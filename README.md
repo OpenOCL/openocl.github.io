@@ -1,20 +1,43 @@
-# Welcome to the Open Optimal Control Library
+# Open Optimal Control Library
 
 ## Introduction
 
-The Open Optimal Control Library is a software toolbox in Matlab for facilitating modelling and formulation of (parametric) optimal control problems. Interfaces casadi and ipopt.
+The Open Optimal Control Library is a toolbox in Matlab for facilitating modelling and formulation of (parametric) optimal control problems. Interfaces casadi and ipopt.
 
 ## Quick start
 
 Visit the wiki page for a guide, and have a look the examples:    
 https://github.com/JonasKoenemann/optimal-control/wiki
 
+## Models
+
+* airborne wind energy: https://openawe.github.io/
+* robotics: https://github.com/JonasKoenemann/openocl_models (very experimental)
+
+## Publications
+
+Performance Assessment of a Rigid Wing Airborne Wind Energy Pumping System  
+G. Licitra, J. Koenemann, A. Buerger, P. Williams, R. Ruiterkamp, M. Diehl  
+In Energy The International Journal, Elsevier, 2018 (submitted to)
+
+OpenAWE: An Open Source Toolbox for the Optimization of AWE Flight Trajectories  
+J. Koenemann, G. Licitra, S. Sieberling, M. Diehl  
+In Airborne Wind Energy Conference, Freiburg, 2017
+
+Modeling of an Airborne Wind Energy System with a Flexible Tether Model for the Optimization of Landing Trajectories  
+J. Koenemann, P. Williams, S. Sieberling, M. Diehl  
+IFAC 2017 World Congress, Toulouse, France. 9-14 July, 2017
+
+Viability Assessment of a Rigid Wing Airborne Wind Energy Pumping System  
+G. Licitra, J. Koenemann, G. Horn, P. Williams, R. Ruiterkamp, M. Diehl  
+In: 21st International Conference on Process Control (PC), 2017
+
 ## Legal notice
 
 Please see license information in the LICENSE file.
 Please contact Jonas.Koenemann [at] yahoo.de for more information.
 
-Open OCL toolbox
+Dynamic Optimization toolbox
 Copyright (C) 2016-2017  Jonas Koenemann
 
 This program is free software: you can redistribute it and/or modify
@@ -35,6 +58,7 @@ This project has received funding from the European Union’s Horizon 2020 resea
 
 Use without warranty.
 
-Jonas Koenemann
-University of Freiburg, Ampyx Power
+Jonas Koenemann  
 Jonas.Koenemann [at] yahoo.de
+
+
