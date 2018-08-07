@@ -7,12 +7,12 @@ The Open Optimal Control Library is a toolbox in Matlab for facilitating modelli
 ## Quick start
 
 Visit the wiki page for a guide, and have a look the examples:    
-https://github.com/JonasKoenemann/optimal-control/wiki
+<https://github.com/JonasKoenemann/optimal-control/wiki>
 
 ## Models
 
-* airborne wind energy: https://openawe.github.io/
-* robotics: https://github.com/JonasKoenemann/openocl_models (very experimental)
+* airborne wind energy: <https://openawe.github.io/>
+* robotics: <https://github.com/JonasKoenemann/openocl_models> (very experimental)
 
 ## Publications
 
