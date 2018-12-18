@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Open Optimal Control Library is a toolbox in Matlab for facilitating modelling and formulation of (parametric) optimal control problems. Interfaces casadi and ipopt.
+The Open Optimal Control Library is a toolbox for facilitating modelling and formulation of (parametric) dynamic optimization problems in Matlab. It interfaces CasADi and Ipopt.
 
 ## Quick start
 
