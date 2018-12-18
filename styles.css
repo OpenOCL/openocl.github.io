@@ -7,8 +7,8 @@
 
 /* Create 3 equal columns that sits next to each other */
 .imgcolumn {
-  flex: 31%;
-  max-width: 31%;
+  flex: 30%;
+  max-width: 30%;
   padding: 0 4px;
 }
 
