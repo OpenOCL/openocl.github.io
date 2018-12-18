@@ -1,14 +1,14 @@
 .imgrow {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  padding: 0 0px;
 }
 
 /* Create 3 equal columns that sits next to each other */
 .imgcolumn {
   flex: 33%;
   max-width: 33%;
-  padding: 0 4px;
+  padding: 0 0px;
 }
 
 .column img {
