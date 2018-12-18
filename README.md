@@ -1,16 +1,16 @@
 ## Introduction
 
-The Open Optimal Control Library is a toolbox for facilitating modelling and formulation of (parametric) dynamic optimization problems in Matlab. It interfaces CasADi and Ipopt.
+The Open Optimal Control Library is a toolbox in Matlab for facilitating modelling and formulation of (parametric) optimal control problems. It interfaces Ipopt [1] to numerically solve the optimal control problems and CasADi [2] to automatically calcuate the necessary derivatives by algorithmic differentiation.
 
 ## Quick start
 
 Visit the wiki page for a guide, and have a look the examples:    
-<https://github.com/JonasKoenemann/optimal-control/wiki>
+https://github.com/JonasKoenemann/optimal-control/wiki
 
 ## Models
 
-* airborne wind energy: <https://openawe.github.io/>
-* robotics: <https://github.com/JonasKoenemann/openocl_models> (very experimental)
+* airborne wind energy: https://openawe.github.io/
+* robotics: https://github.com/JonasKoenemann/openocl_models (very experimental)
 
 ## Publications
 
@@ -29,6 +29,16 @@ IFAC 2017 World Congress, Toulouse, France. 9-14 July, 2017
 Viability Assessment of a Rigid Wing Airborne Wind Energy Pumping System  
 G. Licitra, J. Koenemann, G. Horn, P. Williams, R. Ruiterkamp, M. Diehl  
 In: 21st International Conference on Process Control (PC), 2017
+
+## References
+
+[1] On the Implementation of a Primal-Dual Interior Point Filter Line Search Algorithm for Large-Scale Nonlinear Programming  
+A. Wächter, L.T. Biegler  
+Mathematical Programming 106 (2006) 25-57, Available at: https://projects.coin-or.org/Ipopt
+
+[2] CasADi - A software framework for nonlinear optimization and optimal control  
+J.A.E. Andersson, J. Gillis, G. Horn, J.B. Rawlings, M. Diehl  
+Mathematical Programming Computation, In Press, 2018, Available at: https://casadi.org
 
 ## Legal notice
 
