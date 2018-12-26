@@ -186,32 +186,8 @@ The dimension of the value has to match the size of the variable with the follow
 initialGuess.get('states').get('p').set(0)  % will set all positions variables to [0;0;0].
 ```
 
-## Legal notice
+## Additional Information
 
-Please see license information in the LICENSE file.
-Please contact Jonas.Koenemann@yahoo.de for more information.
-
-Dynamic Optimization toolbox
-Copyright (C) 2016-2017  Jonas Koenemann, Ampyx Power B.V.
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-
-This project has received funding from the European Union’s Horizon 2020 research and innovation programme under the Marie Sklodowska-Curie grant agreement No 642682.
-
-Use without warranty.
-
-Jonas Koenemann  
-Jonas.Koenemann [at] yahoo.de
+* If you need the model to work with MX type variables in your system, you can pass the option "system_casadi_mx" to the solver
+* For larger problems it can be beneficial to install HSL linear solvers for ipopt (http://www.hsl.rl.ac.uk/ipopt/) and pass the linear solver name to the ipopt options
 
