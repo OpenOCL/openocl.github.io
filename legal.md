@@ -4,7 +4,7 @@
 
 Please see license information in the LICENSE file in the github project.
 
-Open Optimcal Control Library
+Open Optimal Control Library
 Copyright (C) 2016-2019  Jonas Koenemann (Jonas.Koenemann [at] yahoo.de)
 
 This program is free software: you can redistribute it and/or modify
