@@ -9,7 +9,7 @@ The Open Optimal Control Library is a toolbox in Matlab for facilitating modelli
 ## Quick start
 
 Visit the documentation for a guide, and have a look the examples:    
-[Documentation](https://github.com/JonasKoenemann/optimal-control/wiki)
+[Documentation](doc.md)
 
 ## Models
 
