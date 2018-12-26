@@ -5,7 +5,7 @@
 * The framework is tested on Windows 7 64bit/Matlab 2016b and MacOsX/Matlab 2014b. As Matlab is mostly platform independent it should run on other platforms with Matlab versions from 2014b.
 
 ## Installation
-* Get CasADi version 3.3 (or newest 3.4 but it is untested) for Matlab and follow the installation instructions on their page: [CasADi](https://casadi.org)
+* Get CasADi version 3.3 (or newest 3.4 but it is untested) for Matlab and follow the installation instructions on their page: [CasADi](http://casadi.org)
 * Add the main CasADi directory to your Matlab path, not including subdirectories.
 * Clone the optimal-control git repository or get the latest release from here: [code releases](https://github.com/JonasKoenemann/optimal-control/releases).
 * Extract the release to a folder on your hard drive.
