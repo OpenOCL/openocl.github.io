@@ -4,7 +4,7 @@
 <img src="https://openocl.org/imgs/pend.png" width="30%"> <img src="https://openocl.org/imgs/ballbeam.png" width="30%"> <img src="https://openocl.org/imgs/lemn.png" width="30%">    
 [Documentation](doc.md) [Legal Notice](legal.md)
 
-The Open Optimal Control Library is a toolbox in Matlab for facilitating modelling and formulation of (parametric) optimal control problems. It interfaces Ipopt [1] to numerically solve the optimal control problems and CasADi [2] to automatically calcuate the necessary derivatives by algorithmic differentiation.
+The Open Optimal Control Library is a toolbox for Matlab/Octave that facilitates modelling and formulation of (parametric) optimal control problems. It interfaces Ipopt [1] to numerically solve the optimal control problems and CasADi [2] to automatically calcuate the necessary derivatives by algorithmic differentiation.
 
 ## Quick start
 
