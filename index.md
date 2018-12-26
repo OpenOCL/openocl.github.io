@@ -14,7 +14,7 @@ Visit the documentation for a guide, and have a look the examples:
 ## Models
 
 * Airborne wind energy: [openawe.github.io](https://openawe.github.io/)
-* Robotics: github:[openocl_models](https://github.com/JonasKoenemann/openocl_models) (very experimental)
+* Robotics: [github:openocl_models](https://github.com/JonasKoenemann/openocl_models) (very experimental)
 
 ## Publications
 
@@ -38,11 +38,11 @@ In: 21st International Conference on Process Control (PC), 2017
 
 [1] On the Implementation of a Primal-Dual Interior Point Filter Line Search Algorithm for Large-Scale Nonlinear Programming  
 A. Wächter, L.T. Biegler  
-Mathematical Programming 106 (2006) 25-57, Available at: [](https://projects.coin-or.org/Ipopt)
+Mathematical Programming 106 (2006) 25-57, Available at: [projects.coin-or.org/Ipopt](https://projects.coin-or.org/Ipopt)
 
 [2] CasADi - A software framework for nonlinear optimization and optimal control  
 J.A.E. Andersson, J. Gillis, G. Horn, J.B. Rawlings, M. Diehl  
-Mathematical Programming Computation, In Press, 2018, Available at: [](http://casadi.org)
+Mathematical Programming Computation, In Press, 2018, Available at: [casadi.org](http://casadi.org)
 
 ## Contact
 
