@@ -1,11 +1,12 @@
-# Legal Notice
 [back](index.md)
+
+# Legal Notice
 
 Please see license information in the LICENSE file.
 Please contact Jonas.Koenemann [at] yahoo.de for more information.
 
-Dynamic Optimization toolbox
-Copyright (C) 2016-2017  Jonas Koenemann
+Open Optimcal Control Library
+Copyright (C) 2016-2019  Jonas Koenemann (Jonas.Koenemann@yahoo.de)
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
