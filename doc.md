@@ -4,16 +4,16 @@
 * The framework is tested on Windows 7 64bit/Matlab 2016b and MacOsX/Matlab 2014b. As Matlab is mostly platform independent it should run on other platforms with Matlab versions from 2014b.
 
 ## Installation
-* Get CasADi version 3.3 (or newest 3.4 but it is untested) for Matlab and follow the installation instructions on their page: [CasADi](http://casadi.org)
+* Get CasADi version 3.3 (or newest 3.4 but it is untested) for Matlab and follow the installation instructions on their page: [CasADi](https://casadi.org)
 * Add the main CasADi directory to your Matlab path, not including subdirectories.
-* Clone the optimal-control git repository or get the latest release from here: [code releases](../releases).
+* Clone the optimal-control git repository or get the latest release from here: [code releases](https://github.com/JonasKoenemann/optimal-control/releases).
 * Extract the release to a folder on your hard drive.
 * In Matlab, add the main directory containing the Startup script to your Matlab path. Do not include not the sub-directories!
 * Run the StartupOCL.m script
 * Go to the Examples directory, and try one the examples
 
 ## Defining a system model
-Look at the [VanDerPolSystem.m](../blob/master/Examples/01VanDerPol/VanDerPolSystem.m) in the Examples folder.
+Look at the [VanDerPolSystem.m](https://github.com/JonasKoenemann/optimal-control/blob/master/Examples/01VanDerPol/VanDerPolSystem.m) in the Examples folder.
 The system is implemented by inheriting from the System class.
 You need to implement the two methods `setupVariables` and `setupEquation`.
 
@@ -63,7 +63,7 @@ The algebraic equation needs to be given as a column vector.
 You can use the `setAlgEquation` method multiple times. In order to be able to simulate the system, the total number of rows of the algebraic equations needs to be equal to the total number/dimension of algebraic variables (number of degrees of freedom).
 
 ## Defining an optimal control problem (OCP)
-Have a look at the [VanDerPolOCP.m](../blob/master/Examples/01VanDerPol/VanDerPolOCP.m) in the Examples folder.
+Have a look at the [VanDerPolOCP.m](https://github.com/JonasKoenemann/optimal-control/blob/master/Examples/01VanDerPol/VanDerPolOCP.m) in the Examples folder.
 The OCP is implemented by inheriting from the OCP class.
 You need to implement the a couple of methods to define the cost function and boundary conditions.
 
@@ -127,7 +127,7 @@ The essential steps in order to solve your dynamical optimization problem are:
 * Call the solver
 * Process the solution
 
-Have a look at the Example script to get an idea how it works: [mainVanDerPol.m](../blob/master/Examples/01VanDerPol/mainVanDerPol.m)
+Have a look at the Example script to get an idea how it works: [mainVanDerPol.m](https://github.com/JonasKoenemann/optimal-control/blob/master/Examples/01VanDerPol/mainVanDerPol.m)
 
 
 
