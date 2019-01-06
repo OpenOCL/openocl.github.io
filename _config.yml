@@ -2,3 +2,6 @@ theme: jekyll-theme-minimal
 repository: JonasKoenemann/optimal-control
 highlighter: rouge
 title: OpenOCL
+
+collections:
+  - api
