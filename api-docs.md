@@ -2,4 +2,4 @@
 layout: api
 title: API docs 
 ---
-== API Documentation ==
+## API Documentation
