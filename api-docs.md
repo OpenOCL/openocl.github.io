@@ -1,8 +1,4 @@
 ---
 layout: api
-title: API docs 
-
+title: API documentation
 ---
-
-[back](index.md)
-## API Documentation
