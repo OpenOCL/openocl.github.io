@@ -1,4 +1,4 @@
 ---
 layout: api
-title: API docs
+title: API docs 
 ---
