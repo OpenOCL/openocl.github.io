@@ -29,7 +29,7 @@ title: API Docs
             <div class="subsection">
               <dl class="dl-left">
                   {% for el in doc.parameters %}
-                    <dt>{{ el.name }} ({{ el.type }}) </dt>
+                    <dt>{{ el.name }} <span class="dltype">({{ el.type }})</span></dt>
                     <dd>{{ el.content }} </dd>
                   {% endfor %}
               </dl>
@@ -41,7 +41,7 @@ title: API Docs
             <div class="subsection">
               <dl class="dl-left">
                   {% for el in doc.returns %}
-                    <dt>{{ el.type }} </dt>
+                    <dt><span class="dltype">({{ el.type }})</span> </dt>
                     <dd>{{ el.content }} </dd>
                   {% endfor %}
               </dl>
@@ -65,7 +65,7 @@ title: API Docs
                 <div class="subsection3">
                   <dl class="dl-left">
                   {% for p in ma.parameters %}
-                    <dt>{{ p.name }} ({{ p.type }}) </dt>
+                    <dt>{{ p.name }} <span class="dltype">({{ p.type }})</span></dt>
                     <dd>{{ p.content }} </dd>
                   {% endfor %}
                    </dl> 
@@ -79,7 +79,7 @@ title: API Docs
                 <div class="subsection3">
                   <dl class="dl-left">
                   {% for r in ma.returns %}
-                    <dt>{{ r.type }} </dt>
+                    <dt><span class="dltype">({{ r.type }})</span></dt>
                     <dd>{{ r.content }} </dd>
                   {% endfor %}
                   </dl>
@@ -107,7 +107,7 @@ title: API Docs
                   <div class="subsection3">
                     <dl class="dl-left">
                     {% for p in m.parameters %}
-                      <dt>{{ p.name }} ({{ p.type }}) </dt>
+                      <dt>{{ p.name }} <span class="dltype">({{ p.type }})</span></dt>
                       <dd>{{ p.content }} </dd>
                     {% endfor %}
                     </dl>
@@ -121,7 +121,7 @@ title: API Docs
                   <div class="subsection3">
                     <dl class="dl-left">
                     {% for r in m.returns %}
-                      <dt>{{ r.type }} </dt>
+                      <dt><span class="dltype">({{ r.type }})</span></dt>
                       <dd>{{ r.content }} </dd>
                     {% endfor %}
                     </dl>
