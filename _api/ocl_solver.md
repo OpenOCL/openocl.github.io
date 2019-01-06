@@ -46,7 +46,7 @@ parameters:
     content: "Options struct, can be created with OclOptions()"
     name: "options"
     type: "struct"
-position: ~
+position: 3
 returns: 
   - 
     content: A solver object.
