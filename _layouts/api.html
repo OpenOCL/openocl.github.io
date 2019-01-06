@@ -17,7 +17,7 @@ title: API Docs
 					<p class="description">{{ doc.description }}</p>
 				{% endif %}
 				
-				{% if doc.methods and doc.methods[0].name %}
+				{% if doc.methods and doc.methods[0].content %}
 						<h6>Methods</h6>
 						<dl>
 								{% for method in doc.methods %}
