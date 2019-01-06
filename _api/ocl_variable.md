@@ -49,3 +49,4 @@ returns: ~
 right_code_blocks: ~
 title: OclVariable
 type: Class
+---
