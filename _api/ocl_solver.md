@@ -50,6 +50,6 @@ returns:
     content: ~
     name: solver
     type: OclSolver
-title: "ocl.Solver(system, ocp, options)"
+title: "OclSolver(system, ocp, options)"
 type: Function
 ---
