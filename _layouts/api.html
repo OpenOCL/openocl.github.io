@@ -1,8 +1,10 @@
 ---
-layout: default
 title: API Docs
 ---
-	{% for doc in site.api %}
+{% assign sorted_collections = site.collections | sort: "position" %}
+{% for collection in sorted_collections %}
+	{% assign sorted_docs = collection.docs | sort: "position" %}
+	{% for doc in sorted_docs %}
 		<section class="doc-content">
 			<section class="left-docs">
 				<h3>
@@ -12,11 +14,12 @@ title: API Docs
 							<span class="endpoint {{ doc.type }}"></span>
 						{% endif %}
 					</a>
+					<a class="editor-link" href="cloudcannon:collections/{{ doc.relative_path }}">Edit</a>
 				</h3>
 				{% if doc.description %}
 					<p class="description">{{ doc.description }}</p>
 				{% endif %}
-				
+
 				{% if doc.parameters and doc.parameters[0].name %}
 						<h6>Parameters</h6>
 						<dl>
@@ -44,3 +47,4 @@ title: API Docs
 			{% endif %}
 		</section>
 	{% endfor %}
+{% endfor %}
