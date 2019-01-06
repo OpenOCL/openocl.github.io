@@ -26,7 +26,7 @@
           {% assign sorted_docs = site.api | sort: "position" %}
           <ul>
           {% for doc in sorted_docs %}
-                <li><a href="/#{{ doc.id | replace: '/', '' | replace: '.', '' }}">
+                <li><a href="#{{ doc.id | replace: '/', '' | replace: '.', '' }}">
                   {{ doc.name }}
                   {% if doc.type %}<span class="endpoint {{ doc.type }}"></span>{% endif %}
                   </a></li>
