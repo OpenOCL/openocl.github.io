@@ -8,8 +8,8 @@ methods:
     parameters: 
       - 
         content: "Name of the state variable"
-        name: id
-        type: char
+        name: "id"
+        type: "char"
       - 
         content: "Size of the state variable. Scalar, vector, and matrix valued variables are allowed. If a scalar value s is given, the size of the variable will be [s,1]. Defaults to [1,1]."
         name: size
