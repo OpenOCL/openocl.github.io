@@ -29,6 +29,10 @@ dl .dltype {
   font-weight:normal;
 }
 
+h5 {
+ font-size: small; 
+}
+
 
 .subsection{
   margin-left: 40px;
