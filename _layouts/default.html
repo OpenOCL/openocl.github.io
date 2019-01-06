@@ -20,7 +20,7 @@
         <h1><a href="{{ site.url | relative_url  }}">OpenOCL.org</a></h1>
         <p class="view"><a href="https://github.com/JonasKoenemann/optimal-control">View the Project on GitHub</a></p>
         
-        {% if page.title == "API docs" %}
+        {% if page.title == "API documentation" %}
           <h4> Classes and Functions </h4>
           
           {% assign sorted_docs = site.api | sort: "position" %}
@@ -34,12 +34,13 @@
           </ul>
         {% endif %}
 
-        {% if page.title != "API docs" %}
+        {% if page.title != "API documentation" %}
           <h4> Blog </h4>
           
           <ul class="blog">
           {% for post in site.posts %}
             <li>
+              {{ post.date }}
               <a href="{{ post.url }}">{{ post.title }} </a>
               {{ post.excerpt | markdownify  }}
             </li>
