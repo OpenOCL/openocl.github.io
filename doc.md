@@ -1,5 +1,6 @@
-[back](index.md)
-## Documentation
+---
+title: Documentation
+---
 
 ### Requirements
 * The toolbox is tested on Window/Matlab 2016b, MacOsX/Matlab 2014b and Octave 4.2.2. As Matlab is mostly platform independent it should run on other platforms with Matlab versions from 2014b.
