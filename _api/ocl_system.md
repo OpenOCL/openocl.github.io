@@ -1,5 +1,6 @@
 --- 
-content_markdown: "The system is implemented by inheriting from the System class. You need to implement the two methods setupVariables and setupEquation. Have a look at the VanDerPolSystem.m in the Examples folder get an impression on how it works."
+content_markdown: ~
+description: "The system is implemented by inheriting from the System class. You need to implement the two methods setupVariables and setupEquation. Have a look at the VanDerPolSystem.m in the Examples folder get an impression on how it works."
 left_code_blocks: ~
 methods: 
   - content: "Adds a state variable to the system. This function must be called within the setupEquation method."
