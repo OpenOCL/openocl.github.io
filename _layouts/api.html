@@ -45,63 +45,65 @@ title: API Docs
         {% endif %}
 
         {% if doc.methods_abstract and doc.methods_abstract[0].name %}
-            <h4>Abstract Methods</h4>
-            <dl>
-                {% for ma in doc.methods_abstract %}
-                  <dt>{{ ma.name }}</dt>
-                  <dd>{{ ma.content }}</dd>
+          <h4>Abstract Methods</h4>
+          
+          {% for ma in doc.methods_abstract %}
             
-                  {% if ma.parameters and ma.parameters[0].name %}
-                    <h5>Parameters</h5>
-                    <dl>
-                    {% for p in ma.parameters %}
-                      <dt>{{ p.name }} ({{ p.type }})</dt>
-                      <dd>{{ p.content }}</dd>
-                    {% endfor %}
-                     </dl> 
-                  {% endif %}
-              
-                  {% if ma.returns and ma.returns[0].type %}
-                    <h5>Returns</h5
-                    {% for r in ma.returns %}
-                      <dt>{{ r.type }}</dt>
-                      <dd>{{ r.content }}</dd>
-                    {% endfor %}
-                  {% endif %}
-                  
-                {% endfor %}
+            <dl>
+              <dt>{{ ma.name }}</dt>
+              <dd>{{ ma.content }}</dd>
             </dl>
+
+            {% if ma.parameters and ma.parameters[0].name %}
+              <h5>Parameters</h5>
+              <dl>
+              {% for p in ma.parameters %}
+                <dt>{{ p.name }} ({{ p.type }})</dt>
+                <dd>{{ p.content }}</dd>
+              {% endfor %}
+               </dl> 
+            {% endif %}
+          
+            {% if ma.returns and ma.returns[0].type %}
+              <h5>Returns</h5
+              {% for r in ma.returns %}
+                <dt>{{ r.type }}</dt>
+                <dd>{{ r.content }}</dd>
+              {% endfor %}
+            {% endif %}
+                
+          {% endfor %}
         {% endif %}
 
         {% if doc.methods and doc.methods[0].name %}
-            <h4>Methods</h4>
+          <h4>Methods</h4>
+          
+          {% for m in doc.methods %}
             <dl>
-              {% for m in doc.methods %}
-                <dt>{{ m.name }}</dt>
-                <dd>{{ m.content }}</dd>
-              
-                  {% if m.parameters and m.parameters[0].name %}
-                    <h5>Parameters</h5>
-                    <dl>
-                    {% for p in m.parameters %}
-                      <dt>{{ p.name }} ({{ p.type }})</dt>
-                      <dd>{{ p.content }}</dd>
-                    {% endfor %}
-                     </dl>
-                  {% endif %}
-              
-                  {% if m.returns and m.returns[0].type %}
-                    <h5>Returns</h5
-                    <dl>
-                    {% for r in m.returns %}
-                      <dt>{{ r.type }}</dt>
-                      <dd>{{ r.content }}</dd>
-                    {% endfor %}
-                      </dl>
-                  {% endif %}
-              
-              {% endfor %}
+              <dt>{{ m.name }}</dt>
+              <dd>{{ m.content }}</dd>
             </dl>
+          
+            {% if m.parameters and m.parameters[0].name %}
+              <h5>Parameters</h5>
+              <dl>
+              {% for p in m.parameters %}
+                <dt>{{ p.name }} ({{ p.type }})</dt>
+                <dd>{{ p.content }}</dd>
+              {% endfor %}
+              </dl>
+            {% endif %}
+          
+            {% if m.returns and m.returns[0].type %}
+              <h5>Returns</h5
+              <dl>
+              {% for r in m.returns %}
+                <dt>{{ r.type }}</dt>
+                <dd>{{ r.content }}</dd>
+                {% endfor %}
+              </dl>
+            {% endif %}
+          {% endfor %}
         {% endif %}
         {{ doc.content_markdown | markdownify }}
       </section>
