@@ -15,7 +15,7 @@ title: API Docs
           <a id="{{ doc.id | replace: '/', '' | replace: '.', '' }}">
             {{ doc.title }}
             {% if doc.type %}
-              <span class="endpoint {{ doc.type }}"></span>
+              <span class="endpoint {{ doc.type }}"> - {{ doc.type }}</span>
             {% endif %}
           </a>
           
@@ -34,11 +34,11 @@ title: API Docs
             </dl>
         {% endif %}
 
-        {% if doc.returns and doc.returns[0].name %}
+        {% if doc.returns and doc.returns[0].type %}
             <h4>Returns</h4>
             <dl>
                 {% for el in doc.returns %}
-                  <dt>{{ el.name }} ({{ el.type }})</dt>
+                  <dt>{{ el.type }}</dt>
                   <dd>{{ el.content }}</dd>
                 {% endfor %}
             </dl>
