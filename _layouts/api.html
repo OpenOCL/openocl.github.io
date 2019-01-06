@@ -2,9 +2,7 @@
 layout: default
 title: API Docs
 ---
-{% assign sorted_collections = site.collections | sort: "position" %}
-{% for collection in sorted_collections %}
-	{% assign sorted_docs = collection.api | sort: "position" %}
+	{% assign sorted_docs = site.api | sort: "position" %}
 	{% for doc in sorted_docs %}
 		<section class="doc-content">
 			<section class="left-docs">
@@ -60,4 +58,3 @@ title: API Docs
 			{% endif %}
 		</section>
 	{% endfor %}
-{% endfor %}
