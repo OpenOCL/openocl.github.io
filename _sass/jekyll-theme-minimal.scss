@@ -236,9 +236,12 @@ h5 {
   margin-left: 40px;
 }
 
-ul.blog {
+.blog ul {
   list-style-type: None;
   padding-inline-start: unset;
+}
+.blog p.date {
+  margin-bottom:0px;
 }
 
 @media print, screen and (max-width: 960px) {
