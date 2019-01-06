@@ -1,4 +1,4 @@
-theme: jekyll-theme-minimal
+#theme: jekyll-theme-minimal
 repository: JonasKoenemann/optimal-control
 highlighter: rouge
 title: OpenOCL
