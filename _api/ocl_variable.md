@@ -1,5 +1,5 @@
 --- 
-name = OclVariable
+name: OclVariable
 content_markdown: ~
 left_code_blocks: ~
 methods: 
@@ -45,7 +45,7 @@ methods:
         content: "the underlying value of the variable. The value can be either numeric (for initial guess and solution) or symbolic (in system/ocp definitions)."
         type: "numeric or casadi.SX or casadi.MX or sym"
 parameters: ~
-position: ~
+position: 4
 returns: ~
 right_code_blocks: ~
 title: OclVariable
