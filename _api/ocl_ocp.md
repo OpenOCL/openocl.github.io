@@ -1,5 +1,5 @@
 --- 
-name: "OclOCP"
+name: OclOCP
 description: "An optimal control problem (OCP) is defined by inheriting from the OclOCP class. In order to specify cost functions and boundary conditions you have to implement the corresponding methods. Have a look at the VanDerPolOCP.m in the Examples folder."
 content_markdown: ~
 left_code_blocks: ~
@@ -159,7 +159,7 @@ methods_abstract:
         type: OclVariable
     returns: ~
 parameters: ~
-position: 1
+position: 2
 returns: ~
 right_code_blocks: ~
 title: OclOCP()
