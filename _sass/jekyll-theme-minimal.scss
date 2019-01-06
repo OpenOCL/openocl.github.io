@@ -121,6 +121,10 @@ header {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+header p.view {
+  margin-bottom:40px; 
+}
+
 ul.downloads {
   list-style:none;
   height:40px;
@@ -239,6 +243,9 @@ footer {
     right:50px;
     top:52px;
   }
+header p.view {
+  margin-bottom:20px; 
+}
 }
 
 @media print, screen and (max-width: 720px) {
@@ -253,13 +260,12 @@ footer {
   header ul, header p.view {
     position:static;
   }
-  
-  header p.view {
-    margin-bottom:30px; 
-  }
 
   pre, code {
     word-wrap:normal;
+  }
+  header p.view {
+    margin-bottom:20px; 
   }
 }
 
@@ -274,6 +280,9 @@ footer {
 
   .downloads li, .downloads li + li + li {
     width:33%;
+  }
+  header p.view {
+    margin-bottom:20px; 
   }
 }
 
