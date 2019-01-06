@@ -23,7 +23,7 @@ The setupVariables class method is for defining the system variables.
 You can create state, control and algebraic variables using the class methods: addState, addAlgVar, addControl.
 They have the following signature with no return values:  
 
-```Matlab
+```MATLAB
 self.addState(id,size)  
 self.addAlgVar(id,size)
 self.addControl(id,size) 
@@ -35,7 +35,7 @@ Every variable needs to have a unique string valued `id`. The `size` is given as
 The setupEquation method is for defining the system equations. Ordinary differential equations (ODE) and differential algebraic equations (DAE) have to be stated in explicit or semi-explicit form.
 The signature if the method is:
 
-```Matlab
+```MATLAB
 function setupEquation(self,states,algVars,controls,parameters)
 ```
 
