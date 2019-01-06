@@ -50,13 +50,15 @@ title: API Docs
                 {% for ma in doc.methods_abstract %}
                   <dt>{{ ma.name }}</dt>
                   <dd>{{ ma.content }}</dd>
-              
+            
                   {% if ma.parameters and ma.parameters[0].name %}
                     <h5>Parameters</h5>
+                    <dl>
                     {% for p in ma.parameters %}
                       <dt>{{ p.name }} ({{ p.type }})</dt>
                       <dd>{{ p.content }}</dd>
                     {% endfor %}
+                     </dl> 
                   {% endif %}
               
                   {% if ma.returns and ma.returns[0].type %}
@@ -74,27 +76,31 @@ title: API Docs
         {% if doc.methods and doc.methods[0].name %}
             <h4>Methods</h4>
             <dl>
-                {% for m in doc.methods %}
-                  <dt>{{ m.name }}</dt>
-                  <dd>{{ m.content }}</dd>
+              {% for m in doc.methods %}
+                <dt>{{ m.name }}</dt>
+                <dd>{{ m.content }}</dd>
               
-                    {% if m.parameters and m.parameters[0].name %}
+                  {% if m.parameters and m.parameters[0].name %}
                     <h5>Parameters</h5>
+                    <dl>
                     {% for p in m.parameters %}
                       <dt>{{ p.name }} ({{ p.type }})</dt>
                       <dd>{{ p.content }}</dd>
                     {% endfor %}
+                     </dl>
                   {% endif %}
               
                   {% if m.returns and m.returns[0].type %}
                     <h5>Returns</h5
+                    <dl>
                     {% for r in m.returns %}
                       <dt>{{ r.type }}</dt>
                       <dd>{{ r.content }}</dd>
                     {% endfor %}
+                      </dl>
                   {% endif %}
               
-                {% endfor %}
+              {% endfor %}
             </dl>
         {% endif %}
         {{ doc.content_markdown | markdownify }}
