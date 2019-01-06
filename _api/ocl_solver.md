@@ -1,5 +1,5 @@
 --- 
-name = OclSolver
+name: OclSolver
 content_markdown: ~
 description: "Creates a solver object that discretizes the given system and optimal control problem, and calls the underlying optimizer."
 left_code_blocks: 
