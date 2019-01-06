@@ -236,6 +236,11 @@ h5 {
   margin-left: 40px;
 }
 
+ul.blog {
+  list-style-type: None;
+  padding-inline-start: unset;
+}
+
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
