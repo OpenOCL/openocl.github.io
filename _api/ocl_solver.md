@@ -2,8 +2,7 @@
 content_markdown: ~
 description: "Creates a solver object that discretizes the given system and optimal control problem, and calls the underlying optimizer."
 left_code_blocks: 
-  - 
-    code_block: |-
+  - code_block: |-
         ocl = OclSolver(system,ocp,options);
         initialGuess = ocl.getInitialGuess();
         initialGuess.set(3);
@@ -13,14 +12,16 @@ left_code_blocks:
 methods: 
   - 
     name: "initialGuess = getInitialGuess()"
+    content: "Use this method to retrieve a first initial guess that is generated from the bounds. You can further modify this initial guess to improve the solver performance."
     parameters: ~
     returns: 
       - 
-        content: "Structure variable for setting the initial guess"
+        content: "Structured variable for setting the initial guess"
         name: initialGuess
         type: OclVariable
   - 
     name: "solution = solve(initialGuess)"
+    content: "Calls the solver and starts doing iterations."
     parameters: 
       - 
         content: "Provide a good initial guess"
@@ -47,8 +48,7 @@ parameters:
 position: ~
 returns: 
   - 
-    content: ~
-    name: solver
+    content: A solver object.
     type: OclSolver
 title: "OclSolver(system, ocp, options)"
 type: Function
