@@ -7,129 +7,125 @@ title: API Docs
 
 {% assign sorted_docs = site.api | sort: "position" %}
 {% for doc in sorted_docs %}
-  <section class="doc-content">
-    <section class="left-docs">
-      <h3>
-        <a id="{{ doc.id | replace: '/', '' | replace: '.', '' }}">
-          {{ doc.title }}
-          {% if doc.type %}
-            <span class="endpoint {{ doc.type }}"> - {{ doc.type }}</span>
-          {% endif %}
-        </a>
-        
-      </h3>
-      {% if doc.description %}
-        <p class="description">{{ doc.description }}</p>
+  <h3>
+    <a id="{{ doc.id | replace: '/', '' | replace: '.', '' }}">
+      {{ doc.title }}
+      {% if doc.type %}
+        <span class="endpoint {{ doc.type }}"> - {{ doc.type }}</span>
       {% endif %}
+    </a>
+    
+  </h3>
+  {% if doc.description %}
+    <p class="description">{{ doc.description }}</p>
+  {% endif %}
 
-      {% if doc.parameters and doc.parameters[0].name %}
-          <h4>Arguments:</h4>
-          <div class="subsection">
+  {% if doc.parameters and doc.parameters[0].name %}
+      <h4>Arguments:</h4>
+      <div class="subsection">
+        <dl class="dl-left">
+            {% for el in doc.parameters %}
+              <dt>{{ el.name }} <span class="dltype">({{ el.type }})</span></dt>
+              <dd>{{ el.content }} </dd>
+            {% endfor %}
+        </dl>
+     </div>
+  {% endif %}
+
+  {% if doc.returns and doc.returns[0].type %}
+      <h4>Returns:</h4>
+      <div class="subsection">
+        <dl class="dl-left">
+            {% for el in doc.returns %}
+              <dt><span class="dltype">({{ el.type }})</span> </dt>
+              <dd>{{ el.content }} </dd>
+            {% endfor %}
+        </dl>
+      </div>
+  {% endif %}
+
+  {% if doc.methods_abstract and doc.methods_abstract[0].name %}
+    <h4>Abstract Methods</h4>
+    <div class="subsection">
+    
+    {% for ma in doc.methods_abstract %}
+      
+      <dl>
+        <dt>{{ ma.name }} </dt>
+        <dd>{{ ma.content }} </dd>
+      </dl>
+
+      {% if ma.parameters and ma.parameters[0].name %}
+        <div class="subsection2">
+          <h5>Arguments:</h5>
+          <div class="subsection3">
             <dl class="dl-left">
-                {% for el in doc.parameters %}
-                  <dt>{{ el.name }} <span class="dltype">({{ el.type }})</span></dt>
-                  <dd>{{ el.content }} </dd>
-                {% endfor %}
-            </dl>
+            {% for p in ma.parameters %}
+              <dt>{{ p.name }} <span class="dltype">({{ p.type }})</span></dt>
+              <dd>{{ p.content }} </dd>
+            {% endfor %}
+             </dl> 
+           </div>
          </div>
       {% endif %}
-
-      {% if doc.returns and doc.returns[0].type %}
-          <h4>Returns:</h4>
-          <div class="subsection">
+    
+      {% if ma.returns and ma.returns[0].type %}
+        <div class="subsection2">
+          <h5>Returns:</h5>
+          <div class="subsection3">
             <dl class="dl-left">
-                {% for el in doc.returns %}
-                  <dt><span class="dltype">({{ el.type }})</span> </dt>
-                  <dd>{{ el.content }} </dd>
-                {% endfor %}
+            {% for r in ma.returns %}
+              <dt><span class="dltype">({{ r.type }})</span></dt>
+              <dd>{{ r.content }} </dd>
+            {% endfor %}
             </dl>
           </div>
+        </div>
       {% endif %}
-
-      {% if doc.methods_abstract and doc.methods_abstract[0].name %}
-        <h4>Abstract Methods</h4>
-        <div class="subsection">
-        
-        {% for ma in doc.methods_abstract %}
           
-          <dl>
-            <dt>{{ ma.name }} </dt>
-            <dd>{{ ma.content }} </dd>
-          </dl>
+    {% endfor %}
+      
+    </div>
+  {% endif %}
 
-          {% if ma.parameters and ma.parameters[0].name %}
-            <div class="subsection2">
-              <h5>Arguments:</h5>
-              <div class="subsection3">
-                <dl class="dl-left">
-                {% for p in ma.parameters %}
-                  <dt>{{ p.name }} <span class="dltype">({{ p.type }})</span></dt>
-                  <dd>{{ p.content }} </dd>
-                {% endfor %}
-                 </dl> 
-               </div>
-             </div>
-          {% endif %}
-        
-          {% if ma.returns and ma.returns[0].type %}
-            <div class="subsection2">
-              <h5>Returns:</h5>
-              <div class="subsection3">
-                <dl class="dl-left">
-                {% for r in ma.returns %}
-                  <dt><span class="dltype">({{ r.type }})</span></dt>
-                  <dd>{{ r.content }} </dd>
-                {% endfor %}
-                </dl>
-              </div>
+  {% if doc.methods and doc.methods[0].name %}
+    <h4>Methods</h4>
+    <div class="subsection">
+      {% for m in doc.methods %}
+        <dl>
+          <dt>{{ m.name }} </dt>
+          <dd>{{ m.content }} </dd>
+        </dl>
+
+        {% if m.parameters and m.parameters[0].name %}
+          <div class="subsection2">
+            <h5>Arguments:</h5>
+            <div class="subsection3">
+              <dl class="dl-left">
+              {% for p in m.parameters %}
+                <dt>{{ p.name }} <span class="dltype">({{ p.type }})</span></dt>
+                <dd>{{ p.content }} </dd>
+              {% endfor %}
+              </dl>
             </div>
-          {% endif %}
-              
-        {% endfor %}
-          
-        </div>
-      {% endif %}
+          </div>
+        {% endif %}
 
-      {% if doc.methods and doc.methods[0].name %}
-        <h4>Methods</h4>
-        <div class="subsection">
-          {% for m in doc.methods %}
-            <dl>
-              <dt>{{ m.name }} </dt>
-              <dd>{{ m.content }} </dd>
-            </dl>
-
-            {% if m.parameters and m.parameters[0].name %}
-              <div class="subsection2">
-                <h5>Arguments:</h5>
-                <div class="subsection3">
-                  <dl class="dl-left">
-                  {% for p in m.parameters %}
-                    <dt>{{ p.name }} <span class="dltype">({{ p.type }})</span></dt>
-                    <dd>{{ p.content }} </dd>
-                  {% endfor %}
-                  </dl>
-                </div>
-              </div>
-            {% endif %}
-
-            {% if m.returns and m.returns[0].type %}
-              <div class="subsection2">
-                <h5>Returns:</h5>
-                <div class="subsection3">
-                  <dl class="dl-left">
-                  {% for r in m.returns %}
-                    <dt><span class="dltype">({{ r.type }})</span></dt>
-                    <dd>{{ r.content }} </dd>
-                  {% endfor %}
-                  </dl>
-                </div>
-              </div>
-            {% endif %}
-          {% endfor %}
-        </div>
-      {% endif %}
-      {{ doc.content_markdown | markdownify }}
-    </section>
-  </section>
+        {% if m.returns and m.returns[0].type %}
+          <div class="subsection2">
+            <h5>Returns:</h5>
+            <div class="subsection3">
+              <dl class="dl-left">
+              {% for r in m.returns %}
+                <dt><span class="dltype">({{ r.type }})</span></dt>
+                <dd>{{ r.content }} </dd>
+              {% endfor %}
+              </dl>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+  {{ doc.content_markdown | markdownify }}
 {% endfor %}
