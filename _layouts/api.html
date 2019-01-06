@@ -39,18 +39,6 @@ title: API Docs
 
 				{{ doc.content_markdown | markdownify | replace: "<dl>", "<h6>Parameters</h6><dl>" }}
 
-				{% if doc.returns and doc.returns[0].name %}
-						<h6>Returns</h6>
-						<dl>
-								{% for returns in doc.returns %}
-										<dt>{{ returns.name }}</dt>
-										<dd>{{ returns.content }}</dd>
-								{% endfor %}
-						</dl>
-				{% endif %}
-
-				{{ doc.content_markdown | markdownify | replace: "<dl>", "<h6>Returns</h6><dl>" }}
-
 				{% if doc.left_code_blocks and doc.left_code_blocks[0].code_block %}
 						{% for block in doc.left_code_blocks %}
 								{% include syntax-highlight.html block=block %}
