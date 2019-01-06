@@ -1,5 +1,5 @@
 --- 
-name = OclSystem
+name: OclSystem
 content_markdown: ~
 description: "The system is implemented by inheriting from the System class. You need to implement the two methods setupVariables and setupEquation. Have a look at the VanDerPolSystem.m in the Examples folder get an impression on how it works."
 left_code_blocks: ~
@@ -86,7 +86,7 @@ methods_abstract:
         type: OclVariable
     returns: ~
 parameters: ~
-position: ~
+position: 1
 returns: ~
 right_code_blocks: ~
 title: "OclSystem"
