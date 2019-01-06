@@ -25,12 +25,14 @@
           <h4> Classes and Functions </h4>
           
           {% assign sorted_docs = site.api | sort: "position" %}
+          <ul>
           {% for doc in sorted_docs %}
-                <p><a href="api-docs.html#{{ doc.id | replace: '/', '' | replace: '.', '' }}">
+                <li><a href="api-docs.html#{{ doc.id | replace: '/', '' | replace: '.', '' }}">
                   {{ doc.name }}
                   {% if doc.type %}<span class="endpoint {{ doc.type }}"></span>{% endif %}
-                  </a></p>
+                  </a></li>
           {% endfor %}
+          </ul>
 
         {% endif %}
         
