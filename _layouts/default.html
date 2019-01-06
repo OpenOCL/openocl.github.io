@@ -28,7 +28,7 @@
           {% for doc in site.api %}
             <li>
                 <a href="api-docs.html#{{ doc.id | replace: '/', '' | replace: '.', '' }}">
-                  {{ doc.id }}
+                  {{ doc.name }}
                   {% if doc.type %}<span class="endpoint {{ doc.type }}"></span>{% endif %}
                 </a>
             </li>
