@@ -50,6 +50,7 @@ title: API Docs
                 {% for ma in doc.methods_abstract %}
                   <dt>{{ ma.name }}</dt>
                   <dd>{{ ma.content }}</dd>
+              
                   {% if ma.parameters and ma.parameters[0].name %}
                     <h5>Parameters</h5>
                     {% for p in ma.parameters %}
@@ -57,6 +58,15 @@ title: API Docs
                       <dd>{{ p.content }}</dd>
                     {% endfor %}
                   {% endif %}
+              
+                  {% if ma.returns and ma.returns[0].type %}
+                    <h5>Returns</h5
+                    {% for r in ma.returns %}
+                      <dt>{{ r.type }}</dt>
+                      <dd>{{ r.content }}</dd>
+                    {% endfor %}
+                  {% endif %}
+                  
                 {% endfor %}
             </dl>
         {% endif %}
@@ -67,6 +77,7 @@ title: API Docs
                 {% for m in doc.methods %}
                   <dt>{{ m.name }}</dt>
                   <dd>{{ m.content }}</dd>
+              
                     {% if m.parameters and m.parameters[0].name %}
                     <h5>Parameters</h5>
                     {% for p in m.parameters %}
@@ -74,6 +85,15 @@ title: API Docs
                       <dd>{{ p.content }}</dd>
                     {% endfor %}
                   {% endif %}
+              
+                  {% if m.returns and m.returns[0].type %}
+                    <h5>Returns</h5
+                    {% for r in m.returns %}
+                      <dt>{{ r.type }}</dt>
+                      <dd>{{ r.content }}</dd>
+                    {% endfor %}
+                  {% endif %}
+              
                 {% endfor %}
             </dl>
         {% endif %}
