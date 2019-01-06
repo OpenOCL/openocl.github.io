@@ -42,10 +42,10 @@ title: API Docs
             </dl>
         {% endif %}
 
-        {% if doc.abstract_methods and doc.abstract_methods[0].name %}
+        {% if doc.methods_abstract and doc.methods_abstract[0].name %}
             <h4>Abstract Methods</h4>
             <dl>
-                {% for el in doc.abstract_methods %}
+                {% for el in doc.methods_abstract %}
                     <dt>{{ el.name }}</dt>
                     <dd>{{ el.content }}</dd>
                 {% endfor %}
