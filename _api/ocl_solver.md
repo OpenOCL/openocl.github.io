@@ -34,16 +34,16 @@ methods:
 parameters: 
   - 
     content: "The system dynamics"
-    name: system
-    type: OclSystem
+    name: "system"
+    type: "OclSystem"
   - 
     content: "The optimal control problem"
-    name: ocp
-    type: OclOCP
+    name: "ocp"
+    type: "OclOCP"
   - 
     content: "Options struct, can be created with OclOptions()"
-    name: options
-    type: struct
+    name: "options"
+    type: "struct"
 position: ~
 returns: 
   - 
