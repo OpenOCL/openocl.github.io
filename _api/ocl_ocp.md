@@ -30,7 +30,7 @@ methods:
         name: lhs
         type: "OclVariable or Matlab matrix"
       - 
-        content: "One of the following operators as string"
+        content: "One of the following operators as a string: '<=', '==', '>='"
         name: operator
         type: char
       - 
@@ -47,7 +47,7 @@ methods:
         name: lhs
         type: "OclVariable or Matlab matrix"
       - 
-        content: "One of the following operators as string"
+        content: "One of the following operators as a string: '<=', '==', '>='"
         name: operator
         type: char
       - 
