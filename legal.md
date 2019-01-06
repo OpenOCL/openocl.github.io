@@ -1,4 +1,5 @@
 ---
+permalink: /legal_notice/
 title: Legal Notice
 ---
 
