@@ -23,7 +23,7 @@ The setupVariables class method is for defining the system variables.
 You can create state, control and algebraic variables using the class methods: addState, addAlgVar, addControl.
 They have the following signature with no return values:  
 
-```MATLAB
+```m
 self.addState(id,size)  
 self.addAlgVar(id,size)
 self.addControl(id,size) 
@@ -35,7 +35,7 @@ Every variable needs to have a unique string valued `id`. The `size` is given as
 The setupEquation method is for defining the system equations. Ordinary differential equations (ODE) and differential algebraic equations (DAE) have to be stated in explicit or semi-explicit form.
 The signature if the method is:
 
-```MATLAB
+```matlab
 function setupEquation(self,states,algVars,controls,parameters)
 ```
 
@@ -47,7 +47,7 @@ For example, you can get the value of the 3d position state variable p by: `p = 
 Inside setupEquation, you can use the `self.setODE` method to specify the derivative for each state variable
 The setODE method has the following signature with no return value  
 
-```Matlab
+```m
 self.setODE(id,equation)
 ```
 
@@ -56,7 +56,7 @@ For example define the ODE for 3d positions p variable by: `self.setODE('p',v)`;
 Use the `self.setAlgEquation` method to define the algebraic equations.
 It has the following signature with no return value  
 
-```Matlab
+```m
 self.setAlgEquation(equation) 
 ```
 
