@@ -2,7 +2,7 @@ theme: jekyll-theme-minimal
 repository: JonasKoenemann/optimal-control
 highlighter: rouge
 title: OpenOCL
-url:https://openocl.org/
+url: https://openocl.org
 
 collections:
   - api
