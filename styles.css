@@ -25,6 +25,10 @@ dl dd {
   min-height: 20px;
 }
 
+dl .type {
+  font-weight:normal;
+}
+
 
 .subsection{
   margin-left: 40px;
