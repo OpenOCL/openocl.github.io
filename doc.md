@@ -1,4 +1,5 @@
 ---
+permalink: /documentation/
 title: Documentation
 ---
 
