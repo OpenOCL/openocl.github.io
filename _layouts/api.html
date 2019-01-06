@@ -2,13 +2,7 @@
 layout: default
 title: API Docs
 ---
-	{% for api in site.api %}
-tests
-{{ api.title }}
-{{ api.type }}
-{{ api.description }}
-	{% endfor %}
-	{% for api in site.api %}
+	{% for doc in site.api %}
 		<section class="doc-content">
 			<section class="left-docs">
 				<h3>
