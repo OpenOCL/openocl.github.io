@@ -21,19 +21,21 @@
         <h1>OpenOCL.org</h1>
         <p class="view"><a href="https://github.com/JonasKoenemann/optimal-control">View the Project on GitHub</a></p>
         
-        {% if page.platform == "mac" %}
-        <h4> Classes and Functions </h4>
-        
-        <ul>
-        {% for doc in site.api %}
-          <li>
-              <a href="{% if page.url != '/' %}/{% endif %}#{{ doc.id | replace: '/', '' | replace: '.', '' }}">
-                {{ doc.title }}
-                {% if doc.type %}<span class="endpoint {{ doc.type }}"></span>{% endif %}
-              </a>
-          </li>
+        {% if page.title == "API docs" %}
+          <h4> Classes and Functions </h4>
+          
+          <ul>
+          {% for doc in site.api %}
+            <li>
+                <a href="{% if page.url != '/' %}/{% endif %}#{{ doc.id | replace: '/', '' | replace: '.', '' }}">
+                  {{ doc.title }}
+                  {% if doc.type %}<span class="endpoint {{ doc.type }}"></span>{% endif %}
+                </a>
+            </li>
+          {% endfor %}
+          </ul>
         {% endif %}
-        </ul>
+        
         
         
       </header>
