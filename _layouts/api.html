@@ -57,19 +57,19 @@ title: API Docs
 
             {% if ma.parameters and ma.parameters[0].name %}
               <div class="subsection2">
-              <h5>Parameters</h5>
+                <h5>Parameters</h5>
                 <dl>
                 {% for p in ma.parameters %}
                   <dt>{{ p.name }} ({{ p.type }}) </dt>
                   <dd>{{ p.content }} </dd>
                 {% endfor %}
                  </dl> 
-             </div>
+               </div>
             {% endif %}
           
             {% if ma.returns and ma.returns[0].type %}
-              <h5>Returns</h5
               <div class="subsection2">
+                <h5>Returns</h5
                 <dl>
                 {% for r in ma.returns %}
                   <dt>{{ r.type }} </dt>
@@ -106,13 +106,13 @@ title: API Docs
               {% endif %}
 
               {% if m.returns and m.returns[0].type %}
-                <h5>Returns</h5
-                <dl>
-                  <div class="subsection2">
+                <div class="subsection2">
+                  <h5>Returns</h5
+                  <dl>
                   {% for r in m.returns %}
                     <dt>{{ r.type }} </dt>
                     <dd>{{ r.content }} </dd>
-                    {% endfor %}
+                  {% endfor %}
                   </dl>
                 </div>
               {% endif %}
