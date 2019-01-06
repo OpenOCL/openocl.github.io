@@ -25,7 +25,8 @@
           <h4> Classes and Functions </h4>
           
           <ul>
-          {% for doc in site.api %}
+          {% assign sorted_docs = site.api | sort: "position" %}
+          {% for doc in sorted_docs %}
             <li>
                 <a href="api-docs.html#{{ doc.id | replace: '/', '' | replace: '.', '' }}">
                   {{ doc.name }}
