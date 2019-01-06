@@ -2,8 +2,11 @@
 layout: default
 title: API Docs
 ---
-	{% assign sorted_docs = site.api | sort: "position" %}
-	{% for doc in sorted_docs %}
+	{% for api in site.api %}
+tests
+{{ api.title }}
+	{% endfor %}
+	{% for api in site.api %}
 		<section class="doc-content">
 			<section class="left-docs">
 				<h3>
