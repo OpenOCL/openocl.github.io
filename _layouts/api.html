@@ -28,8 +28,8 @@ title: API Docs
             <h4>Parameters</h4>
             <dl>
                 {% for el in doc.parameters %}
-                  <dt>{{ el.name }} ({{ el.type }})</dt>
-                  <dd>{{ el.content }}</dd>
+                  <dt>{{ el.name }} ({{ el.type }}) </dt>
+                  <dd>{{ el.content }} </dd>
                 {% endfor %}
             </dl>
         {% endif %}
@@ -38,8 +38,8 @@ title: API Docs
             <h4>Returns</h4>
             <dl>
                 {% for el in doc.returns %}
-                  <dt>{{ el.type }}</dt>
-                  <dd>{{ el.content }}</dd>
+                  <dt>{{ el.type }} </dt>
+                  <dd>{{ el.content }} </dd>
                 {% endfor %}
             </dl>
         {% endif %}
@@ -50,16 +50,16 @@ title: API Docs
           {% for ma in doc.methods_abstract %}
             
             <dl>
-              <dt>{{ ma.name }}</dt>
-              <dd>{{ ma.content }}</dd>
+              <dt>{{ ma.name }} </dt>
+              <dd>{{ ma.content }} </dd>
             </dl>
 
             {% if ma.parameters and ma.parameters[0].name %}
               <h5>Parameters</h5>
               <dl>
               {% for p in ma.parameters %}
-                <dt>{{ p.name }} ({{ p.type }})</dt>
-                <dd>{{ p.content }}</dd>
+                <dt>{{ p.name }} ({{ p.type }}) </dt>
+                <dd>{{ p.content }} </dd>
               {% endfor %}
                </dl> 
             {% endif %}
@@ -68,8 +68,8 @@ title: API Docs
               <h5>Returns</h5
               <dl>
               {% for r in ma.returns %}
-                <dt>{{ r.type }}</dt>
-                <dd>{{ r.content }}</dd>
+                <dt>{{ r.type }} </dt>
+                <dd>{{ r.content }} </dd>
               {% endfor %}
               </dl>
             {% endif %}
@@ -82,15 +82,15 @@ title: API Docs
           
           {% for m in doc.methods %}
             <dl>
-              <dt>{{ m.name }}</dt>
-              <dd>{{ m.content }}</dd>
+              <dt>{{ m.name }} </dt>
+              <dd>{{ m.content }} </dd>
             </dl>
           
             {% if m.parameters and m.parameters[0].name %}
               <h5>Parameters</h5>
               <dl>
               {% for p in m.parameters %}
-                <dt>{{ p.name }} ({{ p.type }})</dt>
+                <dt>{{ p.name }} ({{ p.type }}) </dt>
                 <dd>{{ p.content }} </dd>
               {% endfor %}
               </dl>
@@ -100,7 +100,7 @@ title: API Docs
               <h5>Returns</h5
               <dl>
               {% for r in m.returns %}
-                <dt>{{ r.type }}</dt>
+                <dt>{{ r.type }} </dt>
                 <dd>{{ r.content }} </dd>
                 {% endfor %}
               </dl>
