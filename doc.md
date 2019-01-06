@@ -1,10 +1,10 @@
 [back](index.md)
-# Documentation
+## Documentation
 
-## Requirements
+### Requirements
 * The toolbox is tested on Window/Matlab 2016b, MacOsX/Matlab 2014b and Octave 4.2.2. As Matlab is mostly platform independent it should run on other platforms with Matlab versions from 2014b.
 
-## Installation
+### Installation
 * Get CasADi version 3.3 (or newest 3.4 but it is untested) for Matlab/Octave and follow the installation instructions on their page: [CasADi](http://casadi.org)
 * Add the main CasADi directory to your Matlab path, not including subdirectories.
 * Clone the optimal-control git repository or get the latest release from here: [code releases](https://github.com/JonasKoenemann/optimal-control/releases).
@@ -13,12 +13,12 @@
 * Run the StartupOCL.m script
 * Go to the Examples directory, and try one the examples
 
-## Defining a system model
+### Defining a system model
 Look at the [VanDerPolSystem.m](https://github.com/JonasKoenemann/optimal-control/blob/master/Examples/01VanDerPol/VanDerPolSystem.m) in the Examples folder.
 The system is implemented by inheriting from the System class.
 You need to implement the two methods `setupVariables` and `setupEquation`.
 
-### setupVariables
+#### setupVariables
 The setupVariables class method is for defining the system variables.
 You can create state, control and algebraic variables using the class methods: addState, addAlgVar, addControl.
 They have the following signature with no return values:  
@@ -31,7 +31,7 @@ self.addControl(id,size)
 
 Every variable needs to have a unique string valued `id`. The `size` is given as a 2 dimensional matrix e.g. `self.addState('p',[3 1])` to create a 3d vector p.
 
-### setupEquation
+#### setupEquation
 The setupEquation method is for defining the system equations. Ordinary differential equations (ODE) and differential algebraic equations (DAE) have to be stated in explicit or semi-explicit form.
 The signature if the method is:
 
@@ -63,12 +63,12 @@ self.setAlgEquation(equation)
 The algebraic equation needs to be given as a column vector.
 You can use the `setAlgEquation` method multiple times. In order to be able to simulate the system, the total number of rows of the algebraic equations needs to be equal to the total number/dimension of algebraic variables (number of degrees of freedom).
 
-## Defining an optimal control problem (OCP)
+### Defining an optimal control problem (OCP)
 Have a look at the [VanDerPolOCP.m](https://github.com/JonasKoenemann/optimal-control/blob/master/Examples/01VanDerPol/VanDerPolOCP.m) in the Examples folder.
 The OCP is implemented by inheriting from the OCP class.
 You need to implement the a couple of methods to define the cost function and boundary conditions.
 
-### Cost function: `pathCosts`, `arrivalCosts`
+#### Cost function: `pathCosts`, `arrivalCosts`
 In the `pathCosts` method you can implement the intermediate cost (Lagrange costs) function, and in the `arrivalCosts` (Mayer costs) method you implement the costs on the final state.
 
 ```m
@@ -84,7 +84,7 @@ self.addPathCost(equation)
 self.addArrivalCost(equation)
 ```
 
-### Path constraints
+#### Path constraints
 Use the `pathConstraints` method for implementing path constraints
 The signature is (no return value):    
 
@@ -100,7 +100,7 @@ self.addPathConstraint(lhs, operator, rhs)
 
 where lhs and rhs are the left hand side and the right hand side of the equation and the operator can be one of '<=', '>=', '=='
    
-### Boundary conditions: 
+#### Boundary conditions: 
 You can add boundary conditions on the initial and the final state of the trajectory.
 The signature is:    
 
@@ -115,7 +115,7 @@ self.addBoundaryCondition(lhs, operator, rhs)
 
 where lhs and rhs are the left hand side and the right hand side of the equation and the operator can be one of '<=', '>=', '=='
 
-## Calling the solver
+### Calling the solver
 
 The essential steps in order to solve your dynamical optimization problem are:   
 * Create an instance of your System
@@ -132,11 +132,11 @@ Have a look at the Example script to get an idea how it works: [mainVanDerPol.m]
 
 
 
-## The Variable class: Accessing variables, initial guess, and solution
+### The Variable class: Accessing variables, initial guess, and solution
 
 The Variable type(or CasadiVariable in the CasADi backend) is the basic structure to retrieve, store, modify structured optimization variables.
 
-### Accessing values
+#### Accessing values
 
 For each variable you can access specific variables by their name, e.g. you can get the position variable from the state by:    
 
@@ -166,7 +166,7 @@ or
 states.p.value
 ```
 
-### Setting values
+#### Setting values
 
 You can set values to variables using the set methods. The signature is:   
 
@@ -186,7 +186,7 @@ The dimension of the value has to match the size of the variable with the follow
 initialGuess.get('states').get('p').set(0)  % will set all positions variables to [0;0;0].
 ```
 
-## Additional Information
+### Additional Information
 
 * If you need the model to work with MX type variables in your system, you can pass the option "system_casadi_mx" to the solver
 * For larger problems it can be beneficial to install HSL linear solvers for ipopt (http://www.hsl.rl.ac.uk/ipopt/) and pass the linear solver name to the ipopt options
