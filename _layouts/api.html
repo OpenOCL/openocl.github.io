@@ -2,6 +2,9 @@
 layout: default
 title: API Docs
 ---
+
+{{ content }}
+
 {% assign sorted_collections = site.collections | sort: "position" %}
 {% for collection in sorted_collections %}
   {% assign sorted_docs = collection.docs | sort: "position" %}
