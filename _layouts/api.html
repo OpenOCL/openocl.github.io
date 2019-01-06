@@ -66,10 +66,12 @@ title: API Docs
           
             {% if ma.returns and ma.returns[0].type %}
               <h5>Returns</h5
+              <dl>
               {% for r in ma.returns %}
                 <dt>{{ r.type }}</dt>
                 <dd>{{ r.content }}</dd>
               {% endfor %}
+              </dl>
             {% endif %}
                 
           {% endfor %}
