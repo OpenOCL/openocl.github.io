@@ -17,7 +17,12 @@
   vertical-align: middle;
 }
 
-dl dt {float:left}
+dl dt {
+  float:left;
+  margin-right:10px;
+}
 dl dd {
   min-height: 20px;
 }
+
+
