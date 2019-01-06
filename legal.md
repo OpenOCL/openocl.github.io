@@ -1,6 +1,6 @@
-[back](index.md)
-
-# Legal Notice
+---
+title: Legal Notice
+---
 
 Please see license information in the LICENSE file in the github project.
 
