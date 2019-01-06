@@ -1,22 +1,23 @@
-# Open Optimal Control Library
+## Open Optimal Control Library
 
 <img src="https://openocl.org/imgs/vdp.png" width="30%"> <img src="https://openocl.org/imgs/car.png" width="30%"> <img src="https://openocl.org/imgs/circ.png" width="30%">  
 <img src="https://openocl.org/imgs/pend.png" width="30%"> <img src="https://openocl.org/imgs/ballbeam.png" width="30%"> <img src="https://openocl.org/imgs/lemn.png" width="30%">    
+
 [Get started](doc.md) - [API Docs](api-docs.md)
 
 The Open Optimal Control Library is a toolbox for Matlab/Octave that facilitates modelling and formulation of (parametric) optimal control problems. It interfaces Ipopt [1] to numerically solve the optimal control problems and CasADi [2] to automatically calcuate the necessary derivatives by algorithmic differentiation.
 
-## Quick start
+### Quick start
 
 Visit the [documentation](doc.md) for a guide, or go straight to the [examples](https://github.com/JonasKoenemann/optimal-control/tree/master/Examples):    
 
 
-## Models
+### Models
 
 * Airborne wind energy: [openawe.github.io](https://openawe.github.io/)
 * Robotics: [github:openocl_models](https://github.com/JonasKoenemann/openocl_models) (very experimental)
 
-## Publications
+### Publications
 
 Performance Assessment of a Rigid Wing Airborne Wind Energy Pumping System  
 G. Licitra, J. Koenemann, A. Buerger, P. Williams, R. Ruiterkamp, M. Diehl  
@@ -34,7 +35,7 @@ Viability Assessment of a Rigid Wing Airborne Wind Energy Pumping System
 G. Licitra, J. Koenemann, G. Horn, P. Williams, R. Ruiterkamp, M. Diehl  
 In: 21st International Conference on Process Control (PC), 2017
 
-## References
+### References
 
 [1] On the Implementation of a Primal-Dual Interior Point Filter Line Search Algorithm for Large-Scale Nonlinear Programming  
 A. Wächter, L.T. Biegler  
@@ -44,7 +45,7 @@ Mathematical Programming 106 (2006) 25-57, Available at: [projects.coin-or.org/I
 J.A.E. Andersson, J. Gillis, G. Horn, J.B. Rawlings, M. Diehl  
 Mathematical Programming Computation, In Press, 2018, Available at: [casadi.org](http://casadi.org)
 
-## Contact
+### Contact
 
 Jonas.Koenemann [at] yahoo.de
 
