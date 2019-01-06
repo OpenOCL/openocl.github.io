@@ -25,7 +25,7 @@ title: API Docs
         {% endif %}
 
         {% if doc.parameters and doc.parameters[0].name %}
-            <h4>Parameters</h4>
+            <h4>Arguments:</h4>
             <div class="subsection">
               <dl class="dl-left">
                   {% for el in doc.parameters %}
@@ -37,7 +37,7 @@ title: API Docs
         {% endif %}
 
         {% if doc.returns and doc.returns[0].type %}
-            <h4>Returns</h4>
+            <h4>Returns:</h4>
             <div class="subsection">
               <dl class="dl-left">
                   {% for el in doc.returns %}
@@ -61,7 +61,7 @@ title: API Docs
 
             {% if ma.parameters and ma.parameters[0].name %}
               <div class="subsection2">
-                <h5>Parameters</h5>
+                <h5>Arguments:</h5>
                 <div class="subsection3">
                   <dl class="dl-left">
                   {% for p in ma.parameters %}
@@ -75,7 +75,7 @@ title: API Docs
           
             {% if ma.returns and ma.returns[0].type %}
               <div class="subsection2">
-                <h5>Returns</h5>
+                <h5>Returns:</h5>
                 <div class="subsection3">
                   <dl class="dl-left">
                   {% for r in ma.returns %}
@@ -103,7 +103,7 @@ title: API Docs
 
               {% if m.parameters and m.parameters[0].name %}
                 <div class="subsection2">
-                  <h5>Parameters</h5>
+                  <h5>Arguments:</h5>
                   <div class="subsection3">
                     <dl class="dl-left">
                     {% for p in m.parameters %}
@@ -117,7 +117,7 @@ title: API Docs
 
               {% if m.returns and m.returns[0].type %}
                 <div class="subsection2">
-                  <h5>Returns</h5>
+                  <h5>Returns:</h5>
                   <div class="subsection3">
                     <dl class="dl-left">
                     {% for r in m.returns %}
