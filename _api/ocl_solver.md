@@ -33,6 +33,118 @@ methods:
         content: "The solution of the OCP"
         name: solution
         type: OclVariable
+  -
+    name: "setBounds(id, value)"
+    content: "Sets a fixed bound on variable for the whole trajectory."
+    parameters:
+      -
+        content: "The variable id"
+        name: "id"
+        type: "char"
+      - 
+        content: "The fixed value for the bound"
+        name: "value"
+        type: "numeric"
+  -
+    name: "setBounds(id, lower, upper)"
+    content: "Sets a bound on variable for the whole trajectory."
+    parameters:
+      -
+        content: "The variable id"
+        name: "id"
+        type: "char"
+      - 
+        content: "The lower bound"
+        name: "lower"
+        type: "numeric"
+      - 
+        content: "The upper bound"
+        name: "upper"
+        type: "numeric"
+  -
+    name: "setInitialBounds(id, value)"
+    content: "Sets a fixed initial bound on a variable."
+    parameters:
+      -
+        content: "The variable id"
+        name: "id"
+        type: "char"
+      - 
+        content: "The fixed value for the bound"
+        name: "value"
+        type: "numeric"
+  -
+    name: "setInitialBounds(id, lower, upper)"
+    content: "Sets an initial bound on variable"
+    parameters:
+      -
+        content: "The variable id"
+        name: "id"
+        type: "char"
+      - 
+        content: "The lower bound"
+        name: "lower"
+        type: "numeric"
+      - 
+        content: "The upper bound"
+        name: "upper"
+        type: "numeric"
+  -
+    name: "setEndBounds(id, value)"
+    content: "Sets a fixed end bound on a variable."
+    parameters:
+      -
+        content: "The variable id"
+        name: "id"
+        type: "char"
+      - 
+        content: "The fixed value for the bound"
+        name: "value"
+        type: "numeric"
+  -
+    name: "setEndBounds(id, lower, upper)"
+    content: "Sets an end bound on variable"
+    parameters:
+      -
+        content: "The variable id"
+        name: "id"
+        type: "char"
+      - 
+        content: "The lower bound"
+        name: "lower"
+        type: "numeric"
+      - 
+        content: "The upper bound"
+        name: "upper"
+        type: "numeric"
+  -
+    name: "setParameter(id, value)"
+    content: "Sets a fixed bound on the parameter with the given id."
+    parameters:
+      -
+        content: "The parameter id"
+        name: "id"
+        type: "char"
+      - 
+        content: "The fixed value for the bound"
+        name: "value"
+        type: "numeric"
+  -
+    name: "setParameter(id, lower, upper)"
+    content: "Sets a bound on the parameter with the given id."
+    parameters:
+      -
+        content: "The parameter id"
+        name: "id"
+        type: "char"
+      - 
+        content: "The lower bound"
+        name: "lower"
+        type: "numeric"
+      - 
+        content: "The upper bound"
+        name: "upper"
+        type: "numeric"
 parameters: 
   - 
     content: "The system dynamics"
