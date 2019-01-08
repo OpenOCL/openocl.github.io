@@ -4,9 +4,8 @@ description: "An optimal control problem (OCP) is defined by inheriting from the
 content_markdown: ~
 left_code_blocks: ~
 methods: 
-  - 
-    content: "Adds a path cost term of the form c_p(x,z,u,t,tf,p)."
-    name: addPathCost(cost)
+  - content: "Adds a path cost term of the form c_p(x,z,u,t,tf,p)."
+    name: addPathCost(<span style="color:blue">cost</span>)
     parameters: 
       - 
         content: "Scalar variable containing the cost"
