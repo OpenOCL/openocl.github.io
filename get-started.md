@@ -1,5 +1,5 @@
 ---
-permalink: /get_started/
+permalink: /get-started/
 title: Get Started
 ---
 
