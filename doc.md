@@ -1,6 +1,6 @@
 ---
-permalink: /documentation/
-title: Documentation
+permalink: /get_started/
+title: Get Started
 ---
 
 ### Requirements
