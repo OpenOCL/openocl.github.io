@@ -120,19 +120,14 @@ where lhs and rhs are the left hand side and the right hand side of the equation
 ### Calling the solver
 
 The essential steps in order to solve your dynamical optimization problem are:   
-* Create an instance of your System
-* Create and instance of your optimal control problem
-* Get and specify solver options
-* Receive the non-linear program from your optimal control problem
-* Set bounds on variables and provide scaling information
-* Create a solver instance
-* Receive and specify initial guess
+* Specify solver options
+* Create a solver and pass your system and optimal control problem
+* Set bounds on variables and parameters
+* Specify initial guess
 * Call the solver
 * Process the solution
 
 Have a look at the Example script to get an idea how it works: [mainVanDerPol.m](https://github.com/JonasKoenemann/optimal-control/blob/master/Examples/01VanDerPol/mainVanDerPol.m)
-
-
 
 ### The Variable class: Accessing variables, initial guess, and solution
 
