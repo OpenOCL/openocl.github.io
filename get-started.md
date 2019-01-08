@@ -124,7 +124,7 @@ The essential steps in order to solve your dynamical optimization problem are:
 * Create a solver and pass your system and optimal control problem
 * Set bounds on variables and parameters
 * Specify initial guess
-* Call the solver
+* Call the solver 
 * Process the solution
 
 Have a look at the Example script to get an idea how it works: [mainVanDerPol.m](https://github.com/JonasKoenemann/optimal-control/blob/master/Examples/01VanDerPol/mainVanDerPol.m)
