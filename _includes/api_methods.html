@@ -5,7 +5,7 @@
     {% for p in m.parameters %}
       {% assign argnames = argnames | apend: p.name | append: "," %}
     {% endfor %}
-    {% assign argument_begin = '<span class="arg"> %}
+    {% assign argument_begin = '<span class="arg">' %}
     {% assign argument_list = argnames %}
   {% endif %}
 
