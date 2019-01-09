@@ -1,6 +1,6 @@
 --- 
 name: OclOptions
-description: Creates an options struct for OclSolver
+description: Creates an options struct for [OclSolver](#apiocl_solver)
 content_markdown: ~
 left_code_blocks: ~
 methods: ~
