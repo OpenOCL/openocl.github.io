@@ -92,6 +92,14 @@ methods_abstract:
       - content: Parameters
         name: p
         type: "[OclVariable](#apiocl_variable)"
+    code_block:
+      title: Code example
+      language: m
+      code: |-
+        function setupEquation(self,x,z,u,p)     
+          self.setODE('x',(1-x.y^2)*x.x - x.y + u); 
+          self.setODE('y',x.x);
+        end
     returns: ~
 parameters: ~
 position: 1
