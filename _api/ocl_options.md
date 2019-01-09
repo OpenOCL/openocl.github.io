@@ -13,6 +13,6 @@ parameters: ~
 position: 5
 returns: ~
 right_code_blocks: ~
-type: Class
+type: Function
 title: OclVariable
 ---
