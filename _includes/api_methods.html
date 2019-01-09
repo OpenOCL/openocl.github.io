@@ -3,8 +3,9 @@
   {% if m.parameters and m.parameters[0].name %}
     {% assign argnames = '' %}
     {% for p in m.parameters %}
-      {% assign argnames = argnames | concat: p.name %}
+      {% assign argnames = argnames | apend: p.name | "," %}
     {% endfor %}
+    {% assign argnames = argnames | split: ',' %}
     {% assign argument_inner = argnames | join: ',' %}
     {% assign argument_begin = '<span class="arg"> %}
     {% assign argument_list = argument_inner %}
