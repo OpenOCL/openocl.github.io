@@ -12,7 +12,7 @@ methods:
     returns: 
       - content: "the sub-variable of the given variable."
         type: OclVariable
-  - content: "Alternative syntax: var = <span class="arg">value</span> Sets a value to the variable."
+  - content: 'Alternative syntax: var = <span class="arg">value</span> Sets a value to the variable.'
     name: "set"
     parameters: 
       - content: "The value to be set. The value either has to be of the same dimension as the variable or if possible it will be repeated in some dimensions to fit the variable. Scalar values will be set to all entries of the variable. You can use the shorthand notation, e.g. initialGuess.states.x = [1,2,3]"
