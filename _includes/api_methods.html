@@ -5,8 +5,6 @@
     {% for p in m.parameters %}
       {% assign argnames = argnames | apend: p.name | append: "," %}
     {% endfor %}
-    {% assign argnames = argnames | split: "," %}
-    {% assign argument_inner = argnames | join: "," %}
     {% assign argument_begin = '<span class="arg"> %}
     {% assign argument_list = argument_inner %}
   {% endif %}
