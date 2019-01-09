@@ -10,7 +10,7 @@ methods:
       - 
         content: "Scalar variable containing the cost"
         name: cost
-        type: "OclVariable or Matlab matrix"
+        type: "[OclVariable](#apiocl_variable) or Matlab matrix"
     returns: ~
   - 
     content: "Adds an end cost term of the form c_f(x,tf,p)."
@@ -19,7 +19,7 @@ methods:
       - 
         content: "Scalar variable containing the cost"
         name: cost
-        type: "OclVariable or Matlab matrix"
+        type: "[OclVariable](#apiocl_variable) or Matlab matrix"
     returns: ~
   - 
     content: "Adds a path constraint of the form c_p_lower(x,u,z,p)<=c_p(x,u,z,p)<=c_p_upper(x,u,z,p) to the optimal control problem."
