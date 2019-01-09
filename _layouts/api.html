@@ -44,7 +44,8 @@ title: API Docs
       <div class="subsection">
         <dl class="dl-left">
             {% for el in doc.returns %}
-              <dt><span class="dltype">({{ el.type | markdownify }})</span> </dt>
+              {% capture type %} {{ el.type }}{% endcapture %}
+              <dt><span class="dltype">({{ type | markdownify }})</span> </dt>
               <dd>{{ el.content }} </dd>
             {% endfor %}
         </dl>
