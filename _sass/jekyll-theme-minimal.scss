@@ -127,8 +127,10 @@ header p.view {
   margin-bottom:60px; 
 }
 
+$var: 70px;
 header .left-pane {
   overflow:auto; 
+  height: calc(100% - #{$var});
 }
 
 strong {
