@@ -4,8 +4,7 @@ type: Function
 parameters: 
   - content: "The system dynamics"
     name: "system"
-    type: |
-    "[OclSystem](#apiocl_system)"
+    type: "[OclSystem](#apiocl_system)"
   - content: "The optimal control problem"
     name: "ocp"
     type: "[OclOCP](#apiocl_ocp)"
