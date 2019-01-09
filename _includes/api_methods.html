@@ -20,7 +20,7 @@
       <div class="arguments-list">
         <dl class="dl-left">
         {% for p in m.parameters %}
-          <dt><span class="arg">{{ p.name }}</span> <span class="dltype">({{ p.type | markdownify | remove: ' <p>' | remove: '</p>' }})</span></dt>
+          <dt><span class="arg">{{ p.name }}</span> <span class="dltype">({{ p.type | markdownify | remove: '<p>' | remove: ' </p>' }})</span></dt>
           <dd>{{ p.content }} </dd>
         {% endfor %}
          </dl> 
