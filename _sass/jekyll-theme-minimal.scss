@@ -117,8 +117,8 @@ img {
 
 header {
   width:270px;
-  height: 100%;
-  overflow-y: scroll;
+  height: calc(100% - 20px);
+  overflow-y: auto;
   float:left;
   position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
