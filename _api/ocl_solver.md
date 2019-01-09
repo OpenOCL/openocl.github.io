@@ -15,7 +15,7 @@ code_block:
     ocl.setParameter('time', 5, 10);
     initialGuess = ocl.getInitialGuess();
     initialGuess.states.x = -0.2;
-    [solution,times] = ocl.solve(initialGuess);
+    [solution,t] = ocl.solve(initialGuess);
   
 parameters: 
   - content: "The system dynamics"
