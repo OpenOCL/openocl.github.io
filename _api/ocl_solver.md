@@ -2,17 +2,9 @@
 name: OclSolver
 content_markdown: ~
 description: "Creates a solver object that discretizes the given system and optimal control problem, and calls the underlying optimizer."
-left_code_blocks: 
-  - code_block: |-
-        ocl = OclSolver(system,ocp,options);
-        initialGuess = ocl.getInitialGuess();
-        initialGuess.set(3);
-        solutions = ocl.solve(initialGuess);
-    language: Matlab
-    title: "Code Example"
+left_code_blocks: ~
 methods: 
-  - 
-    name: "initialGuess = getInitialGuess"
+  - name: "initialGuess = getInitialGuess"
     content: "Use this method to retrieve a first initial guess that is generated from the bounds. You can further modify this initial guess to improve the solver performance."
     parameters: ~
     returns: 
@@ -50,7 +42,7 @@ methods:
       - content: "The upper bound"
         name: "upper"
         type: "numeric"
-  -name: "setInitialBounds"
+  - name: "setInitialBounds"
     content: "Sets a fixed initial bound on a variable."
     parameters:
       - content: "The variable id"
@@ -93,18 +85,18 @@ methods:
         name: "upper"
         type: "numeric"
   - name: "setParameter"
-    content: "Sets a fixed bound on the parameter with the given id."
+    content: "Sets a fixed bound on the parameter with the given name."
     parameters:
-      - content: "The parameter id"
+      - content: "The parameter name"
         name: "id"
         type: "char"
       - content: "The fixed value for the bound"
         name: "value"
         type: "numeric"
   - name: "setParameter"
-    content: "Sets a bound on the parameter with the given id."
+    content: "Sets a bound on the parameter with the given name."
     parameters:
-      - content: "The parameter id"
+      - content: "The parameter name"
         name: "id"
         type: "char"
       - content: "The lower bound"
@@ -129,4 +121,5 @@ returns:
     type: OclSolver
 title: "OclSolver(system, ocp, options)"
 type: Function
+
 ---
