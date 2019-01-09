@@ -50,4 +50,11 @@ methods:
       - content: "Controls vector with open-loop controls. Defaults to zero valued controls."
         name: "uVec"
         type: "[OclVariable](#apiocl_variable), optional"
+    returns: 
+      - content: The state trajectory."
+        type: "[OclVariable](#apiocl_variable)"
+      - content: The trajectory of algebraic variables."
+        type: "[OclVariable](#apiocl_variable)"
+      - content: The control inputs applied to the system."
+        type: "[OclVariable](#apiocl_variable)"
 ---
