@@ -3,8 +3,8 @@ name: OclVariable
 content_markdown: ~
 left_code_blocks: ~
 methods: 
-  - content: "Gets a sub-variable of a variable. You can use the shorthand notation with the dot operator, e.g.: solution.states.x"
-    name: "get(id) or .id"
+  - content: "Alternative syntax: var.<span class="arg">id</span> Gets a sub-variable of a variable. You can use the shorthand notation with the dot operator, e.g.: solution.states.x"
+    name: "get"
     parameters: 
       - content: "Name of the state variable"
         name: id
@@ -12,25 +12,31 @@ methods:
     returns: 
       - content: "the sub-variable of the given variable."
         type: OclVariable
-  - content: "Sets a value to the variable."
-    name: "set(value) or var = value"
+  - content: "Alternative syntax: var = <span class="arg">value</span> Sets a value to the variable."
+    name: "set"
     parameters: 
       - content: "The value to be set. The value either has to be of the same dimension as the variable or if possible it will be repeated in some dimensions to fit the variable. Scalar values will be set to all entries of the variable. You can use the shorthand notation, e.g. initialGuess.states.x = [1,2,3]"
         name: value
         type: numeric
     returns: ~
-  - content: "Gets a slice of a variable. You can use the shorthand notation e.g.: x = var(1:10,1,:)"
-    name: "slice(dim1, dim2, dim3) or (dim1, dim2, dim3)"
+  - content: "Alternative syntax: var(<span class="arg">dim1</span>,<span class="arg">dim2</span>,<span class="arg">dim3</span>) Gets a slice of a variable. You can use the shorthand notation e.g.: x = var(1:10,1,:)"
+    name: "slice"
     parameters: 
-      - content: "indizes for the first, second, and third dimension. The indizes can be integer arrays or one of: 'all', ':', 'end'."
-        name: "dim1, dim2, dim3"
+      - content: "indizes for the first dimension. The indizes can be scalar, integer arrays, or one of: 'all', ':', 'end'."
+        name: "dim1"
+        type: "int or char"
+      - content: "indizes for the second dimension. The indizes can be scalar, integer arrays, or one of: 'all', ':', 'end'."
+        name: "dim2"
+        type: "int or char"
+      - content: "indizes for the third dimension. The indizes can be scalar, integer arrays, or one of: 'all', ':', 'end'."
+        name: "dim3"
         type: "int or char"
     return: ~
     returns: 
       - content: "the sliced variable."
         type: OclVariable
   - content: Get the value of the variable. This is particularly usefule if you want to plot the numeric values of the variable, for example for the solution. In system and OCP definition this gives you the underlying symbolic values.
-    name: value()
+    name: value
     parameters: ~
     returns: 
       - content: "the underlying value of the variable. The value can be either numeric (for initial guess and solution) or symbolic (in system/ocp definitions)."
