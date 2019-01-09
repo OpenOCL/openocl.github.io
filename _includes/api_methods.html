@@ -1,7 +1,8 @@
 {% assign argument_list = '' %}
 {% if ma.parameters and ma.parameters[0].name %}
   {% for p in ma.parameters %}
-  {% assign argument_list = argument_list | append: p %}
+    {% assign tmp = argument_list | append: p %}
+    {% assign argument_list = tmp %}
   {% endfor %}
 {% endif %}
 
