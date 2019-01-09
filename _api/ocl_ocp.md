@@ -70,27 +70,27 @@ methods_abstract:
       - 
         content: "State variables"
         name: x
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
       - 
         content: "Algebraic Variables"
         name: z
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
       - 
         content: "Control variables"
         name: u
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
       - 
         content: Time
         name: t
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
       - 
         content: "Final time"
         name: tf
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
       - 
         content: "Parameters"
         name: p
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
   - 
     content: "In this method you can specify the costs on the final state (also called Mayer terms)."
     name: "arrivalCosts"
@@ -98,15 +98,15 @@ methods_abstract:
       - 
         content: "State variables"
         name: x
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
       - 
         content: "Final time"
         name: tf
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
       - 
         content: Parameters
         name: p
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
     returns: ~
   - 
     content: "Specifies the path constraints."
@@ -115,19 +115,19 @@ methods_abstract:
       - 
         content: "State variables"
         name: x
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
       - 
         content: "Control variables"
         name: u
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
       - 
         content: Time
         name: t
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
       - 
         content: Parameters
         name: p
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
     returns: ~
   - 
     content: "Specifies the boundary conditions on intial state x0 and final state xf."
@@ -136,15 +136,15 @@ methods_abstract:
       - 
         content: "Initial state variables"
         name: x0
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
       - 
         content: "Final state variables"
         name: xf
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
       - 
         content: Parameters
         name: p
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
     returns: ~
   - 
     content: "Specifies cost terms that depend on any variable of the discretized problem which is a non-linear program (NLP)."
@@ -153,7 +153,7 @@ methods_abstract:
       - 
         content: "Contains all variable of the discretized OCP."
         name: vars
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
     returns: ~
 parameters: ~
 position: 2
