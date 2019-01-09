@@ -6,7 +6,8 @@
       {% assign argnames = argnames | append: p.name | append: "," %}
     {% endfor %}
 
-    {% assign name_array = p.name %}
+    {% assign p_array = m.parameters %}
+    {% assign name_array = p_array.name %}
     {% assign argnames = name_array | join: ", " %}
 
 
