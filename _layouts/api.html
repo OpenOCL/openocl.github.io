@@ -9,7 +9,7 @@ title: API Docs
 {% for doc in sorted_docs %}
   <h3>
     <a id="{{ doc.id | replace: '/', '' | replace: '.', '' }}">
-      {{ doc.title }}
+      {{ doc.name }}
       {% if doc.type %}
         <span class="endpoint {{ doc.type }}"> - {{ doc.type }}</span>
       {% endif %}
