@@ -33,12 +33,12 @@
               </a>
               <ul>
               {% for m in doc.methods_abstract %}
-                <li><a href="#{{ m.id | replace: '/', '' | replace: '.', '' }}">{{ m.name }} </a></li>
+                <li><a href="#{{ m.name | replace: '/', '' | replace: '.', '' }}">{{ m.name }} </a></li>
               {% endfor %}
               </ul>
               <ul>
               {% for m in doc.methods %}
-                <li><a href="#{{ m.id | replace: '/', '' | replace: '.', '' }}">{{ m.name }} </a></li>
+                <li><a href="#{{ m.name | replace: '/', '' | replace: '.', '' }}">{{ m.name }} </a></li>
               {% endfor %}
               </ul>
             </li>
