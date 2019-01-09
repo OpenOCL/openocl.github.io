@@ -38,7 +38,7 @@ methods:
     returns: ~
   - 
     content: "Adds a boundary constraint of the form c_b_lower(x0,xf,p)<=c_b(x0,xf,p)<=c_b_upper(x0,xf,p) that can depend on the initial and final states to the optimal control problem."
-    name: "addBoundaryCondition(lhs, operator, rhs)"
+    name: "addBoundaryCondition"
     parameters: 
       - 
         content: "Left hand side of the constraint equation"
