@@ -117,10 +117,10 @@ img {
 
 header {
   width:320px;
-  height:100%;
+  position: fixed;
   float:left;
   top:0px;
-  padding-top: 50px;
+  padding-top: 30px;
   background: #fff;
   -webkit-font-smoothing:subpixel-antialiased;
 }
@@ -131,7 +131,7 @@ header p.view {
 
 .left-pane {
   float:left;
-  margin-top: 200px;
+  margin-top: 150px;
 }
 
 strong {
