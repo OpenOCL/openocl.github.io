@@ -66,7 +66,10 @@ methods_abstract:
     content: "Implement this method to define the system variables. You can create state, control and algebraic variables using the class methods."
     parameters: ~
     returns: ~
-    code_block: |-
+    code_block: 
+    title: Code example
+    language: m
+    code: |-
       function setupVariables(self)
         %% two scalar state variables
         self.addState('x',[1,1]);
