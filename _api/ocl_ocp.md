@@ -7,18 +7,16 @@ methods:
   - content: "Adds a path cost term of the form c_p(x,z,u,t,tf,p)."
     name: addPathCost
     parameters: 
-      - 
+      - name: cost
         content: "Scalar variable containing the cost"
-        name: cost
         type: "[OclVariable](#apiocl_variable) or Matlab matrix test"
     returns: ~
   - 
     content: "Adds an end cost term of the form c_f(x,tf,p)."
     name: addArrivalCost
     parameters: 
-      - 
+      - name: cost
         content: "Scalar variable containing the cost"
-        name: cost
         type: "[OclVariable](#apiocl_variable) or Matlab matrix"
     returns: ~
   - 
