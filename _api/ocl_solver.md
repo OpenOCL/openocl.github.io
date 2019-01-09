@@ -1,6 +1,22 @@
 --- 
 name: OclSolver
+position: 3
 type: Function
+description: "Creates a solver object that discretizes the given system and optimal control problem, and calls the underlying optimizer."
+code_block:
+  - title: Example
+  - language: m
+  - code: |
+  options = OclOptions();
+  options.nlp.controlIntervals = 30;
+  ocl = OclSolver(VanDerPolSystem,VanDerPolOCP,options);
+  ocl.setBounds('x', -0.25, inf);
+  ocl.setInitialBounds('x', 0);
+  ocl.setParameter('time', 5, 10);
+  initialGuess = ocl.getInitialGuess();
+  initialGuess.states.x = -0.2;
+  [solution,times] = ocl.solve(initialGuess);
+  
 parameters: 
   - content: "The system dynamics"
     name: "system"
@@ -11,12 +27,11 @@ parameters:
   - content: "Options struct, can be created with [OclOptions](#apiocl_options)()"
     name: "options"
     type: "struct"
-position: 3
+
 returns: 
   - content: A solver object.
     type: OclSolver
 content_markdown: ~
-description: "Creates a solver object that discretizes the given system and optimal control problem, and calls the underlying optimizer."
 left_code_blocks: ~
 methods: 
   - name: "getInitialGuess"
