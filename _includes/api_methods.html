@@ -1,11 +1,12 @@
 {% for m in include.methods %}
 
   {% if m.parameters and m.parameters[0].name %}
-    {% assign argnames = "" %}
+    {% assign argnames = '<span class="arg">' %}
     {% for p in m.parameters %}
-      {% assign argnames = argnames | apend: p.name | append: "," %}
+      {% assign argnames = argnames | append: p.name | append: "," %}
     {% endfor %}
-    {% assign argument_begin = '<span class="arg">' %}
+    {{ assign argnames = argnames | split: "" | reverse | join: "" | remove_first: ',' | split: "" | reverse | join: "" }}
+    {% assign argument_begin =  %}
     {% assign argument_list = argnames %}
   {% endif %}
 
