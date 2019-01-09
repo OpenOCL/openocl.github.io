@@ -6,7 +6,8 @@ description: "Creates a solver object that discretizes the given system and opti
 code_block:
   title: Example
   language: m
-  code: |- wea
+  code: |- 
+    wea
     hallo
   
 parameters: 
