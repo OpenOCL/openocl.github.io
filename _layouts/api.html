@@ -13,7 +13,6 @@ title: API Docs
     <a id="{{ doc.id | replace: '/', '' | replace: '.', '' }}">
       {{ doc.name }}
       {% if doc.type %}
-        
         <span class="endpoint {{ doc.type }}"> - {{ doc.type }}</span>
       {% endif %}
     </a>
@@ -23,6 +22,9 @@ title: API Docs
     <p class="description">{{ doc.description }}</p>
   {% endif %}
 
+  {% if doc.code_block  %}
+    {% include syntax-highlight.html block=doc.code_bloc %}
+	{% endif %}
 
   {% comment %}
     Class constructor or function arguments
