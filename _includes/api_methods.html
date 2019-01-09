@@ -7,13 +7,10 @@
     {% endfor %}
 
     {% assign argnames = argnames | remove_first: ", " %}
-   
-    {% assign argument_begin =  %}
-    {% assign argument_list = argnames %}
   {% endif %}
 
   <dl>
-    <dt>{{ m.name }}({{ argument_list }}) </dt>
+    <dt>{{ m.name }}({{ argnames }}) </dt>
     <dd>{{ m.content }} </dd>
   </dl>
 
