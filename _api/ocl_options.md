@@ -1,17 +1,14 @@
 --- 
 name: OclOptions
+description: Creates an options struct for OclSolver
 content_markdown: ~
 left_code_blocks: ~
-methods: 
-  - content: "Create an options struct for OclSolver"
-    name: "OclOptions"
-    parameters: 
-    returns: 
-      - content: "the options struct."
-        type: struct
+methods: ~
 parameters: ~
 position: 5
-returns: ~
+returns: 
+  - content: "the options struct."
+    type: struct
 right_code_blocks: ~
 type: Function
 title: OclVariable
