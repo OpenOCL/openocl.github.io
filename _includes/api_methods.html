@@ -6,7 +6,7 @@
       {% assign argnames = argnames | append: ', <span class="arg">' | append: p.name | append: '</span>' %}
     {% endfor %}
 
-    {% assign argnames = argnames | remove_first: "," %}
+    {% assign argnames = argnames | remove_first: " ," %}
    
     {% assign argument_begin =  %}
     {% assign argument_list = argnames %}
