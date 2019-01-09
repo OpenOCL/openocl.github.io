@@ -1,5 +1,20 @@
 --- 
 name: OclSolver
+type: Function
+parameters: 
+  - content: "The system dynamics"
+    name: "system"
+    type: "[[#apiocl_system]|OclSystem]"
+  - content: "The optimal control problem"
+    name: "ocp"
+    type: "[OclOCP](#apiocl_ocp)"
+  - content: "Options struct, can be created with [OclOptions](#apiocl_options)()"
+    name: "options"
+    type: "struct"
+position: 3
+returns: 
+  - content: A solver object.
+    type: OclSolver
 content_markdown: ~
 description: "Creates a solver object that discretizes the given system and optimal control problem, and calls the underlying optimizer."
 left_code_blocks: ~
@@ -105,21 +120,4 @@ methods:
       - content: "The upper bound"
         name: "upper"
         type: "numeric"
-parameters: 
-  - content: "The system dynamics"
-    name: "system"
-    type: "[OclSystem](#apiocl_system)"
-  - content: "The optimal control problem"
-    name: "ocp"
-    type: "[OclOCP](#apiocl_ocp)"
-  - content: "Options struct, can be created with [OclOptions](#apiocl_options)()"
-    name: "options"
-    type: "struct"
-position: 3
-returns: 
-  - content: A solver object.
-    type: OclSolver
-title: "OclSolver"
-type: Function
-
 ---
