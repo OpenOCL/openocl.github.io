@@ -6,7 +6,7 @@ description: "Creates a solver object that discretizes the given system and opti
 code_block:
   - title: Example
   - language: m
-  - code: |
+  - code: | -
   options = OclOptions();
   options.nlp.controlIntervals = 30;
   ocl = OclSolver(VanDerPolSystem,VanDerPolOCP,options);
