@@ -1,11 +1,7 @@
 {% for ma in include.methods %}
 
-{% assign argument_list = 'test' %}
 {% if ma.parameters and ma.parameters[0].name %}
-  {% for p in ma.parameters %}
-    {% assign tmp = argument_list | append: p.name | append: ", " %}
-    {% assign argument_list = tmp %}
-  {% endfor %}
+  {% assign argument_list = ma.parameters | join: ',' %}
 {% endif %}
 
   <dl>
