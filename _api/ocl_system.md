@@ -71,10 +71,10 @@ methods_abstract:
       language: m
       code: |-
         function setupVariables(self)
-          %% two scalar state variables
+          % two scalar state variables
           self.addState('x',[1,1]);
           self.addState('y',[1,1]);
-          %% one scalar control input
+          % one scalar control input
           self.addControl('u',[1,1]);      
         end
   - content: "Implement this method to specify the differential and algebraic equations. It is possible to define only ordinary differential equations (ODE system), or differential and algebraic equations (DAE system)."
