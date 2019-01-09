@@ -52,14 +52,14 @@ methods:
         type: char
       - name: equation
         content: "The equation specifies the derivative of a state variable. Right hand side of the differential equation dot(x) = f(x,z,u,p) for state variable x."
-        type: "OclVariable or Matlab matrix"
+        type: "[OclVariable](#apiocl_variable) or Matlab matrix"
     returns: ~
   - name: setAlgEquation
     content: "Adds an algebraic equation to the system. Note that in order to be able to simulate the system, the total number of rows of the algebraic equations needs to be equal to the total number/dimension of algebraic variables."
     parameters: 
       - content: "Algebraic equation g in the form g(x,z,u,p)=0"
         name: equation
-        type: "[OclVariable](#) or Matlab matrix"
+        type: "[OclVariable](#apiocl_variable) or Matlab matrix"
     returns: ~
 methods_abstract: 
   - name: setupVariables
@@ -71,16 +71,16 @@ methods_abstract:
     parameters: 
       - content: "State variables"
         name: x
-        type: OclVariable
+        type: [OclVariable](#apiocl_variable)
       - content: "Algebraic Variables"
         name: z
-        type: OclVariable
+        type: [OclVariable](#apiocl_variable)
       - content: "Control variables"
         name: u
-        type: OclVariable
+        type: [OclVariable](#apiocl_variable)
       - content: Parameters
         name: p
-        type: OclVariable
+        type: [OclVariable](#apiocl_variable)
     returns: ~
 parameters: ~
 position: 1
