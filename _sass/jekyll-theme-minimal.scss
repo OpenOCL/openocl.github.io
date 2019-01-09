@@ -211,13 +211,13 @@ h5 {
     margin:0;
   }
 
-  header, section, footer {
+  header, section, footer, .left-pane {
     float:none;
     position:static;
     width:auto;
   }
 
-  header {
+  header, .left-pan {
     padding-right:320px;
   }
 
