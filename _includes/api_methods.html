@@ -10,7 +10,7 @@
   {% endif %}
 
   <dl>
-    <dt><a id="{{ doc.name | replace: '/', '' | replace: '.', '' }}">{{ m.name }}</a>({{ argnames }}) </dt>
+    <dt><a id="{{ m.name | replace: '/', '' | replace: '.', '' }}">{{ m.name }}</a>({{ argnames }}) </dt>
     <dd>{{ m.content }} </dd>
   </dl>
 
