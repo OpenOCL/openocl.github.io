@@ -112,7 +112,7 @@ parameters:
   - content: "The optimal control problem"
     name: "ocp"
     type: "[OclOCP](#apiocl_ocp)"
-  - content: "Options struct, can be created with "[OclOptions](#apiocl_options)"()"
+  - content: "Options struct, can be created with [OclOptions](#apiocl_options)()"
     name: "options"
     type: "struct"
 position: 3
