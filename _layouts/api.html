@@ -11,7 +11,7 @@ title: API Docs
     <a id="{{ doc.id | replace: '/', '' | replace: '.', '' }}">
       {{ doc.name }}
       {% if doc.type %}
-        <span class="endpoint {{ doc.type }}"> - {{ doc.type | markdownify }}</span>
+        <span class="endpoint {{ doc.type }}"> - {{ doc.type | textilize }}</span>
       {% endif %}
     </a>
     
@@ -30,7 +30,7 @@ title: API Docs
       <div class="subsection">
         <dl class="dl-left">
             {% for el in doc.parameters %}
-              <dt>{{ el.name }} <span class="dltype">({{ el.type | markdownify }})</span></dt>
+              <dt>{{ el.name }} <span class="dltype">({{ el.type | textilize }})</span></dt>
               <dd>{{ el.content }} </dd>
             {% endfor %}
         </dl>
@@ -42,7 +42,7 @@ title: API Docs
       <div class="subsection">
         <dl class="dl-left">
             {% for el in doc.returns %}
-              <dt><span class="dltype">({{ el.type | markdownify }})</span> </dt>
+              <dt><span class="dltype">({{ el.type | textilize }})</span> </dt>
               <dd>{{ el.content }} </dd>
             {% endfor %}
         </dl>
