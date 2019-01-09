@@ -59,7 +59,7 @@ methods:
     parameters: 
       - content: "Algebraic equation g in the form g(x,z,u,p)=0"
         name: equation
-        type: "OclVariable or Matlab matrix"
+        type: "[OclVariable](#) or Matlab matrix"
     returns: ~
 methods_abstract: 
   - name: setupVariables
