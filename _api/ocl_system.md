@@ -5,7 +5,7 @@ description: "The system is implemented by inheriting from the System class. You
 left_code_blocks: ~
 methods: 
   - content: "Adds a state variable to the system. This function must be called within the setupEquation method."
-    name: "addState(id, size)"
+    name: "addState"
     parameters: 
       - content: "Name of the state variable"
         name: "id"
@@ -15,7 +15,7 @@ methods:
         type: "int, optional"
     returns: ~
   - content: "Adds an algebraic variable to the system. This function must be called within the setupEquation method."
-    name: "addAlgVar(id, size)"
+    name: "addAlgVar"
     parameters: 
       - content: "Name of the algebraic variable"
         name: id
@@ -25,7 +25,7 @@ methods:
         type: "int, optional"
     returns: ~
   - content: "Adds an control input to the system. This function must be called within the setupEquation method."
-    name: "addControl(id, size)"
+    name: "addControl"
     parameters: 
       - content: "Name of the control variable"
         name: id
@@ -35,7 +35,7 @@ methods:
         type: "int, optional"
     returns: ~
   - content: "Adds a parameter. This function must be called within the setupEquation method."
-    name: "addParameter(id, size)"
+    name: "addParameter"
     parameters: 
       - content: "Name of the parameter"
         name: id
@@ -45,32 +45,29 @@ methods:
         type: "int, optional"
     returns: ~
   - content: "Adds a differential equation to the system. Note that for every state variable a differential equation must be specified."
-    name: "setODE(id, equation)"
+    name: "setODE"
     parameters: 
-      - 
+      - name: id
         content: "Name of the state variable for that the differential equation is given."
-        name: id
         type: char
-      - 
+      - name: equation
         content: "The equation specifies the derivative of a state variable. Right hand side of the differential equation dot(x) = f(x,z,u,p) for state variable x."
-        name: equation
         type: "OclVariable or Matlab matrix"
     returns: ~
-  - 
+  - name: setAlgEquation
     content: "Adds an algebraic equation to the system. Note that in order to be able to simulate the system, the total number of rows of the algebraic equations needs to be equal to the total number/dimension of algebraic variables."
-    name: setAlgEquation(equation)
     parameters: 
       - content: "Algebraic equation g in the form g(x,z,u,p)=0"
         name: equation
         type: "OclVariable or Matlab matrix"
     returns: ~
 methods_abstract: 
-  - content: "Implement this method to define the system variables. You can create state, control and algebraic variables using the class methods."
-    name: setupVariables()
+  - name: setupVariables
+    content: "Implement this method to define the system variables. You can create state, control and algebraic variables using the class methods."
     parameters: ~
     returns: ~
   - content: "Implement this method to specify the differential and algebraic equations. It is possible to define only ordinary differential equations (ODE system), or differential and algebraic equations (DAE system)."
-    name: "setupEquation(x, z, u, p)"
+    name: "setupEquation"
     parameters: 
       - content: "State variables"
         name: x
