@@ -3,7 +3,7 @@
   {% if m.parameters and m.parameters[0].name %}
     {% assign argnames = "" %}
     {% for p in m.parameters %}
-      {% assign argnames = argnames | append: "," | append: p.name | %}
+      {% assign argnames = argnames | append: ', <span class="arg">' | append: p.name | append: '</span>' %}
     {% endfor %}
 
     {% assign argnames = argnames | remove_first: "," %}
