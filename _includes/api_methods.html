@@ -1,0 +1,35 @@
+{% for ma in include.methods %}
+  <dl>
+    <dt>{{ ma.name }} </dt>
+    <dd>{{ ma.content }} </dd>
+  </dl>
+
+  {% if ma.parameters and ma.parameters[0].name %}
+    <div class="arguments">
+      <h5>Arguments:</h5>
+      <div class="arguments-list">
+        <dl class="dl-left">
+        {% for p in ma.parameters %}
+          <dt>{{ p.name }} <span class="dltype">({{ p.type }})</span></dt>
+          <dd>{{ p.content }} </dd>
+        {% endfor %}
+         </dl> 
+       </div>
+     </div>
+  {% endif %}
+
+  {% if ma.returns and ma.returns[0].type %}
+    <div class="arguments">
+      <h5>Returns:</h5>
+      <div class="arguments-list">
+        <dl class="dl-left">
+        {% for r in ma.returns %}
+          <dt><span class="dltype">({{ r.type }})</span></dt>
+          <dd>{{ r.content }} </dd>
+        {% endfor %}
+        </dl>
+      </div>
+    </div>
+  {% endif %}  
+{% endfor %}
+      
