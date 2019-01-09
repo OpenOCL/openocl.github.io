@@ -6,7 +6,7 @@
       {% assign argnames = argnames | apend: p.name | append: "," %}
     {% endfor %}
     {% assign argument_begin = '<span class="arg"> %}
-    {% assign argument_list = argument_inner %}
+    {% assign argument_list = argnames %}
   {% endif %}
 
   <dl>
