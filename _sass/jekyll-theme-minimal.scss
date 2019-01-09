@@ -117,8 +117,7 @@ img {
 
 header {
   width:270px;
-  height: calc(100% - 50px);
-  overflow-y: auto;
+  height: 100%;
   float:left;
   position:fixed;
   -webkit-font-smoothing:subpixel-antialiased;
@@ -126,6 +125,10 @@ header {
 
 header p.view {
   margin-bottom:60px; 
+}
+
+.left-pane {
+  overflow:auto; 
 }
 
 strong {
@@ -154,7 +157,7 @@ footer {
   width:270px;
   float:left;
   position:fixed;
-  bottom:20px;
+  bottom:0px;
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
@@ -223,11 +226,6 @@ h5 {
     display:inline;
   }
 
-  header ul.downloads {
-    position:absolute;
-    right:50px;
-    top:52px;
-  }
   header p.view {
     margin-bottom:20px; 
   }
