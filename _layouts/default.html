@@ -16,33 +16,35 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="header-wrapper">
       <header>
         <h1><a href="{{ site.url | relative_url  }}">OpenOCL.org</a></h1>
         <p class="view"><a href="https://github.com/JonasKoenemann/optimal-control">View the Project on GitHub</a></p>
         
+        <div class="left-pane">
         {% if page.title == "API documentation" %}
-          <h4> Classes and Functions </h4>
-          
-          {% assign sorted_docs = site.api | sort: "position" %}
-          <ul>
-          {% for doc in sorted_docs %}
-            <li>
-              <a href="#{{ doc.id | replace: '/', '' | replace: '.', '' }}">
-                {{ doc.name }}
-                {% if doc.type %}<span class="endpoint {{ doc.type }}"></span>{% endif %}
-              </a>
-              <ul>
-              {% for m in doc.methods_abstract %}
-                <li><a href="#{{ m.name | replace: '/', '' | replace: '.', '' }}">{{ m.name }} </a></li>
-              {% endfor %}
-              {% for m in doc.methods %}
-                <li><a href="#{{ m.name | replace: '/', '' | replace: '.', '' }}">{{ m.name }} </a></li>
-              {% endfor %}
-              </ul>
-            </li>
-          {% endfor %}
-          </ul>
+          <div class="api">
+            <h4> Classes and Functions </h4>
+
+            {% assign sorted_docs = site.api | sort: "position" %}
+            <ul>
+            {% for doc in sorted_docs %}
+              <li>
+                <a href="#{{ doc.id | replace: '/', '' | replace: '.', '' }}">
+                  {{ doc.name }}
+                  {% if doc.type %}<span class="endpoint {{ doc.type }}"></span>{% endif %}
+                </a>
+                <ul>
+                {% for m in doc.methods_abstract %}
+                  <li><a href="#{{ m.name | replace: '/', '' | replace: '.', '' }}">{{ m.name }} </a></li>
+                {% endfor %}
+                {% for m in doc.methods %}
+                  <li><a href="#{{ m.name | replace: '/', '' | replace: '.', '' }}">{{ m.name }} </a></li>
+                {% endfor %}
+                </ul>
+              </li>
+            {% endfor %}
+            </ul>
+          </div>
         {% endif %}
 
         {% if page.title != "API documentation" %}
@@ -59,9 +61,8 @@
           </ul>
         </div>
         {% endif %}
-
+        </div>
       </header>
-      </div>
       <section>
         {% if page.title != "Open Optimal Control Library" %}
         <p><a href="{{ site.url | relative_url  }}">back</a></p>
