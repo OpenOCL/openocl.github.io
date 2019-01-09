@@ -1,15 +1,21 @@
-{% for ma in include.methods %}
+{% for m in include.methods %}
 
-{% if ma.parameters and ma.parameters[0].name %}
-  {% assign argument_list = ma.parameters.name | join: ',' %}
-{% endif %}
+  {% if m.parameters and m.parameters[0].name %}
+    {% assign argnames = '' %}
+    {% for p in m.parameters %}
+      {% assign argnames = argnames | concat: p.name %}
+    {% endfor %}
+    {% assign argument_inner = argnames | join: ',' %}
+    {% assign argument_begin = '<span class="arg"> %}
+    {% assign argument_list = argument_inner %}
+  {% endif %}
 
   <dl>
-    <dt>{{ ma.name }}({{ argument_list }}) </dt>
-    <dd>{{ ma.content }} </dd>
+    <dt>{{ m.name }}({{ argument_list }}) </dt>
+    <dd>{{ m.content }} </dd>
   </dl>
 
-  {% if ma.parameters and ma.parameters[0].name %}
+  {% if m.parameters and m.parameters[0].name %}
     <div class="arguments">
       <h5>Arguments:</h5>
       <div class="arguments-list">
@@ -23,12 +29,12 @@
      </div>
   {% endif %}
 
-  {% if ma.returns and ma.returns[0].type %}
+  {% if m.returns and m.returns[0].type %}
     <div class="arguments">
       <h5>Returns:</h5>
       <div class="arguments-list">
         <dl class="dl-left">
-        {% for r in ma.returns %}
+        {% for r in m.returns %}
           <dt><span class="dltype">({{ r.type }})</span></dt>
           <dd>{{ r.content }} </dd>
         {% endfor %}
