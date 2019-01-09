@@ -7,8 +7,10 @@
     {% endfor %}
 
     {% assign name_array = p.name %}
+    {% assign argnames = name_array | join: ", " %}
 
-    {{ assign argnames = argnames | split: "" | reverse | join: "" | remove_first: ',' | split: "" | reverse | join: "" }}
+
+   
     {% assign argument_begin =  %}
     {% assign argument_list = argnames %}
   {% endif %}
