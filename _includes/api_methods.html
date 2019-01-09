@@ -3,7 +3,7 @@
   {% if m.parameters and m.parameters[0].name %}
     {% assign argnames = "" %}
     {% for p in m.parameters %}
-      {% assign argnames = argnames | append: p.name | prepend: "," %}
+      {% assign argnames = argnames | append: "," | append: p.name | %}
     {% endfor %}
 
     {% assign argnames = argnames | remove_first: "," %}
