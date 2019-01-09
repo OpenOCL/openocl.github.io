@@ -16,25 +16,20 @@ methods:
     content: "Use this method to retrieve a first initial guess that is generated from the bounds. You can further modify this initial guess to improve the solver performance."
     parameters: ~
     returns: 
-      - 
-        content: "Structured variable for setting the initial guess"
+      - content: "Structured variable for setting the initial guess"
         name: initialGuess
         type: OclVariable
-  - 
-    name: "solution = solve"
+  - name: "solution = solve"
     content: "Calls the solver and starts doing iterations."
     parameters: 
-      - 
-        content: "Provide a good initial guess"
+      - content: "Provide a good initial guess"
         name: initialGuess
         type: OclVariable
     returns: 
-      - 
-        content: "The solution of the OCP"
+      - content: "The solution of the OCP"
         name: solution
         type: OclVariable
-  -
-    name: "setBounds"
+  - name: "setBounds"
     content: "Sets a fixed bound on variable for the whole trajectory."
     parameters:
       - content: "The variable id"
@@ -67,16 +62,13 @@ methods:
   - name: "setInitialBounds"
     content: "Sets an initial bound on variable"
     parameters:
-      -
-        content: "The variable id"
+      - content: "The variable id"
         name: "id"
         type: "char"
-      - 
-        content: "The lower bound"
+      - content: "The lower bound"
         name: "lower"
         type: "numeric"
-      - 
-        content: "The upper bound"
+      - content: "The upper bound"
         name: "upper"
         type: "numeric"
   - name: "setEndBounds"
