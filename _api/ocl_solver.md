@@ -12,7 +12,7 @@ left_code_blocks:
     title: "Code Example"
 methods: 
   - 
-    name: "initialGuess = getInitialGuess()"
+    name: "initialGuess = getInitialGuess"
     content: "Use this method to retrieve a first initial guess that is generated from the bounds. You can further modify this initial guess to improve the solver performance."
     parameters: ~
     returns: 
@@ -21,7 +21,7 @@ methods:
         name: initialGuess
         type: OclVariable
   - 
-    name: "solution = solve(initialGuess)"
+    name: "solution = solve"
     content: "Calls the solver and starts doing iterations."
     parameters: 
       - 
@@ -34,47 +34,37 @@ methods:
         name: solution
         type: OclVariable
   -
-    name: "setBounds(id, value)"
+    name: "setBounds"
     content: "Sets a fixed bound on variable for the whole trajectory."
     parameters:
-      -
-        content: "The variable id"
+      - content: "The variable id"
         name: "id"
         type: "char"
-      - 
-        content: "The fixed value for the bound"
+      - content: "The fixed value for the bound"
         name: "value"
         type: "numeric"
-  -
-    name: "setBounds(id, lower, upper)"
+  - name: "setBounds"
     content: "Sets a bound on variable for the whole trajectory."
     parameters:
-      -
-        content: "The variable id"
+      - content: "The variable id"
         name: "id"
         type: "char"
-      - 
-        content: "The lower bound"
+      - content: "The lower bound"
         name: "lower"
         type: "numeric"
-      - 
-        content: "The upper bound"
+      - content: "The upper bound"
         name: "upper"
         type: "numeric"
-  -
-    name: "setInitialBounds(id, value)"
+  -name: "setInitialBounds"
     content: "Sets a fixed initial bound on a variable."
     parameters:
-      -
-        content: "The variable id"
+      - content: "The variable id"
         name: "id"
         type: "char"
-      - 
-        content: "The fixed value for the bound"
+      - content: "The fixed value for the bound"
         name: "value"
         type: "numeric"
-  -
-    name: "setInitialBounds(id, lower, upper)"
+  - name: "setInitialBounds"
     content: "Sets an initial bound on variable"
     parameters:
       -
@@ -89,79 +79,61 @@ methods:
         content: "The upper bound"
         name: "upper"
         type: "numeric"
-  -
-    name: "setEndBounds(id, value)"
+  - name: "setEndBounds"
     content: "Sets a fixed end bound on a variable."
     parameters:
-      -
-        content: "The variable id"
+      - content: "The variable id"
         name: "id"
         type: "char"
-      - 
-        content: "The fixed value for the bound"
+      - content: "The fixed value for the bound"
         name: "value"
         type: "numeric"
-  -
-    name: "setEndBounds(id, lower, upper)"
+  - name: "setEndBounds"
     content: "Sets an end bound on variable"
     parameters:
-      -
-        content: "The variable id"
+      - content: "The variable id"
         name: "id"
         type: "char"
-      - 
-        content: "The lower bound"
+      - content: "The lower bound"
         name: "lower"
         type: "numeric"
-      - 
-        content: "The upper bound"
+      - content: "The upper bound"
         name: "upper"
         type: "numeric"
-  -
-    name: "setParameter(id, value)"
+  - name: "setParameter"
     content: "Sets a fixed bound on the parameter with the given id."
     parameters:
-      -
-        content: "The parameter id"
+      - content: "The parameter id"
         name: "id"
         type: "char"
-      - 
-        content: "The fixed value for the bound"
+      - content: "The fixed value for the bound"
         name: "value"
         type: "numeric"
-  -
-    name: "setParameter(id, lower, upper)"
+  - name: "setParameter"
     content: "Sets a bound on the parameter with the given id."
     parameters:
-      -
-        content: "The parameter id"
+      - content: "The parameter id"
         name: "id"
         type: "char"
-      - 
-        content: "The lower bound"
+      - content: "The lower bound"
         name: "lower"
         type: "numeric"
-      - 
-        content: "The upper bound"
+      - content: "The upper bound"
         name: "upper"
         type: "numeric"
 parameters: 
-  - 
-    content: "The system dynamics"
+  - content: "The system dynamics"
     name: "system"
     type: "OclSystem"
-  - 
-    content: "The optimal control problem"
+  - content: "The optimal control problem"
     name: "ocp"
     type: "OclOCP"
-  - 
-    content: "Options struct, can be created with OclOptions()"
+  - content: "Options struct, can be created with OclOptions()"
     name: "options"
     type: "struct"
 position: 3
 returns: 
-  - 
-    content: A solver object.
+  - content: A solver object.
     type: OclSolver
 title: "OclSolver(system, ocp, options)"
 type: Function
