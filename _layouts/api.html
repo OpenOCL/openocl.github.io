@@ -31,7 +31,7 @@ title: API Docs
       <div class="subsection">
         <dl class="dl-left">
             {% for el in doc.parameters %}
-              <dt>{{ el.name }} <span class="dltype">({{ el.type | markdownify | remove: '<p>' | remove: '</p>' }})</span></dt>
+              <dt>{{ el.name }} <span class="dltype">({{ el.type | markdownify | remove: '<p>' | remove: '</p>' | strip }})</span></dt>
               <dd>{{ el.content }} </dd>
             {% endfor %}
         </dl>
@@ -43,7 +43,7 @@ title: API Docs
       <div class="subsection">
         <dl class="dl-left">
             {% for el in doc.returns %}
-              <dt><span class="dltype">({{ el.type | markdownify | remove: '<p>' | remove: '</p>' }})</span> </dt>
+              <dt><span class="dltype">({{ el.type | markdownify | remove: '<p>' | remove: '</p>' | strip }})</span> </dt>
               <dd>{{ el.content }} </dd>
             {% endfor %}
         </dl>
