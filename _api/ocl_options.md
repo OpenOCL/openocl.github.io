@@ -11,5 +11,5 @@ returns:
     type: struct
 right_code_blocks: ~
 type: Function
-title: OclVariable
+title: OclOptions
 ---
