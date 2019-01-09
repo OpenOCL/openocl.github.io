@@ -26,10 +26,17 @@
           {% assign sorted_docs = site.api | sort: "position" %}
           <ul>
           {% for doc in sorted_docs %}
-                <li><a href="#{{ doc.id | replace: '/', '' | replace: '.', '' }}">
-                  {{ doc.name }}
-                  {% if doc.type %}<span class="endpoint {{ doc.type }}"></span>{% endif %}
-                  </a></li>
+            <li>
+              <a href="#{{ doc.id | replace: '/', '' | replace: '.', '' }}">
+                {{ doc.name }}
+                {% if doc.type %}<span class="endpoint {{ doc.type }}"></span>{% endif %}
+              </a>
+              <ul>
+              {% for m in doc.methods_abstract %}
+                <li><a href="#{{ m.id | replace: '/', '' | replace: '.', '' }}">m.name</a></li>
+              {% endfor %}
+              </ul>
+            </li>
           {% endfor %}
           </ul>
         {% endif %}
