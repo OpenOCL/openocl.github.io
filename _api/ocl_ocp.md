@@ -10,7 +10,7 @@ methods:
       - 
         content: "Scalar variable containing the cost"
         name: cost
-        type: "[OclVariable](#apiocl_variable) or Matlab matrix"
+        type: "[OclVariable](#apiocl_variable) or Matlab matrix test"
     returns: ~
   - 
     content: "Adds an end cost term of the form c_f(x,tf,p)."
