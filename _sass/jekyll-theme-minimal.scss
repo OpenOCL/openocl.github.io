@@ -116,7 +116,7 @@ img {
 }
 
 header {
-  width:270px;
+  width:320px;
   height:100%;
   float:left;
   position:fixed;
@@ -129,7 +129,7 @@ header p.view {
 
 header .left-pane {
   overflow:auto; 
-  height: calc(100% - 270px);
+  height: calc(100% - 230px);
 }
 
 strong {
