@@ -71,16 +71,16 @@ methods_abstract:
     parameters: 
       - content: "State variables"
         name: x
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
       - content: "Algebraic Variables"
         name: z
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
       - content: "Control variables"
         name: u
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
       - content: Parameters
         name: p
-        type: [OclVariable](#apiocl_variable)
+        type: "[OclVariable](#apiocl_variable)"
     returns: ~
 parameters: ~
 position: 1
