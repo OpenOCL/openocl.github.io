@@ -19,14 +19,14 @@ content_markdown: ~
 description: "Creates a solver object that discretizes the given system and optimal control problem, and calls the underlying optimizer."
 left_code_blocks: ~
 methods: 
-  - name: "initialGuess = getInitialGuess"
+  - name: "getInitialGuess"
     content: "Use this method to retrieve a first initial guess that is generated from the bounds. You can further modify this initial guess to improve the solver performance."
     parameters: ~
     returns: 
       - content: "Structured variable for setting the initial guess"
         name: initialGuess
         type: "[OclVariable](#apiocl_variable)"
-  - name: "solution = solve"
+  - name: "solve"
     content: "Calls the solver and starts doing iterations."
     parameters: 
       - content: "Provide a good initial guess"
