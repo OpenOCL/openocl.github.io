@@ -5,7 +5,7 @@ content_markdown: ~
 left_code_blocks: ~
 methods: 
   - content: "Adds a path cost term of the form c_p(x,z,u,t,tf,p)."
-    name: addPathCost(cost)
+    name: addPathCost
     parameters: 
       - 
         content: "Scalar variable containing the cost"
@@ -14,7 +14,7 @@ methods:
     returns: ~
   - 
     content: "Adds an end cost term of the form c_f(x,tf,p)."
-    name: addArrivalCost(cost)
+    name: addArrivalCost
     parameters: 
       - 
         content: "Scalar variable containing the cost"
@@ -23,7 +23,7 @@ methods:
     returns: ~
   - 
     content: "Adds a path constraint of the form c_p_lower(x,u,z,p)<=c_p(x,u,z,p)<=c_p_upper(x,u,z,p) to the optimal control problem."
-    name: "addPathConstraint(lhs, operator, rhs)"
+    name: "addPathConstraint"
     parameters: 
       - 
         content: "Left hand side of the constraint equation"
@@ -57,7 +57,7 @@ methods:
     returns: ~
   - 
     content: "Adds a cost term that can depend on any variable in the discretized optimal control problem."
-    name: addDiscreteCost(cost)
+    name: addDiscreteCost
     parameters: 
       - 
         content: "Scalar variable containing the cost c_d(v_d)"
@@ -67,7 +67,7 @@ methods:
 methods_abstract: 
   - 
     content: "In this method you can implement the path cost (also called Lagrange cost or intermediate cost) function."
-    name: "pathCosts(x, z, u, t, tf, p)"
+    name: "pathCosts"
     parameters: 
       - 
         content: "State variables"
@@ -95,7 +95,7 @@ methods_abstract:
         type: OclVariable
   - 
     content: "In this method you can specify the costs on the final state (also called Mayer terms)."
-    name: "arrivalCosts(x, tf, p)"
+    name: "arrivalCosts"
     parameters: 
       - 
         content: "State variables"
@@ -112,7 +112,7 @@ methods_abstract:
     returns: ~
   - 
     content: "Specifies the path constraints."
-    name: "pathConstraints(x, u, t, p)"
+    name: "pathConstraints"
     parameters: 
       - 
         content: "State variables"
@@ -133,7 +133,7 @@ methods_abstract:
     returns: ~
   - 
     content: "Specifies the boundary conditions on intial state x0 and final state xf."
-    name: "boundaryConditions(x0, xf, p)"
+    name: "boundaryConditions"
     parameters: 
       - 
         content: "Initial state variables"
@@ -150,7 +150,7 @@ methods_abstract:
     returns: ~
   - 
     content: "Specifies cost terms that depend on any variable of the discretized problem which is a non-linear program (NLP)."
-    name: discreteCost(vars)
+    name: discreteCost
     parameters: 
       - 
         content: "Contains all variable of the discretized OCP."
