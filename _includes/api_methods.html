@@ -20,8 +20,7 @@
       <div class="arguments-list">
         <dl class="dl-left">
         {% for p in m.parameters %}
-          {% capture type %} {{ p.type }}{% endcapture %}
-          <dt><span class="arg">{{ p.name }}</span> <span class="dltype">({{ type | markdownify }})</span></dt>
+          <dt><span class="arg">{{ p.name }}</span> <span class="dltype">({{ p.type | markdownify | remove: '<p>' | remove: '</p>' }})</span></dt>
           <dd>{{ p.content }} </dd>
         {% endfor %}
          </dl> 
@@ -36,7 +35,7 @@
         <dl class="dl-left">
         {% for r in m.returns %}
           {% capture type %} {{ r.type }}{% endcapture %}
-          <dt><span class="dltype">({{ type | markdownify }})</span></dt>
+          <dt><span class="dltype">({{ r.type | markdownify | remove: '<p>' | remove: '</p>' }})</span></dt>
           <dd>{{ r.content }} </dd>
         {% endfor %}
         </dl>
