@@ -4,7 +4,8 @@ type: Function
 parameters: 
   - content: "The system dynamics"
     name: "system"
-    type: "[OclSystem](#apiocl_system)"
+    type: |
+    "[OclSystem](#apiocl_system)"
   - content: "The optimal control problem"
     name: "ocp"
     type: "[OclOCP](#apiocl_ocp)"
@@ -25,7 +26,7 @@ methods:
     returns: 
       - content: "Structured variable for setting the initial guess"
         name: initialGuess
-        type: |"[OclVariable](#apiocl_variable)"
+        type: "[OclVariable](#apiocl_variable)"
   - name: "solution = solve"
     content: "Calls the solver and starts doing iterations."
     parameters: 
