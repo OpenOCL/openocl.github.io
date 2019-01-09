@@ -3,7 +3,7 @@ name: OclVariable
 content_markdown: ~
 left_code_blocks: ~
 methods: 
-  - content: "Alternative syntax: var.<span class="arg">id</span> Gets a sub-variable of a variable. You can use the shorthand notation with the dot operator, e.g.: solution.states.x"
+  - content: 'Alternative syntax: var.<span class="arg">id</span> Gets a sub-variable of a variable. You can use the shorthand notation with the dot operator, e.g.: solution.states.x'
     name: "get"
     parameters: 
       - content: "Name of the state variable"
@@ -19,7 +19,7 @@ methods:
         name: value
         type: numeric
     returns: ~
-  - content: "Alternative syntax: var(<span class="arg">dim1</span>,<span class="arg">dim2</span>,<span class="arg">dim3</span>) Gets a slice of a variable. You can use the shorthand notation e.g.: x = var(1:10,1,:)"
+  - content: 'Alternative syntax: var(<span class="arg">dim1</span>,<span class="arg">dim2</span>,<span class="arg">dim3</span>) Gets a slice of a variable. You can use the shorthand notation e.g.: x = var(1:10,1,:)'
     name: "slice"
     parameters: 
       - content: "indizes for the first dimension. The indizes can be scalar, integer arrays, or one of: 'all', ':', 'end'."
