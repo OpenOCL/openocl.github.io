@@ -66,17 +66,17 @@ methods_abstract:
     content: "Implement this method to define the system variables. You can create state, control and algebraic variables using the class methods."
     parameters: ~
     returns: ~
-    code_block: 
-    title: Code example
-    language: m
-    code: |-
-      function setupVariables(self)
-        %% two scalar state variables
-        self.addState('x',[1,1]);
-        self.addState('y',[1,1]);
-        %% one scalar control input
-        self.addControl('u',[1,1]);      
-      end
+    code_block:
+      title: Code example
+      language: m
+      code: |-
+        function setupVariables(self)
+          %% two scalar state variables
+          self.addState('x',[1,1]);
+          self.addState('y',[1,1]);
+          %% one scalar control input
+          self.addControl('u',[1,1]);      
+        end
   - content: "Implement this method to specify the differential and algebraic equations. It is possible to define only ordinary differential equations (ODE system), or differential and algebraic equations (DAE system)."
     name: "setupEquation"
     parameters: 
