@@ -25,7 +25,7 @@ methods:
     returns: 
       - content: "Structured variable for setting the initial guess"
         name: initialGuess
-        type: "[OclVariable](#apiocl_variable)"
+        type: |"[OclVariable](#apiocl_variable)"
   - name: "solution = solve"
     content: "Calls the solver and starts doing iterations."
     parameters: 
