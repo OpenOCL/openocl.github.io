@@ -10,17 +10,17 @@ methods:
     returns: 
       - content: "Structured variable for setting the initial guess"
         name: initialGuess
-        type: OclVariable
+        type: "[OclVariable](#apiocl_variable)"
   - name: "solution = solve"
     content: "Calls the solver and starts doing iterations."
     parameters: 
       - content: "Provide a good initial guess"
         name: initialGuess
-        type: OclVariable
+        type: "[OclVariable](#apiocl_variable)"
     returns: 
       - content: "The solution of the OCP"
         name: solution
-        type: OclVariable
+        type: "[OclVariable](#apiocl_variable)"
   - name: "setBounds"
     content: "Sets a fixed bound on variable for the whole trajectory."
     parameters:
@@ -108,18 +108,18 @@ methods:
 parameters: 
   - content: "The system dynamics"
     name: "system"
-    type: "OclSystem"
+    type: ""[OclSystem](#apiocl_system)""
   - content: "The optimal control problem"
     name: "ocp"
-    type: "OclOCP"
-  - content: "Options struct, can be created with OclOptions()"
+    type: ""[OclOCP](#apiocl_ocp)""
+  - content: "Options struct, can be created with "[OclOptions](#apiocl_options)"()"
     name: "options"
     type: "struct"
 position: 3
 returns: 
   - content: A solver object.
     type: OclSolver
-title: "OclSolver(system, ocp, options)"
+title: "OclSolver"
 type: Function
 
 ---
