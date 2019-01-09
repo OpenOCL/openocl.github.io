@@ -20,6 +20,11 @@ title: API Docs
     <p class="description">{{ doc.description }}</p>
   {% endif %}
 
+
+  {% comment %}
+    Class constructor or function arguments
+  {% endcomment %}
+
   {% if doc.parameters and doc.parameters[0].name %}
       <h4>Arguments:</h4>
       <div class="subsection">
@@ -43,6 +48,11 @@ title: API Docs
         </dl>
       </div>
   {% endif %}
+
+
+  {% comment %}
+    Class methods
+  {% endcomment %}
 
   {% if doc.methods_abstract and doc.methods_abstract[0].name %}
     <h4>Abstract Methods</h4>
