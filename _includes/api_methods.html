@@ -14,6 +14,10 @@
     <dd>{{ m.content }} </dd>
   </dl>
 
+  {% if m.code_block  %}
+    {% include syntax-highlight.html block=doc.code_block %}
+  {% endif %}
+
   {% if m.parameters and m.parameters[0].name %}
     <div class="arguments">
       <h5>Arguments:</h5>
