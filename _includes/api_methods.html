@@ -1,13 +1,11 @@
 {% for m in include.methods %}
 
-  {% if m.parameters and m.parameters[0].name %}
-    {% assign argnames = "" %}
-    {% for p in m.parameters %}
-      {% assign argnames = argnames | append: ', <span class="arg">' | append: p.name | append: '</span>' %}
-    {% endfor %}
+  {% assign argnames = "" %}
+  {% for p in m.parameters %}
+    {% assign argnames = argnames | append: ', <span class="arg">' | append: p.name | append: '</span>' %}
+  {% endfor %}
 
-    {% assign argnames = argnames | remove_first: ", " %}
-  {% endif %}
+  {% assign argnames = argnames | remove_first: ", " %}
 
   <dl>
     <dt><a id="{{ m.name | replace: '/', '' | replace: '.', '' }}">{{ m.name }}</a>({{ argnames }}) </dt>
