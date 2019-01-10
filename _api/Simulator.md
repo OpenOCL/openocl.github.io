@@ -7,20 +7,21 @@ code_block:
   code: |-
     simulator = Simulator(PendulumSystem);
 
-    x = simulator.getStates();
-    x.p = [0;1];
-    x.v = [-0.5;-1];
+    x0 = simulator.getStates();
+    x0.p = [0;1];
+    x0.v = [-0.5;-1];
 
     p = simulator.getParameters();
     p.m = 1;
-    p.l = 1;
+    p.l = 1.5;
 
     t = linspace(0,4,20);
 
+    % apply constant force
     uVec = simulator.getControlsVec(20);
     uVec.F = 10;
 
-    [xVec,zVec,uVec] = simulator.simulate(x,t,uVec,p);
+    [xVec,zVec,uVec] = simulator.simulate(x0,t,uVec,p);
 parameters: 
   - content: "The system dynamics"
     name: "system"
