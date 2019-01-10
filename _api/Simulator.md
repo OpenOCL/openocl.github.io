@@ -74,10 +74,10 @@ methods:
         name: "uVec"
         type: "[OclVariable](#apiocl_variable), optional"
     returns: 
-      - content: The state trajectory."
+      - content: The state trajectory.
         type: "[OclVariable](#apiocl_variable)"
-      - content: The trajectory of algebraic variables."
+      - content: The trajectory of algebraic variables.
         type: "[OclVariable](#apiocl_variable)"
-      - content: The control inputs applied to the system."
+      - content: The control inputs applied to the system.
         type: "[OclVariable](#apiocl_variable)"
 ---
