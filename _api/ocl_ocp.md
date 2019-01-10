@@ -15,6 +15,114 @@ code_block:
         end
       end
     end
+methods_abstract: 
+  - 
+    content: "In this method you can implement the path cost (also called Lagrange cost or intermediate cost) function."
+    name: "pathCosts"
+    parameters: 
+      - 
+        content: "State variables"
+        name: x
+        type: "[OclVariable](#apiocl_variable)"
+      - 
+        content: "Algebraic Variables"
+        name: z
+        type: "[OclVariable](#apiocl_variable)"
+      - 
+        content: "Control variables"
+        name: u
+        type: "[OclVariable](#apiocl_variable)"
+      - 
+        content: Time
+        name: t
+        type: "[OclVariable](#apiocl_variable)"
+      - 
+        content: "Final time"
+        name: tf
+        type: "[OclVariable](#apiocl_variable)"
+      - 
+        content: "Parameters"
+        name: p
+        type: "[OclVariable](#apiocl_variable)"
+  - 
+    content: "In this method you can specify the costs on the final state (also called Mayer terms)."
+    name: "arrivalCosts"
+    parameters: 
+      - 
+        content: "State variables"
+        name: x
+        type: "[OclVariable](#apiocl_variable)"
+      - 
+        content: "Final time"
+        name: tf
+        type: "[OclVariable](#apiocl_variable)"
+      - 
+        content: Parameters
+        name: p
+        type: "[OclVariable](#apiocl_variable)"
+    returns: ~
+  - 
+    content: "Specifies the path constraints."
+    name: "pathConstraints"
+    code_block:
+      title: Path constraints Example
+      language: m
+      code: |-
+        function pathConstraints(self,x,z,u,t,tf,p)
+          self.addPathConstraint(u.Fx^2+u.Fy^2,'<=',p.Fmax^2);
+        end
+    parameters: 
+      - 
+        content: "State variables"
+        name: x
+        type: "[OclVariable](#apiocl_variable)"
+      - 
+        content: "Control variables"
+        name: u
+        type: "[OclVariable](#apiocl_variable)"
+      - 
+        content: Time
+        name: t
+        type: "[OclVariable](#apiocl_variable)"
+      - 
+        content: Parameters
+        name: p
+        type: "[OclVariable](#apiocl_variable)"
+    returns: ~
+  - 
+    content: "Specifies the boundary conditions on intial state x0 and final state xf."
+    name: "boundaryConditions"
+    code_block:
+      title: Boundary conditions
+      language: m
+      code: |-
+        function boundaryConditions(self,x0,xF,p)
+          self.addBoundaryCondition(x0.p(1)^2+x0.p(2)^2-p.l^2,'==',0);
+          self.addBoundaryCondition(dot(x0.p,x0.v),'==',0);
+        end
+    parameters: 
+      - 
+        content: "Initial state variables"
+        name: x0
+        type: "[OclVariable](#apiocl_variable)"
+      - 
+        content: "Final state variables"
+        name: xf
+        type: "[OclVariable](#apiocl_variable)"
+      - 
+        content: Parameters
+        name: p
+        type: "[OclVariable](#apiocl_variable)"
+    returns: ~
+  - 
+    content: "Specifies cost terms that depend on any variable of the discretized problem which is a non-linear program (NLP)."
+    name: discreteCost
+    parameters: 
+      - 
+        content: "Contains all variable of the discretized OCP."
+        name: vars
+        type: "[OclVariable](#apiocl_variable)"
+    returns: ~
 methods: 
   - content: "Adds a path cost term of the form c_p(x,z,u,t,tf,p)."
     name: addPathCost
@@ -73,114 +181,6 @@ methods:
         content: "Scalar variable containing the cost c_d(v_d)"
         name: cost
         type: "[OclVariable](#apiocl_variable) or Matlab matrix"
-    returns: ~
-methods_abstract: 
-  - 
-    content: "In this method you can implement the path cost (also called Lagrange cost or intermediate cost) function."
-    name: "pathCosts"
-    parameters: 
-      - 
-        content: "State variables"
-        name: x
-        type: "[OclVariable](#apiocl_variable)"
-      - 
-        content: "Algebraic Variables"
-        name: z
-        type: "[OclVariable](#apiocl_variable)"
-      - 
-        content: "Control variables"
-        name: u
-        type: "[OclVariable](#apiocl_variable)"
-      - 
-        content: Time
-        name: t
-        type: "[OclVariable](#apiocl_variable)"
-      - 
-        content: "Final time"
-        name: tf
-        type: "[OclVariable](#apiocl_variable)"
-      - 
-        content: "Parameters"
-        name: p
-        type: "[OclVariable](#apiocl_variable)"
-  - 
-    content: "In this method you can specify the costs on the final state (also called Mayer terms)."
-    name: "arrivalCosts"
-    parameters: 
-      - 
-        content: "State variables"
-        name: x
-        type: "[OclVariable](#apiocl_variable)"
-      - 
-        content: "Final time"
-        name: tf
-        type: "[OclVariable](#apiocl_variable)"
-      - 
-        content: Parameters
-        name: p
-        type: "[OclVariable](#apiocl_variable)"
-    returns: ~
-  - 
-    content: "Specifies the path constraints."
-    name: "pathConstraints"
-    code_block:
-      title: Path constraints Example
-      language: m
-      code: |-
-        function pathCosts(self,x,z,u,t,tf,p)
-          self.addPathConstraint(u.Fx^2+u.Fy^2,'<=',p.Fmax^2);
-        end
-    parameters: 
-      - 
-        content: "State variables"
-        name: x
-        type: "[OclVariable](#apiocl_variable)"
-      - 
-        content: "Control variables"
-        name: u
-        type: "[OclVariable](#apiocl_variable)"
-      - 
-        content: Time
-        name: t
-        type: "[OclVariable](#apiocl_variable)"
-      - 
-        content: Parameters
-        name: p
-        type: "[OclVariable](#apiocl_variable)"
-    returns: ~
-  - 
-    content: "Specifies the boundary conditions on intial state x0 and final state xf."
-    name: "boundaryConditions"
-    code_block:
-      title: Boundary conditions
-      language: m
-      code: |-
-        function boundaryConditions(self,x0,xF,p)
-          self.addBoundaryCondition(x0.p(1)^2+x0.p(2)^2-p.l^2,'==',0);
-          self.addBoundaryCondition(dot(x0.p,x0.v),'==',0);
-        end
-    parameters: 
-      - 
-        content: "Initial state variables"
-        name: x0
-        type: "[OclVariable](#apiocl_variable)"
-      - 
-        content: "Final state variables"
-        name: xf
-        type: "[OclVariable](#apiocl_variable)"
-      - 
-        content: Parameters
-        name: p
-        type: "[OclVariable](#apiocl_variable)"
-    returns: ~
-  - 
-    content: "Specifies cost terms that depend on any variable of the discretized problem which is a non-linear program (NLP)."
-    name: discreteCost
-    parameters: 
-      - 
-        content: "Contains all variable of the discretized OCP."
-        name: vars
-        type: "[OclVariable](#apiocl_variable)"
     returns: ~
 parameters: ~
 position: 2
