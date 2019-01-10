@@ -6,23 +6,18 @@ code_block:
   title: Example
   language: m
   code: |- 
-    opt = struct;
     opt.solverInterface   = 'casadi';
     opt.iterationCallback = false;
     opt.system_casadi_mx  = false;
-    opt.nlp = struct;
     opt.nlp.discretization         = 'collocation';
     opt.nlp.controlIntervals       = 20;
     opt.nlp.collocationOrder       = 3;
     opt.nlp.solver                 = 'ipopt';
     opt.nlp.scaling                = false;
     opt.nlp.detectParameters       = false;
-    opt.nlp.outputLifting          = false;
     opt.nlp.casadi.iteration_callback_step = 1;
-    opt.nlp.ipopt = struct;
     opt.nlp.ipopt.linear_solver = 'mumps';
     opt.nlp.ipopt.hessian_approximation = 'exact';
-    opt.debug = false;
 methods: ~
 parameters: ~
 position: 5
