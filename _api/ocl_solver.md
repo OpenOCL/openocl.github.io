@@ -11,12 +11,12 @@ code_block:
     opt.nlp.controlIntervals = 30;
     ocl = OclSolver(VanDerPolSystem,VanDerPolOCP,opt);
     
-    ocl.setBounds('x', -0.25, inf);
-    ocl.setInitialBounds('x', 0);
+    ocl.setBounds('p', -0.25, inf);
+    ocl.setInitialBounds('p', 0);
     ocl.setParameter('time', 5, 10);
     
     v0 = ocl.getInitialGuess();
-    v0.states.x = -0.2;
+    v0.states.p = -0.2;
     [v,t] = ocl.solve(v0);
     
     % initial guess, solution and times have
@@ -28,7 +28,7 @@ code_block:
     t.states % time points of states
     t.controls % time points of controls
     
-    % plotting of state trajectory:
+    % plotting of state p trajectory:
     plot(t.states.value,v.states.p.value)
     
 parameters: 
