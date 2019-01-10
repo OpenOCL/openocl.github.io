@@ -21,12 +21,12 @@ code_block:
     
     % initial guess, solution and times have
     % the following structure:
-    v.states % state trajectory
-    v.controls % control trajectory
-    v.algVars % algebraic variable trajectory
+    v.states     % state trajectory
+    v.controls   % control trajectory
+    v.algVars    % algebraic variable trajectory
     v.integrator % integrator variables
-    t.states % time points of states
-    t.controls % time points of controls
+    t.states     % time points of states
+    t.controls   % time points of controls
     
     % plotting of state p trajectory:
     plot(t.states.value,v.states.p.value)
