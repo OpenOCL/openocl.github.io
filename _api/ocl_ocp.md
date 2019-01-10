@@ -2,7 +2,19 @@
 name: OclOCP
 description: "An optimal control problem (OCP) is defined by inheriting from the OclOCP class. In order to specify cost functions and boundary conditions you have to implement the corresponding methods. If you do not implemented some of these method they default to zero cost or empty constraints. Have a look at the VanDerPolOCP.m in the Examples folder."
 content_markdown: ~
-left_code_blocks: ~
+code_block:
+  title: Example OCP
+  language: m
+  code: |-
+    classdef VanDerPolOCP < OclOCP
+      methods
+        function pathCosts(self,x,z,u,t,tf,p)
+          self.addPathCost( x.p^2 );
+          self.addPathCost( x.v^2 );
+          self.addPathCost( u^2 );
+        end
+      end
+    end
 methods: 
   - content: "Adds a path cost term of the form c_p(x,z,u,t,tf,p)."
     name: addPathCost
