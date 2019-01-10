@@ -27,11 +27,13 @@ methods:
         type: "[OclVariable](#apiocl_variable)"
   - name: "getStates"
     content: "Returns a structured state variable that you can use to pass as the initial state to the simulator. All variable values default to zero."
+    parameters:
     returns: 
       - content: The states."
         type: "[OclVariable](#apiocl_variable)"
   - name: "getParameters"
     content: "Returns a structured state variable that allows you to set parameters for the simulation. All parameter values default to zero."
+    parameters:
     returns: 
       - content: The parameters."
         type: "[OclVariable](#apiocl_variable)"
