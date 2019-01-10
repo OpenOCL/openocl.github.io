@@ -16,6 +16,7 @@ title: API Docs
   {% for p in doc.parameters %}
     {% assign argnames = argnames | append: ', <span class="arg">' | append: p.name | append: '</span>' %}
   {% endfor %}
+  {% assign argnames = argnames | remove_first: ", " %}
 
   <h3>
     <a id="{{ doc.id | replace: '/', '' | replace: '.', '' }}">
@@ -39,27 +40,27 @@ title: API Docs
   {% endcomment %}
 
   {% if doc.parameters and doc.parameters[0].name %}
-      <h4>Arguments:</h4>
-      <div class="subsection">
-        <dl class="dl-left">
-            {% for el in doc.parameters %}
-              <dt>{{ el.name }} <span class="dltype">({{ el.type | markdownify | remove: '<p>' | remove: '</p>' | strip }})</span></dt>
-              <dd>{{ el.content }} </dd>
-            {% endfor %}
-        </dl>
-     </div>
+  <h4>Arguments:</h4>
+  <div class="subsection">
+    <dl class="dl-left">
+        {% for el in doc.parameters %}
+          <dt><span class="arg">{{ el.name }}</span> <span class="dltype">({{ el.type | markdownify | remove: '<p>' | remove: '</p>' | strip }})</span></dt>
+          <dd>{{ el.content }} </dd>
+        {% endfor %}
+    </dl>
+  </div>
   {% endif %}
 
   {% if doc.returns and doc.returns[0].type %}
-      <h4>Returns:</h4>
-      <div class="subsection">
-        <dl class="dl-left">
-            {% for el in doc.returns %}
-              <dt><span class="dltype">({{ el.type | markdownify | remove: '<p>' | remove: '</p>' | strip }})</span> </dt>
-              <dd>{{ el.content }} </dd>
-            {% endfor %}
-        </dl>
-      </div>
+  <h4>Returns:</h4>
+  <div class="subsection">
+    <dl class="dl-left">
+        {% for el in doc.returns %}
+          <dt><span class="dltype">({{ el.type | markdownify | remove: '<p>' | remove: '</p>' | strip }})</span> </dt>
+          <dd>{{ el.content }} </dd>
+        {% endfor %}
+    </dl>
+  </div>
   {% endif %}
 
 
