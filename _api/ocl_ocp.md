@@ -123,6 +123,13 @@ methods_abstract:
   - 
     content: "Specifies the path constraints."
     name: "pathConstraints"
+    code_block:
+      title: Path constraints Example
+      language: m
+      code: |-
+        function pathCosts(self,x,z,u,t,tf,p)
+          self.addPathConstraint(u.Fx^2+u.Fy^2,'<=',p.Fmax^2);
+        end
     parameters: 
       - 
         content: "State variables"
@@ -144,6 +151,14 @@ methods_abstract:
   - 
     content: "Specifies the boundary conditions on intial state x0 and final state xf."
     name: "boundaryConditions"
+    code_block:
+      title: Boundary conditions
+      language: m
+      code: |-
+        function boundaryConditions(self,x0,xF,p)
+          self.addBoundaryCondition(x0.p(1)^2+x0.p(2)^2-p.l^2,'==',0);
+          self.addBoundaryCondition(dot(x0.p,x0.v),'==',0);
+        end
     parameters: 
       - 
         content: "Initial state variables"
