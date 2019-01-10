@@ -66,16 +66,16 @@ methods:
     returns: 
       - content: "the underlying value of the variable. The value can be either numeric (for initial guess and solution) or symbolic (in system/ocp definitions)."
         type: "numeric or casadi.SX or casadi.MX or sym"
-  - content: "Display function of OclVariable. It shows the size of the variable, the names of the children variables, and a part of the value. The output of as OCP solution variable looks similar to:"
+  - content: "Display function of OclVariable. It shows the size of the variable, the names of the children variables, and a part of the value. The output of an OCP initial guess variable looks similar to:"
     code_block:
       title: Example disp()
       language: m
       code: |- 
         Variable:
-        Size: [3681 1]
-        Type: OclStructure
-        Children: states, integrator, controls, parameters, time
-        Value: [100;2;1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;350.5;...]
+          Size: [3681 1]
+          Type: OclStructure
+          Children: states, integrator, controls, parameters, time
+          Value: [100;2;1;0;0;0;0;0;0;0;0;0;0;0;0..]
     name: disp
     parameters: ~
     returns: 
