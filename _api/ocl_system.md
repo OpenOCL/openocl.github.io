@@ -2,7 +2,26 @@
 name: OclSystem
 content_markdown: ~
 description: "The system is implemented by inheriting from the System class. You need to implement the two methods setupVariables and setupEquation. Have a look at the VanDerPolSystem.m in the Examples folder get an impression on how it works."
-left_code_blocks: ~
+code_block:
+  title: Example System
+  language: m
+  code: |-
+    classdef VanDerPolSystem < OclSystem
+      methods
+        function setupVariables(self)    
+          % Two scalar state variables
+          self.addState('p',[1,1]);
+          self.addState('v',[1,1]);
+          % One scalar control variable
+          self.addControl('u',[1,1]);      
+        end
+        function setupEquation(self,x,z,u,p)     
+          % Define differential equations
+          self.setODE('p',(1-x.v^2)*x.p-x.v+u); 
+          self.setODE('v',x.p);
+        end
+      end
+    end
 methods: 
   - content: "Adds a state variable to the system. This function must be called within the setupEquation method."
     name: "addState"
