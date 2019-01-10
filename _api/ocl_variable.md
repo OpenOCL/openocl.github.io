@@ -66,7 +66,7 @@ methods:
     returns: 
       - content: "the underlying value of the variable. The value can be either numeric (for initial guess and solution) or symbolic (in system/ocp definitions)."
         type: "numeric or casadi.SX or casadi.MX or sym"
-  - content: Display function of OclVariable. It shows the size of the variable, the names of the children variables, and a part of the value. The output of a OCP solution variable looks similar to:
+  - content: "Display function of OclVariable. It shows the size of the variable, the names of the children variables, and a part of the value. The output of a OCP solution variable looks similar to:"
     code_block:
       title: Example disp()
       language: m
