@@ -1,7 +1,7 @@
 --- 
 name: OclSystem
 content_markdown: ~
-description: "The system is implemented by inheriting from the System class. You need to implement the two methods setupVariables and setupEquation. Have a look at the VanDerPolSystem.m in the Examples folder get an impression on how it works."
+description: "The system is implemented by inheriting from the System class. You need to implement the two methods setupVariables and setupEquation. Have a look at the VanDerPolSystem.m in the Examples folder get an impression on how it works:"
 code_block:
   title: Example System
   language: m
@@ -16,7 +16,7 @@ code_block:
           self.addControl('u',[1,1]);      
         end
         function setupEquation(self,x,z,u,p)     
-          % Define differential equations
+          % Two differential equations
           self.setODE('p',(1-x.v^2)*x.p-x.v+u); 
           self.setODE('v',x.p);
         end
@@ -86,16 +86,6 @@ methods_abstract:
     parameters: ~
     returns: ~
     code_block:
-      title: Code example
-      language: m
-      code: |-
-        function setupVariables(self)
-          % two scalar state variables
-          self.addState('x',[1,1]);
-          self.addState('y',[1,1]);
-          % one scalar control input
-          self.addControl('u',[1,1]);      
-        end
   - content: "Implement this method to specify the differential and algebraic equations. It is possible to define only ordinary differential equations (ODE system), or differential and algebraic equations (DAE system)."
     name: "setupEquation"
     parameters: 
@@ -112,13 +102,6 @@ methods_abstract:
         name: p
         type: "[OclVariable](#apiocl_variable)"
     code_block:
-      title: Code example
-      language: m
-      code: |-
-        function setupEquation(self,x,z,u,p)     
-          self.setODE('x',(1-x.y^2)*x.x - x.y + u); 
-          self.setODE('y',x.x);
-        end
     returns: ~
 parameters: ~
 position: 1
