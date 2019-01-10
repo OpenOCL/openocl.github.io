@@ -130,7 +130,6 @@ header {
   padding-top: 50px;
   background: #fff;
   -webkit-font-smoothing:subpixel-antialiased;
-  margin-bottom:60px; 
 }
 
 header p.view {
@@ -204,6 +203,9 @@ h5 {
   color: #a50;
 }
 
+.blog {
+  padding-top:60px; 
+}
 .blog ul {
   list-style-type: None;
   padding-inline-start: unset;
@@ -228,6 +230,9 @@ h5 {
 
   header, .left-pane {
     margin-top: 0px;
+  }
+  .blog {
+    padding-top:0px; 
   }
 
   section {
