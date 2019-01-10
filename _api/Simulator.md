@@ -1,6 +1,26 @@
 --- 
 name: Simulator
 type: Class
+code_block:
+  title: Simulator Example
+  language: m
+  code: |-
+    simulator = Simulator(PendulumSystem);
+
+    x = simulator.getStates();
+    x.p = [0;1];
+    x.v = [-0.5;-1];
+
+    p = simulator.getParameters();
+    p.m = 1;
+    p.l = 1;
+
+    t = linspace(0,4,20);
+
+    uVec = simulator.getControlsVec(20);
+    uVec.F = 10;
+
+    [xVec,zVec,uVec] = simulator.simulate(x,t,uVec,p);
 parameters: 
   - content: "The system dynamics"
     name: "system"
