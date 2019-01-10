@@ -6,7 +6,7 @@ code_block:
   language: m
   code: |- 
     % v is a solution of an OCP
-    % p is of size 3x1
+    % p=[px;py;pz] is of size 3x1
     % p trajectory is of size 3x1x(N+1) 
     % F trajectory is of size 1x1xN
     % with N control intervals
@@ -20,7 +20,7 @@ code_block:
     % or 
     v.states.p(:,:,4:5) = {[1,2,3],[4,5,6]}; 
 
-    % set all x values of p in state trajectory
+    % set all px values of p in state trajectory
     v.states.p(1,:,:) = 4;
 
     % plotting of state p trajectory:
