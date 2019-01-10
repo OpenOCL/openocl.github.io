@@ -1,6 +1,6 @@
 --- 
 name: OclOptions
-description: Creates an options struct for [OclSolver](#apiocl_solver). Check the casadi documentation and the ipopt documentation to see which options are available. These options can be set in 'opt.nlp.ipopt'. The default values are the following:
+description: "Creates an options struct for [OclSolver](#apiocl_solver). Check the casadi documentation and the ipopt documentation to see which options are available. These options can be set in 'opt.nlp.ipopt'. The default values are the following:"
 content_markdown: ~
 code_block:
   title: Example
