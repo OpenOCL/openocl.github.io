@@ -10,13 +10,27 @@ code_block:
     opt = OclOptions();
     opt.nlp.controlIntervals = 30;
     ocl = OclSolver(VanDerPolSystem,VanDerPolOCP,opt);
+    
     ocl.setBounds('x', -0.25, inf);
     ocl.setInitialBounds('x', 0);
     ocl.setParameter('time', 5, 10);
+    
     v0 = ocl.getInitialGuess();
     v0.states.x = -0.2;
     [v,t] = ocl.solve(v0);
-  
+    
+    % initial guess, solution and times have
+    % the following structure:
+    v.states % state trajectory
+    v.controls % control trajectory
+    v.algVars % algebraic variable trajectory
+    v.integrator % integrator variables
+    t.states % time points of states
+    t.controls % time points of controls
+    
+    % plotting of state trajectory:
+    plot(t.states.value,v.states.p.value)
+    
 parameters: 
   - content: "The system dynamics"
     name: "system"
