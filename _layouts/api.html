@@ -21,9 +21,6 @@ title: API Docs
   <h3>
     <a id="{{ doc.id | replace: '/', '' | replace: '.', '' }}">
       {{ doc.name }}({{ argnames }})
-      {% if doc.type %}
-      <span class="endpoint {{ doc.type }}">{{ doc.type }}</span>
-      {% endif %}
     </a>
     
   </h3>
