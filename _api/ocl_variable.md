@@ -35,7 +35,7 @@ methods:
     returns: 
       - content: "the sliced variable."
         type: OclVariable
-  - content: Get the value of the variable. This is particularly usefule if you want to plot the numeric values of the variable, for example for the solution. In system and OCP definition this gives you the underlying symbolic values.
+  - content: Get the value of the variable. This is particularly useful if you want to plot the numeric values of the variable, for example for the solution. In system and OCP definition this gives you the underlying symbolic values.
     name: value
     parameters: ~
     returns: 
