@@ -1,6 +1,30 @@
 --- 
 name: OclVariable
 description: The OclVariable type(or CasadiVariable in the CasADi backend) is the basic structure to retrieve, store, modify structured optimization variables. You can access subvariables by their name like the state trajectory or the control variables.
+code_block:
+  title: Examples
+  language: m
+  code: |- 
+    % v is a solution of an OCP
+    % p is of size 3x1
+    % p trajectory is of size 3x1x(N+1) 
+    % F trajectory is of size 1x1xN
+    % with N control intervals
+    p = v.states.p;     % get state p trajectory
+    F = v.controls.F;   % get control F trajectory
+
+    % set all 3x1 p states to the same value
+    v.states.p = [3;2;1]; 
+    % set p states 4 and 5 in the trajectory
+    v.states.p(:,:,4:5) = [1,2,3;4,5,6].'; 
+    % or 
+    v.states.p(:,:,4:5) = {[1,2,3],[4,5,6]}; 
+
+    % set all x values of p in state trajectory
+    v.states.p(1,:,:) = 4;
+
+    % plotting of state p trajectory:
+    plot(t.states.value,v.states.p.value)
 content_markdown: ~
 left_code_blocks: ~
 methods: 
@@ -13,30 +37,6 @@ methods:
     returns: 
       - content: "the sub-variable of the given variable."
         type: OclVariable
-    code_block:
-      title: Examples
-      language: m
-      code: |- 
-        % v is a solution of an OCP
-        % p is of size 3x1
-        % p trajectory is of size 3x1x(N+1) 
-        % F trajectory is of size 1x1xN
-        % with N control intervals
-        p = v.states.p;     % get state p trajectory
-        F = v.controls.F;   % get control F trajectory
-        
-        % set all 3x1 p states to the same value
-        v.states.p = [3;2;1]; 
-        % set p states 4 and 5 in the trajectory
-        v.states.p(:,:,4:5) = [1,2,3;4,5,6].'; 
-        % or 
-        v.states.p(:,:,4:5) = {[1,2,3],[4,5,6]}; 
-        
-        % set all x values of p in state trajectory
-        v.states.p(1,:,:) = 4;
-        
-        % plotting of state p trajectory:
-        plot(t.states.value,v.states.p.value)
   - content: 'Alternative syntax: var = <span class="arg">value</span> Sets a value to the variable.'
     name: "set"
     parameters: 
