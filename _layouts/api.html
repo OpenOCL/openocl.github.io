@@ -7,13 +7,21 @@ title: API Docs
 
 {{ content }}
 
+
+
 {% assign sorted_docs = site.api | sort: "position" %}
 {% for doc in sorted_docs %}
+
+  {% assign argnames = "" %}
+  {% for p in doc.parameters %}
+    {% assign argnames = argnames | append: ', <span class="arg">' | append: p.name | append: '</span>' %}
+  {% endfor %}
+
   <h3>
     <a id="{{ doc.id | replace: '/', '' | replace: '.', '' }}">
-      {{ doc.name }}
+      {{ doc.name }}({{ argnames }})
       {% if doc.type %}
-        <span class="endpoint {{ doc.type }}"> - {{ doc.type }}</span>
+         - <span class="endpoint {{ doc.type }}">{{ doc.type }}</span>
       {% endif %}
     </a>
     
