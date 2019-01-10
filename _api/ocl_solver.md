@@ -49,7 +49,8 @@ methods:
         type: "[OclVariable](#apiocl_variable)"
     returns: 
       - content: "The solution of the OCP"
-        name: solution
+        type: "[OclVariable](#apiocl_variable)"
+      - content: "Time points of the solution"
         type: "[OclVariable](#apiocl_variable)"
   - name: "setBounds"
     content: "Sets a fixed bound on variable for the whole trajectory."
