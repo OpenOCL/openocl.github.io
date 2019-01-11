@@ -22,6 +22,8 @@ Here is a step-by-step guide:
 * Run the StartupOCL.m script: `StartupOCL`
 * Run one of the examples, e.g.: `mainRaceCar`
 
+If you want to save your path using `savepath` or the Matlab path manager, do this **before** running `StartupOCL` in order to not include the sub-directories.
+
 ### Tutorial
 
 In this guide you will learn how to implement a system model and an optimal control problem with *OpenOCL*. You can open the linked examples in separate tabs in your browser. Also check out the [API docs](https://openocl.org/api-docs/) for a more detailed vision into the functions signatures.
