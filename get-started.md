@@ -9,7 +9,7 @@ This version is a pre-release of OpenOCL v3. We recommend using this version alr
 
 The toolbox is tested on Windows/Matlab 2016b, OsX/Matlab 2014b and Ubuntu/Octave 4.2.2. As Matlab is mostly platform independent it should run on other platforms with Matlab versions starting from 2014b.
 
-### Getting started
+### Installation
 
 To run OpenOCL you just need to get CasADi and adjust your path. 
 **No compilation needed!**
