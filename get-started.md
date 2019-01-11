@@ -18,7 +18,7 @@ Here is a step-by-step guide:
 
 * Get [CasADi](http://casadi.org) version 3.3 (or newest 3.4 but it is untested) for Matlab or Octave and follow the installation instructions on their page.
 * Add the main *CasADi* directory to your Matlab path, not including subdirectories: `addpath 'path/to/casadi'`
-* Download [OpenOCL v3.01 pre-release (zip)](https://github.com/JonasKoenemann/optimal-control/archive/v3-01-pre.zip), unzip, and add the folder to your path: `addpath 'path/to/optimal-control-3-01-alpha'`. Again do not include not the sub-directories!
+* Download [OpenOCL v3.01 pre-release (zip)](https://github.com/JonasKoenemann/optimal-control/archive/v3-01-pre.zip), unzip, and add the folder to your path: `addpath 'path/to/optimal-control-3-01-pre'`. Again do not include not the sub-directories!
 * Run the StartupOCL.m script: `StartupOCL`
 * Run one of the examples, e.g.: `mainRaceCar`
 
