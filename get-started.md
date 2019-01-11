@@ -5,7 +5,7 @@ title: Get Started
 
 Download the latest release: [OpenOCL v3.01 alpha (zip)](https://github.com/JonasKoenemann/optimal-control/archive/v3-01-alpha.zip), [Release Notes](https://github.com/JonasKoenemann/optimal-control/releases/tag/v3-01-alpha)
 
-This version is a pre-release of OpenOCL v3. We recommend using this version already until the final release is out because the version contains some changes in the API. The final release of OpenOCL v3 is due to [January 20, 2019](https://github.com/JonasKoenemann/optimal-control/milestone/1). This is also the first release to support Octave! For a list of changes have a look at the [release notes](https://github.com/JonasKoenemann/optimal-control/releases/tag/v3-01-alpha). To get the developement version of OpenOCL wit the latest developments clone the [master](https://github.com/JonasKoenemann/optimal-control/tree/master) branch or a recent [dev_ branch](https://github.com/JonasKoenemann/optimal-control/branches) on github.
+This version is a pre-release of OpenOCL v3. We recommend using this version already until the final release is out because the version contains some changes in the API. The final release of OpenOCL v3 is due to [January 20, 2019](https://github.com/JonasKoenemann/optimal-control/milestone/1). This is also the first release to support Octave! For a list of changes have a look at the [release notes](https://github.com/JonasKoenemann/optimal-control/releases/tag/v3-01-alpha). To get the developement version of OpenOCL wit the latest developments clone the [master](https://github.com/JonasKoenemann/optimal-control/tree/master) branch or a recent [dev branch](https://github.com/JonasKoenemann/optimal-control/branches) on github.
 
 The toolbox is tested on Windows/Matlab 2016b, OsX/Matlab 2014b and Ubuntu/Octave 4.2.2. As Matlab is mostly platform independent it should run on other platforms with Matlab versions starting from 2014b.
 
@@ -22,12 +22,15 @@ Here is a step-by-step guide:
 * Run the StartupOCL.m script: `StartupOCL`
 * Run one of the examples, e.g.: `mainRaceCar`
 
-### Defining a system model
+### Tutorial
+
+
+#### Defining a system model
 Look at the [VanDerPolSystem.m](https://github.com/JonasKoenemann/optimal-control/blob/master/Examples/01VanDerPol/VanDerPolSystem.m) in the Examples folder.
 The system is implemented by inheriting from the System class.
 You need to implement the two methods `setupVariables` and `setupEquation`.
 
-#### setupVariables
+**setupVariables**
 The setupVariables class method is for defining the system variables.
 You can create state, control and algebraic variables using the class methods: addState, addAlgVar, addControl.
 They have the following signature with no return values:  
@@ -40,7 +43,7 @@ self.addControl(id,size)
 
 Every variable needs to have a unique string valued `id`. The `size` is given as a 2 dimensional matrix e.g. `self.addState('p',[3 1])` to create a 3d vector p.
 
-#### setupEquation
+**setupEquation**
 The setupEquation method is for defining the system equations. Ordinary differential equations (ODE) and differential algebraic equations (DAE) have to be stated in explicit or semi-explicit form.
 The signature if the method is:
 
@@ -72,12 +75,12 @@ self.setAlgEquation(equation)
 The algebraic equation needs to be given as a column vector.
 You can use the `setAlgEquation` method multiple times. In order to be able to simulate the system, the total number of rows of the algebraic equations needs to be equal to the total number/dimension of algebraic variables (number of degrees of freedom).
 
-### Defining an optimal control problem (OCP)
+#### Defining an optimal control problem (OCP)
 Have a look at the [VanDerPolOCP.m](https://github.com/JonasKoenemann/optimal-control/blob/master/Examples/01VanDerPol/VanDerPolOCP.m) in the Examples folder.
 The OCP is implemented by inheriting from the OCP class.
 You need to implement the a couple of methods to define the cost function and boundary conditions.
 
-#### Cost function: `pathCosts`, `arrivalCosts`
+**Cost functions**: `pathCosts`, `arrivalCosts`
 In the `pathCosts` method you can implement the intermediate cost (Lagrange costs) function, and in the `arrivalCosts` (Mayer costs) method you implement the costs on the final state.
 
 ```m
@@ -93,7 +96,7 @@ self.addPathCost(equation)
 self.addArrivalCost(equation)
 ```
 
-#### Path constraints
+**Path constraints**
 Use the `pathConstraints` method for implementing path constraints
 The signature is (no return value):    
 
@@ -109,7 +112,7 @@ self.addPathConstraint(lhs, operator, rhs)
 
 where lhs and rhs are the left hand side and the right hand side of the equation and the operator can be one of '<=', '>=', '=='
    
-#### Boundary conditions: 
+**Boundary conditions**: 
 You can add boundary conditions on the initial and the final state of the trajectory.
 The signature is:    
 
@@ -124,7 +127,7 @@ self.addBoundaryCondition(lhs, operator, rhs)
 
 where lhs and rhs are the left hand side and the right hand side of the equation and the operator can be one of '<=', '>=', '=='
 
-### Calling the solver
+#### Calling the solver
 
 The essential steps in order to solve your dynamical optimization problem are:   
 * Specify solver options
@@ -136,11 +139,11 @@ The essential steps in order to solve your dynamical optimization problem are:
 
 Have a look at the Example script to get an idea how it works: [mainVanDerPol.m](https://github.com/JonasKoenemann/optimal-control/blob/master/Examples/01VanDerPol/mainVanDerPol.m)
 
-### The Variable class: Accessing variables, initial guess, and solution
+#### The Variable class: Accessing variables, initial guess, and solution
 
 The Variable type(or CasadiVariable in the CasADi backend) is the basic structure to retrieve, store, modify structured optimization variables.
 
-#### Accessing values
+**Accessing values**
 
 For each variable you can access specific variables by their name, e.g. you can get the position variable from the state by:    
 
@@ -170,7 +173,7 @@ or
 states.p.value
 ```
 
-#### Setting values
+**Setting values**
 
 You can set values to variables using the set methods. The signature is:   
 
@@ -190,7 +193,7 @@ The dimension of the value has to match the size of the variable with the follow
 initialGuess.get('states').get('p').set(0)  % will set all positions variables to [0;0;0].
 ```
 
-### Additional Information
+#### Additional Information
 
 * If you need the model to work with MX type variables in your system, you can pass the option "system_casadi_mx" to the solver
 * For larger problems it can be beneficial to install HSL linear solvers for ipopt (http://www.hsl.rl.ac.uk/ipopt/) and pass the linear solver name to the ipopt options
