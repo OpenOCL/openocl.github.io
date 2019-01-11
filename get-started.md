@@ -5,7 +5,7 @@ title: Get Started
 
 Download the latest release: [OpenOCL v3.01 alpha (zip)](https://github.com/JonasKoenemann/optimal-control/archive/v3-01-alpha.zip), [Release Notes](https://github.com/JonasKoenemann/optimal-control/releases/tag/v3-01-alpha)
 
-This version is a pre-release of OpenOCL v3. We recommend using this version already until the final release is out because the version contains some changes in the API. The final release of OpenOCL v3 is due to [January 20, 2019](https://github.com/JonasKoenemann/optimal-control/milestone/1). This is also the first release to support Octave! For a list of changes have a look at the [release notes](https://github.com/JonasKoenemann/optimal-control/releases/tag/v3-01-alpha). To get the developement version of OpenOCL wit the latest developments clone the [master](https://github.com/JonasKoenemann/optimal-control/tree/master) branch or a recent [dev branch](https://github.com/JonasKoenemann/optimal-control/branches) on github.
+This version is a pre-release of *OpenOCL v3*. We recommend using this version already until the final release is out because the version contains some changes in the API. The final release of *OpenOCL v3* is due to [January 20, 2019](https://github.com/JonasKoenemann/optimal-control/milestone/1). This is also the first release to support Octave! For a list of changes have a look at the [release notes](https://github.com/JonasKoenemann/optimal-control/releases/tag/v3-01-alpha). To get the developement version of OpenOCL wit the latest developments clone the [master](https://github.com/JonasKoenemann/optimal-control/tree/master) branch or a recent [dev branch](https://github.com/JonasKoenemann/optimal-control/branches) on github.
 
 The toolbox is tested on Windows/Matlab 2016b, OsX/Matlab 2014b and Ubuntu/Octave 4.2.2. As Matlab is mostly platform independent it should run on other platforms with Matlab versions starting from 2014b.
 
@@ -17,18 +17,18 @@ To run OpenOCL you just need to get CasADi and adjust your path.
 Here is a step-by-step guide:
 
 * Get [CasADi](http://casadi.org) version 3.3 (or newest 3.4 but it is untested) for Matlab or Octave and follow the installation instructions on their page.
-* Add the main CasADi directory to your Matlab path, not including subdirectories: `addpath "path/to/casadi"`
+* Add the main *CasADi* directory to your Matlab path, not including subdirectories: `addpath "path/to/casadi"`
 * Download [OpenOCL v3.01 alpha (zip)](https://github.com/JonasKoenemann/optimal-control/archive/v3-01-alpha.zip), unzip and add the folder to your path: `addpath "path/to/optimal-control-3-01-alpha"` Again do not include not the sub-directories!
 * Run the StartupOCL.m script: `StartupOCL`
 * Run one of the examples, e.g.: `mainRaceCar`
 
 ### Tutorial
 
-In this guide you will learn how to implement a system model and an optimal control problem with *OpenOCL*. You can open the examples in separate tabs in your browser. Also check out the [API docs](https://openocl.org/api-docs/) for a more detailed vision into the functions signatures.
+In this guide you will learn how to implement a system model and an optimal control problem with *OpenOCL*. You can open the linked examples in separate tabs in your browser. Also check out the [API docs](https://openocl.org/api-docs/) for a more detailed vision into the functions signatures.
 
 #### Defining a system model
 Have a look at the [VanDerPolSystem.m](https://github.com/JonasKoenemann/optimal-control/blob/master/Examples/01VanDerPol/VanDerPolSystem.m) in the Examples folder.
-The system is implemented by inheriting from the System class.
+The system is implemented by inheriting from the OclSystem class.
 You need to implement the two methods `setupVariables` and `setupEquation`.
 
 **setupVariables**
@@ -42,7 +42,7 @@ self.addAlgVar(id,size)
 self.addControl(id,size) 
 ```
 
-Every variable needs to have a unique string valued `id`. The `size` is given as a 2 dimensional matrix e.g. `self.addState('p',[3 1])` to create a 3d vector p.
+Every variable needs to have a unique string valued `id`. The `size` is given as a 2 dimensional matrix e.g. `self.addState('p',[3 1])` to create a 3d vector p. The size is optional for a scalar variable or can be a scalar value to create a variable with the given number of elements.
 
 **setupEquation**
 The setupEquation method is for defining the system equations. Ordinary differential equations (ODE) and differential algebraic equations (DAE) have to be stated in explicit or semi-explicit form.
@@ -78,8 +78,8 @@ You can use the `setAlgEquation` method multiple times. In order to be able to s
 
 #### Defining an optimal control problem (OCP)
 Have a look at the [VanDerPolOCP.m](https://github.com/JonasKoenemann/optimal-control/blob/master/Examples/01VanDerPol/VanDerPolOCP.m) in the Examples folder.
-The OCP is implemented by inheriting from the OCP class.
-You need to implement the a couple of methods to define the cost function and boundary conditions.
+The OCP is implemented by inheriting from the OclOCP class.
+While the `setupEquation` method for the OclSystem is mandatory, the methods in OclOCP to define the cost functions and boundary conditions are optional. Default values for the costs are zero and an empty constraint list for the constraints.
 
 **Cost functions**: `pathCosts`, `arrivalCosts`
 In the `pathCosts` method you can implement the intermediate cost (Lagrange costs) function, and in the `arrivalCosts` (Mayer costs) method you implement the costs on the final state.
