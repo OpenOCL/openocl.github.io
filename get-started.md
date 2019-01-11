@@ -3,7 +3,7 @@ permalink: /get-started/
 title: Get Started
 ---
 
-Download the latest release: [OpenOCL v3.01 pre-release (zip)](https://github.com/JonasKoenemann/optimal-control/archive/v3-01-pre.zip), [Release Notes](https://github.com/JonasKoenemann/optimal-control/releases/tag/v3-01-pre)
+**Download** the latest release: [OpenOCL v3.01 pre-release (zip)](https://github.com/JonasKoenemann/optimal-control/archive/v3-01-pre.zip), [Release Notes](https://github.com/JonasKoenemann/optimal-control/releases/tag/v3-01-pre)
 
 This version is a pre-release of *OpenOCL v3*. We recommend using this version already until the final release is out because the version contains some changes in the API. The final release of *OpenOCL v3* is due by [January 20, 2019](https://github.com/JonasKoenemann/optimal-control/milestone/1). This is also the first release to support Octave! For a list of changes have a look at the [release notes](https://github.com/JonasKoenemann/optimal-control/releases/tag/v3-01-pre). To get the developement version of OpenOCL with the latest developments clone the [master](https://github.com/JonasKoenemann/optimal-control/tree/master) branch or a recent [dev branch](https://github.com/JonasKoenemann/optimal-control/branches) on github.
 
