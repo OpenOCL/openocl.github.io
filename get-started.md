@@ -3,8 +3,9 @@ permalink: /get-started/
 title: Get Started
 ---
 
-### Requirements
-* The toolbox is tested on Window/Matlab 2016b, MacOsX/Matlab 2014b and Octave 4.2.2. As Matlab is mostly platform independent it should run on other platforms with Matlab versions from 2014b.
+Download the latest [OpenOCL v3.01 alpha (zip)](https://github.com/JonasKoenemann/optimal-control/archive/v.3.01.alpha.zip), [Release Notes](https://github.com/JonasKoenemann/optimal-control/releases/tag/v.3.01.alpha)
+
+The toolbox is tested on Window/Matlab 2016b, MacOsX/Matlab 2014b and Octave 4.2.2. As Matlab is mostly platform independent it should run on other platforms with Matlab versions from 2014b.
 
 ### Installation
 * Get CasADi version 3.3 (or newest 3.4 but it is untested) for Matlab/Octave and follow the installation instructions on their page: [CasADi](http://casadi.org)
