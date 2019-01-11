@@ -9,7 +9,7 @@ The Open Optimal Control Library is a toolbox for Matlab/Octave that facilitates
 
 ### Quick start
 
-Visit the [get-started](get-started.md) guide, or go straight to the [examples](https://github.com/JonasKoenemann/optimal-control/tree/master/Examples):    
+Go to [get-started](get-started.md) to download the toolbox, visit the [tutorial](tutorial.md), or go straight to the [examples](https://github.com/JonasKoenemann/optimal-control/tree/master/Examples):    
 
 
 ### Models
