@@ -31,7 +31,7 @@ Have a look at the [VanDerPolSystem.m](https://github.com/JonasKoenemann/optimal
 The system is implemented by inheriting from the OclSystem class.
 You need to implement the two methods `setupVariables` and `setupEquation`.
 
-**setupVariables**
+**setupVariables**:
 The setupVariables class method is for defining the system variables.
 You can create state, control and algebraic variables using the class methods: addState, addAlgVar, addControl.
 They have the following signature with no return values:  
@@ -44,7 +44,7 @@ self.addControl(id,size)
 
 Every variable needs to have a unique string valued `id`. The `size` is given as a 2 dimensional matrix e.g. `self.addState('p',[3 1])` to create a 3d vector p. The size is optional for a scalar variable or can be a scalar value to create a variable with the given number of elements.
 
-**setupEquation**
+**setupEquation**:
 The setupEquation method is for defining the system equations. Ordinary differential equations (ODE) and differential algebraic equations (DAE) have to be stated in explicit or semi-explicit form.
 The signature if the method is:
 
@@ -97,7 +97,7 @@ self.addPathCost(equation)
 self.addArrivalCost(equation)
 ```
 
-**Path constraints**
+**Path constraints**:
 Use the `pathConstraints` method for implementing path constraints
 The signature is (no return value):    
 
