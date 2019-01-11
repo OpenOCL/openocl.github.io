@@ -6,3 +6,6 @@ url: https://openocl.org
 
 collections:
   - api
+
+plugins:
+  - jekyll-sitemap
