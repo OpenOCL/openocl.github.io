@@ -9,19 +9,18 @@ This version is a pre-release of OpenOCL v3. We recommend using this version alr
 
 The toolbox is tested on Windows/Matlab 2016b, OsX/Matlab 2014b and Ubuntu/Octave 4.2.2. As Matlab is mostly platform independent it should run on other platforms with Matlab versions starting from 2014b.
 
-### Installation
+### Getting started
 
-To run OpenOCL you just need to get CasADi and adjust your path. **No compilation needed!**
+To run OpenOCL you just need to get CasADi and adjust your path. 
+**No compilation needed!**
 
 Here is a step-by-step guide:
 
 * Get [CasADi](http://casadi.org) version 3.3 (or newest 3.4 but it is untested) for Matlab or Octave and follow the installation instructions on their page.
 * Add the main CasADi directory to your Matlab path, not including subdirectories: `addpath "path/to/casadi"`
-* Clone the optimal-control git repository or get the latest release from here: [code releases](https://github.com/JonasKoenemann/optimal-control/releases).
-* Extract the release to a folder on your hard drive.
-* In Matlab, add the main directory containing the Startup script to your Matlab path: `addpath "path/to/optimal-control-3-01-alpha"` Do not include not the sub-directories!
-* Run the StartupOCL.m script
-* Run on of the examples: e.g. `mainRaceCar`
+* Download [OpenOCL v3.01 alpha (zip)](https://github.com/JonasKoenemann/optimal-control/archive/v3-01-alpha.zip), unzip and add the folder to your path: `addpath "path/to/optimal-control-3-01-alpha"` Again do not include not the sub-directories!
+* Run the StartupOCL.m script: `StartupOCL`
+* Run on of the examples, e.g.: `mainRaceCar`
 
 ### Defining a system model
 Look at the [VanDerPolSystem.m](https://github.com/JonasKoenemann/optimal-control/blob/master/Examples/01VanDerPol/VanDerPolSystem.m) in the Examples folder.
