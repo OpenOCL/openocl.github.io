@@ -24,9 +24,10 @@ Here is a step-by-step guide:
 
 ### Tutorial
 
+In this guide you will learn how to implement a system model and an optimal control problem with *OpenOCL*. You can open the examples in separate tabs in your browser. Also check out the [API docs](https://openocl.org/api-docs/) for a more detailed vision into the functions signatures.
 
 #### Defining a system model
-Look at the [VanDerPolSystem.m](https://github.com/JonasKoenemann/optimal-control/blob/master/Examples/01VanDerPol/VanDerPolSystem.m) in the Examples folder.
+Have a look at the [VanDerPolSystem.m](https://github.com/JonasKoenemann/optimal-control/blob/master/Examples/01VanDerPol/VanDerPolSystem.m) in the Examples folder.
 The system is implemented by inheriting from the System class.
 You need to implement the two methods `setupVariables` and `setupEquation`.
 
