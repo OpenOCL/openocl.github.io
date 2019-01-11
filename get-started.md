@@ -20,7 +20,7 @@ Here is a step-by-step guide:
 * Add the main CasADi directory to your Matlab path, not including subdirectories: `addpath "path/to/casadi"`
 * Download [OpenOCL v3.01 alpha (zip)](https://github.com/JonasKoenemann/optimal-control/archive/v3-01-alpha.zip), unzip and add the folder to your path: `addpath "path/to/optimal-control-3-01-alpha"` Again do not include not the sub-directories!
 * Run the StartupOCL.m script: `StartupOCL`
-* Run on of the examples, e.g.: `mainRaceCar`
+* Run one of the examples, e.g.: `mainRaceCar`
 
 ### Defining a system model
 Look at the [VanDerPolSystem.m](https://github.com/JonasKoenemann/optimal-control/blob/master/Examples/01VanDerPol/VanDerPolSystem.m) in the Examples folder.
