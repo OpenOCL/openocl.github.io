@@ -3,7 +3,7 @@ permalink: /tutorial/
 title: Tutorial
 ---
 
-In this guide you will learn how to implement a system model and an optimal control problem with *OpenOCL*. You can open the linked examples in separate tabs in your browser (holding down *ctrl*). Also check out the [API docs](https://openocl.org/api-docs/) for a more detailed vision into the functions signatures.
+In this guide you will learn how to implement a system model and an optimal control problem with *OpenOCL*. You can open the linked examples in separate tabs in your browser (holding down *ctrl*). Also check out the [API docs](https://openocl.org/api-docs/) for a more detailed vision into the function's signatures.
 
 
 ### Defining a system model
