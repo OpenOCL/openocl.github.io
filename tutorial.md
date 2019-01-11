@@ -12,8 +12,8 @@ The system is implemented by inheriting from the OclSystem class.
 You need to implement the two methods `setupVariables` and `setupEquation`.
 
 **setupVariables**:
-The setupVariables class method is for defining the system variables.
-You can create state, control and algebraic variables using the class methods: addState, addAlgVar, addControl.
+With the setupVariables method you can define the system variables.
+You can create state, control and algebraic variables using the methods: addState, addAlgVar, addControl.
 They have the following signature with no return values:  
 
 ```m
@@ -22,11 +22,11 @@ self.addAlgVar(id,size)
 self.addControl(id,size) 
 ```
 
-Every variable needs to have a unique string valued `id`. The `size` is given as a 2 dimensional matrix e.g. `self.addState('p',[3 1])` to create a 3d vector p. The size is optional for a scalar variable or can be a scalar value to create a variable with the given number of elements.
+Every variable needs to have a unique string valued `id`. The `size` is given as a 2 dimensional matrix e.g. `self.addState('p',[3,1])` to create a state variable p of size [3,1]. The size is optional for a scalar variable or can be a scalar value to create a variable with the given number of elements.
 
 **setupEquation**:
-The setupEquation method is for defining the system equations. Ordinary differential equations (ODE) and differential algebraic equations (DAE) have to be stated in explicit or semi-explicit form.
-The signature if the method is:
+With the setupEquation method you can define the system equations. Ordinary differential equations (ODE) and differential algebraic equations (DAE) have to be stated in explicit or semi-explicit form.
+The signature of the method is:
 
 ```m
 function setupEquation(self,states,algVars,controls,parameters)
@@ -34,7 +34,7 @@ function setupEquation(self,states,algVars,controls,parameters)
 
 The setupEquation method takes 4 input arguments of type Var: states, algVars, controls, parameters.
 The Var class provides useful methods to access the content of variables (see description of Var below).
-For example, you can get the value of the 3d position state variable p by: `p = states.get('p');`
+For example, you can get the value of the 3rd position state variable p by: `p = states.get('p');`
 (shorthand notation: `p = states.p;`)
 
 Inside setupEquation, you can use the `self.setODE` method to specify the derivative for each state variable
@@ -44,7 +44,7 @@ The setODE method has the following signature with no return value
 self.setODE(id,equation)
 ```
 
-For example define the ODE for 3d positions p variable by: `self.setODE('p',v)`; where the velocity v shall be of the same dimension as p.
+For example to define the ODE for the positions p variable by: `self.setODE('p',v)`; where the velocity v shall be of the same dimension as p.
 
 Use the `self.setAlgEquation` method to define the algebraic equations.
 It has the following signature with no return value  
