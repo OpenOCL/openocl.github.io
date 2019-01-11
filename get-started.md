@@ -12,12 +12,12 @@ The toolbox is tested on Windows/Matlab 2016b, OsX/Matlab 2014b and Ubuntu/Octav
 ### Installation
 
 To run OpenOCL you just need to get CasADi and adjust your Matlab/Octave path. 
-**No compilation is needed!**
+**No compilation is necessary!**
 
 Here is a step-by-step guide:
 
 * Get [CasADi](http://casadi.org) version 3.3 (or newest 3.4 but it is untested) for Matlab or Octave and follow the installation instructions on their page.
-* Add the main *CasADi* directory to your Matlab path, **not** including subdirectories: `addpath 'path/to/casadi'`
+* Add the main *CasADi* directory to your Matlab path, not including subdirectories: `addpath 'path/to/casadi'`
 * Download [OpenOCL v3.01 pre-release (zip)](https://github.com/JonasKoenemann/optimal-control/archive/v3-01-pre.zip), unzip, and add the folder to your path: `addpath 'path/to/optimal-control-3-01-pre'`. Again do not include the sub-directories!
 * Run the StartupOCL.m script: `StartupOCL`
 * Run one of the examples, e.g.: `mainRaceCar`
