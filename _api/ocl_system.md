@@ -80,7 +80,7 @@ methods:
       - content: "Size of the control variable. Scalar, vector, and matrix valued variables are allowed. If a scalar value s is given, the size of the variable will be [s,1]. Defaults to [1,1]."
         name: size
         type: "int, optional"
-      - content: "Default value for the parameter. This value can be overwritten when you specify the parameter for OclSolver with solver.setParamter. Defaults to unbounded."
+      - content: "Default value for the parameter. This value can be overwritten when you specify the parameter for OclSolver with solver.setParameter. Defaults to unbounded."
         name: v
         type: "numeric, optional"
     returns: ~
