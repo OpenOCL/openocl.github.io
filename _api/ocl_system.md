@@ -32,6 +32,12 @@ methods:
       - content: "Size of the state variable. Scalar, vector, and matrix valued variables are allowed. If a scalar value s is given, the size of the variable will be [s,1]. Defaults to [1,1]."
         name: size
         type: "int, optional"
+      - content: "Lower bound on the variable. This value can be overwritten when you specify bounds for OclSolver with solver.setBound. Defaults to -inf."
+        name: lb
+        type: "numeric, optional"
+      - content: "Upper bound on the variable. This value can be overwritten when you specify bounds for OclSolver with solver.setBound. Defaults to inf."
+        name: ub
+        type: "numeric, optional"
     returns: ~
   - content: "Adds an algebraic variable to the system. This function must be called within the setupEquation method."
     name: "addAlgVar"
@@ -42,6 +48,12 @@ methods:
       - content: "Size of the algebraic variable. Scalar, vector, and matrix valued variables are allowed. If a scalar value s is given, the size of the variable will be [s,1]. Defaults to [1,1]."
         name: size
         type: "int, optional"
+      - content: "Lower bound on the variable. This value can be overwritten when you specify bounds for OclSolver with solver.setBound. Defaults to -inf."
+        name: lb
+        type: "numeric, optional"
+      - content: "Upper bound on the variable. This value can be overwritten when you specify bounds for OclSolver with solver.setBound. Defaults to inf."
+        name: ub
+        type: "numeric, optional"
     returns: ~
   - content: "Adds an control input to the system. This function must be called within the setupEquation method."
     name: "addControl"
@@ -52,6 +64,12 @@ methods:
       - content: "Size of the control variable. Scalar, vector, and matrix valued variables are allowed. If a scalar value s is given, the size of the variable will be [s,1]. Defaults to [1,1]."
         name: size
         type: "int, optional"
+      - content: "Lower bound on the variable. This value can be overwritten when you specify bounds for OclSolver with solver.setBound. Defaults to -inf."
+        name: lb
+        type: "numeric, optional"
+      - content: "Upper bound on the variable. This value can be overwritten when you specify bounds for OclSolver with solver.setBound. Defaults to inf."
+        name: ub
+        type: "numeric, optional"
     returns: ~
   - content: "Adds a parameter. This function must be called within the setupEquation method."
     name: "addParameter"
@@ -62,6 +80,9 @@ methods:
       - content: "Size of the control variable. Scalar, vector, and matrix valued variables are allowed. If a scalar value s is given, the size of the variable will be [s,1]. Defaults to [1,1]."
         name: size
         type: "int, optional"
+      - content: "Default value for the parameter. This value can be overwritten when you specify the parameter for OclSolver with solver.setParamter. Defaults to unbounded."
+        name: v
+        type: "numeric, optional"
     returns: ~
   - content: "Adds a differential equation to the system. Note that for every state variable a differential equation must be specified."
     name: "setODE"
