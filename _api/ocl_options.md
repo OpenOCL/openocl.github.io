@@ -13,7 +13,6 @@ code_block:
     opt.nlp.controlIntervals       = 20;
     opt.nlp.collocationOrder       = 3;
     opt.nlp.solver                 = 'ipopt';
-    opt.nlp.scaling                = false;
     opt.nlp.detectParameters       = false;
     opt.nlp.casadi.iteration_callback_step = 1;
     opt.nlp.ipopt.linear_solver = 'mumps';
