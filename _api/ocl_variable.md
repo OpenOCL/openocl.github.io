@@ -46,18 +46,18 @@ methods:
         name: value
         type: numeric
     returns: ~
-  - content: 'Alternative syntax: var(<span class="arg">dim1</span>,<span class="arg">dim2</span>,<span class="arg">dim3</span>) Gets a slice of a variable. You can use the shorthand notation e.g.: x = var(1:10,1,:)'
+  - content: 'Alternative syntax: var(<span class="arg">dim1</span>,<span class="arg">dim2</span>,<span class="arg">dim3</span>) Gets a slice of a variable. You can slice a variable the same way as you would index a matrix in Matlab/Octave which means linear indexing is also possible.'
     name: "slice"
     parameters: 
-      - content: "indizes for the first dimension. The indizes can be scalar, integer arrays, or one of: 'all', ':', 'end'."
+      - content: "indizes for the first dimension. The indizes can be scalar, integer arrays, or you can use : and end."
         name: "dim1"
-        type: "int or char"
+        type: "int, :, end"
       - content: "indizes for the second dimension. The indizes can be scalar, integer arrays, or one of: 'all', ':', 'end'."
         name: "dim2"
-        type: "int or char"
+        type: "int, :, end, optional"
       - content: "indizes for the third dimension. The indizes can be scalar, integer arrays, or one of: 'all', ':', 'end'."
         name: "dim3"
-        type: "int or char"
+        type: "int, :, end, optional"
     return: ~
     returns: 
       - content: "the sliced variable."
