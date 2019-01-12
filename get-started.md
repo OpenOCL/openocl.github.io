@@ -12,7 +12,6 @@ The toolbox is tested on Windows/Matlab 2016b, OsX/Matlab 2014b and Ubuntu/Octav
 ### Installation
 
 To run OpenOCL you just need to get CasADi and adjust your Matlab/Octave path. 
-**No compilation is necessary!**
 
 Here is a step-by-step guide:
 
