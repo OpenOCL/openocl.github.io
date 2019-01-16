@@ -13,6 +13,7 @@ code_block:
     opt.nlp.controlIntervals       = 20;
     opt.nlp.collocationOrder       = 3;
     opt.nlp.solver                 = 'ipopt';
+    opt.nlp.auto_interpolation     = true;
     opt.nlp.ipopt.linear_solver = 'mumps';
     opt.nlp.ipopt.hessian_approximation = 'exact';
 methods: ~
