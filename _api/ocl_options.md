@@ -6,15 +6,19 @@ code_block:
   title: Example
   language: m
   code: |- 
+    opt = struct;
     opt.solverInterface   = 'casadi';
-    opt.iterationCallback = false;
     opt.system_casadi_mx  = false;
-    opt.nlp.discretization          = 'collocation';
-    opt.nlp.controlIntervals        = 20;
-    opt.nlp.collocationOrder        = 3;
-    opt.nlp.solver                  = 'ipopt';
-    opt.nlp.auto_interpolation      = true;
-    opt.nlp.controls_regularization = true;
+    opt.controls_regularization = true;
+    opt.controls_regularization_value = 1e-6;
+    opt.nlp = struct;
+    opt.nlp.discretization         = 'collocation';
+    opt.nlp.controlIntervals       = 20;
+    opt.nlp.collocationOrder       = 3;
+    opt.nlp.solver                 = 'ipopt';
+    opt.nlp.auto_interpolation     = true;
+    opt.nlp.casadi = struct;
+    opt.nlp.ipopt = struct;
     opt.nlp.ipopt.linear_solver = 'mumps';
     opt.nlp.ipopt.hessian_approximation = 'exact';
 methods: ~
