@@ -9,11 +9,12 @@ code_block:
     opt.solverInterface   = 'casadi';
     opt.iterationCallback = false;
     opt.system_casadi_mx  = false;
-    opt.nlp.discretization         = 'collocation';
-    opt.nlp.controlIntervals       = 20;
-    opt.nlp.collocationOrder       = 3;
-    opt.nlp.solver                 = 'ipopt';
-    opt.nlp.auto_interpolation     = true;
+    opt.nlp.discretization          = 'collocation';
+    opt.nlp.controlIntervals        = 20;
+    opt.nlp.collocationOrder        = 3;
+    opt.nlp.solver                  = 'ipopt';
+    opt.nlp.auto_interpolation      = true;
+    opt.nlp.controls_regularization = true;
     opt.nlp.ipopt.linear_solver = 'mumps';
     opt.nlp.ipopt.hessian_approximation = 'exact';
 methods: ~
