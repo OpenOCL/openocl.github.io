@@ -116,7 +116,7 @@ methods_abstract:
     returns: ~
   - 
     content: "Specifies cost terms that depend on any variable of the discretized problem which is a non-linear program (NLP)."
-    name: discreteCost
+    name: discreteCosts
     parameters: 
       - 
         content: "Contains all variable of the discretized OCP."
