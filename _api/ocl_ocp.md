@@ -77,14 +77,6 @@ methods_abstract:
         name: x
         type: "[OclVariable](#apiocl_variable)"
       - 
-        content: "Algebraic variables"
-        name: z
-        type: "[OclVariable](#apiocl_variable)"
-      - 
-        content: "Control variables"
-        name: u
-        type: "[OclVariable](#apiocl_variable)"
-      - 
         content: Time
         name: t
         type: "[OclVariable](#apiocl_variable)"
