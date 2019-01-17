@@ -68,8 +68,8 @@ methods_abstract:
       title: Path constraints Example
       language: m
       code: |-
-        function pathConstraints(self,x,z,u,t,p)
-          self.addPathConstraint(u.Fx^2+u.Fy^2,'<=',p.Fmax^2);
+        function pathConstraints(self,x,t,p)
+          self.addPathConstraint(x.Fx^2+x.Fy^2,'<=',p.Fmax^2);
         end
     parameters: 
       - 
