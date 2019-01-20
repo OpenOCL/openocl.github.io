@@ -26,7 +26,7 @@ title: API Docs
     
   </h3>
   {% if doc.description %}
-    <p class="description">{{ doc.description }}</p>
+    <div class="description">{{ doc.description | markdownify}}</div>
   {% endif %}
 
   {% if doc.code_block  %}
