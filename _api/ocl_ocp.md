@@ -72,12 +72,6 @@ methods_abstract:
       - content: "Control variables"
         name: u
         type: "[OclVariable](#apiocl_variable)"
-      - content: Time
-        name: t
-        type: "[OclVariable](#apiocl_variable)"
-      - content: "Final time"
-        name: tf
-        type: "[OclVariable](#apiocl_variable)"
       - content: "Parameters"
         name: p
         type: "[OclVariable](#apiocl_variable)"
@@ -89,9 +83,6 @@ methods_abstract:
         type: "OclCostHandler"
       - content: "State variables"
         name: x
-        type: "[OclVariable](#apiocl_variable)"
-      - content: "Final time"
-        name: tf
         type: "[OclVariable](#apiocl_variable)"
       - content: Parameters
         name: p
@@ -112,9 +103,6 @@ methods_abstract:
         type: "OclConstraint"
       - content: "State variables"
         name: x
-        type: "[OclVariable](#apiocl_variable)"
-      - content: Time
-        name: t
         type: "[OclVariable](#apiocl_variable)"
       - content: Parameters
         name: p
@@ -152,14 +140,14 @@ methods_abstract:
         type: "[OclVariable](#apiocl_variable)"
     returns: ~
 methods: 
-  - content: "Adds a path cost term of the form c_p(x,z,u,t,tf,p)."
+  - content: "Adds a path cost term of the form c_p(x,z,u,p)."
     name: addPathCost
     parameters: 
       - name: cost
         content: "Scalar variable containing the cost"
         type: "[OclVariable](#apiocl_variable) or Matlab matrix"
     returns: ~
-  - content: "Adds an end cost term of the form c_f(x,tf,p)."
+  - content: "Adds an end cost term of the form c_f(x,p)."
     name: addArrivalCost
     parameters: 
       - name: cost
