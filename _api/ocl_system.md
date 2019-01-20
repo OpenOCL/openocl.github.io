@@ -12,10 +12,10 @@ code_block:
   title: Example System
   language: m
   code: |-
-    ## As system functions
+    %% As system functions
     sys = OclSystem(@sysVars,@sysEq);
     
-    # function definitions can be in the same file (if the main script is wrapped by a function) or in separate files:
+    % function definitions can be in the same file (if the main script is wrapped by a function) or in separate files:
     function sysVars(sh)
       sh.addState('p');
       sh.addState('v');
@@ -25,10 +25,10 @@ code_block:
       sh.setODE('v',x.p);
     end
     
-    ## By inheriting from OclSystem
+    %% By inheriting from OclSystem
     sys = VanDerPolSystem();
     
-    # class definition must be in a separate file
+    % class definition must be in a separate file
     classdef VanDerPolSystem < OclSystem
       methods (Static)
         function setupVariables(self)    
