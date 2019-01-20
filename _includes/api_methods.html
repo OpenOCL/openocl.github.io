@@ -9,7 +9,7 @@
 
   <dl>
     <dt><a id="{{ m.name | replace: '/', '' | replace: '.', '' }}">{{ m.name }}</a>({{ argnames }}) </dt>
-    <dd>{{ m.content.type | markdownify | remove: '<p>' | remove: '</p>' | strip }} </dd>
+    <dd>{{ m.content | markdownify | remove: '<p>' | remove: '</p>' | strip }} </dd>
   </dl>
 
   {% if m.code_block  %}
