@@ -9,14 +9,14 @@ code_block:
   code: |- 
     opt = OclOptions();
     opt.nlp.controlIntervals = 30;
-    ocl = OclSolver(VanDerPolSystem,VanDerPolOCP,opt);
+    ocl = OclSolver(10,VanDerPolSystem,VanDerPolOCP,opt);
     
     ocl.setBounds('p', -0.25, inf);
     ocl.setInitialBounds('p', 0);
-    ocl.setParameter('time', 5, 10);
     
     v0 = ocl.getInitialGuess();
     v0.states.p = -0.2;
+    
     [v,t] = ocl.solve(v0);
     
     % initial guess, solution and times have
@@ -28,10 +28,14 @@ code_block:
     t.states     % time points of states
     t.controls   % time points of controls
     
-    % plotting of state p trajectory:
-    plot(t.states.value,v.states.p.value)
+    % plotting of control and state p trajectory:
+    oclPlot(t.controls,v.controls.u)
+    oclPlot(t.states,v.states.p)
     
 parameters: 
+  - content: "The end time/horizon length of the optimal control problem. You can alternatively specify a vector of `length(T)=N+1` to set the timepoints at which the optimal control problem is discretized. The default discretizatoin is at times `linspace(0,1,N+1)*T`. If you pass a vector of `length(T)=N`, the entries of `T` are the timesteps of the control interval, e.g. `T=linspace(0.1,0.1,N)`. If you specify `T=[]`, the final time of the optimal control problem is free. The endtime is available in the parameters as `p.T`. The normalized discretization of the control intervals is available in the controls as `u.h_normalized`. You can set bounds on `T` and `h_normalized` as you can do on any other variable."
+    name: "T"
+    type: "numeric"
   - content: "The system dynamics"
     name: "system"
     type: "[OclSystem](#apiocl_system)"
