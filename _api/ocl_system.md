@@ -55,6 +55,13 @@ code_block:
         end
       end
     end
+parameters:
+  - content: "Function handle to the function that sets up the variables. The function for the variables must have one input argument, no return values, and thus the following siganture: varFunctionName(sh) where sh is the system handler that allows to add variables and parameters. If no function handle is provided, the system must be implemented by deriving from OclSystem and implementing the abstract methods setupVariables and setupEquations."
+    name: fhVars
+    type: "function handle, optional"
+  - content: "Function handle to the function that sets up the equations. The function for the variables must have five input argument, no return values, and thus the following signature: eqFunctionName(sh,x,z,u,p) where sh is the system handler that allows to add ODE and DAE equations, x the states, z the algebraic variables, u the control inputs, p the parameters. If no function handle is provided, the system must be implemented by deriving from OclSystem and implementing the abstract methods setupVariables and setupEquations."
+    name: fhEquations
+    type: "function handle, optional"
 methods: 
   - content: "Adds a state variable to the system."
     name: "addState"
@@ -163,13 +170,6 @@ methods_abstract:
         type: "[OclVariable](#apiocl_variable)"
     code_block:
     returns: ~
-parameters:
-  - content: "Function handle to the function that sets up the variables. The function for the variables must have one input argument, no return values, and thus the following siganture: varFunctionName(sh) where sh is the system handler that allows to add variables and parameters."
-    name: fhVars
-    type: "function handle, optional"
-  - content: "Function handle to the function that sets up the equations. The function for the variables must have five input argument, no return values, and thus the following signature: eqFunctionName(sh,x,z,u,p) where sh is the system handler that allows to add ODE and DAE equations, x the states, z the algebraic variables, u the control inputs, p the parameters."
-    name: fhEquations
-    type: "function handle, optional"
 position: 1
 returns: ~
 right_code_blocks: ~
