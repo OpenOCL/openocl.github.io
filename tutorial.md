@@ -9,7 +9,7 @@ In this guide you will learn how to implement a system model and an optimal cont
 
 
 ### Defining a system model
-Have a look at the [VanDerPolSystem.m](https://github.com/OpenOCL/OpenOCL/blob/v3-01-pre/Examples/01VanDerPol/VanDerPolSystem.m) in the Examples folder.
+Have a look at the [CartPoleSystem.m](https://github.com/OpenOCL/OpenOCL/blob/v.3.10/Examples/05CartPole/CartPoleSystem.m) in the Examples folder.
 The system is implemented by inheriting from the OclSystem class.
 You need to implement the two methods `setupVariables` and `setupEquation`.
 
@@ -60,7 +60,7 @@ You can use the `setAlgEquation` method multiple times. In order to be able to s
 
 
 ### Defining an optimal control problem (OCP)
-Have a look at the [VanDerPolOCP.m](https://github.com/OpenOCL/OpenOCL/blob/v3-01-pre/Examples/01VanDerPol/VanDerPolOCP.m) in the Examples folder.
+Have a look at the [CartPoleOCP.m](https://github.com/OpenOCL/OpenOCL/blob/v.3.10/Examples/05CartPole/CartPoleOCP.m) in the Examples folder.
 The OCP is implemented by inheriting from the OclOCP class.
 While the `setupEquation` method for the OclSystem is mandatory, the methods in OclOCP to define the cost functions and boundary conditions are optional. Default values for the costs are zero and an empty constraint list for the constraints.
 
@@ -122,7 +122,7 @@ The essential steps in order to solve your dynamical optimization problem are:
 * Call the solver 
 * Process the solution
 
-Have a look at the Example script to get an idea how it works: [mainVanDerPol.m](https://github.com/OpenOCL/OpenOCL/blob/v3-01-pre/Examples/01VanDerPol/mainVanDerPol.m)
+Have a look at the Example script to get an idea how it works: [mainCartPole.m](https://github.com/OpenOCL/OpenOCL/blob/v.3.10/Examples/05CartPole/mainCartPole.m)
 
 ### The Variable class: Accessing variables, initial guess, and solution
 
