@@ -88,7 +88,7 @@ methods:
       - content: "The variable id"
         name: "id"
         type: "char"
-      - content: The lower bound"
+      - content: "The lower bound"
         name: "lb=lb"
         type: "numeric"
       - content: "The upper bound"
