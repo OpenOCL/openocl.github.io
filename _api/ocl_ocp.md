@@ -21,6 +21,7 @@ code_block:
     %% Using functions
     %%
     ocp1 = OclOCP(@ocpPathCosts);
+    
     function ocpPathCosts(ch,x,z,u,p)
       self.addPathCost( x.p^2 );
       self.addPathCost( x.v^2 );
@@ -28,8 +29,11 @@ code_block:
     end
     
     %% Using a OCP class
-    %% Note that the methods are marked as Static!
+    %%
     ocp2 = VanDerPolOCP();
+    
+    %% Note that the methods are marked as Static!
+    %% Class definitions must be in a separate file.
     classdef VanDerPolOCP < OclOCP
       methods (Static)
         function pathCosts(ch,x,z,u,p)
