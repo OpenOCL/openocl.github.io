@@ -151,7 +151,7 @@ methods_abstract:
     returns: ~
     code_block:
   - content: "Implement this method as a static method to specify the differential and algebraic equations. It is possible to define only ordinary differential equations (ODE system), or differential and algebraic equations (DAE system)."
-    name: "setupEquation"
+    name: "setupEquations"
     parameters: 
       - content: "System handler, reference to the system object."
         name: sh
