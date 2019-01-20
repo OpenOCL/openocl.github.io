@@ -68,11 +68,11 @@ While the `setupEquation` method for the OclSystem is mandatory, the methods in 
 In the `pathCosts` method you can implement the intermediate cost (Lagrange costs) function, and in the `arrivalCosts` (Mayer costs) method you implement the costs on the final state.
 
 ```m
-function pathCosts(self,states,algVars,controls,time,endTime,parameters)  
-function arrivalCosts(self,states,endTime,parameters)  
+function pathCosts(self,states,algVars,controls,parameters)  
+function arrivalCosts(self,states,parameters)  
 ```
  
-The variables states, algVars, controls, time, endTime, and parameters are of type Var.
+The variables states, algVars, controls, and parameters are of type Var.
 Use the functions addPathCost and addArrivalCost to add a cost term in the respective methods.   
  
 ```m
@@ -85,7 +85,7 @@ Use the `pathConstraints` method for implementing path constraints
 The signature is (no return value):    
 
 ```m
-function pathConstraints(states, algVars, controls, time, parameters)  
+function pathConstraints(states, algVars, controls, parameters)  
 ```
  
 Inside `pathConstraints` you can use the function `addPathConstraint` to add a constraint, the signature is:
