@@ -12,6 +12,12 @@ code_block:
   title: Example System
   language: m
   code: |-
+    %%
+    %% Example code for the two ways of implementing
+    %% system. The the results system sys are 
+    %% equivalent.
+    %%
+    
     %%%
     %% As system functions
     sys = OclSystem(@sysVars,@sysEq);
@@ -22,6 +28,7 @@ code_block:
     function sysVars(sh)
       sh.addState('p');
       sh.addState('v');
+      sh.addControl('u');  
     end
     function sysEq(sh,x,z,u,p)
       sh.setODE('p',(1-x.v^2)*x.p-x.v+u); 
@@ -37,14 +44,11 @@ code_block:
     classdef VanDerPolSystem < OclSystem
       methods (Static)
         function setupVariables(self)    
-          % Two scalar state variables
-          self.addState('p',[1,1]);
-          self.addState('v',[1,1]);
-          % One scalar control variable
-          self.addControl('u',[1,1]);      
+          self.addState('p');
+          self.addState('v');
+          self.addControl('u');      
         end
         function setupEquations(self,x,z,u,p)     
-          % Two differential equations
           self.setODE('p',(1-x.v^2)*x.p-x.v+u); 
           self.setODE('v',x.p);
         end
