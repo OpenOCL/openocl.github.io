@@ -2,7 +2,10 @@
 name: OclSystem
 description: |-
   There are two ways to implement the dynamics of a system. The first way is by implementing functions for defining the system variables and equations, and creating an OclSystem using the function handles/pointers. The second way involves involves implementing the system in an object oriented way as a class that is inherited from OclSystem. The second way is a bit more involved but for complex systems it allows using the capabilities of classes, e.g. defining instance variables.
-  **As system functions** You need to implement two functions, one for defining the system variables, and a second one for defining the system equations. The system is created by passing the two function handles to the constructor of OclSystem.
+  
+  **As system functions** 
+  You need to implement two functions, one for defining the system variables, and a second one for defining the system equations. The system is created by passing the two function handles to the constructor of OclSystem.
+  
   **By inheriting from OclSystem** You need to inherit your class from OclSystem and implement the two methods setupVariables and setupEquations as static methods. 
   
 code_block:
