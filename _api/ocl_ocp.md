@@ -28,7 +28,7 @@ code_block:
       self.add( u.u^2 );
     end
     
-    %% Using a OCP class
+    %% Using an OCP class
     %%
     ocp2 = VanDerPolOCP();
     
