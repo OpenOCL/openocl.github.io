@@ -1,20 +1,58 @@
 --- 
 name: OclOCP
-description: "An optimal control problem (OCP) is defined by inheriting from the OclOCP class. In order to specify cost functions and boundary conditions you have to implement the corresponding methods. If you do not implemented some of these method they default to zero cost or empty constraints. Have a look at the VanDerPolOCP.m in the Examples folder."
-content_markdown: ~
+description: |-
+    As for [OclSystem](#apiocl_system) there are two ways to implement an optimal control problem (OCP): The functional and the object oriented approach. If you do not implemented some of the functions or methods they default to zero cost for the cost functions or an empty constraints array for path constraints and boundary conditions.
+
+**Using OCP function**
+You can implement functions for path costs, arrival costs, path constraints, boundary conditions. Pass function handles/pointers to these function to the constructor of OclOCP to create an optimal control problem. For information about the signature of these functions look at the definitions of the abstract methods.
+
+**By inheriting from OclOCP**
+The OCP is defined by inheriting from the OclOCP class. In order to specify cost functions and boundary conditions you have to implement the corresponding methods. 
+
 code_block:
   title: Example OCP
   language: m
   code: |-
+    %% Example code for the two ways of implementing
+    %% optimal control problems. The two resulting problems
+    %% ocp1 and ocp2 are equivalent.
+    %%
+
+    %% Using functions
+    %%
+    ocp1 = OclOCP(@ocpPathCosts);
+    function ocpPathCosts(ch,x,z,u,p)
+      self.addPathCost( x.p^2 );
+      self.addPathCost( x.v^2 );
+      self.addPathCost( u.u^2 );
+    end
+    
+    %% Using a OCP class
+    %% Note that the methods are marked as Static!
+    ocp2 = VanDerPolOCP();
     classdef VanDerPolOCP < OclOCP
-      methods
-        function pathCosts(self,x,z,u,t,tf,p)
-          self.addPathCost( x.p^2 );
-          self.addPathCost( x.v^2 );
-          self.addPathCost( u^2 );
+      methods (Static)
+        function pathCosts(ch,x,z,u,p)
+          ch.addPathCost( x.p^2 );
+          ch.addPathCost( x.v^2 );
+          ch.addPathCost( u.u^2 );
         end
       end
     end
+    
+parameters: 
+  - content: "Function handle to the function that defines the path costs. The signature of the corresponding function can be seen in the abstract methods definition."
+    name: fhPathCosts
+    type: "function handle, optional"
+  - content: "Function handle to the function that defines the arrival costs. The signature of the corresponding function can be seen in the abstract methods definition."
+    name: fhArrivalCosts
+    type: "function handle, optional"
+  - content: "Function handle to the function that defines the path constraints. The signature of the corresponding function can be seen in the abstract methods definition."
+    name: fhPathConstraints
+    type: "function handle, optional"
+  - content: "Function handle to the function that defines the boundary conditions. The signature of the corresponding function can be seen in the abstract methods definition."
+    name: fhBoundaryConditions
+    type: "function handle, optional"
 methods_abstract: 
   - 
     content: "In this method you can implement the path cost (also called Lagrange cost or intermediate cost) function."
@@ -178,7 +216,7 @@ methods:
         name: cost
         type: "[OclVariable](#apiocl_variable) or Matlab matrix"
     returns: ~
-parameters: ~
+
 position: 2
 returns: ~
 right_code_blocks: ~
