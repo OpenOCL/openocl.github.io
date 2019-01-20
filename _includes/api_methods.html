@@ -9,7 +9,7 @@
 
   <dl>
     <dt><a id="{{ m.name | replace: '/', '' | replace: '.', '' }}">{{ m.name }}</a>({{ argnames }}) </dt>
-    <dd>{{ m.content }} </dd>
+    <dd>{{ m.content.type | markdownify | remove: '<p>' | remove: '</p>' | strip }} </dd>
   </dl>
 
   {% if m.code_block  %}
@@ -23,7 +23,7 @@
         <dl class="dl-left">
         {% for p in m.parameters %}
           <dt><span class="arg">{{ p.name }}</span> <span class="dltype">({{ p.type | markdownify | remove: '<p>' | remove: '</p>' | strip }})</span></dt>
-          <dd>{{ p.content }} </dd>
+          <dd>{{ p.content | markdownify | remove: '<p>' | remove: '</p>' | strip }} </dd>
         {% endfor %}
          </dl> 
        </div>
@@ -38,7 +38,7 @@
         {% for r in m.returns %}
           {% capture type %} {{ r.type }}{% endcapture %}
           <dt><span class="dltype">({{ r.type | markdownify | remove: '<p>' | remove: '</p>' | strip }})</span></dt>
-          <dd>{{ r.content }} </dd>
+          <dd>{{ r.content | markdownify | remove: '<p>' | remove: '</p>' | strip }} </dd>
         {% endfor %}
         </dl>
       </div>
