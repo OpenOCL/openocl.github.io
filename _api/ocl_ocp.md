@@ -23,9 +23,9 @@ code_block:
     ocp1 = OclOCP(@ocpPathCosts);
     
     function ocpPathCosts(ch,x,z,u,p)
-      self.addPathCost( x.p^2 );
-      self.addPathCost( x.v^2 );
-      self.addPathCost( u.u^2 );
+      self.add( x.p^2 );
+      self.add( x.v^2 );
+      self.add( u.u^2 );
     end
     
     %% Using a OCP class
@@ -37,9 +37,9 @@ code_block:
     classdef VanDerPolOCP < OclOCP
       methods (Static)
         function pathCosts(ch,x,z,u,p)
-          ch.addPathCost( x.p^2 );
-          ch.addPathCost( x.v^2 );
-          ch.addPathCost( u.u^2 );
+          ch.add( x.p^2 );
+          ch.add( x.v^2 );
+          ch.add( u.u^2 );
         end
       end
     end
@@ -60,6 +60,9 @@ methods_abstract:
   - content: "In this method you can implement the path cost (also called Lagrange cost or intermediate cost) function."
     name: "pathCosts"
     parameters: 
+      - content: "Cost handler, allows you to add cost terms to the optimal control problem using the add method."
+        name: ch
+        type: "OclCostHandler"
       - content: "State variables"
         name: x
         type: "[OclVariable](#apiocl_variable)"
@@ -81,6 +84,9 @@ methods_abstract:
   - content: "In this method you can specify the costs on the final state (also called Mayer terms)."
     name: "arrivalCosts"
     parameters: 
+      - content: "Cost handler, allows you to add cost terms to the optimal control problem using the add method."
+        name: ch
+        type: "OclCostHandler"
       - content: "State variables"
         name: x
         type: "[OclVariable](#apiocl_variable)"
@@ -97,10 +103,13 @@ methods_abstract:
       title: Path constraints Example
       language: m
       code: |-
-        function pathConstraints(self,x,t,p)
-          self.addPathConstraint(x.Fx^2+x.Fy^2,'<=',p.Fmax^2);
+        function pathConstraints(ch,x,t,p)
+          ch.add(x.Fx^2+x.Fy^2,'<=',p.Fmax^2);
         end
     parameters: 
+      - content: "Constraints handler, allows you to add constraints to the optimal control problem using the add method."
+        name: ch
+        type: "OclConstraint"
       - content: "State variables"
         name: x
         type: "[OclVariable](#apiocl_variable)"
@@ -117,11 +126,14 @@ methods_abstract:
       title: Boundary conditions
       language: m
       code: |-
-        function boundaryConditions(self,x0,xF,p)
-          self.addBoundaryCondition(x0.p(1)^2+x0.p(2)^2-p.l^2,'==',0);
-          self.addBoundaryCondition(dot(x0.p,x0.v),'==',0);
+        function boundaryConditions(ch,x0,xF,p)
+          ch.add(x0.p(1)^2+x0.p(2)^2-p.l^2,'==',0);
+          ch.add(dot(x0.p,x0.v),'==',0);
         end
     parameters: 
+      - content: "Constraints handler, allows you to add constraints to the optimal control problem using the add method."
+        name: ch
+        type: "OclConstraint"
       - content: "Initial state variables"
         name: x0
         type: "[OclVariable](#apiocl_variable)"
