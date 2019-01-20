@@ -1,6 +1,6 @@
 --- 
 name: OclOCP
-description: |- 
+description: |
   As for [OclSystem](#apiocl_system) there are two ways to implement an optimal control problem (OCP) The functional and the object oriented approach. If you do not implemented some of the functions or methods they default to zero cost for the cost functions or an empty constraints array for path constraints and boundary conditions.
 
   **Using OCP function**
@@ -13,32 +13,6 @@ code_block:
   title: Example OCP
   language: m
   code: |-
-    %% Example code for the two ways of implementing
-    %% optimal control problems. The two resulting problems
-    %% ocp1 and ocp2 are equivalent.
-    %%
-
-    %% Using functions
-    %%
-    ocp1 = OclOCP(@ocpPathCosts);
-    function ocpPathCosts(ch,x,z,u,p)
-      self.addPathCost( x.p^2 );
-      self.addPathCost( x.v^2 );
-      self.addPathCost( u.u^2 );
-    end
-    
-    %% Using a OCP class
-    %% Note that the methods are marked as Static!
-    ocp2 = VanDerPolOCP();
-    classdef VanDerPolOCP < OclOCP
-      methods (Static)
-        function pathCosts(ch,x,z,u,p)
-          ch.addPathCost( x.p^2 );
-          ch.addPathCost( x.v^2 );
-          ch.addPathCost( u.u^2 );
-        end
-      end
-    end
 parameters: 
   - content: "Function handle to the function that defines the path costs. The signature of the corresponding function can be seen in the abstract methods definition."
     name: fhPathCosts
@@ -185,7 +159,6 @@ methods:
     returns: ~
 position: 2
 returns: ~
-right_code_blocks: ~
 title: OclOCP
 type: Class
 ---
