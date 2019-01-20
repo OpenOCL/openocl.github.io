@@ -31,7 +31,7 @@ code_block:
       sh.addControl('u');  
     end
     function sysEq(sh,x,z,u,p)
-      sh.setODE('p',(1-x.v^2)*x.p-x.v+u); 
+      sh.setODE('p',(1-x.v^2)*x.p-x.v+u.u); 
       sh.setODE('v',x.p);
     end
     
@@ -50,7 +50,7 @@ code_block:
           self.addControl('u');      
         end
         function setupEquations(self,x,z,u,p)     
-          self.setODE('p',(1-x.v^2)*x.p-x.v+u); 
+          self.setODE('p',(1-x.v^2)*x.p-x.v+u.u); 
           self.setODE('v',x.p);
         end
       end
