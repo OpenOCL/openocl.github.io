@@ -40,19 +40,7 @@ code_block:
       end
     end
     
-parameters: 
-  - content: "Function handle to the function that defines the path costs. The signature of the corresponding function can be seen in the abstract methods definition."
-    name: fhPathCosts
-    type: "function handle, optional"
-  - content: "Function handle to the function that defines the arrival costs. The signature of the corresponding function can be seen in the abstract methods definition."
-    name: fhArrivalCosts
-    type: "function handle, optional"
-  - content: "Function handle to the function that defines the path constraints. The signature of the corresponding function can be seen in the abstract methods definition."
-    name: fhPathConstraints
-    type: "function handle, optional"
-  - content: "Function handle to the function that defines the boundary conditions. The signature of the corresponding function can be seen in the abstract methods definition."
-    name: fhBoundaryConditions
-    type: "function handle, optional"
+
 methods_abstract: 
   - 
     content: "In this method you can implement the path cost (also called Lagrange cost or intermediate cost) function."
