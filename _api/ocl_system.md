@@ -3,7 +3,7 @@ name: OclSystem
 description: |-
   There are two ways to implement the dynamics of a system. The first way is by implementing functions for defining the system variables and equations, and creating an OclSystem using the function handles/pointers. The second way involves involves implementing the system in an object oriented way as a class that is inherited from OclSystem. The second way is a bit more involved but for complex systems it allows using the capabilities of classes, e.g. defining instance variables.
   
-  **As system functions** 
+  **Using system functions** 
   You need to implement two functions, one for defining the system variables, and a second one for defining the system equations. The system is created by passing the two function handles to the constructor of OclSystem.
   
   **By inheriting from OclSystem** You need to inherit your class from OclSystem and implement the two methods setupVariables and setupEquations as static methods. 
@@ -18,8 +18,8 @@ code_block:
     %% equivalent.
     %%
     
-    %%%
-    %% As system functions
+    %% Using system functions
+    %%
     sys1 = OclSystem(@sysVars,@sysEq);
     
     % Function definitions can be in the same file 
@@ -36,8 +36,8 @@ code_block:
     end
     
     
-    %%%
     %% By inheriting from OclSystem
+    %% 
     sys2 = VanDerPolSystem();
     
     % The class definition must be in a separate file.
@@ -56,7 +56,7 @@ code_block:
       end
     end
 methods: 
-  - content: "Adds a state variable to the system. This function must be called within the setupEquation method."
+  - content: "Adds a state variable to the system."
     name: "addState"
     parameters: 
       - content: "Name of the state variable"
@@ -72,7 +72,7 @@ methods:
         name: ub
         type: "numeric, optional"
     returns: ~
-  - content: "Adds an algebraic variable to the system. This function must be called within the setupEquation method."
+  - content: "Adds an algebraic variable to the system."
     name: "addAlgVar"
     parameters: 
       - content: "Name of the algebraic variable"
@@ -88,7 +88,7 @@ methods:
         name: ub
         type: "numeric, optional"
     returns: ~
-  - content: "Adds an control input to the system. This function must be called within the setupEquation method."
+  - content: "Adds an control input to the system."
     name: "addControl"
     parameters: 
       - content: "Name of the control variable"
@@ -104,7 +104,7 @@ methods:
         name: ub
         type: "numeric, optional"
     returns: ~
-  - content: "Adds a parameter. This function must be called within the setupEquation method."
+  - content: "Adds a parameter."
     name: "addParameter"
     parameters: 
       - content: "Name of the parameter"
@@ -136,13 +136,19 @@ methods:
     returns: ~
 methods_abstract: 
   - name: setupVariables
-    content: "Implement this method to define the system variables. You can create state, control and algebraic variables using the class methods."
-    parameters: ~
+    content: "Implement this method as a static method to define the system variables. You can create state, control and algebraic variables using the class methods."
+    parameters: 
+      - content: "System handler, reference to the system object."
+        name: sh
+        type: "[OclSystem](#apiocl_system)"
     returns: ~
     code_block:
-  - content: "Implement this method to specify the differential and algebraic equations. It is possible to define only ordinary differential equations (ODE system), or differential and algebraic equations (DAE system)."
+  - content: "Implement this method as a static method to specify the differential and algebraic equations. It is possible to define only ordinary differential equations (ODE system), or differential and algebraic equations (DAE system)."
     name: "setupEquation"
     parameters: 
+      - content: "System handler, reference to the system object."
+        name: sh
+        type: "[OclSystem](#apiocl_system)"
       - content: "State variables"
         name: x
         type: "[OclVariable](#apiocl_variable)"
@@ -157,7 +163,13 @@ methods_abstract:
         type: "[OclVariable](#apiocl_variable)"
     code_block:
     returns: ~
-parameters: ~
+parameters:
+  - content: "Function handle to the function that sets up the variables. The function for the variables must have one input argument, no return values, and thus the following siganture: varFunctionName(sh) where sh is the system handler that allows to add variables and parameters."
+    name: fhVars
+    type: "function handle, optional"
+  - content: "Function handle to the function that sets up the equations. The function for the variables must have five input argument, no return values, and thus the following signature: eqFunctionName(sh,x,z,u,p) where sh is the system handler that allows to add ODE and DAE equations, x the states, z the algebraic variables, u the control inputs, p the parameters."
+    name: fhEquations
+    type: "function handle, optional"
 position: 1
 returns: ~
 right_code_blocks: ~
