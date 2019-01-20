@@ -12,7 +12,6 @@ code_block:
   title: Example System
   language: m
   code: |-
-
     %% Example code for the two ways of implementing
     %% system. The two resulting systems sys1 and sys2 are 
     %% equivalent.
