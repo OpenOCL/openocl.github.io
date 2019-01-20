@@ -71,7 +71,7 @@ methods:
       - content: "Time points of the solution"
         type: "[OclVariable](#apiocl_variable)"
   - name: "setBounds"
-    content: "Sets a bound on variable for the whole trajectory. If only lower bound is given, it will be `lb==ub`. A bound can be either scalar or a vector with `length(lb)==length(ub)==N+1` for states and `length(lb)==length(ub)==N` for control variables."
+    content: "Sets a bound on a variable for the whole trajectory. If only the lower bound is given, it will be `lb==ub`. A bound can be either scalar or a vector with `length(lb)==length(ub)==N+1` for states and `length(lb)==length(ub)==N` for control variables."
     parameters:
       - content: "The variable id"
         name: "id"
@@ -83,7 +83,7 @@ methods:
         name: "ub=ub"
         type: "numeric,optional"
   - name: "setInitialBounds"
-    content: "Sets an initial bound on variable. If only lower bound is given, it will be `lb==ub`. A bound can be either scalar or a vector with `length(lb)==length(ub)==N+1` for states and `length(lb)==length(ub)==N` for control variables."
+    content: "Sets an initial bound on a variable. If only the lower bound is given, it will be `lb==ub`. A bound can be either scalar or a vector with `length(lb)==length(ub)==N+1` for states and `length(lb)==length(ub)==N` for control variables."
     parameters:
       - content: "The variable id"
         name: "id"
@@ -95,7 +95,7 @@ methods:
         name: "ub=ub"
         type: "numeric,optional"
   - name: "setEndBounds"
-    content: "Sets an end bound on variable. If only lower bound is given, it will be `lb==ub`. A bound can be either scalar or a vector with `length(lb)==length(ub)==N+1` for states and `length(lb)==length(ub)==N` for control variables."
+    content: "Sets an end bound on a variable. If only the lower bound is given, it will be `lb==ub`. A bound can be either scalar or a vector with `length(lb)==length(ub)==N+1` for states and `length(lb)==length(ub)==N` for control variables."
     parameters:
       - content: "The variable id"
         name: "id"
@@ -107,7 +107,7 @@ methods:
         name: "ub=ub"
         type: "numeric"
   - name: "setParameter"
-    content: "Sets a bound on the parameter with the given name. If only lower bound is given, it will be `lb==ub`. A bound can be either scalar or a vector with `length(lb)==length(ub)==N+1` for states and `length(lb)==length(ub)==N` for control variables."
+    content: "Sets a bound on the parameter with the given name. If only the lower bound is given, it will be `lb==ub`. A bound can be either scalar or a vector with `length(lb)==length(ub)==N+1` for states and `length(lb)==length(ub)==N` for control variables."
     parameters:
       - content: "The parameter name"
         name: "id"
