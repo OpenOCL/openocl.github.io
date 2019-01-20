@@ -1,13 +1,33 @@
 --- 
 name: OclSystem
-content_markdown: ~
-description: "The system is implemented by inheriting from the System class. You need to implement the two methods setupVariables and setupEquation. Have a look at the VanDerPolSystem.m in the Examples folder get an impression on how it works:"
+description: |-
+  There are two ways to implement the dynamics of a system. The first way is by implementing functions for defining the system variables and equations, and creating an OclSystem using the function handles/pointers. The second way involves involves implementing the system in an object oriented way as a class that is inherited from OclSystem. The second way is a bit more involved but for complex systems it allows using the capabilities of classes, e.g. defining instance variables.
+  **As system functions** You need to implement two functions, one for defining the system variables, and a second one for defining the system equations. The system is created by passing the two function handles to the constructor of OclSystem.
+  **By inheriting from OclSystem** You need to inherit your class from OclSystem and implement the two methods setupVariables and setupEquations as static methods. 
+  
 code_block:
   title: Example System
   language: m
   code: |-
+    ## As system functions
+    sys = OclSystem(@sysVars,@sysEq);
+    
+    # function definitions can be in the same file (if the main script is wrapped by a function) or in separate files:
+    function sysVars(sh)
+      sh.addState('p');
+      sh.addState('v');
+    end
+    function sysEq(sh,x,z,u,p)
+      sh.setODE('p',(1-x.v^2)*x.p-x.v+u); 
+      sh.setODE('v',x.p);
+    end
+    
+    ## By inheriting from OclSystem
+    sys = VanDerPolSystem();
+    
+    # class definition must be in a separate file
     classdef VanDerPolSystem < OclSystem
-      methods
+      methods (Static)
         function setupVariables(self)    
           % Two scalar state variables
           self.addState('p',[1,1]);
@@ -15,7 +35,7 @@ code_block:
           % One scalar control variable
           self.addControl('u',[1,1]);      
         end
-        function setupEquation(self,x,z,u,p)     
+        function setupEquations(self,x,z,u,p)     
           % Two differential equations
           self.setODE('p',(1-x.v^2)*x.p-x.v+u); 
           self.setODE('v',x.p);
