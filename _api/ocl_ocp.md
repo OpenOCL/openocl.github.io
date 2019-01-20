@@ -1,6 +1,6 @@
 --- 
 name: OclOCP
-description: |-
+description: |- "
   As for [OclSystem](#apiocl_system) there are two ways to implement an optimal control problem (OCP): The functional and the object oriented approach. If you do not implemented some of the functions or methods they default to zero cost for the cost functions or an empty constraints array for path constraints and boundary conditions.
 
   **Using OCP function**
@@ -8,7 +8,7 @@ You can implement functions for path costs, arrival costs, path constraints, bou
 
   **By inheriting from OclOCP**
 The OCP is defined by inheriting from the OclOCP class. In order to specify cost functions and boundary conditions you have to implement the corresponding methods. 
-
+"
 code_block:
   title: Example OCP
   language: m
