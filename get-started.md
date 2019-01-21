@@ -25,6 +25,9 @@ If you would like to save your path using `savepath` or the Matlab path manager,
 
 ### Build status
 
+| master branch | develop branch |
+|:------:|:-------:|
+| [![Build Status](https://travis-ci.org/OpenOCL/OpenOCL.svg?branch=master)](https://travis-ci.org/OpenOCL/OpenOCL) | [![Build Status](https://travis-ci.org/OpenOCL/OpenOCL.svg?branch=develop)](https://travis-ci.org/OpenOCL/OpenOCL) |
 
 
 
