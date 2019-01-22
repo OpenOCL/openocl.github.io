@@ -72,10 +72,10 @@ methods:
         name: s
         type: "int, optional"
       - content: "Lower bound on the variable. This value can be overwritten when you specify bounds for OclSolver with solver.setBound. Defaults to -inf."
-        name: lb=lb
+        name: lb=-inf
         type: "numeric, optional"
       - content: "Upper bound on the variable. This value can be overwritten when you specify bounds for OclSolver with solver.setBound. Defaults to inf."
-        name: ub=ub
+        name: ub=inf
         type: "numeric, optional"
     returns: ~
   - content: "Adds an algebraic variable to the system."
@@ -88,10 +88,10 @@ methods:
         name: s
         type: "int, optional"
       - content: "Lower bound on the variable. This value can be overwritten when you specify bounds for OclSolver with solver.setBound. Defaults to -inf."
-        name: lb=lb
+        name: lb=-inf
         type: "numeric, optional"
       - content: "Upper bound on the variable. This value can be overwritten when you specify bounds for OclSolver with solver.setBound. Defaults to inf."
-        name: ub=ub
+        name: ub=inf
         type: "numeric, optional"
     returns: ~
   - content: "Adds an control input to the system."
@@ -104,10 +104,10 @@ methods:
         name: s
         type: "int, optional"
       - content: "Lower bound on the variable. This value can be overwritten when you specify bounds for OclSolver with solver.setBound. Defaults to -inf."
-        name: lb=lb
+        name: lb=-inf
         type: "numeric, optional"
       - content: "Upper bound on the variable. This value can be overwritten when you specify bounds for OclSolver with solver.setBound. Defaults to inf."
-        name: ub=ub
+        name: ub=inf
         type: "numeric, optional"
     returns: ~
   - content: "Adds a parameter."
@@ -120,7 +120,7 @@ methods:
         name: s
         type: "int, optional"
       - content: "Default value for the parameter. This value can be overwritten when you specify the parameter for OclSolver with solver.setParameter. Defaults to unbounded."
-        name: default=val
+        name: default=[]
         type: "numeric, optional"
     returns: ~
   - content: "Adds a differential equation to the system. Note that for every state variable a differential equation must be specified."
