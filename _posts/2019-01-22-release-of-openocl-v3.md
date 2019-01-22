@@ -5,8 +5,9 @@ title: New release OpenOCL v3
 We are happy to announce that OpenOCL v3 is ready and released. 
 It contains many improvements with respect to the previous version and also some API changes. 
 If you come from an earlier version see the [release notes](https://github.com/OpenOCL/OpenOCL/releases/tag/v.3.11) that contains a list of changes below.
-Otherwise you can directly go to the download of [OpenOCL v3.11](get-started)
+Otherwise you can directly go to the download of [OpenOCL v3.11](get-started) or pull the latest version from the master branch.
 
+### Release Notes
 The release includes many changes to the API. Some class names, method names, and the way the solver is created are changed. If you come from an earlier version you need to adapt your model/code for this version. Below you find a list of changes. Also look at the examples how they are implemented (and look at the API documentation at [openocl.org](https://openocl.org)). This is also the first release to support Octave, and this release will become the first stable release. 
 
 The URL of the github repository has changed. Change your remote URL with:
