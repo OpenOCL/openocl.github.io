@@ -120,7 +120,7 @@ methods:
         name: s
         type: "int, optional"
       - content: "Default value for the parameter. This value can be overwritten when you specify the parameter for OclSolver with solver.setParameter. Defaults to unbounded."
-        name: v
+        name: default=val
         type: "numeric, optional"
     returns: ~
   - content: "Adds a differential equation to the system. Note that for every state variable a differential equation must be specified."
