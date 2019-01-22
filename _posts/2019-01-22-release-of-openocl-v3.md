@@ -5,7 +5,7 @@ title: New release OpenOCL v3
 We are happy to announce that OpenOCL v3 is ready and released. 
 It contains many improvements with respect to the previous version and also some API changes. 
 If you come from an earlier version see the [release notes](https://github.com/OpenOCL/OpenOCL/releases/tag/v.3.11) that contains a list of changes below.
-Otherwise you can directly go to the download of [OpenOCL v3.11](/get-started) or pull the latest version from the master branch.
+Otherwise you can directly go to the *download* page of [OpenOCL v3.11](/get-started) or pull the latest version from the master branch.
 
 Also note that the URL of the github repository has changed. Update your remote URL with:   
 `git remote set-url origin https://github.com/OpenOCL/OpenOCL.git`
