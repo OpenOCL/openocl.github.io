@@ -155,8 +155,7 @@ strong {
 }
 
 section {
-  width:auto;
-  margin-left:270px;
+  width:calc(100% - 300px);
   float:right;
   padding-bottom:50px;
 }
