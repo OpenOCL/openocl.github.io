@@ -69,13 +69,13 @@ methods:
         name: "id"
         type: "char"
       - content: "Size of the state variable. Scalar, vector, and matrix valued variables are allowed. If a scalar value s is given, the size of the variable will be [s,1]. Defaults to [1,1]."
-        name: size
+        name: s
         type: "int, optional"
       - content: "Lower bound on the variable. This value can be overwritten when you specify bounds for OclSolver with solver.setBound. Defaults to -inf."
-        name: lb
+        name: lb=lb
         type: "numeric, optional"
       - content: "Upper bound on the variable. This value can be overwritten when you specify bounds for OclSolver with solver.setBound. Defaults to inf."
-        name: ub
+        name: ub=ub
         type: "numeric, optional"
     returns: ~
   - content: "Adds an algebraic variable to the system."
@@ -85,13 +85,13 @@ methods:
         name: id
         type: char
       - content: "Size of the algebraic variable. Scalar, vector, and matrix valued variables are allowed. If a scalar value s is given, the size of the variable will be [s,1]. Defaults to [1,1]."
-        name: size
+        name: s
         type: "int, optional"
       - content: "Lower bound on the variable. This value can be overwritten when you specify bounds for OclSolver with solver.setBound. Defaults to -inf."
-        name: lb
+        name: lb=lb
         type: "numeric, optional"
       - content: "Upper bound on the variable. This value can be overwritten when you specify bounds for OclSolver with solver.setBound. Defaults to inf."
-        name: ub
+        name: ub=ub
         type: "numeric, optional"
     returns: ~
   - content: "Adds an control input to the system."
@@ -101,13 +101,13 @@ methods:
         name: id
         type: char
       - content: "Size of the control variable. Scalar, vector, and matrix valued variables are allowed. If a scalar value s is given, the size of the variable will be [s,1]. Defaults to [1,1]."
-        name: size
+        name: s
         type: "int, optional"
       - content: "Lower bound on the variable. This value can be overwritten when you specify bounds for OclSolver with solver.setBound. Defaults to -inf."
-        name: lb
+        name: lb=lb
         type: "numeric, optional"
       - content: "Upper bound on the variable. This value can be overwritten when you specify bounds for OclSolver with solver.setBound. Defaults to inf."
-        name: ub
+        name: ub=ub
         type: "numeric, optional"
     returns: ~
   - content: "Adds a parameter."
@@ -117,7 +117,7 @@ methods:
         name: id
         type: char
       - content: "Size of the control variable. Scalar, vector, and matrix valued variables are allowed. If a scalar value s is given, the size of the variable will be [s,1]. Defaults to [1,1]."
-        name: size
+        name: s
         type: "int, optional"
       - content: "Default value for the parameter. This value can be overwritten when you specify the parameter for OclSolver with solver.setParameter. Defaults to unbounded."
         name: v
