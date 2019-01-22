@@ -3,7 +3,6 @@ repository: OpenOCL/OpenOCL
 highlighter: rouge
 title: OpenOCL
 url: https://openocl.org
-baseurl: https://openocl.org
 
 collections:
   - api
