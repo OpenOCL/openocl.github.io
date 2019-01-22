@@ -104,7 +104,7 @@ methods:
         name: "lb"
         type: "numeric"
       - content: "The upper bound"
-        name: "ub"
+        name: "ub,optional"
         type: "numeric"
   - name: "setParameter"
     content: "Sets a bound on the parameter with the given name. If only the lower bound is given, it will be `lb==ub`. A bound can be either scalar or a vector with `length(lb)==length(ub)==N+1` for states and `length(lb)==length(ub)==N` for control variables."
@@ -116,6 +116,6 @@ methods:
         name: "lb"
         type: "numeric"
       - content: "The upper bound"
-        name: "ub"
+        name: "ub,optional"
         type: "numeric"
 ---
