@@ -13,9 +13,6 @@ Also note that the URL of the github repository has changed. Update your remote 
 ### Release Notes
 The release includes many changes to the API. Some class names, method names, and the way the solver is created are changed. If you come from an earlier version you need to adapt your model/code for this version. Below you find a list of changes. Also look at the examples how they are implemented (and look at the API documentation at [openocl.org](https://openocl.org)). This is also the first release to support Octave, and this release will become the first stable release. 
 
-The URL of the github repository has changed. Change your remote URL with:
-`git remote set-url origin https://github.com/OpenOCL/OpenOCL.git`
-
 API changes:
 * `Solver.getNLP` and `Solver.getSolver` are replaced by `OclSolver(T,system,ocp,options)`
 * System became [OclSystem](https://openocl.org/api-docs/#apiocl_system)
