@@ -14,7 +14,7 @@ title: Blog
   {% for post in site.posts %}
     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
     <h4> 
-        <a href="/{{ post.category }}">{{ post.category }}</a> 
+        <a href="/{{ page.category }}">{{ page.category }}</a> 
     </h4>
     <p>{{ post.excerpt }}</p>
   {% endfor %}
