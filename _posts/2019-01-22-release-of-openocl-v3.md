@@ -1,6 +1,7 @@
 ---
 title: New release OpenOCL v3
 categories: release
+permalink: /:categories/:title/
 ---
 
 We are happy to announce that OpenOCL v3 is ready and released. 
