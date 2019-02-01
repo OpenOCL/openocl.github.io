@@ -1,5 +1,6 @@
 ---
 title: API docs are now on the website!
+permalink: /:categories/:title/
 ---
 
 Go to [api-docs](/api-docs/) to view all classes, methods, and functions that you need to implement optimal control problems with OpenOCL. The API should be almost complete for all public functions. It will be gradually extended as the toolbox evolves.
