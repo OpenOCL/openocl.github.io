@@ -25,7 +25,7 @@ If you would like to save your path using `savepath` or the Matlab path manager,
 
 ### Build status
 
-2019/02/27: We are currently doing major refactoring in the development branch.
+2019/02/27: The development branch is currently undergoing major refactorization.
 
 | master branch | develop branch |
 |:------:|:-------:|
