@@ -25,7 +25,7 @@ If you would like to save your path using `savepath` or the Matlab path manager,
 
 ### Build status
 
-2019/02/27: The development branch is currently undergoing major refactorization.
+2019/02/27: The development branch is currently undergoing major refactorization in the attempt to implement the core in C++, and make the software available in other languages, e.g. Python.
 
 | master branch | develop branch |
 |:------:|:-------:|
