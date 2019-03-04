@@ -7,11 +7,11 @@ title: Open Optimal Control Library
 [Get started](get-started.md) - [Tutorial](tutorial.md) - [API Docs](api-docs.md)
 
 With the Open Optimal Control Library you can:
-* Model dynamical systems
-* Formulate optimal control problems
-* Automatically generate necessary derivatives (jabobian, hessian)
-* Solve optimal control or trajectory optimization problems
-* Implement model predictive controllers
+* Model **dynamical systems**
+* Formulate **optimal control** problems
+* Automatically generate necessary **derivatives** (jabobian, hessian)
+* Solve **trajectory optimization** problems
+* Implement **model-predictive control**
 
 The software can be used from Matlab and Octave. Python and C++ implementations as well as a unified optimal control modeling language are coming soon. 
 
