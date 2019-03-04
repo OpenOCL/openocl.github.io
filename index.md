@@ -29,10 +29,10 @@ In the examples you will find (ordered by problem complexity):
 * [Cart-pole swingup](https://github.com/OpenOCL/OpenOCL/tree/master/Examples/05CartPole)
 
 
-### Models
+### Additional models
 
 * Airborne wind energy: [openawe.github.io](https://openawe.github.io/)
-* Robotics: [github:openocl_models](https://github.com/JonasKoenemann/openocl_models) (very experimental)
+* (Arm-type) Robotics: [github:openocl_models](https://github.com/JonasKoenemann/openocl_models) (very experimental)
 
 ### Publications
 
