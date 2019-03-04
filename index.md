@@ -1,12 +1,12 @@
 ---
-last_modified_at: 2019-03-01
+last_modified_at: 2019-03-04
 title: Open Optimal Control Library
 ---
 <img src="https://openocl.org/imgs/cartpole.gif" width="31%"> <img src="https://openocl.org/imgs/car.png" width="31%"> <img src="https://openocl.org/imgs/circ.png" width="31%">  
 <img src="https://openocl.org/imgs/pend.png" width="31%"> <img src="https://openocl.org/imgs/ballbeam.png" width="31%"> <img src="https://openocl.org/imgs/lemn.png" width="31%">    
 [Get started](get-started.md) - [Tutorial](tutorial.md) - [API Docs](api-docs.md)
 
-The Open Optimal Control Library is a toolbox for Matlab/Octave that facilitates modelling and formulation of (parametric) optimal control problems. It interfaces Ipopt [1] to numerically solve the optimal control problems and CasADi [2] to automatically calcuate the necessary derivatives by algorithmic differentiation.
+The Open Optimal Control Library is a toolbox for Matlab/Octave that facilitates modelling and formulation of (parametric) optimal control problems. Python and C++ implementations, as well as a unified optimal control modeling language are coming soon. OpenOCL interfaces Ipopt [1] to numerically solve the optimal control problems and CasADi [2] to automatically calcuate the necessary derivatives by algorithmic differentiation.
 
 ### Quick start
 
