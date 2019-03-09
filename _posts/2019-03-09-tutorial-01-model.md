@@ -2,6 +2,7 @@
 categories: tutorials
 title: "[Tutorial01] Double pole cart model"
 permalink: /:categories/:title/
+mathjax: true
 hidden: true
 ---
 
