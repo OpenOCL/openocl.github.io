@@ -2,6 +2,7 @@
 categories: tutorial
 title: "[Tutorial01] Double pole cart model"
 permalink: /:categories/:title/
+published: false
 ---
 
 We start the tutorial series with implementing the simulation model of a double pole cart. 
