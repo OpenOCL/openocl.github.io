@@ -6,7 +6,7 @@ mathjax: true
 hidden: true
 ---
 
-We start the tutorial series with implementing the simulation model of a double pole cart. 
+We start the *tutorial series for optimal control* with implementing the simulation model of a double pole cart. 
 The idea of this tutorial series is to implement the code for the tutorials while writing the blog posts, so it is to be seen how far we will get.
 
 ### Basic model outline
@@ -20,7 +20,8 @@ Here we describe the features/requirements that we would like to implement for t
 6. The system can be simulated from a given state $x_0$.
 7. The system is noisy.
 
-That should be it to begin with..
+Here i drew a picture of the system:
+![Drawing of double pole cart](/assets/posts/drawing_dpcart.jpg)
 
 ### Model equations
 
