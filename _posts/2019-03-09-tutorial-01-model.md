@@ -1,6 +1,6 @@
 ---
 categories: tutorial
-title: [Tutorial01] Double pole cart model
+title: "[Tutorial01] Double pole cart model"
 permalink: /:categories/:title/
 ---
 
