@@ -21,7 +21,7 @@ Here we describe the features/requirements that we would like to implement for t
 7. The system is noisy.
 
 Here i drew a picture of the system:
-![Drawing of double pole cart](/assets/posts/drawing_dpcart.jpg)
+![Drawing of double pole cart](/assets/posts/drawing_dpcart.jpg =250x)
 
 ### Model equations
 
