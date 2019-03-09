@@ -26,6 +26,10 @@ Here i drew a picture of the system:
 
 ### Model equations
 
+With the model equations we want to describe mathematically how the system evolves with time. But first we need to define the state of the system which describes the situation in which the system currently is. The state has to have *Markov property* which says something like: you should be able to predict future states, when you have only the current state given. So we need this property to be able to simulate the system.
+
+Therefore the state usually does not only include the current location or configuration of the system but also the velocity of the system. Because of *Newton's Laws* we can describe the state of classical mechanical systems by its position and velocity. We know that the system continues moving when there are no forces, and it will acclerate/decelerate when there are external forces according to $F=m a$ etc.
+
 We describe the state of the system by a set of variables:
 * Position of the cart $p$
 * Velocity of the cart $v$
