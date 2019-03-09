@@ -20,9 +20,16 @@ Here we describe the features/requirements that we would like to implement for t
 6. The system can be simulated from a given state $x_0$.
 7. The system is noisy.
 
-Here i drew a picture of the system:
+Here i drew a picture of the system:  
 ![Drawing of double pole cart](/assets/posts/drawing_dpcart.jpg)
 
 ### Model equations
 
+We describe the state of the system by a set of variables:
+* Position of the cart $p$
+* Velocity of the cart $v$
+* Angle of the first pole $\theta$
+* Angular velocity of the first pole $\dot{\theta}$
+* Angle of the second pole $\phi$
+* Angular velocity of the second pole $\dot{\phi}$
 
