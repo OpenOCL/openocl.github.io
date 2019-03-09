@@ -30,7 +30,7 @@ With the model equations we want to describe mathematically how the system evolv
 
 Therefore the state usually does not only include the current location or configuration of the system but also the velocity of the system. Because of *Newton's Laws* we can describe the state of classical mechanical systems by its position and velocity. We know that the system continues moving when there are no forces, and it will acclerate/decelerate when there are external forces according to $F=m a$ etc.
 
-We describe the state of the system by a set of variables:
+So for our double pole cart system, we can describe the state by the following set of variables:
 * Position of the cart $p$
 * Velocity of the cart $v$
 * Angle of the first pole $\theta$
