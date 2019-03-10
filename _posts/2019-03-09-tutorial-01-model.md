@@ -43,8 +43,7 @@ So for our double pole cart system, we can describe the state by the following s
 
 ### The dynamical system equations
 
-Now comes the hard part. Although we could probably find the equations online somewhere (like [here](https://www.acin.tuwien.ac.at/fileadmin/cds/pre_post_print/glueck2013.pdf) or at least for the double pendulum [here](https://www.youtube.com/watch?v=neh86u7_TIk)) we will try to derive the equations from scratch.
-
+Now comes the hard part. Although we could probably find the equations online somewhere (like [here](https://www.acin.tuwien.ac.at/fileadmin/cds/pre_post_print/glueck2013.pdf) or at least for the double pendulum [here](https://www.youtube.com/watch?v=neh86u7_TIk) and [here](http://web.mit.edu/jorloff/www/chaosTalk/double-pendulum/double-pendulum-en.html)) we will try to derive the equations from scratch.
 
 First we can determine the positions of the masses $p_1$ and $p_2$. Here is another picture: 
 
@@ -59,6 +58,8 @@ and similarity $p_2$ can be calculated by
 \\[
 p_2 = p1 + \\begin{bmatrix}  \cos(\theta+\phi) l_2 \\\ \\sin({\theta+\phi}) l_2 \\end{bmatrix}
 \\]
+
+
 
 Lets start with a **single pendulum**.
 
