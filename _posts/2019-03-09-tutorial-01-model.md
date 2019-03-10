@@ -45,12 +45,17 @@ Now comes the hard part. Although we could probably find the equations online so
 
 Lets start with a **single pendulum**.
 
-So, our first pendulum is described by the position of the hinge/joint $p_1$, the angle $theta$, and the angular velocity $\dot{\theta}$. The only force acting on the pendulum is the gravity force $f_g$. Here is another picture: 
+So, our first pendulum is described by the position of the hinge/joint $p_1$, the angle $\theta$, and the angular velocity $\dot{\theta}$. The only force acting on the pendulum is the gravity force $f_g$. Here is another picture: 
 
 ![Drawing of single pendulum](/assets/posts/tut01_drawing_pendulum.jpg)
 
 Only the orthorgonal part of the force $f^{\top}_g$ creates a moment around $p_1$. The torque is 
 $$
-\tau = f^{\top}_g l_1 = sin(\theta) f_g l_1 
+\tau = f^{\top}_g l_1 = sin(\theta) f_g l_1 \,,
+$$
+which relates to the angular acceleration by 
+$$
+\tau = I \ddot{\theta} \,.
 $$
 
+For the inertia $I$ 
