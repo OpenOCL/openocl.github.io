@@ -52,12 +52,12 @@ First we can determine the positions of the masses $p_1$ and $p_2$. Here is anot
 
 From the picture we can see that $p_1$ can be calculated by
 \\[
-p_1 = \\begin{bmatrix} p_x + \cos{\theta} l_1 \\\ \sin{\theta} l_1 \\end{bmatrix}
+p_1 = \\begin{bmatrix} p_x + \\cos\{\theta\} l_1 \\\ \\sin{\theta} l_1 \\end{bmatrix}
 \\]
 
 and similarity $p_2$ can be calculated by
 \\[
-p_2 = p1 + \\begin{bmatrix}  \cos{\theta+\phi} l_2 \\\ \sin{\theta+\phi} l_2 \\end{bmatrix}
+p_2 = p1 + \\begin{bmatrix}  \\cos\{\theta+\phi\} l_2 \\\ \\sin{\theta+\phi} l_2 \\end{bmatrix}
 \\]
 
 Lets start with a **single pendulum**.
