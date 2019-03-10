@@ -6,12 +6,13 @@ mathjax: true
 hidden: true
 ---
 
-We start the *tutorial series for optimal control* with implementing the simulation model of a double pole cart. 
+We start the *tutorial series for optimal control* with implementing the simulation model of a **double pendulum on a cart**, or **double-pole cart**, or **double cart-pole** if you like. 
 The idea of this tutorial series is to implement the code for the tutorials while writing the blog posts, so it is to be seen how far we will get.
 
-### Basic model outline
+### Basic system outline
 
-Here we describe the features/requirements that we would like to implement for the model.
+We briefly summarize the features/requirements that we would like to implement for the model:
+
 1. The system has a cart that can move linearly alogn the x-axis.
 2. The cart can be controlled by a limited force $f$ that acts along the x-axis.
 3. In the center of the cart a pole/pendulum is attached by a uncontrolled revolute joint.
@@ -20,11 +21,11 @@ Here we describe the features/requirements that we would like to implement for t
 6. The system can be simulated from a given state $x_0$.
 7. The system is noisy.
 
-Here i drew a picture of the system:
+Here, i drew a picture of the system:
 
 ![Drawing of double pole cart](/assets/posts/drawing_dpcart.jpg)
 
-### Model equations
+### The state of the system
 
 With the model equations we want to describe mathematically how the system evolves with time. But first we need to define the state of the system which describes the situation in which the system currently is. The state has to have *Markov property* which says something like: you should be able to predict future states, when you have only the current state given. So we need this property to be able to simulate the system.
 
@@ -37,4 +38,19 @@ So for our double pole cart system, we can describe the state by the following s
 * Angular velocity of the first pole $\dot{\theta}$
 * Angle of the second pole $\phi$
 * Angular velocity of the second pole $\dot{\phi}$
+
+### The dynamical system equations
+
+Now comes the hard part. Although we could probably find the equations online somewhere (like [here](https://www.acin.tuwien.ac.at/fileadmin/cds/pre_post_print/glueck2013.pdf) or at least for the double pendulum [here](https://www.youtube.com/watch?v=neh86u7_TIk)) we will try to derive the equations from scratch.
+
+Lets start with a **single pendulum**.
+
+So, our first pendulum is described by the position of the hinge/joint $p_1$, the angle $theta$, and the angular velocity$\dot{\theta}$. The only force acting on the pendulum is the gravity force $f_g$. Here is another picture: 
+
+![Drawing of single pendulum](/assets/posts/tut01_drawing_pendulum.jpg)
+
+Only the orthorgonal part of the force $f^{\top}_g$ creates a moment around $p_1$. The torque is 
+$$
+\tau = f^{\top}_g l_1 = sin(\theta) f_g l_1 
+$$
 
