@@ -58,4 +58,14 @@ $$
 \tau = I \ddot{\theta} \,.
 $$
 
-For the inertia $I$ 
+For the inertia $I$ we can take the [inertia of a rod](http://hyperphysics.phy-astr.gsu.edu/hbase/mi2.html) where the the axis is at the end of the rod. If the pendulum has mass $m_1$ the inertia is given by 
+$$
+I_1 = \frac{1}{3} m_1 l_1 \,.
+$$
+
+Putting all together we arrive at
+$$
+\ddot{\theta} = \frac{3 \sin{\theta} f_g l_1}{m_1 l_1} = \frac{3 \sin{\theta} f_g }{m_1} \,,
+$$
+and we realize that the length $l_1$ drops out of the equation.
+
