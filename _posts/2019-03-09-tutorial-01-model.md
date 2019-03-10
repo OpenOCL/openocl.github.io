@@ -51,9 +51,9 @@ First we can determine the positions of the masses $p_1$ and $p_2$. Here is anot
 ![Drawing of single pendulum](/assets/posts/tut01_drawing_pendulum.jpg)
 
 From the picture we can see that $p_1$ can be calculated by
-\[
+\\[
 p_1 = \\begin{bmatrix} p_x + \cos{\theta} l_1 // \sin{\theta} l_1 \\end{bmatrix}
-\]
+\\]
 
 and similarity $p_2$ can be calculated by
 $$
