@@ -1,5 +1,5 @@
 ---
-title: New release OpenOCL v3
+title: New release OpenOCL v3.11
 categories: releases
 permalink: /:categories/:title/
 ---
