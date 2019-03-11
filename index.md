@@ -22,7 +22,7 @@ OpenOCL interfaces Ipopt [1] to numerically solve the optimal control problems a
 Go the *getting started* section to [download](get-started.md) the toolbox, visit the [tutorial](tutorial.md), or go straight to the [examples](https://github.com/JonasKoenemann/optimal-control/tree/master/Examples)!
 
 In the examples you will find (ordered by problem complexity):
-* [Van der Pol oscillator](https://github.com/OpenOCL/OpenOCL/tree/master/Examples/01VanDerPol)
+* [Van der Pol oscillator](https://github.com/OpenOCL/OpenOCL/blob/master/Examples/01VanDerPol/mainVanDerPol.m)
 * [Ball on beam equilibrium](https://github.com/OpenOCL/OpenOCL/tree/master/Examples/02BallAndBeam)
 * [Pendulum swingup](https://github.com/OpenOCL/OpenOCL/tree/master/Examples/03Pendulum)
 * [Race car control](https://github.com/OpenOCL/OpenOCL/tree/master/Examples/04RaceCar)
