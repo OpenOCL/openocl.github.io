@@ -22,4 +22,4 @@ Here are some details on the implementation:
 
 And here you can see them racing on the same track:
 
-{% include youtube_player.html id=N1xGLIeHnOg start=19 border=1 %}
+{% include youtube_player.html id='N1xGLIeHnOg' start=19 border=1 %}
