@@ -3,7 +3,7 @@ categories: contributed
 title: "[Contributed] 1 to 10 scale stock pro"
 permalink: /:categories/:title/
 hidden: true
-youtube: 
+youtube: N1xGLIeHnOg&
 ---
 
 **Mustafa Alp** from the *Polytechnic University of Milan* sent us a great video of his implementation in OpenOCL:
@@ -23,4 +23,4 @@ Here are some details on the implementation:
 
 And here you can see them racing on the same track:
 
-{% include youtube_player.html id=N1xGLIeHnOg&amp; %}
+{% include youtube_player.html id=page.youtube %}
