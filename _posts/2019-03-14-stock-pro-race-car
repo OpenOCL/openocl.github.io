@@ -1,13 +1,12 @@
 categories: contributed
 title: "[Contributed] 1 to 10 scale stock pro"
 permalink: /:categories/:title/
-mathjax: true
 hidden: true
 ---
 
 Mustafa Alp from the *Polytechnic University of Milan* sent us a great video of his implementation:
 
-![Animation of race track](/assets/posts/lapsim_2208_v1.gif)
+[Animation of race track](/assets/posts/lapsim_2208_v1.gif)
 
 Here are some details of the implementation:
 * The vehicle model is a car from the 1:10 scale pro stock division.
