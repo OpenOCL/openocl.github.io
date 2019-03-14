@@ -1,6 +1,6 @@
 categories: contributed
-title: "[Contributed] 1 to 10 scale stock pro"
-permalink: 
+title: "[Contributed] 1:10 scale stock pro"
+permalink: /:categories/:title/
 hidden: true
 ---
 
@@ -22,4 +22,3 @@ Here are some details on the implementation:
 And here you can see them racing on the same track:
 
 
-{% include youtube_player.html id=N1xGLIeHnOg %}
