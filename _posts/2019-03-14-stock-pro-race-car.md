@@ -1,9 +1,8 @@
 categories: contributed
-title: "[Contributed] 1 to 10 scale stock pro"
+title: 
 permalink: /:categories/:title/
 hidden: true
 ---
-
 
 Mustafa Alp from the *Polytechnic University of Milan* sent us a great video of his implementation:
 
