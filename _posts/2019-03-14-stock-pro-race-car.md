@@ -18,7 +18,7 @@ Here are some details on the implementation:
 * The torque curve of the motor is experimentally determined (25000 rpm limit).
 * Aerodynamic downforce and drag coefficients, as well as centres of pressures are from CFD results.
 * Mass, center of gravity position, mass moment of inertia, and drivetrain inertia values are from CAD drawings. 
-* It use a semi empirical tyre model with vertical load sensitivity, and combined (lateral and longitudinal) slip effects, as well as *roll off* characteristics of force/slip curves.
+* It uses a semi empirical tyre model with vertical load sensitivity, and combined (lateral and longitudinal) slip effects, as well as *roll off* characteristics of force/slip curves.
 
 
 And here you can see them racing on the same track:
