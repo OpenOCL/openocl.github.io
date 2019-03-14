@@ -23,4 +23,4 @@ Here are some details on the implementation:
 And here you can see them racing on the same track:
 
 
-{% include youtubePlayer.html id=N1xGLIeHnOg %}
+{% include youtube_player.html id=N1xGLIeHnOg %}
