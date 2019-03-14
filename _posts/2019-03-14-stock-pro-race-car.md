@@ -1,6 +1,6 @@
 categories: contributed
-title: 
-permalink: /:categories/:title/
+title: "[Contributed] 1 to 10 scale stock pro"
+permalink: 
 hidden: true
 ---
 
