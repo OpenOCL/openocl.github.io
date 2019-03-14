@@ -6,7 +6,7 @@ hidden: true
 youtube: N1xGLIeHnOg&amp;
 ---
 
-Mustafa Alp from the *Polytechnic University of Milan* sent us a great video of his implementation:
+**Mustafa Alp** from the *Polytechnic University of Milan* sent us a great video of his implementation:
 
 ![Animation of race track](/assets/posts/lapsim_2208_v1.gif)
 
