@@ -7,8 +7,8 @@ hidden: true
 
 **Mustafa Alp** from the *Polytechnic University of Milan* sent us a great video of his implementation in OpenOCL:
 
-![Animation of race track](/assets/posts/lapsim_2208_v1.gif)
-(Image courtesy of Mustafa Alp)
+![Animation of race track](/assets/posts/lapsim_2208_v1.gif)  
+<span style="font-size: xx-small;">(Image courtesy of Mustafa Alp)</span>
 
 Here are some details on the implementation:
 * The vehicle model is a car from the 1:10 scale pro stock division.
