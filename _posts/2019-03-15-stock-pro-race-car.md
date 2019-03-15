@@ -11,7 +11,7 @@ hidden: false
 <span style="font-size: xx-small;">(Image courtesy of Mustafa Alp)</span>
 
 Here are some details on the implementation:
-* The vehicle model resembles a car of the 1:10 scale pro stock division remote controled racing.
+* The vehicle model resembles a car of the 1:10 scale pro stock division remote controlled racing.
 * The track length is **337 meters**.
 * The simulated laptime of **22.08 seconds** is close to the laptime that is achieved in real racing (see video below). 
 * The track is discretized by 815 discretization points.
