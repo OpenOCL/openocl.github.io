@@ -46,7 +46,7 @@ In Energy The International Journal, Elsevier, 2018 [[edited](https://ieeexplore
 
 OpenAWE: An Open Source Toolbox for the Optimization of AWE Flight Trajectories  
 J. Koenemann, G. Licitra, S. Sieberling, M. Diehl  
-In Airborne Wind Energy Conference, Freiburg, 2017 [[pdf](https://repository.tudelft.nl/islandora/object/uuid%3A3e4117da-fa2c-48c9-a3bf-f4e97500fdc2)]
+In Airborne Wind Energy Conference, Freiburg, extended abstract, 2017 [[pdf](https://repository.tudelft.nl/islandora/object/uuid%3A3e4117da-fa2c-48c9-a3bf-f4e97500fdc2)]
 
 Modeling of an Airborne Wind Energy System with a Flexible Tether Model for the Optimization of Landing Trajectories  
 J. Koenemann, P. Williams, S. Sieberling, M. Diehl  
