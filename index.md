@@ -42,7 +42,7 @@ In Renewable Energy The International Journal, Elsevier, 2018 (submitted) [[pre-
 
 Performance Assessment of a Rigid Wing Airborne Wind Energy Pumping System  
 G. Licitra, J. Koenemann, A. Buerger, P. Williams, R. Ruiterkamp, M. Diehl  
-In Energy The International Journal, Elsevier, 2018 [[edited](https://ieeexplore.ieee.org/document/7976256)] [[pre-print](/assets/posts/FlightTrajectoryOptimization.pdf)]
+In Energy The International Journal, Elsevier, 2018 [[edited](https://authors.elsevier.com/c/1YcGh1H~c~7Wh0)] [[pre-print](/assets/posts/FlightTrajectoryOptimization.pdf)]
 
 OpenAWE: An Open Source Toolbox for the Optimization of AWE Flight Trajectories  
 J. Koenemann, G. Licitra, S. Sieberling, M. Diehl  
