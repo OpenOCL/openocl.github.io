@@ -17,7 +17,7 @@ title: Blog
   {% if post.hidden != true  %}
     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
     {% if post.categories %}
-    <p class="tags"><a href="/{{ post.categories }}">{{ post.categories }}</a></p>
+    <p class="tags"><a href="/{{ post.categories }}/">{{ post.categories }}</a></p>
     {% endif %}
     {{ post.excerpt }}
   {% endif %}
