@@ -78,7 +78,14 @@
     
       <section>
         {% if page.title != "Open Optimal Control Library" %}
-        <p><a id="top" href="{{ site.url | relative_url  }}">back</a></p>
+        <p>
+          <script>
+           document.write('<a id="top" href="' + document.referrer + '">back</a>');
+          </script>
+          <noscript>
+           <a id="top" href="{{ site.url | relative_url  }}">back</a>
+          </noscript>
+        </p>
         {% endif %}
         <h2> {{ page.title }} </h2>
       {{ content }}
