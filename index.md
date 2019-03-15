@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2019-03-11
+last_modified_at: 2019-03-15
 title: Open Optimal Control Library
 ---
 <img src="https://openocl.org/imgs/cartpole.gif" width="31%"> <img src="https://openocl.org/imgs/car.png" width="31%"> <img src="https://openocl.org/imgs/circ.png" width="31%">  
@@ -38,19 +38,19 @@ In the examples you will find (ordered by problem complexity):
 
 Performance Assessment of a Rigid Wing Airborne Wind Energy Pumping System  
 G. Licitra, J. Koenemann, A. Buerger, P. Williams, R. Ruiterkamp, M. Diehl  
-In Energy The International Journal, Elsevier, 2018 (submitted to)
+In Energy The International Journal, Elsevier, 2018 [[edited](https://ieeexplore.ieee.org/document/7976256)] [[pre-print](/assets/posts/FlightTrajectoryOptimization.pdf)]
 
 OpenAWE: An Open Source Toolbox for the Optimization of AWE Flight Trajectories  
 J. Koenemann, G. Licitra, S. Sieberling, M. Diehl  
-In Airborne Wind Energy Conference, Freiburg, 2017
+In Airborne Wind Energy Conference, Freiburg, 2017 [[pdf](https://repository.tudelft.nl/islandora/object/uuid%3A3e4117da-fa2c-48c9-a3bf-f4e97500fdc2)]
 
 Modeling of an Airborne Wind Energy System with a Flexible Tether Model for the Optimization of Landing Trajectories  
 J. Koenemann, P. Williams, S. Sieberling, M. Diehl  
-IFAC 2017 World Congress, Toulouse, France. 9-14 July, 2017
+IFAC 2017 World Congress, Toulouse, France. 9-14 July, 2017 [[pdf](https://www.sciencedirect.com/science/article/pii/S2405896317315227)]
 
 Viability Assessment of a Rigid Wing Airborne Wind Energy Pumping System  
 G. Licitra, J. Koenemann, G. Horn, P. Williams, R. Ruiterkamp, M. Diehl  
-In: 21st International Conference on Process Control (PC), 2017
+In: 21st International Conference on Process Control (PC), 2017 [[edited](https://ieeexplore.ieee.org/document/7976256)]
 
 ### References
 
