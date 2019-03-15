@@ -31,7 +31,7 @@
         
         {% if page.title != "API documentation" %}
         <div class="blog">
-          <h4> Blog </h4>
+          <h4><a href="{{ blog | relative_url  }}"> Blog </a> </h4>
           
           <ul>
           {% for post in site.posts %}
