@@ -1,4 +1,4 @@
-var element = document.getElementById('back-link');
+var element = document.getElementById('top');
 
 // Provide a standard href to facilitate standard browser features such as 
 //  - Hover to see link
