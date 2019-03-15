@@ -17,13 +17,13 @@ The release includes many changes to the API. Some class names, method names, an
 
 API changes:
 * `Solver.getNLP` and `Solver.getSolver` are replaced by `OclSolver(T,system,ocp,options)`
-* System became [OclSystem](/api-docs/#apiocl_system/)
+* System became [OclSystem](/api-docs/#apiocl_system)
 * OCP(system) became OclOCP()
 * Solver `OclSolver` takes 1 more argument T, new signature `OclSolver` OclSolver(T, system, ocp, options)
 * There is no explicit time dependents in OCP definition, new signatures: `pathCosts(ch, x, z, u, p)`, `arrivalCosts(ch, x, p)`, `pathConstraints(ch, x, p)`.  #83
 * In OclSystem: `setupEquation` became `setupEquations` #85 
-* [OclSystem](/api-docs/#apiocl_system) and [OclOCP](https://openocl.org/api-docs/#apiocl_ocp/): it is possible to implement systems and OCP by in functions, and pass the function handles to the constructors. See [Example](https://github.com/OpenOCL/OpenOCL/blob/master/Examples/01VanDerPol/mainVanDerPol.m). This is an alternative way to the existing approach of inheriting from  [OclOCP](https://openocl.org/api-docs/#apiocl_ocp) and [OclSystem](/api-docs/#apiocl_system/). #74 
-* OclOCP methods `pathConstraints`, `pathCosts` have to be declared as Static when inheriting from  [OclOCP](/api-docs/#apiocl_ocp/) #74 
+* [OclSystem](/api-docs/#apiocl_system) and [OclOCP](https://openocl.org/api-docs/#apiocl_ocp): it is possible to implement systems and OCP by in functions, and pass the function handles to the constructors. See [Example](https://github.com/OpenOCL/OpenOCL/blob/master/Examples/01VanDerPol/mainVanDerPol.m). This is an alternative way to the existing approach of inheriting from  [OclOCP](/api-docs/#apiocl_ocp) and [OclSystem](/api-docs/#apiocl_system). #74 
+* OclOCP methods `pathConstraints`, `pathCosts` have to be declared as Static when inheriting from  [OclOCP](/api-docs/#apiocl_ocp) #74 
 * OclSystem methods `setupVariables`. `setupEquations` have to be declared as Static when inheriting from [OclSystem](https://openocl.org/api-docs/#apiocl_system) #74 
 * There is no more dependency on z and u in pathConstraints #80
 * Slicing for OclVariables works now like in Matlab. #73 In initial guess and solution state/control trajectory are extended in the third dimension, e.g. shape of sol.p is 3x1x(N+1), slice with sol.p(:,1,4:6)
@@ -35,7 +35,7 @@ API changes:
 
 API new features:
 * You can set `ocl.setBounds('x', xTraj)` where` xTraj` is a vector with the length of `N+1` if x is a state, or `N` if x is a control variable (with N the number of control interval). #82 
-* New argument T see [OclSolver](https://openocl.org/api-docs/#apiocl_solver), can set end time and enables to pass custom discretization points for the OCP. #83 
+* New argument T see [OclSolver](/api-docs/#apiocl_solver), can set end time and enables to pass custom discretization points for the OCP. #83 
 * OclSolver.solve returns `times` or independent variables as structured variables
 * You can set variable limits in OclSystem, #69, [VanDerPol](https://github.com/OpenOCL/OpenOCL/blob/master/Examples/01VanDerPol/mainVanDerPol.m)
 * option `opt.system_casadi_mx  = true` enables the use of casadi MX symbolics for the system
