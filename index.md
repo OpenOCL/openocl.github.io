@@ -50,7 +50,7 @@ IFAC 2017 World Congress, Toulouse, France. 9-14 July, 2017 [[pdf](https://www.s
 
 Viability Assessment of a Rigid Wing Airborne Wind Energy Pumping System  
 G. Licitra, J. Koenemann, G. Horn, P. Williams, R. Ruiterkamp, M. Diehl  
-In: 21st International Conference on Process Control (PC), 2017 [[edited](https://ieeexplore.ieee.org/document/7976256)]
+In: 21st International Conference on Process Control (PC), 2017 [[edited](https://ieeexplore.ieee.org/document/7976256)] [[pre-print](/assets/posts/Main_PC17.pdf)]
 
 ### References
 
