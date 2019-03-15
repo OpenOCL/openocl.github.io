@@ -13,17 +13,17 @@ Also note that the URL of the github repository has changed. Update your remote 
 `git remote set-url origin https://github.com/OpenOCL/OpenOCL.git`
 
 ### Release Notes
-The release includes many changes to the API. Some class names, method names, and the way the solver is created are changed. If you come from an earlier version you need to adapt your model/code for this version. Below you find a list of changes. Also look at the examples how they are implemented (and look at the API documentation at [openocl.org](https://openocl.org)). This is also the first release to support Octave, and this release will become the first stable release. 
+The release includes many changes to the API. Some class names, method names, and the way the solver is created are changed. If you come from an earlier version you need to adapt your model/code for this version. Below you find a list of changes. Also look at the examples how they are implemented (and look at the API documentation at [openocl.org](/)). This is also the first release to support Octave, and this release will become the first stable release. 
 
 API changes:
 * `Solver.getNLP` and `Solver.getSolver` are replaced by `OclSolver(T,system,ocp,options)`
-* System became [OclSystem](/api-docs/#apiocl_system)
+* System became [OclSystem](/api-docs/#apiocl_system/)
 * OCP(system) became OclOCP()
 * Solver `OclSolver` takes 1 more argument T, new signature `OclSolver` OclSolver(T, system, ocp, options)
 * There is no explicit time dependents in OCP definition, new signatures: `pathCosts(ch, x, z, u, p)`, `arrivalCosts(ch, x, p)`, `pathConstraints(ch, x, p)`.  #83
 * In OclSystem: `setupEquation` became `setupEquations` #85 
-* [OclSystem](/api-docs/#apiocl_system) and [OclOCP](https://openocl.org/api-docs/#apiocl_ocp): it is possible to implement systems and OCP by in functions, and pass the function handles to the constructors. See [Example](https://github.com/OpenOCL/OpenOCL/blob/master/Examples/01VanDerPol/mainVanDerPol.m). This is an alternative way to the existing approach of inheriting from  [OclOCP](https://openocl.org/api-docs/#apiocl_ocp) and [OclSystem](https://openocl.org/api-docs/#apiocl_system). #74 
-* OclOCP methods `pathConstraints`, `pathCosts` have to be declared as Static when inheriting from  [OclOCP](https://openocl.org/api-docs/#apiocl_ocp) #74 
+* [OclSystem](/api-docs/#apiocl_system) and [OclOCP](https://openocl.org/api-docs/#apiocl_ocp/): it is possible to implement systems and OCP by in functions, and pass the function handles to the constructors. See [Example](https://github.com/OpenOCL/OpenOCL/blob/master/Examples/01VanDerPol/mainVanDerPol.m). This is an alternative way to the existing approach of inheriting from  [OclOCP](https://openocl.org/api-docs/#apiocl_ocp) and [OclSystem](/api-docs/#apiocl_system/). #74 
+* OclOCP methods `pathConstraints`, `pathCosts` have to be declared as Static when inheriting from  [OclOCP](/api-docs/#apiocl_ocp/) #74 
 * OclSystem methods `setupVariables`. `setupEquations` have to be declared as Static when inheriting from [OclSystem](https://openocl.org/api-docs/#apiocl_system) #74 
 * There is no more dependency on z and u in pathConstraints #80
 * Slicing for OclVariables works now like in Matlab. #73 In initial guess and solution state/control trajectory are extended in the third dimension, e.g. shape of sol.p is 3x1x(N+1), slice with sol.p(:,1,4:6)
