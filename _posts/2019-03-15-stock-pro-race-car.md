@@ -1,6 +1,6 @@
 ---
 categories: contributed
-title: "[Contributed] 1:10 scale remote car racing"
+title: "[Contributed] 1:10 scale pro stock remote car racing"
 permalink: /:categories/:title/
 hidden: false
 ---
