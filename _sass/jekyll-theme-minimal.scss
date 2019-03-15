@@ -11,7 +11,34 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color:#393939;
-  margin:0 0 20px;
+  margin:0 0 15px;
+}
+
+h1, h2, h3 {
+  line-height:1.1;
+}
+
+h1 {
+  font-size:28px;
+}
+
+h1 a {
+  color:#222;
+}
+
+h2 {
+  color:#434343;
+}
+
+h3, h4, h5, h6 {
+  color:#494949;
+}
+h3 {
+  margin-bottom: 10px; 
+}
+
+h4, h5, h6 {
+  margin-bottom: 7px; 
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -41,31 +68,6 @@ p.tags a {
   color: #ab3b04;
 }
 
-h1, h2, h3 {
-  line-height:1.1;
-}
-
-h1 {
-  font-size:28px;
-}
-
-h1 a {
-  color:#222;
-}
-
-h2 {
-  color:#434343;
-}
-
-h3, h4, h5, h6 {
-  color:#494949;
-}
-h3 {
-  margin-bottom: 15px; 
-}
-h4 {
-  margin-bottom: 10px; 
-}
 
 .api h3 {
   display: block;
