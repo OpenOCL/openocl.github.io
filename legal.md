@@ -1,12 +1,13 @@
 ---
 permalink: /legal_notice/
+last_modified_at: 2019-03-15
 title: Legal Notice
 ---
 
 Please see license information in the LICENSE file in the github project.
 
 Open Optimal Control Library
-Copyright (C) 2016-2019  Jonas Koenemann (Jonas.Koenemann [at] yahoo.de)
+Copyright (C) 2016-2019  Jonas Koenemann
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -21,10 +22,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-
 This project has received funding from the European Union’s Horizon 2020 research and innovation programme under the Marie Sklodowska-Curie grant agreement No 642682.
 
 Use without warranty.
-
-Jonas Koenemann  
-Jonas.Koenemann [at] yahoo.de
+info [at] openocl.org
