@@ -1,7 +1,7 @@
 (function(document) {
 var element = document.getElementById('top');
-
-if (typeof(element) != 'undefined' && element != null && window.history.length > 0)  
+last = document.referrer;
+if (typeof(element) != 'undefined' && element != null && window.history.length > 0 && last.includes("openocl"))  
 {
   element.setAttribute('href', 'back');
   element.onclick = function() {
