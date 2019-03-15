@@ -1,3 +1,4 @@
+(function(document) {
 var element = document.getElementById('top');
 
 if (typeof(element) != 'undefined' && element != null)
@@ -7,4 +8,4 @@ if (typeof(element) != 'undefined' && element != null)
     window.history.back();
   }
 }
-
+})(document);
