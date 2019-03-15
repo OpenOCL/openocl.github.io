@@ -68,7 +68,7 @@ Mathematical Programming Computation, In Press, 2018, Available at: [casadi.org]
 
 ### Contact
 
-Jonas.Koenemann [at] yahoo.de
+info [at] openocl.org
 
 [Legal Notice](legal.md)
 
