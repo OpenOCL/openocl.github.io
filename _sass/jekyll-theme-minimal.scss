@@ -149,7 +149,7 @@ img {
 }
 
 header {
-  width:260px;
+  width:190px;
   position: fixed;
   float:left;
   top:0px;
@@ -167,6 +167,11 @@ header p.view {
 header .blog li {
   padding-left: 7px;
   margin-bottom: 10px;
+}
+
+header .blog li a:hover {
+  color: #a50;
+  font-weight: normal;
 }
 
 .left-pane {
