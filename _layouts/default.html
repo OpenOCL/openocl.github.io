@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="A software framework for trajectory optimization and model-predictive control. Toolbox for C++, Python, Matlab, Octave." />
     
+    <script src="{{ '/assets/js/back_link.js' | relative_url }}"></script>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -79,12 +80,7 @@
       <section>
         {% if page.title != "Open Optimal Control Library" %}
         <p>
-          <script>
-           document.write('<a id="top" href="' + document.referrer + '">back</a>');
-          </script>
-          <noscript>
            <a id="top" href="{{ site.url | relative_url  }}">back</a>
-          </noscript>
         </p>
         {% endif %}
         <h2> {{ page.title }} </h2>
