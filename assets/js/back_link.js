@@ -2,7 +2,7 @@ var element = document.getElementById('top');
 
 if (typeof(element) != 'undefined' && element != null)
 {
-  element.setAttribute('href', document.referrer);
+  element.setAttribute('href', 'test');
   element.onclick = function() {
     history.back();
   }
