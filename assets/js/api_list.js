@@ -1,16 +1,12 @@
-var scroll_pos = 0;
-
 function callback() {
   let elem = document.getElementById("api-list");
   let coords = elem.getBoundingClientRect();
-  let api_doc_y = coords.bottom;
-  if ((document.body.getBoundingClientRect()).top > scroll_pos)
+  if (coords.top+window.pageYOffset < 50) {
     elem.style.position = "relative";
-  else if (api_doc_y < document.documentElement.clientHeight) {
-    elem.style.position = "absolute";
+  } else if (coords.bottom < document.documentElement.clientHeight-20) {
+    elem.style.position = "fixed";
     elem.style.bottom = "20px";
   }
-  scroll_pos = (document.body.getBoundingClientRect()).top;
 }
 
 window.addEventListener("scroll", callback);
