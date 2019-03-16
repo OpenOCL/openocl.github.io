@@ -7,6 +7,7 @@ body {
   font: 14px/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#444444;
   font-weight:400;
+  letter-spacing: 0.03em;
 }
 
 header {
@@ -62,6 +63,7 @@ h2 a, h3 a, h4 a, h5 a, h6 a {
 
 h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
   color:#014f75;
+  letter-spacing: 0em;
 }
 
 p, ul, ol, table, pre, dl {
