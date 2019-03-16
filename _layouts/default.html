@@ -50,7 +50,7 @@
        
       <div class="left-pane">
       {% if page.title == "API documentation" %}
-        <div class="api">
+        <div class="api" id="api-list">
           <h4> Classes and Functions </h4>
 
           {% assign sorted_docs = site.api | sort: "position" %}
@@ -93,5 +93,10 @@
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/back_link.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/achors.js' | relative_url }}"></script>
+    
+    {% if page.title == "API documentation" %}
+    <script src="{{ '/assets/js/api-list.js' | relative_url }}"></script>
+    {% endif %}
+    
   </body>
 </html>
