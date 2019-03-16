@@ -299,6 +299,10 @@ h3 .endpoint {
 
 
 @media print, screen and (max-width: 960px) {
+	
+  header .blog {
+    width: auto;
+  }
 
   div.wrapper {
     width:auto;
