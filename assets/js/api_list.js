@@ -1,4 +1,7 @@
 function callback() {
+  if (document.documentElement.clientHeight < 960) {
+    return;
+  }
   let elem = document.getElementById("api-list");
   let coords = elem.getBoundingClientRect();
   if (coords.top+window.pageYOffset < 50) {
