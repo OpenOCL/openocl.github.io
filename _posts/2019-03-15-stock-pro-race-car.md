@@ -5,7 +5,7 @@ permalink: /:categories/:title/
 hidden: false
 ---
 
-**Mustafa Alp** from the *Polytechnic University of Milan* sent us a great video of his implementation in OpenOCL:
+**Mustafa Alp** from the *Polytechnic University of Milan* sent us a great video of his implementation in OpenOCL.
 
 ![Animation of race track](/assets/posts/lapsim_2208_v1.gif)  
 <span style="font-size: xx-small;">(Image courtesy of Mustafa Alp)</span>
