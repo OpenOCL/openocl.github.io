@@ -25,12 +25,13 @@ function callback() {
 window.addEventListener("scroll", callback);
   
 function scrollTop() {
-  window.scrollTo(0, 0);
+  window.scrollTo(100, 0);
 }
 
 let top_scroll = document.getElementById("scroll-top-click");
 
 top_scroll.addEventListener("click", scrollTop);
+top_scroll.removeAttribute("href")
 
 
 })(document);
