@@ -76,13 +76,11 @@ header #header-blog li {
 
 header #header-blog li a {
   font: 0.9em "Indie Flower";
-  letter-spacing: 0.025em;
   display: block;
 }
 
 header #header-blog li a:hover {
   color: #014f75;
-  font-weight: bold;
 }
 
 @media print, screen and (max-width: 960px) {

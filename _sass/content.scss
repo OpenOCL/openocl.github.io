@@ -4,15 +4,16 @@ body {
   font: 0.88em/1.5 "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#444444;
   font-weight:400;
-  letter-spacing: 0.025em;
 }
 
-p a {
-  letter-spacing: 0.036em;
+a {
+  color:#267CB9;
+  text-decoration:none;
 }
 
-p a:hover, p a:active {
-  letter-spacing: 0.0em;
+a:hover, a:focus {
+  color:#014f75;
+  text-shadow: 0 0 .65px #333, 0 0 .65px #333;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -73,15 +74,7 @@ p.tags a {
   color: #ab3b04;
 }
 
-a {
-  color:#267CB9;
-  text-decoration:none;
-}
 
-a:hover, a:focus {
-  color:#014f75;
-  font-weight: bold;
-}
 
 a small {
   font-size:0.6em;
