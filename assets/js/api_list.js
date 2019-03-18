@@ -1,3 +1,5 @@
+(function(document) {
+  
 function callback() {
   let elem = document.getElementById("api-list");
   let el_height = elem.clientHeight;
@@ -22,8 +24,12 @@ function callback() {
 }
 window.addEventListener("scroll", callback);
 
-let top_scroll = document.getElementById("top");
-top_scroll.onclick = function(){
+function scrollTop() {
   window.scrollTo(0, 0);
-};
+}
+  
+let top_scroll = document.getElementById("top");
 
+top_scroll.addEventListener("click", scrollTop);
+
+})(document);
