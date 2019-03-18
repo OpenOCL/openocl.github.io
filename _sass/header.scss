@@ -4,7 +4,7 @@ header {
 }
 
 header .header-fixed {
-  width:190px;
+  width: 190px;
   position: fixed;
   z-index: 10;
   top:0px;
@@ -14,18 +14,18 @@ header .header-fixed {
 }
 
 header h1#header-logo {
-  color:#393939;
-  margin:0 0 15px;
-  line-height:1.1;
-  font-size:28px;
+  color: #393939;
+  margin: 0 0 15px;
+  line-height: 1.1;
+  font-size: 28px;
 }
 
 header h1#header-logo a {
-  color:#000;
+  color: #000;
 }
 
 header h1#header-logo a:hover, header h1#header-logo a:active  {
-  color:#014f75;
+  color: #014f75;
 }
 
 header #view-on-github {
@@ -34,15 +34,13 @@ header #view-on-github {
 }
 
 header #header-api {
-  padding-top:100px;
+  padding-top: 100px;
   padding-left: 50px;
   float: left;
 }
 
-header #header-api h3 {
+header #header-api h4 {
   display: block;
-  background: #f8f8f8;
-  padding: 10px 5px;
   border-top: 2px solid;
 }
 
