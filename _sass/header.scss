@@ -65,7 +65,6 @@ header #header-blog h4 {
 }
 header #header-blog h4 a {
   color: #000;
-  display: block;
 }
 
 header #header-blog li {
@@ -76,6 +75,7 @@ header #header-blog li {
 header #header-blog li a {
   font: 13px "Indie Flower";
   letter-spacing: 0.025em;
+  display: block;
 }
 
 header #header-blog li a:hover {
