@@ -1,14 +1,20 @@
 function callback() {
   let elem = document.getElementById("api-list");
-  let el_height;
+  let el_height = elem.clientHeight;
   let coords = elem.getBoundingClientRect();
 
   let screen_width = document.documentElement.clientWidth;
   let screen_height = document.documentElement.clientHeight;
   
-  if (screen_width>960 && window.pageYOffset + screen_height > elem.clientHeight ) {
+  if (screen_width>960 ) {
     elem.style.position = "fixed";
-    elem.style.top = Math.min(window.pageYOffset, el_height) + "px";
+    if (window.pageYOffset < el_height+150 - screen_height) {
+      elem.style.top =  150-window.pageYOffset + "px";
+    }
+    else {
+      elem.style.top =  screen_height - el_height -20  + "px";
+    }
+    
   }
   else {
     elem.style.position = "unset";
