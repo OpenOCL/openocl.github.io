@@ -45,35 +45,35 @@
         </div>
         {% endif %}
 
-      </header>
+        {% if page.title == "API documentation" %}
+        <div id="header-api">
+          <div class="api" id="api-list">
+            <h4> Classes and Functions </h4>
 
-      {% if page.title == "API documentation" %}
-      <div id="header-api">
-        <div class="api" id="api-list">
-          <h4> Classes and Functions </h4>
-
-          {% assign sorted_docs = site.api | sort: "position" %}
-          <ul>
-          {% for doc in sorted_docs %}
-            <li>
-              <a href="#{{ doc.id | replace: '/', '' | replace: '.', '' }}">
-                {{ doc.name }}
-                {% if doc.type %}<span class="endpoint {{ doc.type }}"></span>{% endif %}
-              </a>
-              <ul>
-              {% for m in doc.methods_abstract %}
-                <li><a href="#{{ m.name | replace: '/', '' | replace: '.', '' }}">{{ m.name }} </a></li>
-              {% endfor %}
-              {% for m in doc.methods %}
-                <li><a href="#{{ m.name | replace: '/', '' | replace: '.', '' }}">{{ m.name }} </a></li>
-              {% endfor %}
-              </ul>
-            </li>
-          {% endfor %}
-          </ul>
+            {% assign sorted_docs = site.api | sort: "position" %}
+            <ul>
+            {% for doc in sorted_docs %}
+              <li>
+                <a href="#{{ doc.id | replace: '/', '' | replace: '.', '' }}">
+                  {{ doc.name }}
+                  {% if doc.type %}<span class="endpoint {{ doc.type }}"></span>{% endif %}
+                </a>
+                <ul>
+                {% for m in doc.methods_abstract %}
+                  <li><a href="#{{ m.name | replace: '/', '' | replace: '.', '' }}">{{ m.name }} </a></li>
+                {% endfor %}
+                {% for m in doc.methods %}
+                  <li><a href="#{{ m.name | replace: '/', '' | replace: '.', '' }}">{{ m.name }} </a></li>
+                {% endfor %}
+                </ul>
+              </li>
+            {% endfor %}
+            </ul>
+          </div>
         </div>
-      </div>
-      {% endif %}
+        {% endif %}
+
+      </header>
 
       <section>
         {% if page.title != "Open Optimal Control Library" %}
