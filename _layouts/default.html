@@ -24,13 +24,12 @@
     {% include mathjax.html %}
     <div class="wrapper">
 
-
       <header>
         <h1><a href="{{ site.url | relative_url  }}">OpenOCL.org</a></h1>
-        <p class="view"><a href="https://github.com/OpenOCL/OpenOCL">View the Project on GitHub</a></p>
+        <p id="view-on-github"><a href="https://github.com/OpenOCL/OpenOCL">View the Project on GitHub</a></p>
 
         {% if page.title != "API documentation" %}
-        <div class="blog">
+        <div id="header-blog">
           <h4><a href="/blog/"> Blog: </a> </h4>
 
           <ul>
@@ -48,8 +47,8 @@
 
       </header>
 
-      <div class="left-pane">
       {% if page.title == "API documentation" %}
+      <div id="header-api">
         <div class="api" id="api-list">
           <h4> Classes and Functions </h4>
 
@@ -73,8 +72,8 @@
           {% endfor %}
           </ul>
         </div>
-      {% endif %}
       </div>
+      {% endif %}
 
       <section>
         {% if page.title != "Open Optimal Control Library" %}

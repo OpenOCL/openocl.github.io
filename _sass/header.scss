@@ -26,69 +26,70 @@ header h1 a {
   color:#000;
 }
 
-header .left-pane {
+header #view-on-github {
+  margin-bottom:0;
+  padding-bottom:10px;
+}
+
+header #header-api {
   float:left;
   margin-top: 131px;
   padding-left: 50px;
 }
 
-header .api h3 {
+header #header-api h3 {
   display: block;
   background: #f8f8f8;
   padding: 10px 5px;
   border-top: 2px solid;
 }
 
-header .view {
-  margin-bottom:0;
-  padding-bottom:10px;
-}
-
-header .blog {
+header #header-blog {
   padding-top:50px;
+  text-align: justify;
+  width: 175px;
 }
-header .blog ul {
+header #header-blog ul {
   list-style-type: None;
   padding-inline-start: unset;
 }
-header .blog .date {
+header #header-blog .date {
   margin-bottom:0px;
   font-size: smaller;
 }
 
-header .blog {
-  text-align: justify;
-  width: 175px;
-}
-
-header .blog h4 {
+header #header-blog h4 {
   font-weight: normal;
 }
-header .blog h4 a {
+header #header-blog h4 a {
   color: #000;
 }
 
-header .blog li {
+header #header-blog li {
   padding-left: 7px;
   margin-bottom: 10px;
 }
 
-header .blog li a {
+header #header-blog li a {
   font-family: cursive;
 }
 
-header .blog li a:hover {
+header #header-blog li a:hover {
   color: #014f75;
   font-weight: bold;
 }
 
 @media print, screen and (max-width: 960px) {
 
-  header .blog {
+  header #view-on-github {
+    margin-bottom:20px;
+  }
+
+  header #header-blog {
     width: auto;
   }
 
-  header, .left-pane {
+  header, header #header-api {
     float:none;
     position:static;
     width:auto;
@@ -96,27 +97,16 @@ header .blog li a:hover {
     padding-left: 0;
   }
 
-  header, .left-pane {
+  header, header #header-api {
     margin-top: 0px;
   }
 
-  .blog {
+  header #header-blog {
     padding-top:0px;
-  }
-
-  section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
-    padding:20px 0;
-    margin:0 0 20px;
   }
 
   header a small {
     display:inline;
-  }
-
-  header p.view {
-    margin-bottom:20px;
   }
 }
 
@@ -126,17 +116,11 @@ header .blog li a:hover {
     padding:0;
   }
 
-  header ul, header p.view {
+  header #view-on-github {
+    margin-bottom:20px;
+  }
+
+  header ul, header #view-on-github {
     position:static;
-  }
-
-  header p.view {
-    margin-bottom:20px;
-  }
-}
-
-@media print, screen and (max-width: 480px) {
-  header p.view {
-    margin-bottom:20px;
   }
 }
