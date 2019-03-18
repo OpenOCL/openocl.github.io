@@ -6,7 +6,7 @@ function callback() {
   let screen_width = document.documentElement.clientWidth;
   let screen_height = document.documentElement.clientHeight;
   
-  if (screen_width>960 ) {
+  if (screen_width>960-11 ) {
     elem.style.position = "fixed";
     if (window.pageYOffset < el_height+150 - screen_height) {
       elem.style.top =  150-window.pageYOffset + "px";
