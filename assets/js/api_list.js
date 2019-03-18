@@ -6,7 +6,7 @@ function callback() {
   let screen_width = document.documentElement.clientWidth;
   let screen_height = document.documentElement.clientHeight;
   
-  if (screen_width>960-11 ) {
+  if (screen_width>960 ) {
     elem.style.position = "fixed";
     if (window.pageYOffset < el_height+150 - screen_height) {
       elem.style.top =  150-window.pageYOffset + "px";
@@ -21,3 +21,9 @@ function callback() {
   }
 }
 window.addEventListener("scroll", callback);
+
+let top_scroll = document.getElementById("top");
+top_scroll.onclick = function(){
+  window.scrollTo(0, 0);
+};
+
