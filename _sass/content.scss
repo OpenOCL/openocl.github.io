@@ -6,8 +6,11 @@ body {
   font-weight:400;
   letter-spacing: 0.025em;
 }
+body a {
+  letter-spacing: 0;
+}
 
-body a, body a:hover, body a:active {
+body a:hover, body a:active {
   letter-spacing: 0.025em;
 }
 
