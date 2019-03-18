@@ -4,18 +4,18 @@
     <meta charset="Content-Type: text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="google-site-verification" content="AyRDc3HQYTQ_IJi_2wgaPgbAIXeZfanlNdBgXgsdpsQ" />
-    
+
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
     <link rel="manifest" href="/assets/icons/site.webmanifest">
-    
+
     <title>OpenOCL: Optimal Control (Software) Library</title>
 
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="A software framework for trajectory optimization and model-predictive control. Toolbox for C++, Python, Matlab, Octave." />
-    
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -23,16 +23,16 @@
   <body>
     {% include mathjax.html %}
     <div class="wrapper">
-      
-      
+
+
       <header>
         <h1><a href="{{ site.url | relative_url  }}">OpenOCL.org</a></h1>
         <p class="view"><a href="https://github.com/OpenOCL/OpenOCL">View the Project on GitHub</a></p>
-        
+
         {% if page.title != "API documentation" %}
         <div class="blog">
           <h4><a href="/blog/"> Blog: </a> </h4>
-          
+
           <ul>
           {% for post in site.posts %}
             {% if post.hidden != true  %}
@@ -45,9 +45,9 @@
           </ul>
         </div>
         {% endif %}
-        
+
       </header>
-       
+
       <div class="left-pane">
       {% if page.title == "API documentation" %}
         <div class="api" id="api-list">
@@ -75,7 +75,7 @@
         </div>
       {% endif %}
       </div>
-    
+
       <section>
         {% if page.title != "Open Optimal Control Library" %}
         <p>
@@ -93,10 +93,9 @@
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/back_link.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/achors.js' | relative_url }}"></script>
-    
     {% if page.title == "API documentation" %}
-    <script src="{{ '/assets/js/api_list.js' | relative_url }}"></script>
+    <!--<script src="{{ '/assets/js/api_list.js' | relative_url }}"></script>-->
     {% endif %}
-    
+
   </body>
 </html>
