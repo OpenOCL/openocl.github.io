@@ -6,11 +6,12 @@ body {
   font-weight:400;
   letter-spacing: 0.025em;
 }
-section p a {
+
+p a {
   letter-spacing: 0.036em;
 }
 
-section p a:hover, section p a:active {
+p a:hover, p a:active {
   letter-spacing: 0.0em;
 }
 
