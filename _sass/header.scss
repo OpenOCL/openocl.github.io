@@ -92,16 +92,13 @@ header #header-blog li a:hover {
     padding-top:0px;
   }
 
-  header, header #header-api {
+  header .header-fixed, header #header-api {
     float:none;
     position:static;
     width:auto;
+    margin-top: 0px;
     padding-top: 0;
     padding-left: 0;
-  }
-
-  header, header #header-api {
-    margin-top: 0px;
   }
 
   header a small {
@@ -111,7 +108,7 @@ header #header-blog li a:hover {
 
 @media print, screen and (max-width: 720px) {
 
-  header {
+  header .header-fixed{
     padding:0;
   }
 
