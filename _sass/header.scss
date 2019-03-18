@@ -11,19 +11,19 @@ header {
   line-height: normal;
 }
 
-header h1 {
+header h1#header-logo {
   color:#393939;
   margin:0 0 15px;
   line-height:1.1;
   font-size:28px;
 }
 
-header h1 a:hover, header h1 a:active  {
-  color:#014f75;
+header h1#header-logo a {
+  color:#000;
 }
 
-header h1 a {
-  color:#000;
+header h1#header-logo a:hover, header h1#header-logo a:active  {
+  color:#014f75;
 }
 
 header #view-on-github {
@@ -87,6 +87,7 @@ header #header-blog li a:hover {
 
   header #header-blog {
     width: auto;
+    padding-top:0px;
   }
 
   header, header #header-api {
@@ -99,10 +100,6 @@ header #header-blog li a:hover {
 
   header, header #header-api {
     margin-top: 0px;
-  }
-
-  header #header-blog {
-    padding-top:0px;
   }
 
   header a small {

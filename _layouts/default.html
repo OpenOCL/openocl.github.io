@@ -25,7 +25,7 @@
     <div class="wrapper">
 
       <header>
-        <h1><a href="{{ site.url | relative_url  }}">OpenOCL.org</a></h1>
+        <h1 id="header-logo"><a href="{{ site.url | relative_url  }}">OpenOCL.org</a></h1>
         <p id="view-on-github"><a href="https://github.com/OpenOCL/OpenOCL">View the Project on GitHub</a></p>
 
         {% if page.title != "API documentation" %}
@@ -82,12 +82,13 @@
         </p>
         {% endif %}
         <h2> {{ page.title }} </h2>
-      {{ content }}
-
+      {{ content
       </section>
+
       <footer>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
+
     </div>
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/back_link.js' | relative_url }}"></script>
