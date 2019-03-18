@@ -1,14 +1,16 @@
 header {
+  -webkit-font-smoothing:subpixel-antialiased;
+  line-height: normal;
+}
+
+header .header-fixed {
   width:190px;
   position: fixed;
   z-index: 10;
-  float:left;
   top:0px;
   padding-top: 50px;
   padding-left: 50px;
   background: #fff;
-  -webkit-font-smoothing:subpixel-antialiased;
-  line-height: normal;
 }
 
 header h1#header-logo {
