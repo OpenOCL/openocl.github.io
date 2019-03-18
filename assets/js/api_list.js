@@ -23,6 +23,7 @@ function callback() {
   }
 }
 window.addEventListener("scroll", callback);
+window.addEventListener("resize", callback);
   
 function scrollTop() {
   window.scrollTo(100, 0);
