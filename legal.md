@@ -10,8 +10,8 @@ openocl.org is a project of:
 > Merzhauser Str. 2  
 > 79100 Freiburg  
 > Germany
-
-info [at] openocl.org
+> 
+> info [at] openocl.org
 
 Please see license information in the LICENSE file in the github project.
 
