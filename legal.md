@@ -4,6 +4,12 @@ last_modified_at: 2019-03-15
 title: Legal Notice
 ---
 
+openocl.org is a project of   
+Jonas Koenemann   
+Merzhauser Str. 2
+79100 Freiburg
+Germany
+
 Please see license information in the LICENSE file in the github project.
 
 Open Optimal Control Library
