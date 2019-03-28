@@ -10,8 +10,8 @@ function callback() {
   
   if (screen_width>960 ) {
     elem.style.position = "fixed";
-    if (window.pageYOffset < el_height+150 - screen_height) {
-      elem.style.top =  150-window.pageYOffset + "px";
+    if (window.pageYOffset < el_height+200 - screen_height) {
+      elem.style.top =  200-window.pageYOffset + "px";
     }
     else {
       elem.style.top =  screen_height - el_height -20  + "px";
