@@ -13,19 +13,8 @@ header .header-fixed {
   background: #fff;
 }
 
-header h1#header-logo {
-  color: #393939;
-  margin: 0 0 15px;
-  line-height: 1.1;
-  font-size: 2em;
-}
-
-header h1#header-logo a {
-  color: #000;
-}
-
-header h1#header-logo a:hover, header h1#header-logo a:active  {
-  color: #014f75;
+header img#logo {
+  margin-left: 14px
 }
 
 header #view-on-github {
