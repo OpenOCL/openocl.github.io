@@ -30,7 +30,6 @@
           <p id="view-on-github"><a href="https://github.com/OpenOCL/OpenOCL">View the Project on GitHub</a></p>
           
           {% if page.title != "API documentation" %}
-          <p class="social-buttons"><a href="https://twitter.com/OpenOCL?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-screen-name="false" data-dnt="true" data-show-count="false">Follow</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
           <div id="header-blog">
             <h4><a href="/blog/"> Blog: </a> </h4>
 
@@ -88,9 +87,12 @@
       {{ content }}
       </section>
 
+      {% if page.title != "API documentation" %}
       <footer>
+        <p class="social-buttons"><a href="https://twitter.com/OpenOCL?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-screen-name="false" data-dnt="true" data-show-count="false">Follow</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
+      {% endif %}
 
     </div>
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
