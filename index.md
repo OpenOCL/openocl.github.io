@@ -38,7 +38,7 @@ In the examples you will find (ordered by problem complexity):
 
 A Reference Model for Airborne Wind Energy Systems For Optimization and Control  
 E. Malz, J. Koenemann, S. Sieberling, S. Gros  
-In Renewable Energy The International Journal, Elsevier, 2018 (submitted) [[pre-print](/assets/posts/awe_reference_model_2019.pdf)]
+In Renewable Energy The International Journal, Elsevier, 2018 (submitted) [[edited](https://authors.elsevier.com/a/1Yqgo3QJ-dbJWl)] [[pre-print](/assets/posts/awe_reference_model_2019.pdf)]
 
 Performance Assessment of a Rigid Wing Airborne Wind Energy Pumping System  
 G. Licitra, J. Koenemann, A. Buerger, P. Williams, R. Ruiterkamp, M. Diehl  
