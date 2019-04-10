@@ -60,14 +60,6 @@
                   {{ doc.name }}
                   {% if doc.type %}<span class="endpoint {{ doc.type }}"></span>{% endif %}
                 </a>
-                <ul>
-                {% for m in doc.methods_abstract %}
-                  <li><a href="#{{ m.name | replace: '/', '' | replace: '.', '' }}">{{ m.name }} </a></li>
-                {% endfor %}
-                {% for m in doc.methods %}
-                  <li><a href="#{{ m.name | replace: '/', '' | replace: '.', '' }}">{{ m.name }} </a></li>
-                {% endfor %}
-                </ul>
               </li>
             {% endfor %}
             </ul>
