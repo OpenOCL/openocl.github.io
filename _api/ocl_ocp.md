@@ -1,26 +1,13 @@
 --- 
 name: OclOCP
 description: |
-  As for [OclSystem](#apiocl_system) there are two ways to implement an optimal control problem (OCP): The functional and the object oriented approach. If you do not implemented some of the functions or methods they default to zero cost for the cost functions or an empty constraints array for path constraints and boundary conditions.
-
-  **Using OCP function**
-  You can implement functions for path costs, arrival costs, path constraints, boundary conditions. Pass function handles/pointers to these function to the constructor of OclOCP to create an optimal control problem. For information about the signature of these functions look at the definitions of the abstract methods.
-
-  **By inheriting from OclOCP**
-  The OCP is defined by inheriting from the OclOCP class. In order to specify cost functions and boundary conditions you have to implement the corresponding methods. 
+  An optimal control problem is implemented by providing functions for the path costs, arrival costs, path constraints, and boundary conditions. If you do not implemented some of the functions or methods, they default to zero cost for the cost functions or an empty constraints array for path constraints and boundary conditions.
 
 code_block:
   title: Example OCP
   language: m
   code: |-
-    %% Example code for the two ways of implementing
-    %% optimal control problems. The two resulting problems
-    %% ocp1 and ocp2 are equivalent.
-    %%
-
-    %% Using functions
-    %%
-    ocp1 = OclOCP(@ocpPathCosts);
+    ocp = OclOCP(@ocpPathCosts);
     
     function ocpPathCosts(ch,x,z,u,p)
       self.add( x.p^2 );
@@ -28,117 +15,23 @@ code_block:
       self.add( u.u^2 );
     end
     
-    %% Using an OCP class
-    %%
-    ocp2 = VanDerPolOCP();
-    
-    %% Note that the methods are marked as Static!
-    %% Class definitions must be in a separate file.
-    classdef VanDerPolOCP < OclOCP
-      methods (Static)
-        function pathCosts(ch,x,z,u,p)
-          ch.add( x.p^2 );
-          ch.add( x.v^2 );
-          ch.add( u.u^2 );
-        end
-      end
-    end
 parameters: 
-  - content: "Function handle to the function that defines the path costs. The signature of the corresponding function can be seen in the abstract methods definition."
+  - content: "Function handle to the function that defines the path costs (also called Lagrange cost or intermediate cost). The signature of the function handle is `fh(ch,x,z,u,p)` where `ch` is the cost handler, `x` are the states, `z` are the algebraic variables, `u` are the controls, and `p` are the parameters."
     name: fhPathCosts
     type: "function handle, optional"
-  - content: "Function handle to the function that defines the arrival costs. The signature of the corresponding function can be seen in the abstract methods definition."
+  - content: "Function handle to the function that defines the arrival costs (also called Mayer terms). The signature of the function handle is `fh(ch,x,T,p)` where `ch` is the cost handler, `x` are the terminal states, `T` is the final time, `p` are the parameters."
     name: fhArrivalCosts
     type: "function handle, optional"
-  - content: "Function handle to the function that defines the path constraints. The signature of the corresponding function can be seen in the abstract methods definition."
+  - content: "Function handle to the function that defines the path constraints. The signature of the function handle is `fh(ch,x,t,p)` where `ch` is the contraints handler, `t` is the time, `p` are the parameters."
     name: fhPathConstraints
     type: "function handle, optional"
-  - content: "Function handle to the function that defines the boundary conditions. The signature of the corresponding function can be seen in the abstract methods definition."
+  - content: "Function handle to the function that defines the boundary conditions. The signature of the function handle is `fh(ch,x0,xF,p)` where `ch` is the contraints handler, `x0` are the initial states, `xF` are the terminal states, `p` are the parameters."
     name: fhBoundaryConditions
     type: "function handle, optional"
-methods_abstract: 
-  - content: "In this method you can implement the path cost (also called Lagrange cost or intermediate cost) function."
-    name: "pathCosts"
-    parameters: 
-      - content: "Cost handler, allows you to add cost terms to the optimal control problem using the add method."
-        name: ch
-        type: "OclCostHandler"
-      - content: "State variables"
-        name: x
-        type: "[OclVariable](#apiocl_variable)"
-      - content: "Algebraic Variables"
-        name: z
-        type: "[OclVariable](#apiocl_variable)"
-      - content: "Control variables"
-        name: u
-        type: "[OclVariable](#apiocl_variable)"
-      - content: "Parameters"
-        name: p
-        type: "[OclVariable](#apiocl_variable)"
-  - content: "In this method you can specify the costs on the final state (also called Mayer terms)."
-    name: "arrivalCosts"
-    parameters: 
-      - content: "Cost handler, allows you to add cost terms to the optimal control problem using the add method."
-        name: ch
-        type: "OclCostHandler"
-      - content: "State variables"
-        name: x
-        type: "[OclVariable](#apiocl_variable)"
-      - content: Parameters
-        name: p
-        type: "[OclVariable](#apiocl_variable)"
-    returns: ~
-  - content: "Specifies the path constraints."
-    name: "pathConstraints"
-    code_block:
-      title: Path constraints Example
-      language: m
-      code: |-
-        function pathConstraints(ch,x,p)
-          ch.add(x.Fx^2+x.Fy^2,'<=',p.Fmax^2);
-        end
-    parameters: 
-      - content: "Constraints handler, allows you to add constraints to the optimal control problem using the add method."
-        name: ch
-        type: "OclConstraint"
-      - content: "State variables"
-        name: x
-        type: "[OclVariable](#apiocl_variable)"
-      - content: Parameters
-        name: p
-        type: "[OclVariable](#apiocl_variable)"
-    returns: ~
-  - content: "Specifies the boundary conditions on intial state x0 and final state xf."
-    name: "boundaryConditions"
-    code_block:
-      title: Boundary conditions
-      language: m
-      code: |-
-        function boundaryConditions(ch,x0,xF,p)
-          ch.add(x0.p(1)^2+x0.p(2)^2-p.l^2,'==',0);
-          ch.add(dot(x0.p,x0.v),'==',0);
-        end
-    parameters: 
-      - content: "Constraints handler, allows you to add constraints to the optimal control problem using the add method."
-        name: ch
-        type: "OclConstraint"
-      - content: "Initial state variables"
-        name: x0
-        type: "[OclVariable](#apiocl_variable)"
-      - content: "Final state variables"
-        name: xf
-        type: "[OclVariable](#apiocl_variable)"
-      - content: Parameters
-        name: p
-        type: "[OclVariable](#apiocl_variable)"
-    returns: ~
-  - content: "Specifies cost terms that depend on any variable of the discretized problem which is a non-linear program (NLP)."
-    name: discreteCosts
-    parameters: 
-      - content: "Contains all variable of the discretized OCP."
-        name: vars
-        type: "[OclVariable](#apiocl_variable)"
-    returns: ~
+  - content: "Function handle to the function that defines discrete cost. The discrete cost terms can depend on any variable of the discretized optimal control problem which is a non-linear program (NLP). The signature of the function handle is `fh(ch, V)` where `ch` is the cost handler, and `V` of type [OclVariable](#apiocl_variable) are the nlp variables."
+    name: fhBoundaryConditions
+    type: "function handle, optional"
+
 methods: 
   - content: "Adds a path cost term of the form c_p(x,z,u,p)."
     name: addPathCost
