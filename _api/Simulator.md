@@ -1,5 +1,6 @@
 --- 
 name: Simulator
+position: 50
 type: Class
 code_block:
   title: Simulator Example
@@ -29,7 +30,6 @@ parameters:
   - content: "Options struct, can be created with Simulator.getOptions(). Defaults to empty struct."
     name: "options"
     type: "struct, optional"
-position: 6
 returns: 
   - content: the Simulator object.
     type: Simulator
