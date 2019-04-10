@@ -1,6 +1,6 @@
 ---
 name: OclConstraintHandler
-description: The cost handler allows to add cost terms in a cost function definition.
+description: The constraint handler allows to add constraints to the optimal control problem definition.
 methods: 
  - content: "Adds a constraint to the optimal control problem."
     name: "add"
@@ -15,7 +15,7 @@ methods:
         name: rhs
         type: "[OclVariable](#apiocl_variable) or Matlab matrix"
     returns: ~
-position: 12
+position: 13
 title: OclConstraintHandler
 type: Class
 ---
