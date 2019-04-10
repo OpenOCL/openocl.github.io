@@ -17,10 +17,10 @@ code_block:
     
 parameters: 
   - content: "Function handle to the function that defines the path costs (also called Lagrange cost or intermediate cost). The signature of the function handle is `fh(ch,x,z,u,p)` where `ch` is the cost handler, `x` are the states, `z` are the algebraic variables, `u` are the controls, and `p` are the parameters."
-    name: fhPathCosts
+    name: "pathcosts=fhPathCosts"
     type: "function handle, optional"
   - content: "Function handle to the function that defines the arrival costs (also called Mayer terms). The signature of the function handle is `fh(ch,x,T,p)` where `ch` is the cost handler, `x` are the terminal states, `T` is the final time, `p` are the parameters."
-    name: fhArrivalCosts
+    name: arrivalcosts=fhArrivalCosts
     type: "function handle, optional"
   - content: "Function handle to the function that defines the path constraints. The signature of the function handle is `fh(ch,x,t,p)` where `ch` is the contraints handler, `t` is the time, `p` are the parameters."
     name: fhPathConstraints
