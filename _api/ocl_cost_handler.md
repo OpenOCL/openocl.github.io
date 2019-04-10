@@ -9,7 +9,7 @@ methods:
         content: "Scalar variable containing the cost"
         type: "[OclVariable](#apiocl_variable) or Matlab matrix"
     returns: ~
-position: 8
+position: 11
 title: OclCostHandler
 type: Class
 ---
