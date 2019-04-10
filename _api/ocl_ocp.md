@@ -34,7 +34,7 @@ parameters:
   - content: "Function handle to the function that defines discrete cost. The discrete cost terms can depend on any variable of the discretized optimal control problem which is a non-linear program (NLP). The signature of the function handle is `fh(ch, V)` where `ch` is the cost handler, and `V` of type [OclVariable](#apiocl_variable) are the nlp variables."
     name: discretecosts=[]
     type: "function handle, optional"
-position: 2
+position: 10
 returns: ~
 title: OclOCP
 type: Class
