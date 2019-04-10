@@ -1,64 +1,31 @@
 --- 
 name: OclSystem
 description: |-
-  There are two ways to implement the dynamics of a system. The first way is by implementing functions for defining the system variables and equations, and creating an OclSystem using the function handles/pointers. The second way involves involves implementing the system in an object oriented way as a class that is inherited from OclSystem. The second way is a bit more involved but for complex systems it allows using the capabilities of classes, e.g. defining instance variables.
-  
-  **Using system functions** 
-  You need to implement two functions, one for defining the system variables, and a second one for defining the system equations. The system is created by passing the handles of the two functions to the constructor of OclSystem.
-  
-  **By inheriting from OclSystem** You need to inherit your class from OclSystem and implement the two methods setupVariables and setupEquations as static methods. 
+  A dynamical system is defined by implementing functions for the system variables and equations, and creating an OclSystem passing the function pointers. You need to implement two functions, one for defining the system variables, and a second one for defining the system equations. The system is created by passing the handles of the two functions to the constructor of OclSystem.
   
 code_block:
   title: Example System
   language: m
   code: |-
-    %% Example code for the two ways of implementing
-    %% system. The two resulting systems sys1 and sys2 are 
-    %% equivalent.
-    %%
-    
-    %% Using system functions
-    %%
-    sys1 = OclSystem(@sysVars,@sysEq);
+    sys = OclSystem(@sysVars,@sysEq);
     
     % Function definitions can be in the same file 
     % (if the main script is wrapped by a function) 
     % or in separate files:
-    function sysVars(sys)
-      sys.addState('p');
-      sys.addState('v');
-      sys.addControl('u');  
+    function sysVars(sh)
+      sh.addState('p');
+      sh.addState('v');
+      sh.addControl('u');  
     end
-    function sysEq(sys,x,z,u,p)
-      sys.setODE('p',(1-x.v^2)*x.p-x.v+u.u); 
-      sys.setODE('v',x.p);
-    end
-    
-    
-    %% By inheriting from OclSystem
-    %% 
-    sys2 = VanDerPolSystem();
-    
-    % The class definition must be in a separate file.
-    % Note that the methods are marked as Static!
-    classdef VanDerPolSystem < OclSystem
-      methods (Static)
-        function setupVariables(sys)    
-          sys.addState('p');
-          sys.addState('v');
-          sys.addControl('u');      
-        end
-        function setupEquations(sys,x,z,u,p)     
-          sys.setODE('p',(1-x.v^2)*x.p-x.v+u.u); 
-          sys.setODE('v',x.p);
-        end
-      end
+    function sysEq(sh,x,z,u,p)
+      sh.setODE('p',(1-x.v^2)*x.p-x.v+u.u); 
+      sh.setODE('v',x.p);
     end
 parameters:
-  - content: "Function handle to the function that sets up the variables. The function for the variables must have one input argument, no return values, and thus the following siganture: varFunctionName(sys) where sys is a system handler that allows to add variables and parameters. If no function handle is provided, the system must be implemented by deriving from OclSystem and implementing the abstract methods setupVariables and setupEquations."
+  - content: "Function handle to the function that sets up the variables. The function for the variables must have one input argument, no return values, and thus the following siganture: varFunctionName(sh) where `sh` is a system handler that allows to add variables and parameters."
     name: fhVars
     type: "function handle, optional"
-  - content: "Function handle to the function that sets up the equations. The function for the variables must have five input argument, no return values, and thus the following signature: eqFunctionName(sys,x,z,u,p) where sys is a system handler that allows to add ODE and DAE equations, x the states, z the algebraic variables, u the control inputs, p the parameters. If no function handle is provided, the system must be implemented by deriving from OclSystem and implementing the abstract methods setupVariables and setupEquations."
+  - content: "Function handle to the function that sets up the equations. The function for the variables must have five input argument, no return values, and thus the following signature: `eqFunctionName(sh,x,z,u,p)` where sys is a system handler that allows to add ODE and DAE equations, x the states, z the algebraic variables, u the control inputs, p the parameters."
     name: fhEquations
     type: "function handle, optional"
 methods: 
@@ -139,35 +106,6 @@ methods:
       - content: "Algebraic equation g in the form g(x,z,u,p)=0"
         name: equation
         type: "[OclVariable](#apiocl_variable) or Matlab matrix"
-    returns: ~
-methods_abstract: 
-  - name: setupVariables
-    content: "Implement this method as a static method to define the system variables. You can create state, control and algebraic variables using the class methods."
-    parameters: 
-      - content: "System handler, reference to the system object."
-        name: sh
-        type: "[OclSystem](#apiocl_system)"
-    returns: ~
-    code_block:
-  - content: "Implement this method as a static method to specify the differential and algebraic equations. It is possible to define only ordinary differential equations (ODE system), or differential and algebraic equations (DAE system)."
-    name: "setupEquations"
-    parameters: 
-      - content: "System handler, reference to the system object."
-        name: sh
-        type: "[OclSystem](#apiocl_system)"
-      - content: "State variables"
-        name: x
-        type: "[OclVariable](#apiocl_variable)"
-      - content: "Algebraic Variables"
-        name: z
-        type: "[OclVariable](#apiocl_variable)"
-      - content: "Control variables"
-        name: u
-        type: "[OclVariable](#apiocl_variable)"
-      - content: Parameters
-        name: p
-        type: "[OclVariable](#apiocl_variable)"
-    code_block:
     returns: ~
 position: 1
 returns: ~
