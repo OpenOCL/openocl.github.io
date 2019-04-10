@@ -13,9 +13,9 @@ code_block:
     % (if the main script is wrapped by a function) 
     % or in separate files:
     function ocpPathCosts(ch,x,z,u,p)
-      self.add( x.p^2 );
-      self.add( x.v^2 );
-      self.add( u.u^2 );
+      ch.add( x.p^2 );
+      ch.add( x.v^2 );
+      ch.add( u.u^2 );
     end
     
 parameters: 
