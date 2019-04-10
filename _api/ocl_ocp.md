@@ -1,7 +1,7 @@
 --- 
 name: OclOCP
 description: |
-  An optimal control problem is implemented by providing functions for the path costs, arrival costs, path constraints, and boundary conditions. If you do not implemented some of the functions or methods, they default to zero cost for the cost functions or an empty constraints array for path constraints and boundary conditions.
+  An optimal control problem is implemented by providing functions for the path costs, arrival costs, path constraints, and boundary conditions. You can pass the function handles as positional arguments or keyword arguments. All function handles are optional. If you do not provide some of the functions, they default to zero cost for the cost functions or an empty constraints array for path constraints and boundary conditions.
 
 code_block:
   title: Example OCP
