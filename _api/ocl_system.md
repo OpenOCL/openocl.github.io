@@ -22,10 +22,10 @@ code_block:
       seh.setODE('v',x.p);
     end
 parameters:
-  - content: "Function handle to the function that sets up the variables. The function for the variables must have one input argument, no return values, and thus the following siganture: `fh(svh)` where `svh` is the system variables handler that allows to add variables and parameters."
+  - content: "Function handle to the function that sets up the variables. The function for the variables must have one input argument, no return values, and thus the following siganture: `fh(svh)` where `svh` is the [OclSystemVarsHandler](#apiocl_system_vars_handler) handler that allows to add variables and parameters."
     name: varsfun
     type: "function handle"
-  - content: "Function handle to the function that sets up the equations. The function for the variables must have five input argument, no return values, and thus the following signature: `fh(seh,x,z,u,p)` where `seh` is the system equations handler that allows to add ODE and DAE equations, `x` the states, `z` the algebraic variables, `u` the control inputs, `p` the parameters."
+  - content: "Function handle to the function that sets up the equations. The function for the variables must have five input argument, no return values, and thus the following signature: `fh(seh,x,z,u,p)` where `seh` is the [OclSystemEqHandler](#apiocl_system_eq_handler) that allows to add ODE and DAE equations, `x` the states, `z` the algebraic variables, `u` the control inputs, `p` the parameters."
     name: eqfun
     type: "function handle,"
 position: 1
