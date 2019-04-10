@@ -82,7 +82,7 @@ methods:
     parameters: ~
     returns: 
 parameters: ~
-position: 4
+position: 30
 returns: ~
 right_code_blocks: ~
 type: Class
