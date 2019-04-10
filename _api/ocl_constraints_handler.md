@@ -15,7 +15,5 @@ methods:
         name: rhs
         type: "[OclVariable](#apiocl_variable) or Matlab matrix"
     returns: ~
-position: 13
-title: OclConstraintHandler
-type: Class
+
 ---
