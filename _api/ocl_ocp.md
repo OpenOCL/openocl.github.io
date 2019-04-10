@@ -34,55 +34,6 @@ parameters:
   - content: "Function handle to the function that defines discrete cost. The discrete cost terms can depend on any variable of the discretized optimal control problem which is a non-linear program (NLP). The signature of the function handle is `fh(ch, V)` where `ch` is the cost handler, and `V` of type [OclVariable](#apiocl_variable) are the nlp variables."
     name: discretecosts=[]
     type: "function handle, optional"
-
-methods: 
-  - content: "Adds a path cost term of the form c_p(x,z,u,p)."
-    name: addPathCost
-    parameters: 
-      - name: cost
-        content: "Scalar variable containing the cost"
-        type: "[OclVariable](#apiocl_variable) or Matlab matrix"
-    returns: ~
-  - content: "Adds an end cost term of the form c_f(x,p)."
-    name: addArrivalCost
-    parameters: 
-      - name: cost
-        content: "Scalar variable containing the cost"
-        type: "[OclVariable](#apiocl_variable) or Matlab matrix"
-    returns: ~
-  - content: "Adds a path constraint of the form c_p_lower(x,u,z,p)<=c_p(x,u,z,p)<=c_p_upper(x,u,z,p) to the optimal control problem."
-    name: "addPathConstraint"
-    parameters: 
-      - content: "Left hand side of the constraint equation"
-        name: lhs
-        type: "[OclVariable](#apiocl_variable) or Matlab matrix"
-      - content: "One of the following operators as a string: '<=', '==', '>='"
-        name: operator
-        type: char
-      - content: "Right hand side of the constraint equation"
-        name: rhs
-        type: "[OclVariable](#apiocl_variable) or Matlab matrix"
-    returns: ~
-  - content: "Adds a boundary constraint of the form c_b_lower(x0,xf,p)<=c_b(x0,xf,p)<=c_b_upper(x0,xf,p) that can depend on the initial and final states to the optimal control problem."
-    name: "addBoundaryCondition"
-    parameters: 
-      - content: "Left hand side of the constraint equation"
-        name: lhs
-        type: "[OclVariable](#apiocl_variable) or Matlab matrix"
-      - content: "One of the following operators as a string: '<=', '==', '>='"
-        name: operator
-        type: char
-      - content: "Right hand side of the constraint equation"
-        name: rhs
-        type: "[OclVariable](#apiocl_variable) or Matlab matrix"
-    returns: ~
-  - content: "Adds a cost term that can depend on any variable in the discretized optimal control problem."
-    name: addDiscreteCost
-    parameters: 
-      - content: "Scalar variable containing the cost c_d(v_d)"
-        name: cost
-        type: "[OclVariable](#apiocl_variable) or Matlab matrix"
-    returns: ~
 position: 2
 returns: ~
 title: OclOCP
