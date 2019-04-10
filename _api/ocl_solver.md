@@ -1,6 +1,6 @@
 --- 
 name: OclSolver
-position: 3
+position: 20
 type: Function
 description: "Creates a solver object that discretizes the given system and optimal control problem, and calls the underlying optimizer. Before solving set options, parameters, bounds, and the initial guess:"
 code_block:
