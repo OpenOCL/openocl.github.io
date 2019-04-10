@@ -12,14 +12,14 @@ code_block:
     % Function definitions can be in the same file 
     % (if the main script is wrapped by a function) 
     % or in separate files:
-    function sysVars(sh)
-      sh.addState('p');
-      sh.addState('v');
-      sh.addControl('u');  
+    function sysVars(svh)
+      svh.addState('p');
+      svh.addState('v');
+      svh.addControl('u');  
     end
-    function sysEq(sh,x,z,u,p)
-      sh.setODE('p',(1-x.v^2)*x.p-x.v+u.u); 
-      sh.setODE('v',x.p);
+    function sysEq(seh,x,z,u,p)
+      seh.setODE('p',(1-x.v^2)*x.p-x.v+u.u); 
+      seh.setODE('v',x.p);
     end
 parameters:
   - content: "Function handle to the function that sets up the variables. The function for the variables must have one input argument, no return values, and thus the following siganture: `fh(svh)` where `svh` is the system variables handler that allows to add variables and parameters."
