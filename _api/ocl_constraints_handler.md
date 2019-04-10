@@ -3,13 +3,13 @@ name: OclConstraintHandler
 description: The cost handler allows to add cost terms in a cost function definition.
 methods: 
  - content: "Adds a constraint to the optimal control problem."
-    name: "addPathConstraint"
+    name: "add"
     parameters: 
       - content: "Left hand side of the constraint equation"
         name: lhs
         type: "[OclVariable](#apiocl_variable) or Matlab matrix"
       - content: "One of the following operators as a string: '<=', '==', '>='"
-        name: operator
+        name: op
         type: char
       - content: "Right hand side of the constraint equation"
         name: rhs
