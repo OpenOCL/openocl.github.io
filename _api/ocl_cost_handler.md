@@ -1,3 +1,4 @@
+---
 name: OclCostHandler
 description: The cost handler allows to add cost terms in a cost function definition.
 methods: 
@@ -11,3 +12,4 @@ methods:
 position: 8
 title: OclCostHandler
 type: Class
+---
