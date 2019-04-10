@@ -9,6 +9,9 @@ code_block:
   code: |-
     ocp = OclOCP('pathcosts', @ocpPathCosts);
     
+    % Function definitions can be in the same file 
+    % (if the main script is wrapped by a function) 
+    % or in separate files:
     function ocpPathCosts(ch,x,z,u,p)
       self.add( x.p^2 );
       self.add( x.v^2 );
