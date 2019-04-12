@@ -11,13 +11,4 @@ if (element !== null && window.history.length > 0 && last_page.toLowerCase().ind
   }
 }
   
-function scrollTop() {
-  window.scrollTo(100, 0);
-}
-
-let top_scroll = document.getElementById("scroll-top-click");
-
-top_scroll.addEventListener("click", scrollTop);
-top_scroll.href = ""
-  
 })(document);
