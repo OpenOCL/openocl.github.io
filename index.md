@@ -4,7 +4,7 @@ title: Open Optimal Control Library
 ---
 <img src="https://openocl.org/imgs/cartpole.gif" width="31%"> <img src="https://openocl.org/imgs/car.png" width="31%"> <img src="https://openocl.org/imgs/circ.png" width="31%">  
 <img src="https://openocl.org/imgs/pend.png" width="31%"> <img src="https://openocl.org/imgs/ballbeam.png" width="31%"> <img src="https://openocl.org/imgs/lemn.png" width="31%">    
-[Get started](get-started.md) - [Tutorial](tutorial.md) - [API Docs](api-docs.md)
+[Get started](get-started.md) - [API Docs](api-docs.md)
 
 With the Open Optimal Control Library you can:
 * Model **dynamical systems**
