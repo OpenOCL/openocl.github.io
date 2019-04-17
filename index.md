@@ -11,7 +11,7 @@ With the Open Optimal Control Library you can:
 * Formulate **optimal control** problems
 * Automatically generate necessary **derivatives** (jabobian, hessian)
 * Solve **trajectory optimization** problems
-* Implement a **predictive controller** (MPC)
+* Implement a **model-predictive controller** (MPC)
 
 The software can be used from Matlab and Octave. Python and C++ implementations as well as a unified optimal control modeling language are coming soon. 
 
