@@ -15,7 +15,7 @@ With the Open Optimal Control Library you can:
 
 The software can be used from Matlab and Octave. Python and C++ implementations as well as a unified optimal control modeling language are coming soon. 
 
-OpenOCL interfaces Ipopt [1] to numerically solve the optimal control problems and CasADi [2] to automatically calcuate the necessary derivatives by algorithmic differentiation. It implements direct methods to optimal control (collocation/pseudo-spectral methods).
+OpenOCL interfaces Ipopt [1] to numerically solve the optimal control problems and CasADi [2] to automatically calculate the necessary derivatives by algorithmic differentiation. It implements direct methods to optimal control (collocation/pseudo-spectral methods).
 
 ### Quick start
 
