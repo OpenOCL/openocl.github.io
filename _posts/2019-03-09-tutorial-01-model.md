@@ -65,13 +65,13 @@ The center of mass position of the first pole $p_1 \in \mathcal{R}^2$ is half-wa
 From the picture we can see that $p_1$ can be calculated by
 
 \\[
-p_1 = p_c + \frac{l_1}{2} * \\begin{bmatrix}  \cos(\\theta\)  \\\ \\sin({\theta}) \\end{bmatrix} \\,.
+p_1 = p_c + \frac{l_1}{2}  \\begin{bmatrix}  \cos(\\theta\)  \\\ \\sin({\theta}) \\end{bmatrix} \\,.
 \\]
 
 The center of mass position of the second pole can be derived similarily. Here we need to go to the end of the first pole (not only the half length), and add the two joint angles to get the direction of the second pole. The position of the second pole $p_2$ can be calculated by
 
 \\[
-p_2 = p_c + l_1 * \\begin{bmatrix} \cos(\\theta\)  \\\ \\sin({\theta}) \\end{bmatrix} +  \frac{l_2}{2} \\begin{bmatrix}  \cos(\theta+\phi) \\\ \\sin({\theta+\phi})\\end{bmatrix} \\,.
+p_2 = p_c + l_1  \\begin{bmatrix} \cos(\\theta\)  \\\ \\sin({\theta}) \\end{bmatrix} +  \frac{l_2}{2} \\begin{bmatrix}  \cos(\theta+\phi) \\\ \\sin({\theta+\phi})\\end{bmatrix} \\,.
 \\]
 
 From the *center of mass* positions we can get the velocities by differentiation. The velocity of the cart is given by
@@ -83,13 +83,13 @@ v_c = \\begin{bmatrix} \dot{q}_0 \\\ 0 \\end{bmatrix} \\,,
 the *center of mass* velocity of the first pole is given by
 
 \\[
-v_1 = v_c + \frac{l_1}{2} * \\begin{bmatrix}  - \sin(\\theta\) \dot{\theta}  \\\ \\cos({\theta}) \dot{\theta} \\end{bmatrix} \\,,
+v_1 = v_c + \frac{l_1}{2}  \\begin{bmatrix}  - \sin(\\theta\) \dot{\theta}  \\\ \\cos({\theta}) \dot{\theta} \\end{bmatrix} \\,,
 \\]
 
 and the velocity of the second pole is 
 
 \\[
-v_2 = v_c + l_1 * \\begin{bmatrix} - \sin(\\theta\) \dot{\theta}  \\\ \\cos({\theta}) \dot{\theta} \\end{bmatrix} +  \frac{l_2}{2} \\begin{bmatrix}  - \sin(\theta+\phi) (\dot{\theta}+\dot{\phi}) \\\ \\cos({\theta+\phi}) (\dot{\theta}+ \dot{\phi}) \\end{bmatrix} \\,.
+v_2 = v_c + l_1  \\begin{bmatrix} - \sin(\\theta\) \dot{\theta}  \\\ \\cos({\theta}) \dot{\theta} \\end{bmatrix} +  \frac{l_2}{2} \\begin{bmatrix}  - \sin(\theta+\phi) (\dot{\theta}+\dot{\phi}) \\\ \\cos({\theta+\phi}) (\dot{\theta}+ \dot{\phi}) \\end{bmatrix} \\,.
 \\]
 
 
@@ -137,10 +137,10 @@ We can calculate the derivatives in the *Euler-Lagrange* equation by hand, but i
 \dots
 \\]
 
-which is all the equations that we need to predict the behaviour of the system!
+which is all the equations that we need to predict the behaviour of the system! These type of equations are called *ordinary differential equations* as they contain both the state variables ($q_0$, $q_1$, $q_2$, $\dot{q}_0$, $\dot{q}_1$, $\dot{q}_2$) but also their derivative ($\ddot{q}_0$, $\ddot{q}_1$, $\ddot{q}_2$).
 
+We can now use a numerical integration method like *explicit Euler* [[wikipedia]()], *Runge-Kutta 4* [[wikipedia]()], or even implicit methods like *implicit Euler* [[wikipedia]()], *BDF* [[wikipedia]()] or *Collocation* [[wikipedia]()] to simluate the system. Fortunately in Python and Matlab there are already excellent implementation available that we can use (although at least the explicit methods are super easy to implement!).
 
-
-
+To be able to use the integration methods we need to bring the equations into a particular form. 
 
 
