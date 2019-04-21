@@ -141,7 +141,7 @@ which is all the equations that we need to predict the behaviour of the system! 
 
 We can now use a numerical integration method like *explicit Euler* [[wikipedia]()], *Runge-Kutta 4* [[wikipedia]()], or even implicit methods like *implicit Euler* [[wikipedia]()], *BDF* [[wikipedia]()] or *Collocation* [[wikipedia]()] to simluate the system. Fortunately in Python and Matlab there are already excellent implementation available that we can use (although at least the explicit methods are super easy to implement!).
 
-To be able to use the integration methods we need to bring the equations into a particular form. We already collected all the state variables into a vector $x$, the controls are usually called $u$ which for the cart-pole just the force $f$. The (non-linear) system dynamics can be presented in the explicit form as
+To be able to use the integration methods we need to bring the equations into a particular form. We already collected all the state variables into a vector $x$, the controls are usually called $u$ which for the cart-pole just the force $u=f$. The (non-linear) system dynamics can be presented in the explicit form as
 
 \\[
 \dot{x} = f(x,u) \\,,
@@ -154,6 +154,17 @@ For our cart-pole system this means we need to add some trivial equations, i.e. 
 \\[
 \dot{x} = ... \\,.
 \\]
+
+And here are the Python and Matlab implementations:
+```Python
+
+```
+
+```Matlab
+
+```
+
+We add a function to [animate the system](), and we get this nice simulation:
 
 Easy!
 
