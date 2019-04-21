@@ -1,6 +1,6 @@
 ---
 categories: tutorials
-title: "[Tutorial01] Double pendulum on cart"
+title: "[Tutorial01] Modeling for Reinforcement learning and optimal control. Double pendulum on cart"
 permalink: /:categories/:title/
 mathjax: true
 hidden: true
