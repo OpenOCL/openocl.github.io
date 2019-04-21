@@ -137,6 +137,19 @@ We can calculate the derivatives in the *Euler-Lagrange* equation by hand, and s
 \ddot{q}_0 = \frac{ -f \cos(2q_2) + 3 f - 4 \dot{q}_1 \cos^2(q_1) - \dot{q_1} \cos^2(q_1-q_2) - \dot{q}_1 \cos^2(q_1 + q_2) - 2 \dot{q_1} \dot{q_2} \cos(q_1 - q_2) - 2 \dot{q_1} \dot{q}_2 \cos(q_1+q_2) - \dot{q_2} \cos^2(q_1 - q_2) - \dot{q}_2  \cos^2(q_1 + q_2) + \frac{981}{50 \sin(2 q_1)}{-2 \cos(2 q_1) + 5 \cos(2 q_2) - 17}
 \\]
 
+Ok i am giving up here, you can image how this will go on...
+
+\\[
+\ddot{q}_1 = \mathrm{homework}
+\\]
+
+\\[
+\ddot{q}_2 = \mathrm{homework}
+\\]
+
+
+
+
 which is all the equations that we need to predict the behaviour of the system! These type of equations are called *ordinary differential equations* as they contain both the state variables ($q_0$, $q_1$, $q_2$, $\dot{q}_0$, $\dot{q}_1$, $\dot{q}_2$) but also their derivative ($\ddot{q}_0$, $\ddot{q}_1$, $\ddot{q}_2$). Remember that our state was given by $x=[q_0, q_1, q_2, \dot{q}_0, \dot{q}_1, \dot{q}_2]^\top$.
 
 We can now use a numerical integration method like *explicit Euler* [[wikipedia]()], *Runge-Kutta 4* [[wikipedia]()], or even implicit methods like *implicit Euler* [[wikipedia]()], *BDF* [[wikipedia]()] or *Collocation* [[wikipedia]()] to simluate the system. Fortunately in Python and Matlab there are already excellent implementation available that we can use (although at least the explicit methods are super easy to implement!).
