@@ -92,9 +92,6 @@ and the velocity of the second pole is
 v_2 = v_c + l_1 * \\begin{bmatrix} - \sin(\\theta\) \dot{\theta}  \\\ \\cos({\theta}) \dot{\theta} \\end{bmatrix} +  \frac{l_2}{2} \\begin{bmatrix}  - \sin(\theta+\phi) (\dot{\theta}+\dot{\phi}) \\\ \\cos({\theta+\phi}) (\dot{\theta}+ \dot{\phi}) \\end{bmatrix} \\,.
 \\]
 
-You can try it by hand, but we have also prepared scripts for you in [Python]() and [Matlab]() that use symbolic toolboxes and do the calculation for us. The *center of mass* velocities obtained from the scripts are:
-
-
 
 **Dynamics** The dynamics of a system describe the inertial and accelerating properties of a system.
 
@@ -134,7 +131,7 @@ Now we can plug the kinetic energies and the potential energies into the *Euler-
 \\]
 where $q=[q_0,q_1,q_2]^\top$ are the coordinates of the system,$\dot{q}=[\dot{q_0},\dot{q_1},\dot{q_2}]^\top$ are the velocities of the system, and $f$ is the force input (external force) that only acts on the cart in x-direction.
 
-We can calculate the derivatives in the *Euler-Lagrange* equation by hand, but it is easier and less error prone to let the computer do the calculations for you. We prepared scripts for [Matlab]() and [Python]() for you that use symbolic toolboxes and do the calculation for us. From the scripts we get:
+We can calculate the derivatives in the *Euler-Lagrange* equation by hand, but it is easier and less error prone to let the computer do the calculations for you. We prepared scripts in [Python]() and [Matlab]() for you that use symbolic toolboxes and do the calculation for us. From the scripts we get:
 
 \\[
 \dots
