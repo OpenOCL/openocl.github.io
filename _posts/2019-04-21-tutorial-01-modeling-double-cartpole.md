@@ -150,9 +150,7 @@ Ok i am giving up here, you can image how this could go on...
 \\]
 
 
-
-
-which is all the equations that we need to predict the behaviour of the system! These type of equations are called *ordinary differential equations* as they contain both the state variables ($q_0$, $q_1$, $q_2$, $\dot{q}_0$, $\dot{q}_1$, $\dot{q}_2$) but also their derivative ($\ddot{q}_0$, $\ddot{q}_1$, $\ddot{q}_2$). Remember that our state was given by $x=[q_0, q_1, q_2, \dot{q}_0, \dot{q}_1, \dot{q}_2]^\top$.
+These type of equations are called *ordinary differential equations* as they contain both the state variables ($q_0$, $q_1$, $q_2$, $\dot{q}_0$, $\dot{q}_1$, $\dot{q}_2$) but also their derivative ($\ddot{q}_0$, $\ddot{q}_1$, $\ddot{q}_2$). Remember that our state was given by $x=[q_0, q_1, q_2, \dot{q}_0, \dot{q}_1, \dot{q}_2]^\top$.
 
 We can now use a numerical integration method like *explicit Euler* [[wikipedia]()], *Runge-Kutta 4* [[wikipedia]()], or even implicit methods like *implicit Euler* [[wikipedia]()], *BDF* [[wikipedia]()] or *Collocation* [[wikipedia]()] to simluate the system. Fortunately in Python and Matlab there are already excellent implementation available that we can use (although at least the explicit methods are super easy to implement!).
 
@@ -164,7 +162,7 @@ To be able to use the integration methods we need to bring the equations into a 
 
 which is the most common form of representing general dynamical system in the explicit form.
 
-For our cart-pole system this means we need to add some trivial equations which are $\dot(x_0)=\dot{q_0}$, $\dot(x_1)=\dot{q_1}$, and $\dot(x_2)=\dot{q_2}$. Together our *ordinary differential equations* for the double-cart-pole are:
+For our cart-pole system this means we need to add some trivial equations which are $\dot{x}_0=\dot{q}_0$, $\dot{x}_1=\dot{q}_1$, and $\dot{x}_2=\dot{q}_2$. Together our *ordinary differential equations* for the double-cart-pole are:
 
 \\[
 \dot{x} = ... \\,.
