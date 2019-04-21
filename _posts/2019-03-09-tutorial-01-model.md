@@ -68,7 +68,7 @@ From the picture we can see that $p_1$ can be calculated by
 p_1 = p_c + \frac{l_1}{2} * \\begin{bmatrix}  \cos(\\theta\)  \\\ \\sin({\theta}) \\end{bmatrix} \\,.
 \\]
 
-The center of mass position of the second pole can be derived similarily. Here we need to go to the end of the first pole (not only the half length), and add the two joint angles to get the direction of the second pole. $p_2$ can be calculated by
+The center of mass position of the second pole can be derived similarily. Here we need to go to the end of the first pole (not only the half length), and add the two joint angles to get the direction of the second pole. The position of the second pole $p_2$ can be calculated by
 
 \\[
 p_2 = p_c + l_1 * \\begin{bmatrix} \cos(\\theta\)  \\\ \\sin({\theta}) \\end{bmatrix} +  \frac{l_2}{2} \\begin{bmatrix}  \cos(\theta+\phi) \\\ \\sin({\theta+\phi})\\end{bmatrix} \\,.
@@ -89,7 +89,7 @@ v_1 = v_c + \frac{l_1}{2} * \\begin{bmatrix}  - \sin(\\theta\) \dot{\theta}  \\\
 and the velocity of the second pole is 
 
 \\[
-v_2 = v_c + l_1 * \\begin{bmatrix} - \sin(\\theta\) \dot{\theta}  \\\ \\cos({\theta}) \dot{\theta} \\end{bmatrix} +  \frac{l_2}{2} \\begin{bmatrix}  - \sin(\theta+\phi) (\dot{\that}+\dot{\phi}) \\\ \\cos({\theta+\phi}) (\dot{\theta}+ \dot{\phi}) \\end{bmatrix} \\,.
+v_2 = v_c + l_1 * \\begin{bmatrix} - \sin(\\theta\) \dot{\theta}  \\\ \\cos({\theta}) \dot{\theta} \\end{bmatrix} +  \frac{l_2}{2} \\begin{bmatrix}  - \sin(\theta+\phi) (\dot{\theta}+\dot{\phi}) \\\ \\cos({\theta+\phi}) (\dot{\theta}+ \dot{\phi}) \\end{bmatrix} \\,.
 \\]
 
 You can try it by hand, but we have also prepared scripts for you in [Python]() and [Matlab]() that use symbolic toolboxes and do the calculation for us. The *center of mass* velocities obtained from the scripts are:
