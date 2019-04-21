@@ -137,7 +137,7 @@ We can calculate the derivatives in the *Euler-Lagrange* equation by hand, and s
 \\begin{align} 
 \ddot{q}_0 = & (-f \cos(2q_2) + 3 f - 4 \dot{q}_1 \cos^2(q_1) - \dot{q_1} \cos^2(q_1-q_2) - \dot{q}_1 \cos^2(q_1 + q_2) \\\
              & - 2 \dot{q}_1 \dot{q}_2 \cos(q_1 - q_2) - 2 \dot{q}_1 \dot{q}_2 \cos(q_1+q_2) - \dot{q}_2 \cos^2(q_1 - q_2) \\\
-             & - \dot{q}_2 \cos^2(q_1 + q_2) + \frac{981}{50} \sin(2 q_1) ) \times (-2 \cos(2 q_1) + 5 \cos(2 q_2) - 17)^{-1}
+             & - \dot{q}_2 \cos^2(q_1 + q_2) + \frac{981}{50} \sin(2 q_1) )  (-2 \cos(2 q_1) + 5 \cos(2 q_2) - 17)^{-1}
 \\end{align}
 \\]
 
@@ -166,8 +166,10 @@ which is the most common form of representing general dynamical system in the ex
 For our cart-pole system this means we need to add some trivial equations which are $\dot{x}_0=\dot{q}_0$, $\dot{x}_1=\dot{q}_1$, and $\dot{x}_2=\dot{q}_2$. Together our *ordinary differential equations* for the double-cart-pole are:
 
 \\[
-\dot{x} = \begin{bmatrix} \dot{q}_0 \\\ \dot{q}_1 \\\ \dot{q}_2 \\\ \ddot{q}_0 \\\ \ddot{q}_1 \\\ \ddot{q}_2  \end{bmatrix}   \\,.
+\dot{x} = \begin{bmatrix} \dot{q}_0 \\\ \dot{q}_1 \\\ \dot{q}_2 \\\ \ddot{q}_0 \\\ \ddot{q}_1 \\\ \ddot{q}_2  \end{bmatrix}   \\,,
 \\]
+
+where $\ddot{q}_0$, $\ddot{q}_1$, $\ddot{q}_2$ are the long equations from above.
 
 And here are the Python and Matlab implementations to simlulate the system starting from a random state $x_0$ for 5 second:
 
@@ -176,7 +178,35 @@ And here are the Python and Matlab implementations to simlulate the system start
 ```
 
 ```Matlab
+function simulate_doublecartpole
+  
+  % parameters
+  p = doublecartpole_parameters;
+  
+  % get a random starting state between min state and max state
+  x_min = [-1; -pi; -pi; -.05; -1; -1];
+  x_max = -x_min;
+  x0 = rand(6,1) .* (x_max-x_min) + x_min;
+  
+  % simulate
+  tspan = [0:0.01:5];
+  [times, X] = ode45(@ode_function, tspan, x0);
+  
+  draw_doublecartpole(times, X, x_min, x_max, p);
+ 
+end
 
+function r = ode_function(t, x)
+  r_1 = 1;
+  r_2 = 1;
+  m_c = 5;
+  m_1 = 1;
+  m_2 = 1; 
+  g = 9.81;
+  
+  r = dynamics_generated(x(1), x(2), x(3), x(4), x(5), x(6), 0, r_1, r_2, m_c, m_1, m_2, g);
+  
+end
 ```
 
 We add a function to animate the system in [Python]() and [Matlab]{}, and we get this nice simulation:
