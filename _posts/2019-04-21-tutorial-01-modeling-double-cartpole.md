@@ -166,7 +166,7 @@ which is the most common form of representing general dynamical system in the ex
 For our cart-pole system this means we need to add some trivial equations which are $\dot{x}_0=\dot{q}_0$, $\dot{x}_1=\dot{q}_1$, and $\dot{x}_2=\dot{q}_2$. Together our *ordinary differential equations* for the double-cart-pole are:
 
 \\[
-\dot{x} = \begin{bmatrix} \dot{q}_0 \\ \dot{q}_1 \\ \dot{q}_2 \\ \ddot{q}_0 \\ \ddot{q}_1 \\ \ddot{q}_2  \end{bmatrix}   \\,.
+\dot{x} = \begin{bmatrix} \dot{q}_0 \\\ \dot{q}_1 \\\ \dot{q}_2 \\\ \ddot{q}_0 \\\ \ddot{q}_1 \\\ \ddot{q}_2  \end{bmatrix}   \\,.
 \\]
 
 And here are the Python and Matlab implementations to simlulate the system starting from a random state $x_0$ for 5 second:
