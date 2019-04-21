@@ -35,11 +35,11 @@ Therefore the state usually does not only include the current location or config
 
 So for our double pole cart system, we can describe the state by the following set of variables:
 * Position of the cart $q_0 \in \mathcal{R}$ in the x-direction
-* Velocity of the cart $\dot{q_0} \in mathcal{R}$ in the x-direction
-* Angle of the first pole $q_1 \in mathcal{R}$
-* Angular velocity of the first pole $\dot{q_1} \in mathcal{R}$
-* Angle of the second pole $q_2 \in mathcal{R}$
-* Angular velocity of the second pole $\dot{q_2} \in mathcal{R}$
+* Velocity of the cart $\dot{q_0} \in \mathcal{R}$ in the x-direction
+* Angle of the first pole $q_1 \in \mathcal{R}$
+* Angular velocity of the first pole $\dot{q_1} \in \mathcal{R}$
+* Angle of the second pole $q_2 \in \mathcal{R}$
+* Angular velocity of the second pole $\dot{q_2} \in \mathcal{R}$
 
 This choice of state is a minimal representation of the state of the system. All variables are scalar, and real numbers. We do not need to describe e.g. the position of the cart in y-direction as the cart can not move *upwards*.
 
@@ -52,12 +52,13 @@ We start with calculating the center of mass positions of the three body parts o
 **Kinematics** The kinematics describe the static and moving structures of a system without the inertial and accelerating properties. For the double cart-pole we therefore desribe the center of mass positions and velocities.
 
 The position $p_c \in \mathcal{R}^2$ of the cart is easy:
+
 \\[
-p_c = \\begin{bmatrix} q_0 \\\ 0 \\,,
+p_c = \\begin{bmatrix} q_0 \\\ 0 \\end{bmatrix} \\,,
 \\]
 as the y-coordinate of the cart is always $0$.
 
-The center of mass position of the first pole $p_1 \in \mathcam{R}^2$ is half-way along the first pole. Here is another picture: 
+The center of mass position of the first pole $p_1 \in \mathcal{R}^2$ is half-way along the first pole. Here is another picture: 
 
 ![Drawing of single pendulum](/assets/posts/tut01_drawing_pendulum.jpg)
 
@@ -105,9 +106,9 @@ where $g=9.81$ is the gravitational acceleration.
 
 Now we can plug the kinetic energies and the potential energies into the *Euler-Lagrange* equation:
 \\[
-\frac{\partial K_0+K_1+K_2-P_1-P_2}{\partia q} - \frac{\partial K_0+K_1+K_2-P_1-P_2}{\partia \dot{q}} = \tau \\,,
+\frac{\partial K_0+K_1+K_2-P_1-P_2}{\partia q} - \frac{\partial K_0+K_1+K_2-P_1-P_2}{\partia \dot{q}} = [f,0,0]^\top \\,,
 \\]
-where $q=[q_0,q_1,q_2]^\top$ are the coordinates of the system and $\dot{q}=[\dot{q_0},\dot{q_1},\dot{q_2}]^\top$ are the velocities of the system.
+where $q=[q_0,q_1,q_2]^\top$ are the coordinates of the system,$\dot{q}=[\dot{q_0},\dot{q_1},\dot{q_2}]^\top$ are the velocities of the system, and $f$ is the force input (external force) that only acts on the cart in x-direction.
 
 
 
