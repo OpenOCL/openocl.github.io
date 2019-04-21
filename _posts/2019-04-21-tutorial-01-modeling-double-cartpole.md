@@ -134,7 +134,9 @@ where $q=[q_0,q_1,q_2]^\top$ are the coordinates of the system,$\dot{q}=[\dot{q_
 We can calculate the derivatives in the *Euler-Lagrange* equation by hand, and solve for $\ddot{q}=[\ddot{q}_0,\ddot{q}_1,\ddot{q}_2]^\top$ but it is easier and less error prone to let the computer do the calculations for you. We prepared scripts in [Python]() and [Matlab]() for you that use symbolic toolboxes with symbolic differentiation and do the calculation for us. From the scripts it turns out that we get something much more complicated than we expected! So here it comes..
 
 \\[
-\ddot{q}_0 = \frac{ \splitfrac{-f \cos(2q_2) + 3 f - 4 \dot{q}_1 \cos^2(q_1) - \dot{q_1} \cos^2(q_1-q_2)}{ - \dot{q}_1 \cos^2(q_1 + q_2) - 2 \dot{q_1} \dot{q_2} \cos(q_1 - q_2) - 2 \dot{q_1} \dot{q}_2 \cos(q_1+q_2) - \dot{q_2} \cos^2(q_1 - q_2) - \dot{q}_2  \cos^2(q_1 + q_2) + \frac{981}{50} \sin(2 q_1) }} {-2 \cos(2 q_1) + 5 \cos(2 q_2) - 17}
+\begin{split}
+\ddot{q}_0 = -f \cos(2q_2) + 3 f - 4 \dot{q}_1 \cos^2(q_1) - \dot{q_1} \cos^2(q_1-q_2) - \dot{q}_1 \cos^2(q_1 + q_2) - 2 \dot{q_1} \dot{q_2} \cos(q_1 - q_2) - 2 \dot{q_1} \dot{q}_2 \cos(q_1+q_2) - \dot{q_2} \cos^2(q_1 - q_2) - \dot{q}_2  \cos^2(q_1 + q_2) + \frac{981}{50} \sin(2 q_1) \\ \hrule\\ -2 \cos(2 q_1) + 5 \cos(2 q_2) - 17}
+\end{split}
 \\]
 
 Ok i am giving up here, you can image how this could go on...
