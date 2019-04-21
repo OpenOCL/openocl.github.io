@@ -135,14 +135,15 @@ We can calculate the derivatives in the *Euler-Lagrange* equation by hand, and s
 
 \\[
 \\begin{align} 
-\ddot{q}_0 = -f \cos(2q_2) + 3 f - 4 \dot{q}_1 \cos^2(q_1) - \dot{q_1} \cos^2(q_1-q_2) - \dot{q}_1 \cos^2(q_1 + q_2) \\\
-- 2 \dot{q_1} \dot{q_2} \cos(q_1 - q_2) - 2 \dot{q}_1 \dot{q}_2 \cos(q_1+q_2) - \dot{q}_2 \cos^2(q_1 - q_2) \\\
+\ddot{q}_0 = -f \cos(2q_2) + 3 f - 4 \dot{q}_1 \cos^2(q_1) - \dot{q_1} \cos^2(q_1-q_2) - \dot{q}_1 \cos^2(q_1 + q_2) \\
+- 2 \dot{q_1} \dot{q_2} \cos(q_1 - q_2) - 2 \dot{q}_1 \dot{q}_2 \cos(q_1+q_2) - \dot{q}_2 \cos^2(q_1 - q_2) \\
+- \dot{q}_2 \cos^2(q_1 + q_2) + \frac{981}{50} \sin(2 q_1)
 \\end{align}
 \\]
 
 
 
-- \dot{q}_2 \cos^2(q_1 + q_2) + \frac{981}{50} \sin(2 q_1) \\\
+
 
 \\[
 \\begin{align} 
