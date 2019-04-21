@@ -177,7 +177,7 @@ And here are the Python and Matlab implementations to simlulate the system start
 
 ```
 
-```Matlab
+```m
 function simulate_doublecartpole
   
   % parameters
