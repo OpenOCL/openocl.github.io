@@ -65,13 +65,13 @@ The center of mass position of the first pole $p_1 \in \mathcal{R}^2$ is half-wa
 From the picture we can see that $p_1$ can be calculated by
 
 \\[
-p_1 = p_c + \frac{l_1}{2}  \\begin{bmatrix}  \cos(\\theta\)  \\\ \\sin({\theta}) \\end{bmatrix} \\,.
+p_1 = p_c + \frac{l_1}{2}  \\begin{bmatrix}  \cos(q_1)  \\\ \\sin(q_1) \\end{bmatrix} \\,.
 \\]
 
 The center of mass position of the second pole can be derived similarily. Here we need to go to the end of the first pole (not only the half length), and add the two joint angles to get the direction of the second pole. The position of the second pole $p_2$ can be calculated by
 
 \\[
-p_2 = p_c + l_1  \\begin{bmatrix} \cos(\\theta\)  \\\ \\sin({\theta}) \\end{bmatrix} +  \frac{l_2}{2} \\begin{bmatrix}  \cos(\theta+\phi) \\\ \\sin({\theta+\phi})\\end{bmatrix} \\,.
+p_2 = p_c + l_1  \\begin{bmatrix} \cos(q_1)  \\\ \\sin(q_1) \\end{bmatrix} +  \frac{l_2}{2} \\begin{bmatrix}  \cos(q_1+q_2) \\\ \\sin({q_1+q_2})\\end{bmatrix} \\,.
 \\]
 
 From the *center of mass* positions we can get the velocities by differentiation. The velocity of the cart is given by
@@ -89,7 +89,7 @@ v_1 = v_c + \frac{l_1}{2}  \\begin{bmatrix}  - \sin(\\theta\) \dot{\theta}  \\\ 
 and the velocity of the second pole is 
 
 \\[
-v_2 = v_c + l_1  \\begin{bmatrix} - \sin(\\theta\) \dot{\theta}  \\\ \\cos({\theta}) \dot{\theta} \\end{bmatrix} +  \frac{l_2}{2} \\begin{bmatrix}  - \sin(\theta+\phi) (\dot{\theta}+\dot{\phi}) \\\ \\cos({\theta+\phi}) (\dot{\theta}+ \dot{\phi}) \\end{bmatrix} \\,.
+v_2 = v_c + l_1  \\begin{bmatrix} - \sin(\\theta\) \dot{q}_1  \\\ \\cos(q_1) \dot{q}_1 \\end{bmatrix} +  \frac{l_2}{2} \\begin{bmatrix}  - \sin(q_1+q_2) (\dot{q}_1+\dot{q}_2) \\\ \\cos(q_1+q_2) (\dot{q}_1+ \dot{q}_2) \\end{bmatrix} \\,.
 \\]
 
 
