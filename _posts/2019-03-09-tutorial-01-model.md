@@ -106,7 +106,7 @@ where $g=9.81$ is the gravitational acceleration.
 
 Now we can plug the kinetic energies and the potential energies into the *Euler-Lagrange* equation:
 \\[
-\frac{\partial K_0+K_1+K_2-P_1-P_2}{\partial q} - \frac{\partial K_0+K_1+K_2-P_1-P_2}{\partial \dot{q}} = [f,0,0]^\top \\,,
+\frac{\partial (K_0+K_1+K_2-P_1-P_2)}{\partial q} - \frac{\partial (K_0+K_1+K_2-P_1-P_2)}{\partial \dot{q}} = [f,0,0]^\top \\,,
 \\]
 where $q=[q_0,q_1,q_2]^\top$ are the coordinates of the system,$\dot{q}=[\dot{q_0},\dot{q_1},\dot{q_2}]^\top$ are the velocities of the system, and $f$ is the force input (external force) that only acts on the cart in x-direction.
 
