@@ -137,8 +137,7 @@ We can calculate the derivatives in the *Euler-Lagrange* equation by hand, and s
 \\begin{align} 
 \ddot{q}_0 = & (-f \cos(2q_2) + 3 f - 4 \dot{q}_1 \cos^2(q_1) - \dot{q_1} \cos^2(q_1-q_2) - \dot{q}_1 \cos^2(q_1 + q_2) \\\
              & - 2 \dot{q}_1 \dot{q}_2 \cos(q_1 - q_2) - 2 \dot{q}_1 \dot{q}_2 \cos(q_1+q_2) - \dot{q}_2 \cos^2(q_1 - q_2) \\\
-             & - \dot{q}_2 \cos^2(q_1 + q_2) + \frac{981}{50} \sin(2 q_1) ) \\\
-             & (-2 \cos(2 q_1) + 5 \cos(2 q_2) - 17)^{-1}
+             & - \dot{q}_2 \cos^2(q_1 + q_2) + \frac{981}{50} \sin(2 q_1) ) \times (-2 \cos(2 q_1) + 5 \cos(2 q_2) - 17)^{-1}
 \\end{align}
 \\]
 
@@ -152,7 +151,7 @@ Ok i am giving up here ...
 \ddot{q}_2 = \mathrm{exercise..}
 \\]
 
-These type of equations are called *ordinary differential equations* as they contain both the state variables ($q_0$, $q_1$, $q_2$, $\dot{q}_0$, $\dot{q}_1$, $\dot{q}_2$) but also their derivative ($\ddot{q}_0$, $\ddot{q}_1$, $\ddot{q}_2$). Remember that our state was given by $x=[q_0, q_1, q_2, \dot{q}_0, \dot{q}_1, \dot{q}_2]^\top$.
+These type of equations are called *ordinary differential equations* as they relate the state variables ($q_0$, $q_1$, $q_2$, $\dot{q}_0$, $\dot{q}_1$, $\dot{q}_2$) to their derivative ($\ddot{q}_0$, $\ddot{q}_1$, $\ddot{q}_2$). Remember that our state was given by $x=[q_0, q_1, q_2, \dot{q}_0, \dot{q}_1, \dot{q}_2]^\top$.
 
 We can now use a numerical integration method like *explicit Euler* [[wikipedia]()], *Runge-Kutta 4* [[wikipedia]()], or even implicit methods like *implicit Euler* [[wikipedia]()], *BDF* [[wikipedia]()] or *Collocation* [[wikipedia]()] to simluate the system. Fortunately in Python and Matlab there are already excellent implementation available that we can use (although at least the explicit methods are super easy to implement!).
 
@@ -167,7 +166,7 @@ which is the most common form of representing general dynamical system in the ex
 For our cart-pole system this means we need to add some trivial equations which are $\dot{x}_0=\dot{q}_0$, $\dot{x}_1=\dot{q}_1$, and $\dot{x}_2=\dot{q}_2$. Together our *ordinary differential equations* for the double-cart-pole are:
 
 \\[
-\dot{x} = ... \\,.
+\dot{x} = \begin{bmatrix} \dot{q}_0 \\ \dot{q}_1 \\ \dot{q}_2 \\ \ddot{q}_0 \\ \ddot{q}_1 \\ \ddot{q}_2  \end{bmatrix}   \\,.
 \\]
 
 And here are the Python and Matlab implementations to simlulate the system starting from a random state $x_0$ for 5 second:
