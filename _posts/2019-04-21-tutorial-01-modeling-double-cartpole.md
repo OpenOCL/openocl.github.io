@@ -131,10 +131,10 @@ Now we can plug the kinetic energies and the potential energies into the *Euler-
 \\]
 where $q=[q_0,q_1,q_2]^\top$ are the coordinates of the system,$\dot{q}=[\dot{q_0},\dot{q_1},\dot{q_2}]^\top$ are the velocities of the system, and $f$ is the force input (external force) that only acts on the cart in x-direction.
 
-We can calculate the derivatives in the *Euler-Lagrange* equation by hand, but it is easier and less error prone to let the computer do the calculations for you. We prepared scripts in [Python]() and [Matlab]() for you that use symbolic toolboxes with symbolic differentiation and do the calculation for us. From the scripts it turns out that we get something much more complicated than we expected! Too much to write it down in this post. So we generate functions directly from the sumbolic expressions and just show a screenshot here:
+We can calculate the derivatives in the *Euler-Lagrange* equation by hand, and solve for $\ddot{q}=[\ddot{q}_0,\ddot{q}_1,\ddot{q}_2]^\top$ but it is easier and less error prone to let the computer do the calculations for you. We prepared scripts in [Python]() and [Matlab]() for you that use symbolic toolboxes with symbolic differentiation and do the calculation for us. From the scripts it turns out that we get something much more complicated than we expected! So here it comes..
 
 \\[
-\ddot{q}_0 = 
+\ddot{q}_0 = \frac{ -f \cos(2q_2) + 3 f - 4 \dot{q}_1 \cos^2(q_1) - \dot{q_1} \cos^2(q_1-q_2) - \dot{q}_1 \cos^2(q_1 + q_2) - 2 \dot{q_1} \dot{q_2} \cos(q_1 - q_2) - 2 \dot{q_1} \dot{q}_2 \cos(q_1+q_2) - \dot{q_2} \cos^2(q_1 - q_2) - \dot{q}_2  \cos^2(q_1 + q_2) + \frac{981}{50 \sin(2 q_1)}{-2 \cos(2 q_1) + 5 \cos(2 q_2) - 17}
 \\]
 
 which is all the equations that we need to predict the behaviour of the system! These type of equations are called *ordinary differential equations* as they contain both the state variables ($q_0$, $q_1$, $q_2$, $\dot{q}_0$, $\dot{q}_1$, $\dot{q}_2$) but also their derivative ($\ddot{q}_0$, $\ddot{q}_1$, $\ddot{q}_2$). Remember that our state was given by $x=[q_0, q_1, q_2, \dot{q}_0, \dot{q}_1, \dot{q}_2]^\top$.
