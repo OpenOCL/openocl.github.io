@@ -127,14 +127,14 @@ where $g=9.81$ is the gravitational acceleration.
 
 Now we can plug the kinetic energies and the potential energies into the *Euler-Lagrange* equation:
 \\[
-\frac{\partial (K_0+K_1+K_2-P_1-P_2)}{\partial q} - \frac{\partial (K_0+K_1+K_2-P_1-P_2)}{\partial \dot{q}} = [f,0,0]^\top \\,,
+\frac{\partial (K_c+K_1+K_2-P_1-P_2)}{\partial q} - \frac{\partial (K_c+K_1+K_2-P_1-P_2)}{\partial \dot{q}} = [f,0,0]^\top \\,,
 \\]
 where $q=[q_0,q_1,q_2]^\top$ are the coordinates of the system,$\dot{q}=[\dot{q_0},\dot{q_1},\dot{q_2}]^\top$ are the velocities of the system, and $f$ is the force input (external force) that only acts on the cart in x-direction.
 
-We can calculate the derivatives in the *Euler-Lagrange* equation by hand, but it is easier and less error prone to let the computer do the calculations for you. We prepared scripts in [Python]() and [Matlab]() for you that use symbolic toolboxes with symbolic differentiation and do the calculation for us. From the scripts we get:
+We can calculate the derivatives in the *Euler-Lagrange* equation by hand, but it is easier and less error prone to let the computer do the calculations for you. We prepared scripts in [Python]() and [Matlab]() for you that use symbolic toolboxes with symbolic differentiation and do the calculation for us. From the scripts it turns out that we get something much more complicated than we expected! Too much to write it down in this post. So we generate functions directly from the sumbolic expressions and just show a screenshot here:
 
 \\[
-\dots
+\ddot{q}_0 = 
 \\]
 
 which is all the equations that we need to predict the behaviour of the system! These type of equations are called *ordinary differential equations* as they contain both the state variables ($q_0$, $q_1$, $q_2$, $\dot{q}_0$, $\dot{q}_1$, $\dot{q}_2$) but also their derivative ($\ddot{q}_0$, $\ddot{q}_1$, $\ddot{q}_2$). Remember that our state was given by $x=[q_0, q_1, q_2, \dot{q}_0, \dot{q}_1, \dot{q}_2]^\top$.
@@ -167,8 +167,8 @@ And here are the Python and Matlab implementations to simlulate the system start
 
 We add a function to animate the system in [Python]() and [Matlab]{}, and we get this nice simulation:
 
-
 Easy!
+
 Get all the code bundled in a zip file: [Python](), [Matlab](), [Octave]().
 
 Upcoming articles:
