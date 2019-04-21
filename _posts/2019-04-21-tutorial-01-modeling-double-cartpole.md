@@ -1,6 +1,6 @@
 ---
 categories: tutorials
-title: "[Tutorial01] Modeling for Reinforcement learning and optimal control. Double pendulum on cart"
+title: "[Tutorial01] Modeling for Reinforcement learning and optimal control: Double pendulum on cart"
 permalink: /:categories/:title/
 mathjax: true
 hidden: true
@@ -155,7 +155,8 @@ For our cart-pole system this means we need to add some trivial equations which 
 \dot{x} = ... \\,.
 \\]
 
-And here are the Python and Matlab implementations to simluate the system starting from a random state $x_0$ for 5 second:
+And here are the Python and Matlab implementations to simlulate the system starting from a random state $x_0$ for 5 second:
+
 ```Python
 
 ```
