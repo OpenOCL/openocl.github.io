@@ -131,7 +131,7 @@ Now we can plug the kinetic energies and the potential energies into the *Euler-
 \\]
 where $q=[q_0,q_1,q_2]^\top$ are the coordinates of the system,$\dot{q}=[\dot{q_0},\dot{q_1},\dot{q_2}]^\top$ are the velocities of the system, and $f$ is the force input (external force) that only acts on the cart in x-direction.
 
-We can calculate the derivatives in the *Euler-Lagrange* equation by hand, but it is easier and less error prone to let the computer do the calculations for you. We prepared scripts in [Python]() and [Matlab]() for you that use symbolic toolboxes and do the calculation for us. From the scripts we get:
+We can calculate the derivatives in the *Euler-Lagrange* equation by hand, but it is easier and less error prone to let the computer do the calculations for you. We prepared scripts in [Python]() and [Matlab]() for you that use symbolic toolboxes with symbolic differentiation and do the calculation for us. From the scripts we get:
 
 \\[
 \dots
@@ -149,13 +149,13 @@ To be able to use the integration methods we need to bring the equations into a 
 
 which is the most common form of representing general dynamical system in the explicit form.
 
-For our cart-pole system this means we need to add some trivial equations, i.e. $\dot(x_0)=\dot{q_0}$, $\dot(x_1)=\dot{q_1}$, and $\dot(x_2)=\dot{q_2}$. Together our *ordinary differential equations* for the double-cart-pole are:
+For our cart-pole system this means we need to add some trivial equations which are $\dot(x_0)=\dot{q_0}$, $\dot(x_1)=\dot{q_1}$, and $\dot(x_2)=\dot{q_2}$. Together our *ordinary differential equations* for the double-cart-pole are:
 
 \\[
 \dot{x} = ... \\,.
 \\]
 
-And here are the Python and Matlab implementations:
+And here are the Python and Matlab implementations to simluate the system starting from a random state $x_0$ for 5 second:
 ```Python
 
 ```
@@ -164,7 +164,14 @@ And here are the Python and Matlab implementations:
 
 ```
 
-We add a function to [animate the system](), and we get this nice simulation:
+We add a function to animate the system in [Python]() and [Matlab]{}, and we get this nice simulation:
+
 
 Easy!
+Get all the code bundled in a zip file: [Python](), [Matlab](), [Octave]().
+
+Upcoming articles:
+- Creating an OpenAI gym environment for the double-cart-pole.
+- Reinfocement learning (Q-learning) with the double-cart-pole.
+- Implementing a model-predictive controller for the double-cart-pole using [OpenOCL](https://openocl.org).
 
