@@ -35,19 +35,19 @@ Therefore the state usually does not only include the current location or config
 
 So for our double pole cart system, we can describe the state by the following set of variables:
 * Position of the cart $q_0 \in \mathcal{R}$ in the x-direction
-* Velocity of the cart $\dot{q_0} \in \mathcal{R}$ in the x-direction
+* Velocity of the cart $\dot{q}_0 \in \mathcal{R}$ in the x-direction
 * Angle of the first pole $q_1 \in \mathcal{R}$
-* Angular velocity of the first pole $\dot{q_1} \in \mathcal{R}$
+* Angular velocity of the first pole $\dot{q}_1 \in \mathcal{R}$
 * Angle of the second pole $q_2 \in \mathcal{R}$
-* Angular velocity of the second pole $\dot{q_2} \in \mathcal{R}$
+* Angular velocity of the second pole $\dot{q}_2 \in \mathcal{R}$
 
 This choice of state is a minimal representation of the state of the system. All variables are scalar, and real numbers. We do not need to describe e.g. the position of the cart in y-direction as the cart can not move *upwards*.
 
 ### The dynamical system equations
 
-Now follows the hard part. We use the *Euler–Lagrange equations* to model the system dynamics. The *Euler–Lagrange* method is an energy based method that is quiet straightforward to apply and requires less thinking than for example the (recursive) Newton-Euler method.
+Now follows the hard part! We use the *Euler–Lagrange equations* [[wikipedia](https://en.wikipedia.org/wiki/Euler%E2%80%93Lagrange_equation)] to model the system dynamics. The *Euler–Lagrange* method is an energy based method that is a bit easier and requires less thinking than for example the (recursive) Newton-Euler method.
 
-We start with calculating the center of mass positions of the three body parts of the cart-pole system, and express the positions as functions of the state variables. We derivate the center of mass positions because we can use them to define the potential and kinetic energies of the body parts which we will use to obtain the dynamical equations. The three body parts are: the cart, the first pole, the second pole. 
+We start with calculating the center of mass positions of the three body parts of the cart-pole system, and express the positions as functions of the state variables. We derive the center of mass positions because we can use them to define the potential and kinetic energies of the body parts which we will use to obtain the dynamical equations. The three body parts are: the cart, the first pole, the second pole. 
 
 **Kinematics** The kinematics describe the static and moving structures of a system without the inertial and accelerating properties. For the double cart-pole we therefore desribe the center of mass positions and velocities.
 
@@ -63,14 +63,38 @@ The center of mass position of the first pole $p_1 \in \mathcal{R}^2$ is half-wa
 ![Drawing of single pendulum](/assets/posts/tut01_drawing_pendulum.jpg)
 
 From the picture we can see that $p_1$ can be calculated by
+
 \\[
 p_1 = p_c + \frac{l_1}{2} * \\begin{bmatrix}  \cos(\\theta\)  \\\ \\sin({\theta}) \\end{bmatrix} \\,.
 \\]
 
 The center of mass position of the second pole can be derived similarily. Here we need to go to the end of the first pole (not only the half length), and add the two joint angles to get the direction of the second pole. $p_2$ can be calculated by
+
 \\[
 p_2 = p_c + l_1 * \\begin{bmatrix} \cos(\\theta\)  \\\ \\sin({\theta}) \\end{bmatrix} +  \frac{l_2}{2} \\begin{bmatrix}  \cos(\theta+\phi) \\\ \\sin({\theta+\phi})\\end{bmatrix} \\,.
 \\]
+
+From the *center of mass* positions we can get the velocities by differentiation. The velocity of the cart is given by
+
+\\[
+v_c = \\begin{bmatrix} \dot{q}_0 \\\ 0 \\end{bmatrix} \\,,
+\\]
+
+the *center of mass* velocity of the first pole is given by
+
+\\[
+v_1 = v_c + \frac{l_1}{2} * \\begin{bmatrix}  - \sin(\\theta\) \dot{\theta}  \\\ \\cos({\theta}) \dot{\theta} \\end{bmatrix} \\,,
+\\]
+
+and the velocity of the second pole is 
+
+\\[
+v_2 = v_c + l_1 * \\begin{bmatrix} - \sin(\\theta\) \dot{\theta}  \\\ \\cos({\theta}) \dot{\theta} \\end{bmatrix} +  \frac{l_2}{2} \\begin{bmatrix}  - \sin(\theta+\phi) (\dot{\that}+\dot{\phi}) \\\ \\cos({\theta+\phi}) (\dot{\theta}+ \dot{\phi}) \\end{bmatrix} \\,.
+\\]
+
+You can try it by hand, but we have also prepared scripts for you in [Python]() and [Matlab]() that use symbolic toolboxes and do the calculation for us. The *center of mass* velocities obtained from the scripts are:
+
+
 
 **Dynamics** The dynamics of a system describe the inertial and accelerating properties of a system.
 
@@ -117,6 +141,8 @@ We can calculate the derivatives in the *Euler-Lagrange* equation by hand, but i
 \\]
 
 which is all the equations that we need to predict the behaviour of the system!
+
+
 
 
 
