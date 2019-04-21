@@ -121,39 +121,3 @@ which is all the equations that we need to predict the behaviour of the system!
 
 
 
-
-
-
-
-
-
-
-
-
-
-Lets start with a **single pendulum**.
-
-So, our first pendulum is described by the position of the hinge/joint $p_1$, the angle $\theta$, and the angular velocity $\dot{\theta}$. The only force acting on the pendulum is the gravity force $f_g$. Here is another picture: 
-
-
-
-Only the orthorgonal part of the force $f^{\top}_g$ creates a moment around $p_1$. The torque is 
-$$
-\tau = f^{\top}_g l_1 = \sin(\theta) f_g l_1 \,,
-$$
-which relates to the angular acceleration by 
-$$
-\tau = I \ddot{\theta} \,.
-$$
-
-For the inertia $I_1$ we can take the [inertia of a rod](http://hyperphysics.phy-astr.gsu.edu/hbase/mi2.html) where the the axis is at the end of the rod. If the pendulum has mass $m_1$ the inertia is given by 
-$$
-I_1 = \frac{1}{3} m_1 l_1 \,.
-$$
-
-Putting all together we arrive at
-$$
-\ddot{\theta} = \frac{3 \sin{\theta} f_g l_1}{m_1 l_1} = \frac{3 \sin{\theta} f_g }{m_1} \,,
-$$
-and we realize that the length $l_1$ drops out of the equation.
-
