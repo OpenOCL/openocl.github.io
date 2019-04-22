@@ -25,7 +25,7 @@ To simplify things we assume that the poles are massless. The mass is concentrat
 
 Here, we drew a picture of the system:
 
-![Drawing of double pole cart](/assets/posts/drawing_dpcart.jpg)
+![Drawing of double pole cart](/assets/posts/double_pendulum_cart.jpg)
 
 The structure of the double pendulum on a cart is desribed by a set of parameters which we choose (more or less) arbitrarily: 
 \\[
