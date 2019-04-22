@@ -245,19 +245,20 @@ function xdot = ode_function(t, x)
 end
 ```
 
-The `ode45` function is an explicit variable-step integration method (i think based on Runge-Kutta methods). It chooses a timestep which is appropriate to the current state of the system. If the system is about to change a lot it will choose a smaller timestep. The `ode45` function is therefore not the fastest integration method but very convenient to use. 
+The `ode45` function is an explicit variable-step integration method (i think based on Runge-Kutta methods). It chooses a timestep which is appropriate to the current state of the system. If the system undergoes quick or large changes, the integrator will choose a smaller timestep. The `ode45` function is therefore not the fastest integration method but very convenient to use. 
 
-We add a function to animate the system in [Python]() and [Matlab](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/matlab/simplified/dpc_simple_draw.m), and we get this nice simulation:
-
+We add a function to animate the system in [Python]() and [Matlab](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/matlab/simplified/dpc_simple_draw.m), and we get this nice simulation (this time from a different starting position than above):
 
 
 Easy!
 
 Get all the code bundled in a zip file: [Python](), [Matlab](), [Octave](). You can also find the code on the [github repository](https://github.com/jkoendev/double-pendulum-on-cart).
 
+If you liked the article give a *clap* on medium, *star* on the [github repository](https://github.com/jkoendev/double-pendulum-on-cart), share the article, or whatever you like.
+
 Upcoming articles (ideas):
 - Creating an OpenAI Gym environment for the double pendulum on a cart.
 - Reinfocement learning (Q-learning) with double pendulum on a cart..
 - A more elaborate article on adding different type of noise (equation error, output, sensor, actuator, etc noise)
-- Implementing a model-predictive controller for double pendulum on a cart using [OpenOCL](https://openocl.org).
+- Implementing a model-predictive controller for the double pendulum on a cart using [OpenOCL](https://openocl.org).
 
