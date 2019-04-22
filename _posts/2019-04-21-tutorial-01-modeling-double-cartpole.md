@@ -27,7 +27,7 @@ Here, we drew a picture of the system:
 
 ![Drawing of double pole cart](/assets/posts/double_pendulum_cart.jpg)
 
-The structure of the double pendulum on a cart is desribed by a set of parameters which we choose (more or less) arbitrarily: 
+The physical properties of the *double pendulum on a cart* are described by a set of parameters which we choose (more or less) arbitrarily: 
 \\[
 \\begin{align}
   r_1 &= 1 \\,   & \\quad \textrm{length of the first pole}      & &  \mathrm{[m]} \\\
@@ -57,7 +57,7 @@ This choice of state is a minimal representation of the state of the system. All
 
 ### The dynamical system equations
 
-Now follows the hard part! We use the *Euler–Lagrange equations* [[wikipedia](https://en.wikipedia.org/wiki/Euler%E2%80%93Lagrange_equation)] to model the system dynamics. The *Euler–Lagrange* method is an energy based method that is a bit easier and requires less thinking than for example the (recursive) Newton-Euler method.
+Now follows the hard part! We use the *Euler–Lagrange equations* [[wikipedia](https://en.wikipedia.org/wiki/Euler%E2%80%93Lagrange_equation)] to model the system dynamics. The *Euler–Lagrange* method is an energy based method that is a bit easier and requires less thinking than for example the (recursive) Newton-Euler method. You can apply this method quiet mechanically to most systems.
 
 We start with calculating the center of mass positions of the three body parts of the cart-pole system, and express the positions as functions of the state variables. We derive the center of mass positions because we can use them to define the potential and kinetic energies of the body parts which we will use to obtain the dynamical equations. The three body parts are: the cart, the first pole, the second pole. 
 
@@ -68,11 +68,12 @@ The position $p_c \in \mathcal{R}^2$ of the cart is easy:
 \\[
 p_c = \\begin{bmatrix} q_0 \\\ 0 \\end{bmatrix} \\,,
 \\]
+
 as the y-coordinate of the cart is always $0$.
 
 The center of mass position of the first pole $p_1 \in \mathcal{R}^2$ is half-way along the first pole. Here is another picture: 
 
-![Drawing of single pendulum](/assets/posts/tut01_drawing_pendulum.jpg)
+![Drawing of single pendulum](/assets/posts/dpc_kinematics.jpg)
 
 From the picture we can see that $p_1$ can be calculated by
 
