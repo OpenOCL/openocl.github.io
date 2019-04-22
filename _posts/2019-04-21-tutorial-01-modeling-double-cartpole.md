@@ -57,9 +57,9 @@ This choice of state is a minimal representation of the state of the system. All
 
 ### The dynamical system equations
 
-Now follows the hard part! We use the *Euler–Lagrange equations* [[wikipedia](https://en.wikipedia.org/wiki/Euler%E2%80%93Lagrange_equation)] to model the system dynamics. The *Euler–Lagrange* method is an energy based method that is a bit easier and requires less thinking than for example the (recursive) Newton-Euler method. You can apply this method quiet mechanically to most systems.
+Now follows the hard part! We use the *Euler–Lagrange equations* [[wikipedia](https://en.wikipedia.org/wiki/Euler%E2%80%93Lagrange_equation)] to model the system dynamics. The *Euler–Lagrange* method is an energy based method that is a bit easier and requires less thinking than for example the (recursive) Newton-Euler method. You can apply this method quiet programmatically to many types of systems.
 
-We start with calculating the center of mass positions of the three body parts of the cart-pole system, and express the positions as functions of the state variables. We derive the center of mass positions because we can use them to define the potential and kinetic energies of the body parts which we will use to obtain the dynamical equations. The three body parts are: the cart, the first pole, the second pole. 
+We start with calculating the center of mass positions of the three body parts of the cart-pole system, and express the positions as functions of the state variables. We derive the center of mass positions because we can use them to define the potential and kinetic energies of the body parts which we will use to obtain the dynamical equations. The three body parts are: **the cart**, **the first pole**, **the second pole**. 
 
 **Kinematics** The kinematics describe the static and moving structures of a system without the inertial and accelerating properties. For the double cart-pole we therefore desribe the center of mass positions and velocities.
 
@@ -108,7 +108,7 @@ v_2 = v_c + l_1  \\begin{bmatrix} - \sin(\\theta\) \dot{q}_1  \\\ \\cos(q_1) \do
 
 **Dynamics** The dynamics of a system describe the inertial and accelerating properties of a system.
 
-We derive the dynamics using the Euler-Lagrange energy method. We start with the kinetic energy. The overall kinetic energy is the sum of the kinetic energies of the three body parts.
+We derive the dynamics using the *Euler-Lagrange* energy method. We start with the kinetic energy. The overall kinetic energy is the sum of the kinetic energies of the three body parts.
 
 The kinetic energy of the cart is 
 \\[
@@ -134,14 +134,14 @@ P_1 = m_1 g p_1(2) \,,
 
 and the potential energy of the second pole is
 \\[
-P_2 = m_2 g p_2(2) \,,
+P_2 = m_2 g p_2(2) \,.
 \\]
-where $g=9.81$ is the gravitational acceleration.
 
 Now we can plug the kinetic energies and the potential energies into the *Euler-Lagrange* equation:
 \\[
 \frac{\partial (K_c+K_1+K_2-P_1-P_2)}{\partial q} - \frac{\partial (K_c+K_1+K_2-P_1-P_2)}{\partial \dot{q}} = [f,0,0]^\top \\,,
 \\]
+
 where $q=[q_0,q_1,q_2]^\top$ are the coordinates of the system, $\dot{q}=[\dot{q_0},\dot{q_1},\dot{q_2}]^\top$ are the velocities of the system, and $f$ is the force input (external force) that only acts on the cart in x-direction.
 
 We can calculate the derivatives in the *Euler-Lagrange* equation by hand, and solve for $\ddot{q}=[\ddot{q}_0,\ddot{q}_1,\ddot{q}_2]^\top$ but it is easier and less error prone to let the computer do the calculations for you. We prepared scripts in [Python]() and [Matlab]() for you that use symbolic toolboxes with symbolic differentiation and do the calculation for us. From the scripts it turns out that we get something much more complicated than we expected! So here it comes..
@@ -166,7 +166,7 @@ Ok i am giving up here ...
 
 These type of equations are called *ordinary differential equations* as they relate the state variables ($q_0$, $q_1$, $q_2$, $\dot{q}_0$, $\dot{q}_1$, $\dot{q}_2$) to their derivative ($\ddot{q}_0$, $\ddot{q}_1$, $\ddot{q}_2$). Remember that our state was given by $x=[q_0, q_1, q_2, \dot{q}_0, \dot{q}_1, \dot{q}_2]^\top$.
 
-We can now use a numerical integration method like *explicit Euler* [[wikipedia]()], *Runge-Kutta 4* [[wikipedia]()], or even implicit methods like *implicit Euler* [[wikipedia]()], *BDF* [[wikipedia]()] or *Collocation* [[wikipedia]()] to simluate the system. Fortunately in Python and Matlab there are already excellent implementation available that we can use (although at least the explicit methods are super easy to implement!).
+We can now use a numerical integration method like *explicit Euler* [[wikipedia](https://en.wikipedia.org/wiki/Euler_method)], *Runge-Kutta 4* [[wikipedia]()], or even implicit methods like *implicit Euler* [[wikipedia](https://en.wikipedia.org/wiki/Backward_Euler_method)], *BDF* [[wikipedia](https://en.wikipedia.org/wiki/Backward_differentiation_formula)], or *Collocation* [[wikipedia](https://en.wikipedia.org/wiki/Collocation_method)] to simluate the system. Fortunately in Python and Matlab there are already excellent implementation available that we can use (although at least the explicit methods are super easy to implement!).
 
 To be able to use the integration methods we need to bring the equations into a particular form. We already collected all the state variables into a vector $x$, the controls are usually called $u$ which for the cart-pole just the force $u=f$. The (non-linear) system dynamics can be presented in the explicit form as
 
@@ -174,9 +174,9 @@ To be able to use the integration methods we need to bring the equations into a 
 \dot{x} = f(x,u) \\,,
 \\]
 
-which is the most common form of representing general dynamical system in the explicit form.
+which is a common form of representing general dynamical system in the explicit form.
 
-For our cart-pole system this means we need to add some trivial equations which are $\dot{x}_0=\dot{q}_0$, $\dot{x}_1=\dot{q}_1$, and $\dot{x}_2=\dot{q}_2$. Together our *ordinary differential equations* for the double-cart-pole are:
+For our cart-pole system this means we need to add some trivial equations which are $\dot{x}_0=\dot{q}_0$, $\dot{x}_1=\dot{q}_1$, and $\dot{x}_2=\dot{q}_2$. Together our *ordinary differential equations* for the *double pendulum on a cart* are:
 
 \\[
 \dot{x} = \begin{bmatrix} \dot{q}_0 \\\ \dot{q}_1 \\\ \dot{q}_2 \\\ \ddot{q}_0 \\\ \ddot{q}_1 \\\ \ddot{q}_2  \end{bmatrix}   \\,,
@@ -184,7 +184,7 @@ For our cart-pole system this means we need to add some trivial equations which 
 
 where $\ddot{q}_0$, $\ddot{q}_1$, $\ddot{q}_2$ are the long equations from above.
 
-And here are the Python and Matlab implementations to simlulate the system starting from a random state $x_0$ for 5 second:
+And here are the Python and Matlab implementations to simlulate the system starting from a random state $x_0$ for 8 seconds:
 
 ```Python
 
@@ -202,7 +202,7 @@ function simulate_doublecartpole
   x0 = rand(6,1) .* (x_max-x_min)+x_min;
   
   % simulate
-  tspan = [0:0.01:5];
+  tspan = [0:0.01:8];
   [tspan, X] = ode45(@ode_function, tspan, x0);
   
   draw_doublecartpole(tspan, X, x_min, x_max, p);
