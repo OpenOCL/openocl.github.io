@@ -255,7 +255,7 @@ If you liked the article give a *clap* on medium, *star* on the [github reposito
 
 Let us know if you find errors, or have feedback at info@openocl.org or in the comments section at medium.
 
-Written by: [jkoendev](https://github.com/jkoendev)
+Written by: Jonas ([github](https://github.com/jkoendev), [twitter](https://twitter.com/JonasCoen))
 
 Upcoming articles (ideas):
 - Creating an OpenAI Gym environment for the double pendulum on a cart.
