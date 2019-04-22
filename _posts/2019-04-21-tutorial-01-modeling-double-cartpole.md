@@ -27,7 +27,7 @@ Here, we drew a picture of the system:
 
 ![Drawing of double pole cart](/assets/posts/drawing_dpcart.jpg)
 
-The structure of the double pendulum on a cart is desribed by a set of parameters which we choose (more or less) arbitrarily:[
+The structure of the double pendulum on a cart is desribed by a set of parameters which we choose (more or less) arbitrarily: 
 \\[
 \\begin{align}
   r_1 &= 1 \\, \mathrm{[m]} \\quad \textrm{length of the first pole} \\\
@@ -35,7 +35,7 @@ The structure of the double pendulum on a cart is desribed by a set of parameter
   m_c &= 5 \\, \mathrm{[kg]} \\quad \textrm{mass of the cart} \\\
   m_1 &= 1 \\, \mathrm{[kg]} \\quad \textrm{mass of the first pole} \\\
   m_2 &= 1 \\, \mathrm{[kg]} \\quad \textrm{mass of the second pole} \\\
-  g &= 9.81 \\, \mathrm{[m s^{-2}]} \\quad \textrm{gravitational acceleration} \\\
+  g &= 9.81 \\, \mathrm{[\frac{m}{s^2}]} \\quad \textrm{gravitational acceleration} \\\
 \\end{align}
 \\]
 
@@ -46,12 +46,12 @@ With the model equations we want to describe mathematically how the system evolv
 Therefore the state usually does not only include the current location or configuration of the system but also the velocity of the system. Because of *Newton's Laws* we can describe the state of classical mechanical systems by its position and velocity. We know that the system continues moving when there are no forces, and it will acclerate/decelerate when there are external forces according to $F=m a$ etc.
 
 So for our double pole cart system, we can describe the state by the following set of variables:
-* The position of the cart $q_0 \in \mathcal{R}$ $\textrm{[m]}$ in the x-direction
-* The angle of the first pole $q_1 \in \mathcal{R}$ $\textrm{[rad]}$
-* The angle of the second pole $q_2 \in \mathcal{R}$ $\textrm{[rad]}$
-* The velocity of the cart $\dot{q}_0 \in \mathcal{R}$ $\textrm{[m s^{-1}]}$ in the x-direction
-* The angular velocity of the first pole $\dot{q}_1 \in \mathcal{R}$ $\textrm{[rad s^{-1}]}$
-* The angular velocity of the second pole $\dot{q}_2 \in \mathcal{R}$ $\textrm{[rad]}$ $\textrm{[rad s^{-1}]}$
+* The position of the cart $q_0 \in \mathcal{R}$ $\mathrm{[m]}$ in the x-direction
+* The angle of the first pole $q_1 \in \mathcal{R}$ $\mathrm{[rad]}$
+* The angle of the second pole $q_2 \in \mathcal{R}$ $\mathrm{[rad]}$
+* The velocity of the cart $\dot{q}_0 \in \mathcal{R}$ $\mathrm{[\frac{m}{s}]}$ in the x-direction
+* The angular velocity of the first pole $\dot{q}_1 \in \mathcal{R}$ $\mathrm{[\frac{rad}{s}]}$
+* The angular velocity of the second pole $\dot{q}_2 \in \mathcal{R}$ $\mathrm{[\frac{rad}{s}]}$
 
 This choice of state is a minimal representation of the state of the system. All variables are scalar, and real numbers. We do not need to describe e.g. the position of the cart in y-direction as the cart can not move *upwards*.
 
