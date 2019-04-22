@@ -30,12 +30,12 @@ Here, we drew a picture of the system:
 The structure of the double pendulum on a cart is desribed by a set of parameters which we choose (more or less) arbitrarily: 
 \\[
 \\begin{align}
-  r_1 &= 1 \\,   \\quad \textrm{length of the first pole}      & \\quad   \mathrm{[m]} \\\
-  r_2 &= 1 \\,   \\quad \textrm{length of the second pole}     & \\quad   \mathrm{[m]}  \\\
-  m_c &= 5 \\,   \\quad \textrm{mass of the cart}              & \\quad   \mathrm{[kg]} \\\
-  m_1 &= 1 \\,   \\quad \textrm{mass of the first pole}        & \\quad   \mathrm{[kg]} \\\
-  m_2 &= 1 \\,   \\quad \textrm{mass of the second pole}       & \\quad   \mathrm{[kg]} \\\
-  g &= 9.81 \\,  \\quad \textrm{gravitational acceleration}    & \\quad   \mathrm{[\frac{m}{s^2}]} \\\
+  r_1 &= 1 \\,   & \\quad \textrm{length of the first pole}      &   \mathrm{[m]} \\\
+  r_2 &= 1 \\,   & \\quad \textrm{length of the second pole}     &   \mathrm{[m]}  \\\
+  m_c &= 5 \\,   & \\quad \textrm{mass of the cart}              &   \mathrm{[kg]} \\\
+  m_1 &= 1 \\,   & \\quad \textrm{mass of the first pole}        &   \mathrm{[kg]} \\\
+  m_2 &= 1 \\,   & \\quad \textrm{mass of the second pole}       &   \mathrm{[kg]} \\\
+  g &= 9.81 \\,  & \\quad \textrm{gravitational acceleration}    &   \mathrm{[\frac{m}{s^2}]} \\\
 \\end{align}
 \\]
 
