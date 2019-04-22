@@ -29,14 +29,14 @@ Here, we drew a picture of the system:
 
 The structure of the double pendulum on a cart is desribed by a set of parameters which we choose (more or less) arbitrarily:[
 \\[
-\begin{align}
+\\begin{align}
   r_1 = 1 \\, \mathrm{[m]} \\quad \mathrm{length of the first pole} \\\
   r_2 = 1 \\, \mathrm{[m]} \\quad \mathrm{length of the second pole} \\\
   m_c = 5 \\, \mathrm{[kg]} \\quad \mathrm{mass of the cart} \\\
   m_1 = 1 \\, \mathrm{[kg]} \\quad \mathrm{mass of the first pole} \\\
   m_2 = 1 \\, \mathrm{[kg]} \\quad \mathrm{mass of the second pole} \\\
   g = 9.81 \\, \mathrm{[m s^{-1}]} \\quad \mathrm{gravitational acceleration} \\\
-\end{end}
+\\end{align}
 \\]
 
 
