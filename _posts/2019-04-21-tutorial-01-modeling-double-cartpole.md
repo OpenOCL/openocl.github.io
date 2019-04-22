@@ -183,7 +183,7 @@ which for the double pendulum system is
 f(x) = \dot{x} = \begin{bmatrix} \dot{q}_0 \\\ \dot{q}_1 \\\ \dot{q}_2 \\\ \ddot{q}_0 \\\ \ddot{q}_1 \\\ \ddot{q}_2  \end{bmatrix}   \\,,
 \\]
 
-for the state $x=[q_0, q_1, q_2, \dot{q}_0, \dot{q}_1, \dot{q}_2]^\top$, $\ddot{q}_0$, $\ddot{q}_1$, $\ddot{q}_2$ given by the long equations from above, and the control input $f$ that appears in the equations can be assumed given, as we are just simulating the system. The upcoming articles will cover how to determine the control input by either *Reinforcement Learning* or *Optimal Control*.
+for the state $x=[q_0, q_1, q_2, \dot{q}_0, \dot{q}_1, \dot{q}_2]^\top$, $\ddot{q}_0$, $\ddot{q}_1$, $\ddot{q}_2$ are given by the long equations from above, and the control input $f$ that appears in the equations can be assumed given, as we are just simulating the system. The upcoming articles will cover how to determine the control input by either *Reinforcement Learning* or *Optimal Control*.
 
 And here are the Python and Matlab implementations to simlulate the system starting from a random state $x_0$ for 8 seconds:
 
