@@ -98,7 +98,7 @@ v_c = \\begin{bmatrix} \dot{q}_0 \\\ 0 \\end{bmatrix} \\,,
 the *center of mass* velocity of the first pole is given by
 
 \\[
-v_1 = v_c + \frac{r_1}{2}  \\begin{bmatrix}  - \sin(q)_1 \dot{q}_1  \\\ \\cos(q_1) \dot{q}_1 \\end{bmatrix} \\,,
+v_1 = v_c + \frac{r_1}{2}  \\begin{bmatrix}  - \sin(q_1) \dot{q}_1  \\\ \\cos(q_1) \dot{q}_1 \\end{bmatrix} \\,,
 \\]
 
 and the velocity of the second pole is 
