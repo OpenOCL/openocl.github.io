@@ -256,6 +256,10 @@ Get all the code bundled in a zip file: [Python](), [Matlab](), [Octave](). You 
 
 If you liked the article give a *clap* on medium, *star* on the [github repository](https://github.com/jkoendev/double-pendulum-on-cart), share the article, or whatever you like.
 
+Let us know if you find errors, or have feedback at info@openocl.org or in the comments section at medium.
+
+Written by: Jonas Koenemann
+
 Upcoming articles (ideas):
 - Creating an OpenAI Gym environment for the double pendulum on a cart.
 - Reinfocement learning (Q-learning) with double pendulum on a cart..
