@@ -104,7 +104,7 @@ v_1 = v_c + \frac{r_1}{2}  \\begin{bmatrix}  - \sin(q_1) \dot{q}_1  \\\ \\cos(q_
 and the velocity of the second pole is 
 
 \\[
-v_2 = v_c + r_1  \\begin{bmatrix} - \sin(q)_1 \dot{q}_1  \\\ \\cos(q_1) \dot{q}_1 \\end{bmatrix} +  \frac{r_2}{2} \\begin{bmatrix}  - \sin(q_1+q_2) (\dot{q}_1+\dot{q}_2) \\\ \\cos(q_1+q_2) (\dot{q}_1+ \dot{q}_2) \\end{bmatrix} \\,.
+v_2 = v_c + r_1  \\begin{bmatrix} - \sin(q_1) \dot{q}_1  \\\ \\cos(q_1) \dot{q}_1 \\end{bmatrix} +  \frac{r_2}{2} \\begin{bmatrix}  - \sin(q_1+q_2) (\dot{q}_1+\dot{q}_2) \\\ \\cos(q_1+q_2) (\dot{q}_1+ \dot{q}_2) \\end{bmatrix} \\,.
 \\]
 
 
