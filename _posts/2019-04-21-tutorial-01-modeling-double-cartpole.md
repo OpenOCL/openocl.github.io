@@ -1,12 +1,12 @@
 ---
 categories: tutorials
-title: "Modeling for Reinforcement learning and optimal control: Double pendulum on cart"
+title: "Modeling for Reinforcement learning and optimal control: Double pendulum on a cart"
 permalink: /:categories/:title/
 mathjax: true
 hidden: true
 ---
 
-We start the *tutorial series for optimal control* with implementing the simulation model of a **double pendulum on a cart**, or **double-pole cart**, or **double cart-pole** if you like. 
+We start the *tutorial series for optimal control and reinforcment learning* by implementing the simulation model of a **double pendulum on a cart**, or **double-pole cart**, or **double cart-pole** if you like. 
 The idea of this tutorial series is to implement the code for the tutorials while writing the blog posts, so it is to be seen how far we will get.
 
 ### Basic system outline
@@ -19,8 +19,6 @@ We briefly summarize the features/requirements that we would like to implement f
 4. At the end of the first pole, a second pole is connected to the first pole by a second uncontrolled revolute joint.
 5. The system should have realistic physical behaviour, i.e. we use physical parameters like mass, momentum.
 6. We would like to be able to simulate the system from a given, or randomly chosen state $x_0$.
-
-To simplify things we assume that the poles are massless. The mass is concentrated as point masses at the end of each pole.
 
 Here, we drew a picture of the system:
 
@@ -52,7 +50,7 @@ So for our double pole cart system, we can describe the state by the following s
 * The angular velocity of the first pole $\dot{q}_1 \in \mathcal{R}$                  $\\quad \\quad \mathrm{[\frac{rad}{s}]}$
 * The angular velocity of the second pole $\dot{q}_2 \in \mathcal{R}$                 $\\quad \mathrm{[\frac{rad}{s}]}$
 
-This choice of state is a minimal representation of the state of the system. All variables are scalar, and real numbers. We do not need to describe e.g. the position of the cart in y-direction as the cart can not move *upwards*.
+This choice of state is a minimal representation of the state of the system. All variables are scalar, and real numbers. We do not need to describe e.g. the position of the cart in y-direction as the cart can not move *upwards* (only the poles).
 
 We collect all the state variables in a column vector as $x=[q_0, q_1, q_2, \dot{q}_0, \dot{q}_1, \dot{q}_2]^\top$, where ${}^\top$ is the symbol for the *transpose*.
 
