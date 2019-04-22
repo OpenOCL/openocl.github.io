@@ -55,7 +55,7 @@ So for our double pole cart system, we can describe the state by the following s
 
 This choice of state is a minimal representation of the state of the system. All variables are scalar, and real numbers. We do not need to describe e.g. the position of the cart in y-direction as the cart can not move *upwards*.
 
-We collect all the state variables in a column vector as $x=[q_0, q_1, q_2, \dot{q}_0, \dot{q}_1, \dot{q}_2]^\top$, where ${}^\top$ is the symbolc for the *transpose*.
+We collect all the state variables in a column vector as $x=[q_0, q_1, q_2, \dot{q}_0, \dot{q}_1, \dot{q}_2]^\top$, where ${}^\top$ is the symbol for the *transpose*.
 
 ### The dynamical system equations
 
@@ -172,21 +172,18 @@ These type of equations are called *ordinary differential equations* as they rel
 
 We can now use a numerical integration method like *explicit Euler* [[wikipedia](https://en.wikipedia.org/wiki/Euler_method)], *Runge-Kutta 4* [[wikipedia](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods)], or even implicit methods like *implicit Euler* [[wikipedia](https://en.wikipedia.org/wiki/Backward_Euler_method)], *BDF* [[wikipedia](https://en.wikipedia.org/wiki/Backward_differentiation_formula)], or *Collocation* [[wikipedia](https://en.wikipedia.org/wiki/Collocation_method)] to simluate the system. Fortunately in Python and Matlab there are already excellent implementation available that we can use (although at least the explicit methods are super easy to implement!).
 
-To be able to use the integration methods we need to bring the equations into a particular form. We already collected all the state variables into a vector $x$, the controls are usually called $u$ which for the cart-pole just the force $u=f$. The (non-linear) system dynamics can be presented in the explicit form as
-
+To be able to use the integration methods in Matlab and Python have to define a ordinary differential equation function $f(x)$ which maps the state variables $x$ to the time derivative of the state $\dot{x}$:
 \\[
-\dot{x} = f(x,u) \\,,
+f(x) = \dot{x} \\,,
 \\]
 
-which is a common form of representing general dynamical system in the explicit form.
-
-For our cart-pole system this means we need to add some trivial equations which are $\dot{x}_0=\dot{q}_0$, $\dot{x}_1=\dot{q}_1$, and $\dot{x}_2=\dot{q}_2$. Together our *ordinary differential equations* for the *double pendulum on a cart* are:
+which for the double pendulum system is
 
 \\[
-\dot{x} = \begin{bmatrix} \dot{q}_0 \\\ \dot{q}_1 \\\ \dot{q}_2 \\\ \ddot{q}_0 \\\ \ddot{q}_1 \\\ \ddot{q}_2  \end{bmatrix}   \\,,
+f(x) = \dot{x} = \begin{bmatrix} \dot{q}_0 \\\ \dot{q}_1 \\\ \dot{q}_2 \\\ \ddot{q}_0 \\\ \ddot{q}_1 \\\ \ddot{q}_2  \end{bmatrix}   \\,,
 \\]
 
-where $\ddot{q}_0$, $\ddot{q}_1$, $\ddot{q}_2$ are the long equations from above.
+for the state $x=[q_0, q_1, q_2, \dot{q}_0, \dot{q}_1, \dot{q}_2]^\top$, and $\ddot{q}_0$, $\ddot{q}_1$, $\ddot{q}_2$ given by the long equations from above.
 
 And here are the Python and Matlab implementations to simlulate the system starting from a random state $x_0$ for 8 seconds:
 
