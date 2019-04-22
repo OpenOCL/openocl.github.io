@@ -18,7 +18,7 @@ We briefly summarize the features/requirements that we would like to implement f
 3. In the center of the cart a pole/pendulum is attached by an uncontrolled revolute joint.
 4. At the end of the first pole, a second pole is connected to the first pole by a second uncontrolled revolute joint.
 5. The system should have realistic physical behaviour, i.e. we use physical parameters like mass, momentum.
-6. We would like to be able to simulate the system from a given state $x_0$.
+6. We would like to be able to simulate the system from a given, or randomly chosen state $x_0$.
 7. The system is noisy.
 
 To simplify things we assume that the poles are massless. The mass is concentrated as point masses at the end of each pole.
@@ -27,6 +27,19 @@ Here, we drew a picture of the system:
 
 ![Drawing of double pole cart](/assets/posts/drawing_dpcart.jpg)
 
+The structure of the double pendulum on a cart is desribed by a set of parameters which we choose (more or less) arbitrarily:[
+\\[
+\begin{align}
+  r_1 = 1 \\, \mathrm{[m]} \\quad \mathrm{length of the first pole} \\\
+  r_2 = 1 \\, \mathrm{[m]} \\quad \mathrm{length of the second pole} \\\
+  m_c = 5 \\, \mathrm{[kg]} \\quad \mathrm{mass of the cart} \\\
+  m_1 = 1 \\, \mathrm{[kg]} \\quad \mathrm{mass of the first pole} \\\
+  m_2 = 1 \\, \mathrm{[kg]} \\quad \mathrm{mass of the second pole} \\\
+  g = 9.81 \\, \mathrm{[m s^{-1}]} \\quad \mathrm{gravitational acceleration} \\\
+\end{end}
+\\]
+
+
 ### The state of the system
 
 With the model equations we want to describe mathematically how the system evolves with time. But first we need to define the state of the system which describes the situation in which the system currently is. The state has to have *Markov property* which says something like: you should be able to predict future states, when you have only the current state given. We need this property to be able to simulate the system.
@@ -34,12 +47,12 @@ With the model equations we want to describe mathematically how the system evolv
 Therefore the state usually does not only include the current location or configuration of the system but also the velocity of the system. Because of *Newton's Laws* we can describe the state of classical mechanical systems by its position and velocity. We know that the system continues moving when there are no forces, and it will acclerate/decelerate when there are external forces according to $F=m a$ etc.
 
 So for our double pole cart system, we can describe the state by the following set of variables:
-* Position of the cart $q_0 \in \mathcal{R}$ in the x-direction
-* Velocity of the cart $\dot{q}_0 \in \mathcal{R}$ in the x-direction
-* Angle of the first pole $q_1 \in \mathcal{R}$
-* Angular velocity of the first pole $\dot{q}_1 \in \mathcal{R}$
-* Angle of the second pole $q_2 \in \mathcal{R}$
-* Angular velocity of the second pole $\dot{q}_2 \in \mathcal{R}$
+* The position of the cart $q_0 \in \mathcal{R}$ in the x-direction
+* The angle of the first pole $q_1 \in \mathcal{R}$
+* The angle of the second pole $q_2 \in \mathcal{R}$
+* The velocity of the cart $\dot{q}_0 \in \mathcal{R}$ in the x-direction
+* The angular velocity of the first pole $\dot{q}_1 \in \mathcal{R}$
+* The angular velocity of the second pole $\dot{q}_2 \in \mathcal{R}$
 
 This choice of state is a minimal representation of the state of the system. All variables are scalar, and real numbers. We do not need to describe e.g. the position of the cart in y-direction as the cart can not move *upwards*.
 
@@ -237,8 +250,9 @@ Easy!
 
 Get all the code bundled in a zip file: [Python](), [Matlab](), [Octave]().
 
-Upcoming articles:
-- Creating an OpenAI gym environment for the double-cart-pole.
-- Reinfocement learning (Q-learning) with the double-cart-pole.
-- Implementing a model-predictive controller for the double-cart-pole using [OpenOCL](https://openocl.org).
+Upcoming articles (ideas):
+- Creating an OpenAI Gym environment for the double pendulum on a cart.
+- Reinfocement learning (Q-learning) with double pendulum on a cart..
+- A more elaborate article on adding different type of noise (equation error, output, sensor, actuator, etc noise)
+- Implementing a model-predictive controller for double pendulum on a cart using [OpenOCL](https://openocl.org).
 
