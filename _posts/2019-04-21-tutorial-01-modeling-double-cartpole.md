@@ -19,7 +19,6 @@ We briefly summarize the features/requirements that we would like to implement f
 4. At the end of the first pole, a second pole is connected to the first pole by a second uncontrolled revolute joint.
 5. The system should have realistic physical behaviour, i.e. we use physical parameters like mass, momentum.
 6. We would like to be able to simulate the system from a given, or randomly chosen state $x_0$.
-7. The system is noisy.
 
 To simplify things we assume that the poles are massless. The mass is concentrated as point masses at the end of each pole.
 
@@ -262,7 +261,7 @@ Written by: Jonas Koenemann
 
 Upcoming articles (ideas):
 - Creating an OpenAI Gym environment for the double pendulum on a cart.
-- Reinfocement learning (Q-learning) with double pendulum on a cart..
-- A more elaborate article on adding different type of noise (equation error, output, sensor, actuator, etc noise)
+- Reinfocement learning (Q-learning) with the system.
+- Adding a noise model to the system, different type of noise (equation error, output, sensor, actuator, etc noise).
 - Implementing a model-predictive controller for the double pendulum on a cart using [OpenOCL](https://openocl.org).
 
