@@ -251,7 +251,7 @@ Easy!
 
 Get all the code bundled in a zip file: [Python](), [Matlab](), [Octave](). You can also find the code on the [github repository](https://github.com/jkoendev/double-pendulum-on-cart).
 
-If you liked the article give a *clap* on medium, *star* on the [github repository](https://github.com/jkoendev/double-pendulum-on-cart), share the article, or whatever you like.
+If you liked the article, give a **clap** on medium, **star** on the [github repository](https://github.com/jkoendev/double-pendulum-on-cart), **share** the article, or whatever you like.
 
 Let us know if you find errors, or have feedback at info@openocl.org or in the comments section at medium.
 
