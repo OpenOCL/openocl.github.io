@@ -1,6 +1,6 @@
 ---
 categories: tutorials
-title: "[Tutorial01] Modeling for Reinforcement learning and optimal control: Double pendulum on cart"
+title: "Modeling for Reinforcement learning and optimal control: Double pendulum on cart"
 permalink: /:categories/:title/
 mathjax: true
 hidden: true
@@ -25,7 +25,7 @@ To simplify things we assume that the poles are massless. The mass is concentrat
 
 Here, we drew a picture of the system:
 
-![Drawing of double pole cart](/assets/posts/double_pendulum_cart.jpg)
+![Drawing of the double pendulum on cart](/assets/posts/double_pendulum_cart.jpg)
 
 The physical properties of the *double pendulum on a cart* are described by a set of parameters which we choose (more or less) arbitrarily: 
 \\[
@@ -73,7 +73,7 @@ as the y-coordinate of the cart is always $0$.
 
 The center of mass position of the first pole $p_1 \in \mathcal{R}^2$ is half-way along the first pole. Here is another picture: 
 
-![Drawing of single pendulum](/assets/posts/dpc_kinematics.jpg)
+![Kinematics of the pendulum](/assets/posts/dpc_kinematics.jpg)
 
 From the picture we can see that $p_1$ can be calculated by
 
@@ -144,7 +144,7 @@ Now we can plug the kinetic energies and the potential energies into the *Euler-
 
 where $q=[q_0,q_1,q_2]^\top$ are the coordinates of the system, $\dot{q}=[\dot{q_0},\dot{q_1},\dot{q_2}]^\top$ are the velocities of the system, and $f$ is the force input (external force) that only acts on the cart in x-direction.
 
-We can calculate the derivatives in the *Euler-Lagrange* equation by hand, and solve for $\ddot{q}=[\ddot{q}_0,\ddot{q}_1,\ddot{q}_2]^\top$ but it is easier and less error prone to let the computer do the calculations for you. We prepared scripts in [Python]() and [Matlab]() for you that use symbolic toolboxes with symbolic differentiation and do the calculation for us. From the scripts it turns out that we get something much more complicated than we expected! So here it comes..
+We can calculate the derivatives in the *Euler-Lagrange* equation by hand, and solve for $\ddot{q}=[\ddot{q}_0,\ddot{q}_1,\ddot{q}_2]^\top$ but it is easier and less error prone to let the computer do the calculations for you. We prepared scripts in [Python]() and [Matlab](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/matlab/simplified/dpc_simple_lagrange.m) for you that use symbolic toolboxes with symbolic differentiation and do the calculation for us. From the scripts it turns out that we get something much more complicated than we expected! So here it comes..
 
 \\[
 \\begin{align} 
@@ -166,7 +166,7 @@ Ok i am giving up here ...
 
 These type of equations are called *ordinary differential equations* as they relate the state variables ($q_0$, $q_1$, $q_2$, $\dot{q}_0$, $\dot{q}_1$, $\dot{q}_2$) to their derivative ($\ddot{q}_0$, $\ddot{q}_1$, $\ddot{q}_2$). Remember that our state was given by $x=[q_0, q_1, q_2, \dot{q}_0, \dot{q}_1, \dot{q}_2]^\top$.
 
-We can now use a numerical integration method like *explicit Euler* [[wikipedia](https://en.wikipedia.org/wiki/Euler_method)], *Runge-Kutta 4* [[wikipedia]()], or even implicit methods like *implicit Euler* [[wikipedia](https://en.wikipedia.org/wiki/Backward_Euler_method)], *BDF* [[wikipedia](https://en.wikipedia.org/wiki/Backward_differentiation_formula)], or *Collocation* [[wikipedia](https://en.wikipedia.org/wiki/Collocation_method)] to simluate the system. Fortunately in Python and Matlab there are already excellent implementation available that we can use (although at least the explicit methods are super easy to implement!).
+We can now use a numerical integration method like *explicit Euler* [[wikipedia](https://en.wikipedia.org/wiki/Euler_method)], *Runge-Kutta 4* [[wikipedia](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods)], or even implicit methods like *implicit Euler* [[wikipedia](https://en.wikipedia.org/wiki/Backward_Euler_method)], *BDF* [[wikipedia](https://en.wikipedia.org/wiki/Backward_differentiation_formula)], or *Collocation* [[wikipedia](https://en.wikipedia.org/wiki/Collocation_method)] to simluate the system. Fortunately in Python and Matlab there are already excellent implementation available that we can use (although at least the explicit methods are super easy to implement!).
 
 To be able to use the integration methods we need to bring the equations into a particular form. We already collected all the state variables into a vector $x$, the controls are usually called $u$ which for the cart-pole just the force $u=f$. The (non-linear) system dynamics can be presented in the explicit form as
 
@@ -244,11 +244,15 @@ function xdot = ode_function(t, x)
 end
 ```
 
-We add a function to animate the system in [Python]() and [Matlab]{}, and we get this nice simulation:
+The `ode45` function is an explicit variable-step integration method (i think based on Runge-Kutta methods). It chooses a timestep which is appropriate to the current state of the system. If the system is about to change a lot it will choose a smaller timestep. The `ode45` function is therefore not the fastest integration method but very convenient to use. 
+
+We add a function to animate the system in [Python]() and [Matlab](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/matlab/simplified/dpc_simple_draw.m), and we get this nice simulation:
+
+
 
 Easy!
 
-Get all the code bundled in a zip file: [Python](), [Matlab](), [Octave]().
+Get all the code bundled in a zip file: [Python](), [Matlab](), [Octave](). You can also find the code on the [github repository](https://github.com/jkoendev/double-pendulum-on-cart).
 
 Upcoming articles (ideas):
 - Creating an OpenAI Gym environment for the double pendulum on a cart.
