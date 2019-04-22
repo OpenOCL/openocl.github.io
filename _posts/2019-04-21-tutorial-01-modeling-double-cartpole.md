@@ -46,12 +46,12 @@ With the model equations we want to describe mathematically how the system evolv
 Therefore the state usually does not only include the current location or configuration of the system but also the velocity of the system. Because of *Newton's Laws* we can describe the state of classical mechanical systems by its position and velocity. We know that the system continues moving when there are no forces, and it will acclerate/decelerate when there are external forces according to $F=m a$ etc.
 
 So for our double pole cart system, we can describe the state by the following set of variables:
-* The position of the cart $q_0 \in \mathcal{R}$ in the x-direction          & \\quad         $\mathrm{[m]}$ 
-* The angle of the first pole $q_1 \in \mathcal{R}$                          & \\quad         $\mathrm{[rad]}$
-* The angle of the second pole $q_2 \in \mathcal{R}$                         & \\quad         $\mathrm{[rad]}$
-* The velocity of the cart $\dot{q}_0 \in \mathcal{R}$  in the x-direction   & \\quad         $\mathrm{[\frac{m}{s}]}$
-* The angular velocity of the first pole $\dot{q}_1 \in \mathcal{R}$         & \\quad         $\mathrm{[\frac{rad}{s}]}$
-* The angular velocity of the second pole $\dot{q}_2 \in \mathcal{R}$        & \\quad         $\mathrm{[\frac{rad}{s}]}$
+* The position of the cart $q_0 \in \mathcal{R}$ in the x-direction                   $\\quad \mathrm{[m]}$ 
+* The angle of the first pole $q_1 \in \mathcal{R}$                                   $\\quad \mathrm{[rad]}$
+* The angle of the second pole $q_2 \in \mathcal{R}$                                  $\\quad \mathrm{[rad]}$
+* The velocity of the cart $\dot{q}_0 \in \mathcal{R}$  in the x-direction            $\\quad \mathrm{[\frac{m}{s}]}$
+* The angular velocity of the first pole $\dot{q}_1 \in \mathcal{R}$                  $\\quad \mathrm{[\frac{rad}{s}]}$
+* The angular velocity of the second pole $\dot{q}_2 \in \mathcal{R}$                 $\\quad \mathrm{[\frac{rad}{s}]}$
 
 This choice of state is a minimal representation of the state of the system. All variables are scalar, and real numbers. We do not need to describe e.g. the position of the cart in y-direction as the cart can not move *upwards*.
 
