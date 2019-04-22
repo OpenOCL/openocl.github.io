@@ -1,13 +1,16 @@
 ---
 categories: tutorials
-title: "Modeling for Reinforcement learning and optimal control: Double pendulum on a cart"
+title: "Modeling for Reinforcement Learning and Optimal Control: Double pendulum on a cart"
 permalink: /:categories/:title/
 mathjax: true
 hidden: true
 ---
 
-We start the *tutorial series for optimal control and reinforcment learning* by implementing the simulation model of a **double pendulum on a cart**, or **double-pole cart**, or **double cart-pole** if you like. 
-The idea of this tutorial series is to implement the code for the tutorials while writing the blog posts, so it is to be seen how far we will get.
+
+In this article we show implement the simulation model of a **double pendulum on a cart**, or **double-pole cart**, or **double cart-pole**. At the end of the article we will be simulate the double pendulum system on a cart like this:
+
+![Simulation of the double pendulum on cart](/assets/posts/dpc_simulation_1.jpg)
+
 
 ### Basic system outline
 
