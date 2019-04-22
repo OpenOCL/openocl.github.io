@@ -55,6 +55,8 @@ So for our double pole cart system, we can describe the state by the following s
 
 This choice of state is a minimal representation of the state of the system. All variables are scalar, and real numbers. We do not need to describe e.g. the position of the cart in y-direction as the cart can not move *upwards*.
 
+We collect all the state variables in a column vector as $x=[q_0, q_1, q_2, \dot{q}_0, \dot{q}_1, \dot{q}_2]^\top$, where ${}^\top$ is the symbolc for the *transpose*.
+
 ### The dynamical system equations
 
 Now follows the hard part! We use the *Euler–Lagrange equations* [[wikipedia](https://en.wikipedia.org/wiki/Euler%E2%80%93Lagrange_equation)] to model the system dynamics. The *Euler–Lagrange* method is an energy based method that is a bit easier and requires less thinking than for example the (recursive) Newton-Euler method. You can apply this method quiet programmatically to many types of systems.
@@ -78,13 +80,13 @@ The center of mass position of the first pole $p_1 \in \mathcal{R}^2$ is half-wa
 From the picture we can see that $p_1$ can be calculated by
 
 \\[
-p_1 = p_c + \frac{l_1}{2}  \\begin{bmatrix}  \cos(q_1)  \\\ \\sin(q_1) \\end{bmatrix} \\,.
+p_1 = p_c + \frac{r_1}{2}  \\begin{bmatrix}  \cos(q_1)  \\\ \\sin(q_1) \\end{bmatrix} \\,.
 \\]
 
 The center of mass position of the second pole can be derived similarily. Here we need to go to the end of the first pole (not only the half length), and add the two joint angles to get the direction of the second pole. The position of the second pole $p_2$ can be calculated by
 
 \\[
-p_2 = p_c + l_1  \\begin{bmatrix} \cos(q_1)  \\\ \\sin(q_1) \\end{bmatrix} +  \frac{l_2}{2} \\begin{bmatrix}  \cos(q_1+q_2) \\\ \\sin({q_1+q_2})\\end{bmatrix} \\,.
+p_2 = p_c + r_1  \\begin{bmatrix} \cos(q_1)  \\\ \\sin(q_1) \\end{bmatrix} +  \frac{r_2}{2} \\begin{bmatrix}  \cos(q_1+q_2) \\\ \\sin({q_1+q_2})\\end{bmatrix} \\,.
 \\]
 
 From the *center of mass* positions we can get the velocities by differentiation. The velocity of the cart is given by
@@ -96,13 +98,13 @@ v_c = \\begin{bmatrix} \dot{q}_0 \\\ 0 \\end{bmatrix} \\,,
 the *center of mass* velocity of the first pole is given by
 
 \\[
-v_1 = v_c + \frac{l_1}{2}  \\begin{bmatrix}  - \sin(\\theta\) \dot{\theta}  \\\ \\cos({\theta}) \dot{\theta} \\end{bmatrix} \\,,
+v_1 = v_c + \frac{r_1}{2}  \\begin{bmatrix}  - \sin(\\theta\) \dot{\theta}  \\\ \\cos({\theta}) \dot{\theta} \\end{bmatrix} \\,,
 \\]
 
 and the velocity of the second pole is 
 
 \\[
-v_2 = v_c + l_1  \\begin{bmatrix} - \sin(\\theta\) \dot{q}_1  \\\ \\cos(q_1) \dot{q}_1 \\end{bmatrix} +  \frac{l_2}{2} \\begin{bmatrix}  - \sin(q_1+q_2) (\dot{q}_1+\dot{q}_2) \\\ \\cos(q_1+q_2) (\dot{q}_1+ \dot{q}_2) \\end{bmatrix} \\,.
+v_2 = v_c + r_1  \\begin{bmatrix} - \sin(\\theta\) \dot{q}_1  \\\ \\cos(q_1) \dot{q}_1 \\end{bmatrix} +  \frac{r_2}{2} \\begin{bmatrix}  - \sin(q_1+q_2) (\dot{q}_1+\dot{q}_2) \\\ \\cos(q_1+q_2) (\dot{q}_1+ \dot{q}_2) \\end{bmatrix} \\,.
 \\]
 
 
@@ -134,8 +136,10 @@ P_1 = m_1 g p_1(2) \,,
 
 and the potential energy of the second pole is
 \\[
-P_2 = m_2 g p_2(2) \,.
+P_2 = m_2 g p_2(2) \,,
 \\]
+
+where $p_1(2)$ and $p_2(2)$ are the y-coordinates of the center of mass positions (the height values of the poles).
 
 Now we can plug the kinetic energies and the potential energies into the *Euler-Lagrange* equation:
 \\[
