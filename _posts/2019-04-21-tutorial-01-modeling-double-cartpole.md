@@ -121,7 +121,7 @@ where *q_0*, *q_1*, *q_2* are the coordinates of the system, *\dot{q_0}*, *\dot{
 
 We can calculate the derivatives in the *Euler-Lagrange* equation by hand, and solve for *\ddot{q}_0*, *\ddot{q}_1*, *\ddot{q}_2* but it is easier and less error prone to let the computer do the calculations for you. We prepared scripts in [Python](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/python/dpc_lagrange.py) and [Matlab](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/matlab/simplified/dpc_simple_lagrange.m) for you that use symbolic toolboxes with symbolic differentiation and do the calculation for us. From the scripts it turns out that we get something much more complicated than we expected! So here it comes..
 
-![Equation for the cart acceleration](/assets/posts/tut01/qddot_0@2x.gif)
+![Equation for the cart acceleration](/assets/posts/tut01/qddot_0@2x.png)
 
 Ok i am giving up here ...
 
@@ -137,11 +137,11 @@ We can now use a numerical integration method like *explicit Euler* [[wikipedia]
 
 To be able to use the integration methods in Matlab and Python have to define a ordinary differential equation function $f(x)$ which maps the state variables $x$ to the time derivative of the state $\dot{x}$:
 
-![General ordinary differential equation](/assets/posts/tut01/ode@2x.gif)
+![General ordinary differential equation](/assets/posts/tut01/ode_general@2x.gif)
 
 which for the double pendulum system is
 
-![ODE of the cartpole](/assets/posts/tut01/ode@2x.gif)
+![ODE of the cartpole](/assets/posts/tut01/ode_dpc@2x.gif)
 
 for the state *x*, *\ddot{q}_0*, *\ddot{q}_1*, *\ddot{q}_2* are given by the long equations from above, and the control input *f* that appears in the equations can be assumed given, as we are just simulating the system. The upcoming articles will cover how to determine the control input by either *Reinforcement Learning* or *Optimal Control*.
 
@@ -207,7 +207,7 @@ end
 
 The `ode45` function is an explicit variable-step integration method (i think based on Runge-Kutta methods). It chooses a timestep which is appropriate to the current state of the system. If the system undergoes quick or large changes, the integrator will choose a smaller timestep. The `ode45` function is therefore not the fastest integration method but very convenient to use. 
 
-We add a function to animate the system in [Python]() and [Matlab](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/matlab/simplified/dpc_simple_draw.m), and we get this nice simulation (this time from a different starting position than above):
+We add a function to animate the system in [Python](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/python/simplified/dpc_simple_draw.py) and [Matlab](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/matlab/simplified/dpc_simple_draw.m), and we get this nice simulation (this time from a different starting position than above):
 
 
 Easy!
