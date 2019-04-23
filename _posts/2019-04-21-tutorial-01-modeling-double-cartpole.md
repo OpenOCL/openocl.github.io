@@ -1,4 +1,5 @@
 ---
+layout: blank
 categories: tutorials
 title: "Modeling for Reinforcement Learning and Optimal Control: Double pendulum on a cart"
 permalink: /:categories/:title/
