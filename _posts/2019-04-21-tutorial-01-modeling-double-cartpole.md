@@ -38,12 +38,14 @@ With the model equations we want to describe mathematically how the system evolv
 
 Therefore the state usually does not only include the current location or configuration of the system but also the velocity of the system. Because of *Newton's Laws* we can describe the state of classical mechanical systems by its position and velocity. We know that the system continues moving when there are no forces, and it will acclerate/decelerate when there are external forces according to $F=m a$ etc.
 
-So for our double pole cart system, we can describe the state by the following set of variables:
+So for our double pole cart system, we can describe the state by the following set of variables
+
 ![List of states](/assets/posts/tut01/state@2x.gif)
 
 This choice of state is a minimal representation of the state of the system. All variables are scalar, and real numbers. We do not need to describe e.g. the position of the cart in y-direction as the cart can not move *upwards* (only the poles).
 
 We collect all the state variables in a column vector as 
+
 ![The state vector](/assets/posts/tut01/state_x@2x.gif)
 
 ### The dynamical system equations
