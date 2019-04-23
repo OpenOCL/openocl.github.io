@@ -30,7 +30,7 @@ Here, we drew a picture of the system:
 
 The physical properties of the *double pendulum on a cart* are described by a set of parameters which we choose (more or less) arbitrarily: 
 
-![List of parameters](/assets/posts/tut1/params@2x.gif)
+![List of parameters](/assets/posts/tut01/params@2x.gif)
 
 ### The state of the system
 
@@ -39,12 +39,12 @@ With the model equations we want to describe mathematically how the system evolv
 Therefore the state usually does not only include the current location or configuration of the system but also the velocity of the system. Because of *Newton's Laws* we can describe the state of classical mechanical systems by its position and velocity. We know that the system continues moving when there are no forces, and it will acclerate/decelerate when there are external forces according to $F=m a$ etc.
 
 So for our double pole cart system, we can describe the state by the following set of variables:
-![List of states](/assets/posts/tut1/states@2x.gif)
+![List of states](/assets/posts/tut01/states@2x.gif)
 
 This choice of state is a minimal representation of the state of the system. All variables are scalar, and real numbers. We do not need to describe e.g. the position of the cart in y-direction as the cart can not move *upwards* (only the poles).
 
 We collect all the state variables in a column vector as 
-![The state vector](/assets/posts/tut1/state_x@2x.gif)
+![The state vector](/assets/posts/tut01/state_x@2x.gif)
 
 ### The dynamical system equations
 
@@ -56,7 +56,7 @@ We start with calculating the center of mass positions of the three body parts o
 
 The position of the cart is easy:
 
-![Position of the cart](/assets/posts/tut1/p_c@2x.gif)
+![Position of the cart](/assets/posts/tut01/p_c@2x.gif)
 
 as the y-coordinate of the cart is always zero.
 
@@ -66,23 +66,23 @@ The center of mass position of the first pole is half-way along the first pole. 
 
 From the picture we can see that the position of the first pole can be calculated by
 
-![Position of the first pole](/assets/posts/tut1/p_1@2x.gif)
+![Position of the first pole](/assets/posts/tut01/p_1@2x.gif)
 
 The center of mass position of the second pole can be derived similarily. Here we need to go to the end of the first pole (not only the half length), and add the two joint angles to get the direction of the second pole. The position of the second pole can be calculated by
 
-![Position of the second pole](/assets/posts/tut1/p_2@2x.gif)
+![Position of the second pole](/assets/posts/tut01/p_2@2x.gif)
 
 From the *center of mass* positions we can get the velocities by differentiation. The velocity of the cart is given by
 
-![Velocity of the cart](/assets/posts/tut1/v_c@2x.gif)
+![Velocity of the cart](/assets/posts/tut01/v_c@2x.gif)
 
 the *center of mass* velocity of the first pole is given by
 
-![Velocity of the first pole](/assets/posts/tut1/v_1@2x.gif)
+![Velocity of the first pole](/assets/posts/tut01/v_1@2x.gif)
 
 and the velocity of the second pole is 
 
-![Velocity of the second pole](/assets/posts/tut1/v_2@2x.gif)
+![Velocity of the second pole](/assets/posts/tut01/v_2@2x.gif)
 
 
 **Dynamics** The dynamics of a system describe the inertial and accelerating properties of a system.
@@ -91,57 +91,57 @@ We derive the dynamics using the *Euler-Lagrange* energy method. We start with t
 
 The kinetic energy of the cart is 
 
-![Kinetic energy of the cart](/assets/posts/tut1/K_c@2x.gif)
+![Kinetic energy of the cart](/assets/posts/tut01/K_c@2x.gif)
 
 the kinetic energy of the first pole is 
 
-![Kinetic energy of the first pole](/assets/posts/tut1/K_1@2x.gif)
+![Kinetic energy of the first pole](/assets/posts/tut01/K_1@2x.gif)
 
 and the kinetic energy of the second pole is
 
-![Kinetic energy of the second pole](/assets/posts/tut1/K_2@2x.gif)
+![Kinetic energy of the second pole](/assets/posts/tut01/K_2@2x.gif)
 
 For the potential energy of the system we again sum the potential energies of the individual parts. The cart has constant potential energy as it can not move up or down in the earth gravitational field. We can therefore omit it as it would be elimiated in the equations later.
 
 The potential energy of the first pole is
 
-![Potential energy of the first pole](/assets/posts/tut1/Pot_1@2x.gif)
+![Potential energy of the first pole](/assets/posts/tut01/Pot_1@2x.gif)
 
 and the potential energy of the second pole is
 
-![Potential energy of the second pole](/assets/posts/tut1/Pot_2@2x.gif)
+![Potential energy of the second pole](/assets/posts/tut01/Pot_2@2x.gif)
 
 where *p_1^y* and *p_2^y* are the y-coordinates of the center of mass positions (the height values of the poles).
 
 Now we can plug the kinetic energies and the potential energies into the *Euler-Lagrange* equation:
 
-![Euler Lagrange equation](/assets/posts/tut1/euler-lagrange@2x.gif)
+![Euler Lagrange equation](/assets/posts/tut01/euler-lagrange@2x.gif)
 
 where *q_0*, *q_1*, *q_2* are the coordinates of the system, *\dot{q_0}*, *\dot{q_1}*, *\dot{q_2}* are the velocities of the system, and $f$ is the force input (external force) that only acts on the cart in x-direction.
 
 We can calculate the derivatives in the *Euler-Lagrange* equation by hand, and solve for *\ddot{q}_0*, *\ddot{q}_1*, *\ddot{q}_2* but it is easier and less error prone to let the computer do the calculations for you. We prepared scripts in [Python](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/python/dpc_lagrange.py) and [Matlab](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/matlab/simplified/dpc_simple_lagrange.m) for you that use symbolic toolboxes with symbolic differentiation and do the calculation for us. From the scripts it turns out that we get something much more complicated than we expected! So here it comes..
 
-![Equation for the cart acceleration](/assets/posts/tut1/qddot_0@2x.gif)
+![Equation for the cart acceleration](/assets/posts/tut01/qddot_0@2x.gif)
 
 Ok i am giving up here ...
 
-![Equation for the angular acceleration of the first pole](/assets/posts/tut1/qddot_1@2x.gif)
+![Equation for the angular acceleration of the first pole](/assets/posts/tut01/qddot_1@2x.gif)
 
-![Equation for the angular acceleration of the second pole](/assets/posts/tut1/qddot_2@2x.gif)
+![Equation for the angular acceleration of the second pole](/assets/posts/tut01/qddot_2@2x.gif)
 
 These type of equations are called *ordinary differential equations* as they relate the state variables *q_0*, *q_1*,*q_2*, *\dot{q}_0*, *\dot{q}_1*, *\dot{q}_2* to their derivative *\ddot{q}_0*, *\ddot{q}_1*, *\ddot{q}_2*. Remember that our state was given by 
 
-![State vector](/assets/posts/tut1/x_flat@2x.gif)
+![State vector](/assets/posts/tut01/x_flat@2x.gif)
 
 We can now use a numerical integration method like *explicit Euler* [[wikipedia](https://en.wikipedia.org/wiki/Euler_method)], *Runge-Kutta 4* [[wikipedia](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods)], or even implicit methods like *implicit Euler* [[wikipedia](https://en.wikipedia.org/wiki/Backward_Euler_method)], *BDF* [[wikipedia](https://en.wikipedia.org/wiki/Backward_differentiation_formula)], or *Collocation* [[wikipedia](https://en.wikipedia.org/wiki/Collocation_method)] to simluate the system. Fortunately in Python and Matlab there are already excellent implementation available that we can use (although at least the explicit methods are super easy to implement!).
 
 To be able to use the integration methods in Matlab and Python have to define a ordinary differential equation function $f(x)$ which maps the state variables $x$ to the time derivative of the state $\dot{x}$:
 
-![General ordinary differential equation](/assets/posts/tut1/ode@2x.gif)
+![General ordinary differential equation](/assets/posts/tut01/ode@2x.gif)
 
 which for the double pendulum system is
 
-![ODE of the cartpole](/assets/posts/tut1/ode@2x.gif)
+![ODE of the cartpole](/assets/posts/tut01/ode@2x.gif)
 
 for the state *x*, *\ddot{q}_0*, *\ddot{q}_1*, *\ddot{q}_2* are given by the long equations from above, and the control input *f* that appears in the equations can be assumed given, as we are just simulating the system. The upcoming articles will cover how to determine the control input by either *Reinforcement Learning* or *Optimal Control*.
 
