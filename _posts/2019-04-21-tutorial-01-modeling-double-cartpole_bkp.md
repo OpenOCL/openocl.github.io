@@ -117,7 +117,7 @@ The kinetic energy of the cart is
 \\[
 K_c = \frac{1}{2} m_c v_c^2 \,,
 \\]
-
+P_2 = m_2 g p_2^y \,, 
 the kinetic energy of the first pole is 
 \\[
 K_1 = \frac{1}{2} m_1 v_1^2 \,,
