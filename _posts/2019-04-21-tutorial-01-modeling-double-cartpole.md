@@ -64,7 +64,7 @@ as the y-coordinate of the cart is always zero.
 
 The center of mass position of the first pole is half-way along the first pole. Here is another picture: 
 
-![Kinematics of the pendulum](/assets/posts/dpc_kinematics@2x.jpg)
+![Kinematics of the pendulum](/assets/posts/tut01/dpc_kinematics@2x.jpg)
 
 From the picture we can see that the position of the first pole can be calculated by
 
