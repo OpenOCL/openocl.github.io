@@ -153,7 +153,7 @@ And here are the Python and Matlab implementations to simulate the system starti
 
 ### Python:
 
-```Python
+```py
 import numpy as np
 import math
 from scipy.integrate import solve_ivp
