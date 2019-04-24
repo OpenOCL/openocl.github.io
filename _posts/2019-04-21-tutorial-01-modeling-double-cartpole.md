@@ -13,7 +13,7 @@ In this article we show implement the simulation model of a **double pendulum on
 ![Simulation of the double pendulum on cart](/assets/posts/dpc_simulation_1.jpg)
 
 
-### Basic system outline
+## Basic system outline
 
 We briefly summarize the features/requirements that we would like to implement for the model:
 
@@ -32,7 +32,7 @@ The physical properties of the *double pendulum on a cart* are described by a se
 
 ![List of parameters](/assets/posts/tut01/params@2x.gif)
 
-### The state of the system
+## The state of the system
 
 With the model equations we want to describe mathematically how the system evolves with time. But first we need to define the state of the system which describes the situation in which the system currently is. The state has to have *Markov property* which says something like: you should be able to predict future states, when you have only the current state given. We need this property to be able to simulate the system.
 
@@ -48,7 +48,7 @@ We collect all the state variables in a column vector as
 
 ![The state vector](/assets/posts/tut01/state_x@2x.gif)
 
-### The dynamical system equations
+## The dynamical system equations
 
 Now follows the hard part! We use the *Euler–Lagrange equations* [[wikipedia](https://en.wikipedia.org/wiki/Euler%E2%80%93Lagrange_equation)] to model the system dynamics. The *Euler–Lagrange* method is an energy based method that is a bit easier and requires less thinking than for example the (recursive) Newton-Euler method. You can apply this method quiet programmatically to many types of systems.
 
@@ -147,7 +147,11 @@ which for the double pendulum system is
 
 for the state *x*, *\ddot{q}_0*, *\ddot{q}_1*, *\ddot{q}_2* are given by the long equations from above, and the control input *f* that appears in the equations can be assumed given, as we are just simulating the system. The upcoming articles will cover how to determine the control input by either *Reinforcement Learning* or *Optimal Control*.
 
+## Simulation code
+
 And here are the Python and Matlab implementations to simlulate the system starting from a random state $x_0$ for 8 seconds:
+
+### Python:
 
 ```Python
 def main():
@@ -184,6 +188,8 @@ if __name__ == '__main__':
   main()
 
 ```
+
+### Matlab:
 
 ```matlab
 function dpc_simple_simulate
@@ -265,7 +271,6 @@ The `ode45` function is an explicit variable-step integration method (i think ba
 
 We add a function to animate the system in [Python](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/python/simplified/dpc_simple_draw.py) and [Matlab](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/matlab/simplified/dpc_simple_draw.m), and we get this nice simulation (this time from a different starting position than above):
 
-
 Easy!
 
 **Download** all the code bundled in a zip file: [[Python]()], [[Matlab]()], [[Octave]()]. You can also find the code on the [github repository](https://github.com/jkoendev/double-pendulum-on-cart).
@@ -274,9 +279,4 @@ If you liked the article, give a **clap** on medium, **star** on the [github rep
 
 Written by: Jonas ([github](https://github.com/jkoendev), [twitter](https://twitter.com/JonasCoen))
 
-Upcoming articles (ideas):
-- Creating an OpenAI Gym environment for the double pendulum on a cart.
-- Reinfocement learning (Q-learning) with the system.
-- Adding a noise model to the system, different type of noise (equation error, output, sensor, actuator, etc noise).
-- Implementing a model-predictive controller for the double pendulum on a cart using [OpenOCL](https://openocl.org).
 
