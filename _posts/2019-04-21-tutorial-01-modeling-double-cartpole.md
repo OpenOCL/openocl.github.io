@@ -10,7 +10,7 @@ hidden: true
 
 In this article we show implement the simulation model of a **double pendulum on a cart**, or **double-pole cart**, or **double cart-pole**. At the end of the article we will be simulate the double pendulum system on a cart like this:
 
-![Simulation of the double pendulum on cart](/assets/posts/dpc_simulation_1.jpg)
+![Simulation of the double pendulum on cart](/assets/posts/tut01/dpc_simulation_1.jpg)
 
 
 ## Basic system outline
@@ -26,7 +26,7 @@ We briefly summarize the features/requirements that we would like to implement f
 
 Here, we drew a picture of the system:
 
-![Drawing of the double pendulum on cart](/assets/posts/double_pendulum_cart.jpg)
+![Drawing of the double pendulum on cart](/assets/posts/tut01/dpc_drawing@2x.jpg)
 
 The physical properties of the *double pendulum on a cart* are described by a set of parameters which we choose (more or less) arbitrarily: 
 
@@ -64,7 +64,7 @@ as the y-coordinate of the cart is always zero.
 
 The center of mass position of the first pole is half-way along the first pole. Here is another picture: 
 
-![Kinematics of the pendulum](/assets/posts/dpc_kinematics.jpg)
+![Kinematics of the pendulum](/assets/posts/dpc_kinematics@2x.jpg)
 
 From the picture we can see that the position of the first pole can be calculated by
 
