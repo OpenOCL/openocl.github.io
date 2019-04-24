@@ -233,7 +233,7 @@ if __name__ == '__main__':
 ### Matlab:
 
 ```matlab
-function dpc_simple_simulate
+function dpc_simulate
   % get a random starting state between min state and max state
   x_min = [-1; -pi; -pi; -.05; -1; -1];
   x_max = -x_min;
@@ -241,10 +241,10 @@ function dpc_simple_simulate
 
   % simulate
   tspan = [0:0.01:8];
-  [tspan, X] = ode45(@dpc_simple_ode, tspan, x0);
+  [tspan, X] = ode45(@dpc_ode, tspan, x0);
 end
 
-function xdot = dpc_simple_ode(t, x)
+function xdot = dpc_ode(t, x)
 
   q_0 = x(1);
   q_1 = x(2);
