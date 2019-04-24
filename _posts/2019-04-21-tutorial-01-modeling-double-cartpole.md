@@ -149,7 +149,7 @@ for the state *x*, *\ddot{q}_0*, *\ddot{q}_1*, *\ddot{q}_2* are given by the lon
 
 ## Simulation code
 
-And here are the Python and Matlab implementations to simlulate the system starting from a random state $x_0$ for 8 seconds:
+And here are the Python and Matlab implementations to simulate the system starting from a random state $x_0$ for 8 seconds.
 
 ### Python:
 
