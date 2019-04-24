@@ -54,7 +54,7 @@ Now follows the hard part! We use the *Euler–Lagrange equations* [[wikipedia](
 
 We start with calculating the center of mass positions of the three body parts of the cart-pole system, and express the positions as functions of the state variables. We derive the center of mass positions because we can use them to define the potential and kinetic energies of the body parts which we will use to obtain the dynamical equations. The three body parts are: **the cart**, **the first pole**, **the second pole**. 
 
-**Kinematics** The kinematics describe the static and moving structures of a system without the inertial and accelerating properties. For the double cart-pole we therefore desribe the center of mass positions and velocities.
+**Kinematics** The kinematics describe the static and moving structures of a system without the inertial and accelerating properties. For the double cart-pole we therefore describe the center of mass positions and velocities.
 
 The position of the cart is easy:
 
@@ -316,15 +316,15 @@ function xdot = dpc_simple_ode(t, x)
 end
 ```
 
-The `ode45` function is an explicit variable-step integration method (i think based on Runge-Kutta methods). It chooses a timestep which is appropriate to the current state of the system. If the system undergoes quick or large changes, the integrator will choose a smaller timestep. The `ode45` function is therefore not the fastest integration method but very convenient to use. 
+The `ode45` function is an explicit variable-step integration method based on Runge-Kutta methods. It chooses a timestep which is appropriate to the current state of the system. If the system undergoes quick or large changes, the integrator will choose a smaller timestep. The `ode45` function is therefore not the fastest integration method but very convenient to use. 
 
 We add a function to animate the system in [Python](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/python/simplified/dpc_simple_draw.py) and [Matlab](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/matlab/simplified/dpc_simple_draw.m), and we get this nice simulation (this time from a different starting position than above):
 
 Easy!
 
-**Download** all the code bundled in a zip file: [[Python]()], [[Matlab]()], [[Octave]()]. You can also find the code on the [github repository](https://github.com/jkoendev/double-pendulum-on-cart).
+**Download** all the code bundled in a zip file: [[Python]()], [[Matlab]()]. You can also find the code on the [github repository](https://github.com/jkoendev/double-pendulum-on-cart).
 
-If you liked the article, give a **clap** on medium, **star** on the [github repository](https://github.com/jkoendev/double-pendulum-on-cart), **share** the article, or whatever you like. Let us know if you find errors, or have feedback at info@openocl.org or in the comments section at medium.
+If you liked the article, give a **clap** on medium, **star** on the [github repository](https://github.com/jkoendev/double-pendulum-on-cart), **share** the article, or whatever you like. Let us know if you find errors, or have feedback at blog@openocl.org or in the comments section at medium.
 
 Written by: Jonas ([github](https://github.com/jkoendev), [twitter](https://twitter.com/JonasCoen))
 
