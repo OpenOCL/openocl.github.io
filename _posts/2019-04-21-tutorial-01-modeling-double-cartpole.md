@@ -1,17 +1,17 @@
 ---
-layout: blank
+layout: default
 categories: tutorials
 title: "Modeling for Reinforcement Learning and Optimal Control: Double pendulum on a cart"
 permalink: /:categories/:title/
 mathjax: true
-hidden: true
+hidden: false
 ---
 
 # Modeling for Reinforcement Learning and Optimal Control: Double pendulum on a cart
 
 Modeling is an integral part of engineering and probably any other domain. With the popularity of **machine learning** a new type of black box model in form of artificial neural networks is on the way of replacing in parts models of the traditional approaches. However we think that this does not mean that traditional models will be less significant, but they might get even more important in some domains. Traditional models can for example be used to feed the deep learning algorithms that (at the moment) are hungry for large amounts of data, by generating data using classical modeling approaches. 
 
-In the domain of control theory, **Optimal Control** explicitly relies on a white-box model for the dynamical system, while (model-free) **Reinforcement Learning** trains a black-box model without knowing the behavior of the system (or environment, or plant). The two disciplines overlap where optimal control relies on black-box model for the dynamical system, or where optimal control solutions are used to train neural networks, or where reinforcement learning depends on some kind of model (model-based reinforcement learning). We think that learning and control algorithms can be implemented most efficiently by utilizing the **interplay between model-based and model-free algorithms** when the computational (lookup) speed and expressive power of deep neural networks is combined with the accuracy of physical euqations that are known for many types of systems.
+In the domain of control theory, **Optimal Control** explicitly relies on a white-box model for the dynamical system, while (model-free) **Reinforcement Learning** trains a black-box model without knowing the behavior of the system (or environment, or plant). The two disciplines overlap where optimal control relies on black-box model for the dynamical system, or where optimal control solutions are used to train neural networks, or where reinforcement learning depends on some kind of model (model-based reinforcement learning). We think that learning and control algorithms can be implemented most efficiently by utilizing the **interplay between model-based and model-free algorithms** when the computational (lookup) speed and expressive power of deep neural networks is combined with the accuracy of physical eqations that are known for many types of systems.
 
 In this article we show how to implement a simulation model of a **double pendulum on a cart**, or double-pole cart, or double cart-pole if you like. At the end of the article we will be able to simulate the double pendulum system on a cart like this:
 
@@ -28,7 +28,7 @@ We briefly summarize the features/requirements that we would like to implement f
 2. The cart can be controlled by a limited force $f$ that acts along the x-axis.
 3. In the center of the cart a pole/pendulum is attached by an uncontrolled revolute joint.
 4. At the end of the first pole, a second pole is connected to the first pole by a second uncontrolled revolute joint.
-5. The system should have realistic physical behaviour, i.e. we use physical parameters like mass, momentum.
+5. The system should have realistic physical behavior, i.e. we use physical parameters like mass, momentum.
 6. We would like to be able to simulate the system from a given, or randomly chosen state $x_0$.
 
 Here, we drew a picture of the system:
@@ -43,7 +43,7 @@ The physical properties of the *double pendulum on a cart* are described by a se
 
 With the model equations we want to describe mathematically how the system evolves with time. But first we need to define the state of the system which describes the situation in which the system currently is. The state has to have *Markov property* which says something like: you should be able to predict future states, when you have only the current state given. We need this property to be able to simulate the system.
 
-Therefore the state usually does not only include the current location or configuration of the system but also the velocity of the system. Because of *Newton's Laws* we can describe the state of classical mechanical systems by its position and velocity. We know that the system continues moving when there are no forces, and it will acclerate/decelerate when there are external forces according to $F=m a$ etc.
+Therefore the state usually does not only include the current location or configuration of the system but also the velocity of the system. Because of *Newton's Laws* we can describe the state of classical mechanical systems by its position and velocity. We know that the system continues moving when there are no forces, and it will accelerate/decelerate when there are external forces according to $F=m a$ etc.
 
 So for our double pole cart system, we can describe the state by the following set of variables
 
@@ -77,7 +77,7 @@ From the picture we can see that the position of the first pole can be calculate
 
 ![Position of the first pole](/assets/posts/tut01/p_1@2x.gif)
 
-The center of mass position of the second pole can be derived similarily. Here we need to go to the end of the first pole (not only the half length), and add the two joint angles to get the direction of the second pole. The position of the second pole can be calculated by
+The center of mass position of the second pole can be derived similarly. Here we need to go to the end of the first pole (not only the half length), and add the two joint angles to get the direction of the second pole. The position of the second pole can be calculated by
 
 ![Position of the second pole](/assets/posts/tut01/p_2@2x.gif)
 
@@ -110,7 +110,7 @@ and the kinetic energy of the second pole is
 
 ![Kinetic energy of the second pole](/assets/posts/tut01/K_2@2x.gif)
 
-For the potential energy of the system we again sum the potential energies of the individual parts. The cart has constant potential energy as it can not move up or down in the earth gravitational field. We can therefore omit it as it would be elimiated in the equations later.
+For the potential energy of the system we again sum the potential energies of the individual parts. The cart has constant potential energy as it can not move up or down in the earth gravitational field. We can therefore omit it as it would be eliminated in the equations later.
 
 The potential energy of the first pole is
 
