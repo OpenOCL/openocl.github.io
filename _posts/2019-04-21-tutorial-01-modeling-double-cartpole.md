@@ -309,7 +309,7 @@ We add a function to animate the system in [Python](https://github.com/jkoendev/
 
 **Download** all the code bundled in a zip file: [[Python](/assets/posts/tut01/dpc_python.zip)], [[Matlab](/assets/posts/tut01/dpc_matlab.zip)]. You can also find the code on the [github repository](https://github.com/jkoendev/double-pendulum-on-cart).
 
-If you liked the article, give a **clap** on Medium, **star** on the [github repository](https://github.com/jkoendev/double-pendulum-on-cart), **share** the article, or whatever you like. Let us know if you find errors, or have feedback at blog@openocl.org, create a github issue or leave a comment in the comments section at Medium.
+If you liked the article, give a **clap** on [Medium](https://medium.com/@JonasCoen/modeling-for-reinforcement-learning-and-optimal-control-double-pendulum-on-a-cart-394f46b7ec7e?sk=b1d33aada3cf45844142563a3044b8c2), **star** on the [github repository](https://github.com/jkoendev/double-pendulum-on-cart), **share** the article, or whatever you like. Let us know if you find errors, or have feedback at blog@openocl.org, create a github issue or leave a comment in the comments section at Medium.
 
 Written by: Jonas ([github](https://github.com/jkoendev), [twitter](https://twitter.com/JonasCoen))
 
