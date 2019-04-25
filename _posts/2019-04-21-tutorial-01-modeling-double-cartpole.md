@@ -10,7 +10,7 @@ hidden: true
 
 In this article we show implement the simulation model of a **double pendulum on a cart**, or **double-pole cart**, or **double cart-pole**. At the end of the article we will be simulate the double pendulum system on a cart like this:
 
-![Simulation of the double pendulum on cart](/assets/posts/tut01/dpc_simulation_1.jpg)
+![Simulation of the double pendulum on cart](/assets/posts/tut01/sim_one@2x.gif)
 
 
 ## Basic system outline
@@ -299,6 +299,8 @@ end
 The `ode45` function is an explicit variable-step integration method based on Runge-Kutta methods. It chooses a timestep which is appropriate to the current state of the system. If the system undergoes quick or large changes, the integrator will choose a smaller timestep. The `ode45` function is therefore not the fastest integration method but very convenient to use. 
 
 We add a function to animate the system in [Python](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/python/simplified/dpc_simple_draw.py) and [Matlab](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/matlab/simplified/dpc_simple_draw.m), and we get this nice simulation (this time from a different starting position than above):
+
+![Simulation with sinusoidal control input](/assets/posts/tut01/sim_two_control@2x.gif)
 
 Easy!
 
