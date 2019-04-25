@@ -7,6 +7,11 @@ mathjax: true
 hidden: true
 ---
 
+Modeling is integral part of engineering and probably any other domain. With the popularity of deep learning a new type of black box model in form of artificial neural networks is on the way of replacing in parts models of the traditional approaches. However we think that this does not mean that traditional models will be less significant, but they might get even more important in some domains. Traditional models can for example be used to feed the deep learning algorithms that (at the moment) are hungry for large amounts of data, by generating data using classical modeling approaches. 
+
+In the domain of control theory, *Optimal Control* explicitly relies on a (white-box) model for the dynamical system, while (model-free) *Reinforcement Learning* trains a black-box model without knowing the behavior of the system (or environment, or plant). The two disciplines overlap where optimal control relies on black-box model for the dynamical system, or where optimal control solutations are used to train neural networks, or where reinforcement learning depends on some kind of model (model-based reinforcement learning).
+
+
 
 In this article we show implement the simulation model of a **double pendulum on a cart**, or **double-pole cart**, or **double cart-pole**. At the end of the article we will be simulate the double pendulum system on a cart like this:
 
@@ -298,13 +303,13 @@ end
 
 The `ode45` function is an explicit variable-step integration method based on Runge-Kutta methods. It chooses a timestep which is appropriate to the current state of the system. If the system undergoes quick or large changes, the integrator will choose a smaller timestep. The `ode45` function is therefore not the fastest integration method but very convenient to use. 
 
-We add a function to animate the system in [Python](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/python/simplified/dpc_simple_draw.py) and [Matlab](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/matlab/simplified/dpc_simple_draw.m), and we get this nice simulation (this time from a different starting position than above, and with a sinusoidal control input indicated by the red force line):
+We add a function to animate the system in [Python](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/python/dpc_draw.py) and [Matlab](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/matlab/simplified/dpc_draw.m), and we get this animation of the simulation (this time from a different starting position than above, and with a sinusoidal control input indicated by the red force line):
 
 ![Simulation with sinusoidal control input](/assets/posts/tut01/sim_two_control@2x.gif)
 
 **Download** all the code bundled in a zip file: [[Python](/assets/posts/tut01/dpc_python.zip)], [[Matlab](/assets/posts/tut01/dpc_matlab.zip)]. You can also find the code on the [github repository](https://github.com/jkoendev/double-pendulum-on-cart).
 
-If you liked the article, give a **clap** on medium, **star** on the [github repository](https://github.com/jkoendev/double-pendulum-on-cart), **share** the article, or whatever you like. Let us know if you find errors, or have feedback at blog@openocl.org or in the comments section at medium.
+If you liked the article, give a **clap** on medium, **star** on the [github repository](https://github.com/jkoendev/double-pendulum-on-cart), **share** the article, or whatever you like. Let us know if you find errors, or have feedback at blog@openocl.org, create a github issue or leave a comment in the comments section at medium.
 
 Written by: Jonas ([github](https://github.com/jkoendev), [twitter](https://twitter.com/JonasCoen))
 
