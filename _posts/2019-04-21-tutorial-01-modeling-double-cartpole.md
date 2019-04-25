@@ -126,11 +126,11 @@ Now we can plug the kinetic energies and the potential energies into the *Euler-
 
 where *q_0*, *q_1*, *q_2* are the coordinates of the system, *\dot{q_0}*, *\dot{q_1}*, *\dot{q_2}* are the velocities of the system, and $f$ is the force input (external force) that only acts on the cart in x-direction.
 
-We can calculate the derivatives in the *Euler-Lagrange* equation by hand, and solve for *\ddot{q}_0*, *\ddot{q}_1*, *\ddot{q}_2* but it is easier and less error prone to let the computer do the calculations for you. We prepared scripts in [Python](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/python/dpc_lagrange.py) and [Matlab](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/matlab/simplified/dpc_simple_lagrange.m) for you that use symbolic toolboxes with symbolic differentiation and do the calculation for us. From the scripts it turns out that we get something much more complicated than we expected! So here it comes..
+We can calculate the derivatives in the *Euler-Lagrange* equation by hand, and solve for *\ddot{q}_0*, *\ddot{q}_1*, *\ddot{q}_2* but it is easier and less error prone to let the computer do the calculations for you. We prepared scripts in [Python](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/python/dpc_lagrange.py) and [Matlab](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/matlab/simplified/dpc_simple_lagrange.m) for you that use symbolic toolboxes with symbolic differentiation and do the calculation for us. From the scripts it turns out that we get something much a bit complicated than we expected! So here it comes..
 
 ![Equation for the cart acceleration](/assets/posts/tut01/qddot_0@2x.png)
 
-Ok i am giving up here ...
+Ok we give up here writing down all the equations ...
 
 ![Equation for the angular acceleration of the first pole](/assets/posts/tut01/qddot_1@2x.gif)
 
