@@ -3,7 +3,7 @@ layout: post
 categories: tutorials
 title: "Modeling for Reinforcement Learning and Optimal Control: Double pendulum on a cart"
 permalink: /:categories/:title/
-id = 2019-04-25
+id: 2019-04-25
 mathjax: true
 hidden: false
 ---
