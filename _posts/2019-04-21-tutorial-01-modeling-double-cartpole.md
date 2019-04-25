@@ -7,15 +7,15 @@ mathjax: true
 hidden: true
 ---
 
-Modeling is integral part of engineering and probably any other domain. With the popularity of deep learning a new type of black box model in form of artificial neural networks is on the way of replacing in parts models of the traditional approaches. However we think that this does not mean that traditional models will be less significant, but they might get even more important in some domains. Traditional models can for example be used to feed the deep learning algorithms that (at the moment) are hungry for large amounts of data, by generating data using classical modeling approaches. 
+Modeling is integral part of engineering and probably any other domain. With the popularity of maschine learning a new type of black box model in form of artificial neural networks is on the way of replacing in parts models of the traditional approaches. However we think that this does not mean that traditional models will be less significant, but they might get even more important in some domains. Traditional models can for example be used to feed the deep learning algorithms that (at the moment) are hungry for large amounts of data, by generating data using classical modeling approaches. 
 
-In the domain of control theory, *Optimal Control* explicitly relies on a (white-box) model for the dynamical system, while (model-free) *Reinforcement Learning* trains a black-box model without knowing the behavior of the system (or environment, or plant). The two disciplines overlap where optimal control relies on black-box model for the dynamical system, or where optimal control solutations are used to train neural networks, or where reinforcement learning depends on some kind of model (model-based reinforcement learning).
+In the domain of control theory, *Optimal Control* explicitly relies on a white-box model for the dynamical system, while (model-free) *Reinforcement Learning* trains a black-box model without knowing the behavior of the system (or environment, or plant). The two disciplines overlap where optimal control relies on black-box model for the dynamical system, or where optimal control solutations are used to train neural networks, or where reinforcement learning depends on some kind of model (model-based reinforcement learning). We think that learning and control algorithms can be implemented most efficiently by utilizing the interplay between model-based and model-free algorithms when the computational (lookup) speed and expressive power of deep neural networks is combined with accuracy of physical euqations that are known for many types of systems.
 
-
-
-In this article we show implement the simulation model of a **double pendulum on a cart**, or **double-pole cart**, or **double cart-pole**. At the end of the article we will be simulate the double pendulum system on a cart like this:
+In this article we show how to implement a simulation model of a **double pendulum on a cart**, or **double-pole cart**, or **double cart-pole**. At the end of the article we will be able to simulate the double pendulum system on a cart like this:
 
 ![Simulation of the double pendulum on cart](/assets/posts/tut01/sim_one@2x.gif)
+
+You will also find the link to the **repository**, and links to **download** the simulation code for **Python** and **Matlab/Octave** at the end of the article.
 
 
 ## Basic system outline
