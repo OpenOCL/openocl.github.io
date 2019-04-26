@@ -4,7 +4,7 @@ categories: tutorials
 title: "Modeling for Reinforcement Learning and Optimal Control: Double pendulum on a cart"
 permalink: /:categories/:title/
 mathjax: true
-iden: 1245875362652
+identifier: 1245875362652
 hidden: false
 ---
 
