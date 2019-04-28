@@ -55,7 +55,7 @@
             <h4><a href="/blog/"> Blog: </a> </h4>
 
             <ul>
-            {% for post in site.posts %}
+            {% for post in site.posts limit:4 %}
               {% if post.hidden != true  %}
               <li>
                 <p class="date">{{ post.date | date_to_string }}</p>
@@ -64,6 +64,7 @@
               {% endif %}
             {% endfor %}
             </ul>
+            <p class="blog-see-more"><a href="/blog/">see more</a></p>
           </div>
           {% endif %}
            {% if page.title == "API documentation" %}
