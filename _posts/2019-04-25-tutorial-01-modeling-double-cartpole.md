@@ -126,7 +126,7 @@ Now we can plug the kinetic energies and the potential energies into the *Euler-
 
 where *q_0*, *q_1*, *q_2* are the coordinates of the system, *\dot{q_0}*, *\dot{q_1}*, *\dot{q_2}* are the velocities of the system, and $f$ is the force input (external force) that only acts on the cart in x-direction.
 
-We can calculate the derivatives in the *Euler-Lagrange* equation by hand, and solve for *\ddot{q}_0*, *\ddot{q}_1*, *\ddot{q}_2* but it is easier and less error prone to let the computer do the calculations for you. We prepared scripts in [Python](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/python/dpc_lagrange.py) and [Matlab](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/matlab/simplified/dpc_simple_lagrange.m) for you that use symbolic toolboxes with symbolic differentiation and do the calculation for us. From the scripts it turns out that we get something much a bit complicated than we expected! So here it comes..
+We can calculate the derivatives in the *Euler-Lagrange* equation by hand, and solve for *\ddot{q}_0*, *\ddot{q}_1*, *\ddot{q}_2* but it is easier and less error prone to let the computer do the calculations for you. We prepared scripts in [Python](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/python/dpc_lagrange.py) and [Matlab](https://github.com/jkoendev/double-pendulum-on-cart/blob/master/matlab/simplified/dpc_simple_lagrange.m) for you that use symbolic toolboxes with symbolic differentiation and do the calculation for us. From the scripts it turns out that we get something a bit more complicated than we expected! So here it comes..
 
 ![Equation for the cart acceleration](/assets/posts/tut01/qddot_0@2x.png)
 
@@ -140,7 +140,7 @@ These type of equations are called *ordinary differential equations* as they rel
 
 ![State vector](/assets/posts/tut01/x_flat@2x.gif)
 
-We can now use a numerical integration method like *explicit Euler* [[wikipedia](https://en.wikipedia.org/wiki/Euler_method)], *Runge-Kutta 4* [[wikipedia](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods)], or even implicit methods like *implicit Euler* [[wikipedia](https://en.wikipedia.org/wiki/Backward_Euler_method)], *BDF* [[wikipedia](https://en.wikipedia.org/wiki/Backward_differentiation_formula)], or *Collocation* [[wikipedia](https://en.wikipedia.org/wiki/Collocation_method)] to simluate the system. Fortunately in Python and Matlab there are already excellent implementation available that we can use (although at least the explicit methods are super easy to implement!).
+We can now use a numerical integration method like *explicit Euler* [[wikipedia](https://en.wikipedia.org/wiki/Euler_method)], *Runge-Kutta 4* [[wikipedia](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods)], or even implicit methods like *implicit Euler* [[wikipedia](https://en.wikipedia.org/wiki/Backward_Euler_method)], *BDF* [[wikipedia](https://en.wikipedia.org/wiki/Backward_differentiation_formula)], or *Collocation* [[wikipedia](https://en.wikipedia.org/wiki/Collocation_method)] to simulate the system. Fortunately in Python and Matlab there are already excellent implementation available that we can use (although at least the explicit methods are super easy to implement!).
 
 To be able to use the integration methods in Matlab and Python have to define a ordinary differential equation function $f(x)$ which maps the state variables $x$ to the time derivative of the state $\dot{x}$:
 
