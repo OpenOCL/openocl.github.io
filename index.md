@@ -2,8 +2,8 @@
 last_modified_at: 2019-04-25
 title: Open Optimal Control Library
 ---
-<img src="https://openocl.org/imgs/cartpole.gif" width="31%"> <img src="https://openocl.org/assets/img/race_white.png" width="31%"> <img src="https://openocl.org/imgs/circ.png" width="31%">  
-<img src="https://openocl.org/assets/img/pend_white.png" width="31%"> <img src="https://openocl.org/imgs/ballbeam.png" width="31%"> <img src="https://openocl.org/imgs/lemn.png" width="31%">    
+<img src="https://openocl.org/imgs/cartpole.gif" width="222px"> <img src="https://openocl.org/assets/img/race_white.png" width="220px"> <img src="https://openocl.org/imgs/circ.png" width="222px">  
+<img src="https://openocl.org/assets/img/pend_white.png" width="220px"> <img src="https://openocl.org/imgs/ballbeam.png" width="31%"> <img src="https://openocl.org/imgs/lemn.png" width="222px">    
 [Get started](get-started.md) - [API Docs](api-docs.md)
 
 With the Open Optimal Control Library you can:
