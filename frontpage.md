@@ -6,7 +6,7 @@ permalink: frontpage
 
 ## Quick start
 
-[Download](/get-started/) the software [here] and have a look at the [API Docs](api-docs.md).
+[Download](/get-started/) the software and have a look at the [API Docs](api-docs.md).
 
 ## Features
 
