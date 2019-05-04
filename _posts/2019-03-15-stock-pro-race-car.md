@@ -6,6 +6,8 @@ permalink: /:categories/:title/
 hidden: false
 ---
 
+# 1:10 scale pro stock remote car racing
+
 **Mustafa Alp** from the *Polytechnic University of Milan* sent us a great video of his implementation with the OpenOCL toolbox.
 
 ![Animation of race track](/assets/posts/lapsim_2208_v1.gif)  
