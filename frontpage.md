@@ -27,7 +27,7 @@ permalink: frontpage
 <div class="content-icon">
   <img src="/assets/img/icon-derivatives.png" class="content-icon-left">
   <h4>Easy modeling</h4>
-  <p>The modeling language lets you define your problems in the most natural ways.</p>
+  <p>The *optimal control modeling language* lets you define your problems in the most natural way.</p>
 </div>
 
 <div class="content-icon">
