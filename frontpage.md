@@ -4,14 +4,56 @@ title: Open Optimal Control Library
 permalink: frontpage
 ---
 
-<img src="/assets/img/double-pend-sim.gif" class="content-img-left">
-<p class="content-img-descr"><strong>Modeling</strong> and <strong>simulation</strong> of dynamical systems.</p>
+## Features
 
-<img src="/assets/img/cartpole.gif" class="content-img-right">
-<p class="content-img-descr">Formulation of <strong>optimal control</strong> problems.</p>
+<div class="content-icon">
+  <img src="/assets/img/icon-fast.png" class="content-icon-left">
+  <h4>Fast</h4>
+  <p>Uses fast C++ implementations in the backend.</p>
+</div>
 
-<img src="https://openocl.org/imgs/cartpole.gif" class="content-img-left">
-<p class="content-img-descr">Formulation of <strong>optimal control</strong> problems.</p>
+<div class="content-icon">
+  <img src="/assets/img/icon-get-started.png" class="content-icon-left">
+  <h4>Get started within minutes</h4>
+  <p>The package contains all software that you need to solve optimal control problems.</p>
+</div>
+
+<div class="content-icon">
+  <img src="/assets/img/icon-derivatives.png" class="content-icon-left">
+  <h4>Free derivatives</h4>
+  <p>Derivatives are calculated automatically.</p>
+</div>
+
+<div class="content-icon">
+  <img src="/assets/img/icon-derivatives.png" class="content-icon-left">
+  <h4>Easy modeling</h4>
+  <p>The modeling language lets you define your problems in the most natural ways.</p>
+</div>
+
+<div class="content-icon">
+  <img src="/assets/img/icon-derivatives.png" class="content-icon-left">
+  <h4>Model Predictive Control</h4>
+  <p>Implement a predictive controller for you real physical system.</p>
+</div>
+
+<div class="content-icon">
+  <img src="/assets/img/icon-derivatives.png" class="content-icon-left">
+  <h4>Trajectory optimization</h4>
+  <p>Analyse the behaviour and improve the performance of your system by optimizing parameters and the controller.</p>
+</div>
+
+
+## Examples
+
+The examples give you a quick overview on what problems you can solve with the optimal control library.
+
+<img src="https://openocl.org/assets/img/race_white.png" width="31%">
+
+<div class="content-img-left">
+  <p><strong>Modeling</strong> and <strong>simulation</strong> of dynamical systems.</p>
+  <img src="/assets/img/double-pend-sim.gif">
+</div>
+
 
 <img src="https://openocl.org/assets/img/race_white.png" width="31%"> <img src="https://openocl.org/imgs/circ.png" width="31%">  
 <img src="https://openocl.org/assets/img/pend_white.png" width="31%"> <img src="https://openocl.org/imgs/ballbeam.png" width="31%"> <img src="https://openocl.org/imgs/lemn.png" width="31%">    
