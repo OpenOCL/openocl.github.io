@@ -60,6 +60,7 @@ The following applications give you a quick overview on which kind of problems y
 <div class="content-row-centered">
   <div class="content-left-double">
     <h4>Optimization of vehicle dynamics, race track simulation, predictive controller for autonomous driving.</h4> 
+    <p>Have a look at the post about the remote controlled race car <a href="/contributed/stock-pro-race-car/"> laptime optimization</a>, and the <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/04RaceCar">race car</a> example.</p>
   </div>
   <div class="content-right-single">
     <img src="/assets/img/race_white.png">
