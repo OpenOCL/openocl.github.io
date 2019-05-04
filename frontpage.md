@@ -54,9 +54,13 @@ permalink: frontpage
 
 The following applications give you a quick overview on which kind of problems you can solve with the optimal control library, you can find example code at the given links.
 
-<div class="content-img-right">
-  <h4>Optimization of vehicle dynamics, race track simulation, predictive controller for autonomous driving.</h4> 
-  <img src="/assets/img/race_white.png">
+<div class="content-row">
+  <div class="content-left-double">
+    <h4>Optimization of vehicle dynamics, race track simulation, predictive controller for autonomous driving.</h4> 
+  </div>
+  <div class="content-right-single">
+    <img src="/assets/img/race_white.png">
+  </div>
 </div>
 
 <div class="content-img-left">
