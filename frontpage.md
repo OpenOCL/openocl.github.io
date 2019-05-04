@@ -69,7 +69,7 @@ The following applications give you a quick overview on which kind of problems y
 <div class="content-row-centered">
   <div class="content-right-double">
     <h4>Control of unstable mechanical systems.</h4> 
-    <p>Get example code for the [Van Der Pol](https://github.com/OpenOCL/OpenOCL/tree/master/Examples/01VanDerPol) oszillator, [pendulum on a cart](https://github.com/OpenOCL/OpenOCL/tree/master/Examples/05CartPole), [pendulum swingup](https://github.com/OpenOCL/OpenOCL/tree/master/Examples/03Pendulum), [ball on a plate](https://github.com/OpenOCL/OpenOCL/tree/master/Examples/02BallAndBeam).
+    <p>Get example code for the <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/01VanDerPol">Van Der Pol</a> oszillator, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/05CartPole">pendulum on a cart</a>, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/03Pendulum">pendulum swingup</a>, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/02BallAndBeam">ball on a plate</a>.
   </div>
   <div class="content-left-single">
     <img src="/imgs/cartpole.gif">
@@ -79,7 +79,7 @@ The following applications give you a quick overview on which kind of problems y
 <div class="content-row-centered">
   <div class="content-left-double">
     <h4>Optimization of flying systems, aircraft, and spacecraft flight trajectories, control of unmanned aerial vehicles.</h4> 
-    <p>Have a look at the [OpenAWE](https://openawe.github.org) project which is about optimization of flight trajectories for <em>airborne wind energy</em>.
+    <p>Have a look at the <a href="https://openawe.github.org">OpenAWE</a> project which is about optimization of flight trajectories for <em>airborne wind energy</em>.
   </div>
   <div class="content-right-single">
     <img src="/imgs/lemn.png">
