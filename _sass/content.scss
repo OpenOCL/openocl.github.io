@@ -17,6 +17,13 @@ body {
   max-width: 33.3333333333%;
 }
 
+.content-row-centered {
+ text-align:center;
+ display: flex;
+ flex-wrap: wrap;
+ align-items: center;
+}
+
 .content-left-single {
  order: 1; 
   flex: 0 0 40%;
