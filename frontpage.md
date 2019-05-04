@@ -60,7 +60,6 @@ The following applications give you a quick overview on which kind of problems y
 <div class="content-row-centered">
   <div class="content-left-double">
     <h4>Optimization of vehicle dynamics, race track simulation, predictive controller for autonomous driving.</h4> 
-    <p>
   </div>
   <div class="content-right-single">
     <img src="/assets/img/race_white.png">
@@ -80,6 +79,7 @@ The following applications give you a quick overview on which kind of problems y
 <div class="content-row-centered">
   <div class="content-left-double">
     <h4>Optimization of flying systems, aircraft, and spacecraft flight trajectories, control of unmanned aerial vehicles.</h4> 
+    <p>Have a look at the [OpenAWE](https://openawe.github.org) project which is about optimization of flight trajectories for <em>airborne wind energy</em>.
   </div>
   <div class="content-right-single">
     <img src="/imgs/lemn.png">
