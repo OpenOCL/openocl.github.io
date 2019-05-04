@@ -6,6 +6,8 @@ permalink: /:categories/:title/
 mathjax: false
 identifier: 1245875362652
 ---
+
+# Modeling for Reinforcement Learning and Optimal Control: Double pendulum on a cart
   
 Modeling is an integral part of engineering and probably any other domain. With the popularity of **machine learning** a new type of black box model in form of artificial neural networks is on the way of replacing in parts models of the traditional approaches. However we think that this does not mean that traditional models will be less significant, but they might get even more important in some domains. Traditional models can for example be used to feed the deep learning algorithms that (at the moment) are hungry for large amounts of data, by generating data using classical modeling approaches. 
 
