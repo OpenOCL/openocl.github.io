@@ -80,7 +80,7 @@ The following applications give you a quick overview on which kind of problems y
 <div class="content-row-centered">
   <div class="content-left-double">
     <h4>Optimization of flying systems, aircraft, and spacecraft flight trajectories, control of unmanned aerial vehicles.</h4> 
-    <p>Have a look at the <a href="https://openawe.github.org">OpenAWE</a> project which is about optimization of flight trajectories for <em>airborne wind energy</em>.</p>
+    <p>Have a look at the <a href="https://openawe.github.io">OpenAWE</a> project which is about optimization of flight trajectories for <em>airborne wind energy</em>.</p>
   </div>
   <div class="content-right-single">
     <img src="/imgs/lemn.png">
