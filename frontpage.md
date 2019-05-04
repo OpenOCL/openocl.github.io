@@ -5,6 +5,8 @@ title: Open Optimal Control Library
 permalink: frontpage
 ---
 
+# Open Optimal Control Library
+
 ## Quick start
 
 [Download](/get-started/) the software and have a look at the [API Docs](api-docs.md).
