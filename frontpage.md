@@ -65,38 +65,7 @@ The following applications give you a quick overview on which kind of problems y
   <p>Optimization of flying systems, aircraft, and spacecraft flight trajectories, control of unmanned aerial vehicles.</p> 
   <img src="https://openocl.org/assets/img/lemn.png" width="31%">
 </div>
-                                                                
-
-
-With the Open Optimal Control Library you can:
-* Model **dynamical systems**
-* Formulate **optimal control** problems
-* Automatically generate necessary **derivatives** (jabobian, hessian)
-* Solve **trajectory optimization** problems
-* Implement a **model-predictive controller** (MPC)
-
-The software can be used from Matlab and Octave. Python and C++ implementations as well as a unified optimal control modeling language are under development.
-
-OpenOCL interfaces Ipopt [1] to numerically solve the optimal control problems and CasADi [2] to automatically calculate the necessary derivatives by algorithmic differentiation. It implements direct methods to optimal control (collocation/pseudo-spectral methods).
-
-### Quick start
-
-Go the *getting started* section to [download](get-started.md) the toolbox, visit the [tutorial](tutorial.md), or go straight to the [examples](https://github.com/JonasKoenemann/optimal-control/tree/master/Examples)!
-
-In the examples you will find (ordered by problem complexity):
-* [Van der Pol oscillator](https://github.com/OpenOCL/OpenOCL/blob/master/Examples/01VanDerPol/mainVanDerPol.m)
-* [Ball on beam equilibrium](https://github.com/OpenOCL/OpenOCL/tree/master/Examples/02BallAndBeam)
-* [Pendulum swingup](https://github.com/OpenOCL/OpenOCL/tree/master/Examples/03Pendulum)
-* [Race car control](https://github.com/OpenOCL/OpenOCL/tree/master/Examples/04RaceCar)
-* [Cart-pole swingup](https://github.com/OpenOCL/OpenOCL/tree/master/Examples/05CartPole)
-
-
-### Additional models
-
-* Airborne wind energy: [openawe.github.io](https://openawe.github.io/)
-* Robotics (arm-type, KUKA, Puma560, using Peter Corke's robotics toolbox): [github:openocl_models](https://github.com/JonasKoenemann/openocl_models) (very experimental)
-
-
+     
 ### Contact
 
 info [at] openocl.org
