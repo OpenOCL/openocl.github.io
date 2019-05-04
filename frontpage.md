@@ -54,7 +54,7 @@ permalink: frontpage
 
 The following applications give you a quick overview on which kind of problems you can solve with the optimal control library, you can find example code at the given links.
 
-<div class="content-row">
+<div class="content-row-centered">
   <div class="content-left-double">
     <h4>Optimization of vehicle dynamics, race track simulation, predictive controller for autonomous driving.</h4> 
   </div>
@@ -63,7 +63,7 @@ The following applications give you a quick overview on which kind of problems y
   </div>
 </div>
 
-<div class="content-row">
+<div class="content-row-centered">
   <div class="content-right-double">
     <h4>Control of unstable mechanical systems.</h4> 
   </div>
@@ -72,7 +72,7 @@ The following applications give you a quick overview on which kind of problems y
   </div>
 </div>
 
-<div class="content-row">
+<div class="content-row-centered">
   <div class="content-left-double">
     <h4>Optimization of flying systems, aircraft, and spacecraft flight trajectories, control of unmanned aerial vehicles.</h4> 
   </div>
