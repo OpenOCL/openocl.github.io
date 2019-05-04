@@ -7,13 +7,14 @@ body {
 }
 
 .content-row {
+ text-align:center;
  display: flex;
  flex-wrap: wrap;
 }
 
 .content-icon {
-  width: 175px;
-  text-align:center;
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
 }
 
 a {
