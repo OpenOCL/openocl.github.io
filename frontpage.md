@@ -4,6 +4,10 @@ title: Open Optimal Control Library
 permalink: frontpage
 ---
 
+## Quick start
+
+[Download](/get-started/) the software [here] and have a look at the [API Docs](api-docs.md).
+
 ## Features
 
 <div class="content-icon">
@@ -32,7 +36,7 @@ permalink: frontpage
 
 <div class="content-icon">
   <img src="/assets/img/icon-derivatives.png" class="content-icon-left">
-  <h4>Model Predictive Control</h4>
+  <h4>Model Predictive Control (MPC)</h4>
   <p>Implement a predictive controller for you real physical system.</p>
 </div>
 
@@ -43,21 +47,26 @@ permalink: frontpage
 </div>
 
 
-## Examples
+## Applications
 
-The examples give you a quick overview on what problems you can solve with the optimal control library.
+The following applications give you a quick overview on which kind of problems you can solve with the optimal control library, you can find example code at the given links.
 
-<img src="https://openocl.org/assets/img/race_white.png" width="31%">
-
-<div class="content-img-left">
-  <p><strong>Modeling</strong> and <strong>simulation</strong> of dynamical systems.</p>
-  <img src="/assets/img/double-pend-sim.gif">
+<div class="content-img-right">
+  <p>Optimization of vehicle dynamics, race track simulation, predictive controller for autonomous driving.</p> 
+  <img src="https://openocl.org/assets/img/race_white.png" width="31%">
 </div>
 
+<div class="content-img-left>
+  <p>Control of unstable mechanical systems.</p> 
+  <img src="https://openocl.org/assets/img/pend.png" width="31%">
+</div>
 
-<img src="https://openocl.org/assets/img/race_white.png" width="31%"> <img src="https://openocl.org/imgs/circ.png" width="31%">  
-<img src="https://openocl.org/assets/img/pend_white.png" width="31%"> <img src="https://openocl.org/imgs/ballbeam.png" width="31%"> <img src="https://openocl.org/imgs/lemn.png" width="31%">    
-[Get started](get-started.md) - [API Docs](api-docs.md)
+<div class="content-img-right>
+  <p>Optimization of flying systems, aircraft, and spacecraft flight trajectories, control of unmanned aerial vehicles.</p> 
+  <img src="https://openocl.org/assets/img/lemn.png" width="31%">
+</div>
+                                                                
+
 
 With the Open Optimal Control Library you can:
 * Model **dynamical systems**
