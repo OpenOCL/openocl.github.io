@@ -60,6 +60,7 @@ The following applications give you a quick overview on which kind of problems y
 <div class="content-row-centered">
   <div class="content-left-double">
     <h4>Optimization of vehicle dynamics, race track simulation, predictive controller for autonomous driving.</h4> 
+    <p>
   </div>
   <div class="content-right-single">
     <img src="/assets/img/race_white.png">
@@ -69,6 +70,7 @@ The following applications give you a quick overview on which kind of problems y
 <div class="content-row-centered">
   <div class="content-right-double">
     <h4>Control of unstable mechanical systems.</h4> 
+    <p>Get example code for the [Van Der Pol](https://github.com/OpenOCL/OpenOCL/tree/master/Examples/01VanDerPol) oszillator, [pendulum on a cart](https://github.com/OpenOCL/OpenOCL/tree/master/Examples/05CartPole), [pendulum swingup](https://github.com/OpenOCL/OpenOCL/tree/master/Examples/03Pendulum), [ball on a plate](https://github.com/OpenOCL/OpenOCL/tree/master/Examples/02BallAndBeam).
   </div>
   <div class="content-left-single">
     <img src="/imgs/cartpole.gif">
