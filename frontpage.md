@@ -56,17 +56,17 @@ The following applications give you a quick overview on which kind of problems y
 
 <div class="content-img-right">
   <h4>Optimization of vehicle dynamics, race track simulation, predictive controller for autonomous driving.</h4> 
-  <img src="https://openocl.org/assets/img/race_white.png">
+  <img src="/assets/img/race_white.png">
 </div>
 
 <div class="content-img-left>
   <h4>Control of unstable mechanical systems.</h4> 
-  <img src="https://openocl.org/assets/img/pend.png">
+  <img src="/imgs/cartpole.gif">
 </div>
 
 <div class="content-img-right>
   <h4>Optimization of flying systems, aircraft, and spacecraft flight trajectories, control of unmanned aerial vehicles.</h4> 
-  <img src="https://openocl.org/assets/img/lemn.png">
+  <img src="/imgs/lemn.png">
 </div>
      
 ### Contact
