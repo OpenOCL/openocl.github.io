@@ -4,6 +4,8 @@ last_modified_at: 2019-03-15
 title: Legal Notice
 ---
 
+# Legal Notice
+
 openocl.org is a project of:
 
 > Jonas Koenemann   
