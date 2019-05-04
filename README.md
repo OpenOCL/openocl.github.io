@@ -15,3 +15,7 @@ Use / to go to main page.
 ```markdown
 [click here](/)
 ```
+
+## design
+
+The main content has a width of 730
