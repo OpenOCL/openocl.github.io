@@ -17,6 +17,39 @@ body {
   max-width: 33.3333333333%;
 }
 
+.content-img-left { 
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.content-img-left h4 {
+  flex: 0 0 66.666666666%;
+  max-width: 66.666666666%;
+  order: 2;
+}
+.content-img-left img{
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
+  order: 1;
+}
+
+.content-img-right { 
+ display: flex;
+ flex-wrap: wrap;
+}
+
+.content-img-right h4 {
+  flex: 0 0 66.666666666%;
+  max-width: 66.666666666%;
+  order: 1;
+}
+.content-img-right img{
+  flex: 0 0 33.3333333333%;
+  max-width: 33.3333333333%;
+  order: 2;
+}
+
+
 a {
   color:#267CB9;
   text-decoration:none;
