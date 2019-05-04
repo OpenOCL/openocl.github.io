@@ -63,14 +63,22 @@ The following applications give you a quick overview on which kind of problems y
   </div>
 </div>
 
-<div class="content-img-left">
-  <h4>Control of unstable mechanical systems.</h4> 
-  <img src="/imgs/cartpole.gif">
+<div class="content-row">
+  <div class="content-right-double">
+    <h4>Control of unstable mechanical systems.</h4> 
+  </div>
+  <div class="content-left-single">
+    <img src="/imgs/cartpole.gif">
+  </div>
 </div>
 
-<div class="content-img-right">
-  <h4>Optimization of flying systems, aircraft, and spacecraft flight trajectories, control of unmanned aerial vehicles.</h4> 
-  <img src="/imgs/lemn.png">
+<div class="content-row">
+  <div class="content-left-double">
+    <h4>Optimization of flying systems, aircraft, and spacecraft flight trajectories, control of unmanned aerial vehicles.</h4> 
+  </div>
+  <div class="content-right-single">
+    <img src="/imgs/lemn.png">
+  </div>
 </div>
      
 ### Contact
