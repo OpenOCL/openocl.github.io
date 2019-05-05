@@ -62,7 +62,7 @@ The following applications give you a quick overview on which kind of problems y
     <h4>Autonomous Driving</h4> 
     <p>Optimization of vehicle dynamics, race track simulation, implementation of a predictive controller for autonomous driving. Have a look at the blog post about <a href="/contributed/stock-pro-race-car/">laptime optimization of a remote controlled race car </a>, and the <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/04RaceCar">race car example code</a>.</p>
   </div>
-  <div class="content-row-right">
+  <div class="content-row-right content-row-right-img">
     <img src="/assets/img/race_white.png">
   </div>
 </div>
@@ -72,7 +72,7 @@ The following applications give you a quick overview on which kind of problems y
     <h4>Aerospace engineering</h4> 
     <p>Optimization of aircraft and spacecraft flight trajectories, control of unmanned aerial vehicles. Have a look at the <a href="https://openawe.github.io">OpenAWE</a> project which is about optimization of flight trajectories for <em>airborne wind energy</em>.</p>
   </div>
-  <div class="content-row-left">
+  <div class="content-row-left content-row-left-img">
     <img src="/imgs/lemn.png">
   </div>
 </div>
@@ -82,7 +82,7 @@ The following applications give you a quick overview on which kind of problems y
     <h4>Unstable mechanical systems</h4> 
     <p>Get example code for the <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/01VanDerPol">Van Der Pol</a> oszillator, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/05CartPole">pendulum on a cart</a>, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/03Pendulum">pendulum swingup</a>, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/02BallAndBeam">ball on a plate</a>. The toobox can also be used for teaching!</p>
   </div>
-  <div class="content-row-right">
+  <div class="content-row-right content-row-right-img">
     <img src="/imgs/cartpole.gif">
   </div>
 </div>
