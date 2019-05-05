@@ -46,11 +46,19 @@ body {
   text-align: left;
 }
 
+.content-left-single h4 {
+  text-align: center;
+}
+
 .content-left-double {
   order: 1; 
   flex: 0 0 60%;
   max-width: 60%;
   text-align: left;
+}
+
+.content-left-double h4 {
+  text-align: center;
 }
 
 .content-right-single {
@@ -60,11 +68,19 @@ body {
   text-align: right;
 }
 
+.content-right-single h4 {
+  text-align: center;
+}
+
 .content-right-double {
   order: 2; 
   flex: 0 0 60%;
   max-width: 60%;
   text-align: right;
+}
+
+.content-right-double h4 {
+  text-align: center;
 }
 
 
