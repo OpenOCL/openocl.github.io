@@ -40,27 +40,31 @@ body {
 }
 
 .content-left-single {
- order: 1; 
+  order: 1; 
   flex: 0 0 40%;
   max-width: 40%;
+  text-align: left;
 }
 
 .content-left-double {
- order: 1; 
+  order: 1; 
   flex: 0 0 60%;
   max-width: 60%;
+  text-align: left;
 }
 
 .content-right-single {
- order: 2; 
+  order: 2; 
   flex: 0 0 40%;
   max-width: 40%;
+  text-align: right;
 }
 
 .content-right-double {
- order: 2; 
+  order: 2; 
   flex: 0 0 60%;
   max-width: 60%;
+  text-align: right;
 }
 
 
