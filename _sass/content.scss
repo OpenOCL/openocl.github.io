@@ -43,6 +43,9 @@ body {
   order: 1; 
   flex: 0 0 50%;
   max-width: 50%;
+}
+
+.content-row-left h4, .content-row-left p {
   margin: 0 30px 0 0;
 }
 
@@ -50,6 +53,9 @@ body {
   order: 2; 
   flex: 0 0 50%;
   max-width: 50%;
+}
+
+.content-row-right h4, .content-row-right p {
   margin: 0 0 0 30px;
 }
 
