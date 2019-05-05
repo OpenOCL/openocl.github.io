@@ -59,21 +59,11 @@ The following applications give you a quick overview on which kind of problems y
 
 <div class="content-row-centered">
   <div class="content-left-double">
-    <h4>Optimization of vehicle dynamics, race track simulation, predictive controller for autonomous driving.</h4> 
-    <p>Have a look at the post about the remote controlled race car <a href="/contributed/stock-pro-race-car/"> laptime optimization</a>, and the <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/04RaceCar">race car</a> example.</p>
+    <h4>Autonomous Driving</h4> 
+    <p>Optimization of vehicle dynamics, race track simulation, implementation of a predictive controller for autonomous driving. Have a look at the blog post about the <a href="/contributed/stock-pro-race-car/"> remote controlled race car laptime optimization</a>, and the <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/04RaceCar">race car example</a>.</p>
   </div>
   <div class="content-right-single">
     <img src="/assets/img/race_white.png">
-  </div>
-</div>
-
-<div class="content-row-centered">
-  <div class="content-right-double">
-    <h4>Control of unstable mechanical systems.</h4> 
-    <p>Get example code for the <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/01VanDerPol">Van Der Pol</a> oszillator, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/05CartPole">pendulum on a cart</a>, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/03Pendulum">pendulum swingup</a>, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/02BallAndBeam">ball on a plate</a>.</p>
-  </div>
-  <div class="content-left-single">
-    <img src="/imgs/cartpole.gif">
   </div>
 </div>
 
@@ -84,6 +74,16 @@ The following applications give you a quick overview on which kind of problems y
   </div>
   <div class="content-right-single">
     <img src="/imgs/lemn.png">
+  </div>
+</div>
+
+<div class="content-row-centered">
+  <div class="content-right-double">
+    <h4>Control of unstable mechanical systems.</h4> 
+    <p>Get example code for the <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/01VanDerPol">Van Der Pol</a> oszillator, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/05CartPole">pendulum on a cart</a>, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/03Pendulum">pendulum swingup</a>, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/02BallAndBeam">ball on a plate</a>. The toobox is also great for teaching!</p>
+  </div>
+  <div class="content-left-single">
+    <img src="/imgs/cartpole.gif">
   </div>
 </div>
      
