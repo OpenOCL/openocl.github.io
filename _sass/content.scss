@@ -33,7 +33,6 @@ body {
  display: flex;
  flex-wrap: wrap;
  align-items: center;
- margin: 0 0 20px 0;
 }
 
 .content-row-centered h4 {
@@ -47,16 +46,12 @@ body {
 }
 
 .content-left-single p {
-  margin: 0 30px 0 0;
 }
 
 .content-left-double {
   order: 1; 
-  flex: 0 0 60%;
-  max-width: 60%;
-
-.content-left-double p {
-  margin: 0 30px 0 0;
+  flex: 0 0 40%;
+  max-width: 40%;
 }
 
 .content-right-single {
@@ -64,25 +59,11 @@ body {
   flex: 0 0 40%;
   max-width: 40%;
 }
-
-.content-right-single p {
-  margin: 0 0 0 30px;
-}
-
 .content-right-double {
   order: 2; 
-  flex: 0 0 60%;
-  max-width: 60%;
+  flex: 0 0 40%;
+  max-width: 40%;
 }
-
-.content-right-double h4 {
-  text-align: center;
-}
-
-.content-right-double p {
-  margin: 0 0 0 30px;
-}
-
 
 a {
   color:#267CB9;
