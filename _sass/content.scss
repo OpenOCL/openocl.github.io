@@ -29,10 +29,11 @@ body {
 }
 
 .content-row-centered {
- text-align: justify;
- display: flex;
- flex-wrap: wrap;
- align-items: center;
+  text-align: justify;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .content-row-centered h4 {
