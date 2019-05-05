@@ -56,12 +56,16 @@ body {
   max-width: 50%;
 }
 
-.content-row-img {
-  text-align: center;
-}
-
 .content-row-right h4, .content-row-right p {
   margin: 0 0 0 30px;
+}
+
+.content-row-left-img {
+  text-align: left;
+}
+
+.content-row-right-img {
+  text-align: right;
 }
 
 a {
