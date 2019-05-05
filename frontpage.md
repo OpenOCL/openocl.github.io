@@ -69,7 +69,7 @@ The following applications give you a quick overview on which kind of problems y
 
 <div class="content-row-centered">
   <div class="content-right-double">
-    <h4>Flying systems</h4> 
+    <h4>Aerospace engineering</h4> 
     <p>Optimization of aircraft and spacecraft flight trajectories, control of unmanned aerial vehicles. Have a look at the <a href="https://openawe.github.io">OpenAWE</a> project which is about optimization of flight trajectories for <em>airborne wind energy</em>.</p>
   </div>
   <div class="content-left-single">
