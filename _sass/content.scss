@@ -35,15 +35,15 @@ body {
  align-items: center;
 }
 
+.content-row-centered h4 {
+  text-align: center;
+}
+
 .content-left-single {
   order: 1; 
   flex: 0 0 40%;
   max-width: 40%;
   text-align: left;
-}
-
-.content-left-single h4 {
-  text-align: center;
 }
 
 .content-left-single p {
@@ -57,10 +57,6 @@ body {
   text-align: left;
 }
 
-.content-left-double h4 {
-  text-align: center;
-}
-
 .content-left-double p {
   margin: 0 30px 0 0;
 }
@@ -70,10 +66,6 @@ body {
   flex: 0 0 40%;
   max-width: 40%;
   text-align: right;
-}
-
-.content-right-single h4 {
-  text-align: center;
 }
 
 .content-right-single p {
