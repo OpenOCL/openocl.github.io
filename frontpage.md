@@ -60,7 +60,7 @@ The following applications give you a quick overview on which kind of problems y
 <div class="content-row-centered">
   <div class="content-left-double">
     <h4>Autonomous Driving</h4> 
-    <p>Optimization of vehicle dynamics, race track simulation, implementation of a predictive controller for autonomous driving. Have a look at the blog post about the <a href="/contributed/stock-pro-race-car/"> remote controlled race car laptime optimization</a>, and the <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/04RaceCar">race car example</a>.</p>
+    <p>Optimization of vehicle dynamics, race track simulation, implementation of a predictive controller for autonomous driving. Have a look at the blog post about <a href="/contributed/stock-pro-race-car/">laptime optimization of a remote controlled race car </a>, and the <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/04RaceCar">race car example code</a>.</p>
   </div>
   <div class="content-right-single">
     <img src="/assets/img/race_white.png">
@@ -70,7 +70,7 @@ The following applications give you a quick overview on which kind of problems y
 <div class="content-row-centered">
   <div class="content-right-double">
     <h4>Flying systems</h4> 
-    <p>Optimization of flying systems, aircraft, and spacecraft flight trajectories, control of unmanned aerial vehicles.Have a look at the <a href="https://openawe.github.io">OpenAWE</a> project which is about optimization of flight trajectories for <em>airborne wind energy</em>.</p>
+    <p>Optimization of aircraft and spacecraft flight trajectories, control of unmanned aerial vehicles. Have a look at the <a href="https://openawe.github.io">OpenAWE</a> project which is about optimization of flight trajectories for <em>airborne wind energy</em>.</p>
   </div>
   <div class="content-left-single">
     <img src="/imgs/lemn.png">
@@ -80,7 +80,7 @@ The following applications give you a quick overview on which kind of problems y
 <div class="content-row-centered">
   <div class="content-left-double">
     <h4>Unstable mechanical systems</h4> 
-    <p>Get example code for the <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/01VanDerPol">Van Der Pol</a> oszillator, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/05CartPole">pendulum on a cart</a>, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/03Pendulum">pendulum swingup</a>, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/02BallAndBeam">ball on a plate</a>. The toobox is also great for teaching!</p>
+    <p>Get example code for the <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/01VanDerPol">Van Der Pol</a> oszillator, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/05CartPole">pendulum on a cart</a>, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/03Pendulum">pendulum swingup</a>, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/02BallAndBeam">ball on a plate</a>. The toobox can also be used for teaching!</p>
   </div>
   <div class="content-right-single">
     <img src="/imgs/cartpole.gif">
