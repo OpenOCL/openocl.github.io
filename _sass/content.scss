@@ -29,14 +29,10 @@ body {
 }
 
 .content-row-centered {
- text-align:center;
+ text-align: justify;
  display: flex;
  flex-wrap: wrap;
  align-items: center;
-}
-
-.content-row-centered h4, .content-row-centered p {
-  margin: 15px
 }
 
 .content-left-single {
@@ -50,6 +46,10 @@ body {
   text-align: center;
 }
 
+.content-left-single p {
+  margin: 0 30px 0 0;
+}
+
 .content-left-double {
   order: 1; 
   flex: 0 0 60%;
@@ -59,6 +59,10 @@ body {
 
 .content-left-double h4 {
   text-align: center;
+}
+
+.content-left-double p {
+  margin: 0 30px 0 0;
 }
 
 .content-right-single {
@@ -72,6 +76,10 @@ body {
   text-align: center;
 }
 
+.content-right-single p {
+  margin: 0 0 0 30px;
+}
+
 .content-right-double {
   order: 2; 
   flex: 0 0 60%;
@@ -81,6 +89,10 @@ body {
 
 .content-right-double h4 {
   text-align: center;
+}
+
+.content-right-double p {
+  margin: 0 0 0 30px;
 }
 
 
