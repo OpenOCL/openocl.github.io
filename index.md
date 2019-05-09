@@ -22,7 +22,7 @@ OpenOCL interfaces Ipopt [1] to numerically solve the optimal control problems a
 
 ### Quick start
 
-Go the *getting started* section to [download](get-started.md) the toolbox, visit the [tutorial](tutorial.md), or go straight to the [examples](https://github.com/JonasKoenemann/optimal-control/tree/master/Examples)!
+Go the [getting started](get-started.md) section to **download** the toolbox, or have a look at the [examples](https://github.com/JonasKoenemann/optimal-control/tree/master/Examples)!
 
 In the examples you will find (ordered by problem complexity):
 * [Van der Pol oscillator](https://github.com/OpenOCL/OpenOCL/blob/master/Examples/01VanDerPol/mainVanDerPol.m)
