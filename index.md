@@ -35,7 +35,7 @@ In the examples you will find (ordered by problem complexity):
 ### Additional models
 
 * Airborne wind energy: [openawe.github.io](https://openawe.github.io/)
-* Robotics (arm-type, KUKA, Puma560, using Peter Corke's robotics toolbox): [github:openocl_models](https://github.com/JonasKoenemann/openocl_models) (very experimental)
+* Robotics (arm-type, KUKA, Puma560, using Peter Corke's robotics toolbox): [github:openocl_models](https://github.com/jkoendev/openocl_models) (very experimental)
 
 ### Publications
 
