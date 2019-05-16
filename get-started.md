@@ -31,7 +31,7 @@ During the first run, the toolbox will ask to download necessary software (CasAD
 
 ![First run confirmation message](/assets/img/firstrun.png)
 
-Then the following plots should show up:
+Then these two plots should show up:
 
 ![First run cart pole plots](/assets/img/firstrun_plots.png)
 
