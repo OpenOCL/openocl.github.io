@@ -1,4 +1,5 @@
 ---
+permalink: /index-42/
 last_modified_at: 2019-05-16
 title: Open Optimal Control Library
 ---
