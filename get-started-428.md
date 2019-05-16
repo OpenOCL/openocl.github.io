@@ -8,7 +8,7 @@ title: Getting Started
 
 On this page you can download the latest OpenOCL v4.28. You can find older versions [here](https://github.com/OpenOCL/OpenOCL/releases).
 
-| Windows (Matlab > R2016a, 64bit) and Linux (Matlab > R2014b, 64bit)   | Other  |
+| Windows (Matlab > R2016a, 64bit) <br> and Linux (Matlab > R2014b, 64bit)   | Other  |
 |:----------|:----------|
 | [Matlab package](https://github.com/OpenOCL/OpenOCL/releases/download/v4.28/OpenOCL.v4.28.mltbx) (easiest) | Get and setup CasADi (step 1) |
 | [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v4.28/OpenOCL-4.28.zip) (you need to setup the path manually) | Matlab Code (step2, you need to setup the path manually)  |
