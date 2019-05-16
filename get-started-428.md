@@ -10,17 +10,20 @@ On this page you can download the latest OpenOCL v4.28. You can find older versi
 
 | Windows (Matlab > R2016a, 64bit) and <br> Linux (Matlab > R2014b, 64bit)   | Other (requires two steps) |
 |:----------|:----------|
-| [Matlab package](https://github.com/OpenOCL/OpenOCL/releases/download/v4.28/OpenOCL.v4.28.mltbx) (easiest) | [Get and setup CasADi](https://web.casadi.org/get/) (step 1) |
+| [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v4.28/OpenOCL.v4.28.mltbx) (easiest) | [Get and setup CasADi](https://web.casadi.org/get/) (step 1) |
 | [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v4.28/OpenOCL-4.28.zip) (you need to setup the path manually) | [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v4.28/OpenOCL-4.28.zip) (you need to setup the path manually) |
 
 ### Matlab package installation and execution
 
-If you have downloaded the **Matlab package** you are ready to go, just double click on the file and Matlab will install the packages as an Add-on.
+If you have downloaded the **Matlab .mltbx package** you are ready to go, just double click on the file and Matlab will install the packages as an Add-on. 
+
 Then run an example, e.g.
 
 ```m
 ocl.mainCartPole
 ```
+
+If the file ending `.mltbx` is not associated with Matlab, open Matlab navigate to the `.mltbx` file, and double click within Matlab and install the toolbox.
 
 ### Matlab code
 
