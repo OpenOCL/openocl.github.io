@@ -25,6 +25,8 @@ ocl.mainCartPole
 
 If the file ending `.mltbx` is not associated with Matlab, open Matlab navigate to the `.mltbx` file, and double click within Matlab and install the toolbox.
 
+![Installing .mltbx Matlab toolbox](/assets/img/mltbx-install.png)
+
 ## Matlab code as zip
 
 If you have downloaded the **Matlab code**, you need to unzip the downloaded folder, and navigate to it. Then run an example, e.g.
