@@ -6,7 +6,7 @@ title: Getting Started
 
 # Getting started
 
-On this page you can download the current version OpenOCL v4.22. You can find older versions [here](https://github.com/OpenOCL/OpenOCL/releases).
+On this page you can download the latest OpenOCL v4.22. You can find older versions [here](https://github.com/OpenOCL/OpenOCL/releases).
 
 | Windows (Matlab > R2016a, 64bit)   | Linux (Matlab > R2016a, 64bit)   | Other  |
 |:----------|:--------|:---------|
