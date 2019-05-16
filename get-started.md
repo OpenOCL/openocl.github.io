@@ -27,6 +27,10 @@ If the file ending `.mltbx` is not associated with Matlab, open Matlab navigate 
 
 ![Installing .mltbx Matlab toolbox](/assets/img/mltbx-install.png)
 
+The the first run the toolbox will ask to download necessary software. Confirm by typing `y` and pressing `[enter]`.
+
+![First run confirmation message](/assets/img/firstrun.png)
+
 ## Matlab code as zip
 
 If you have downloaded the **Matlab code**, you need to unzip the downloaded folder, and navigate to it. Then run an example, e.g.
