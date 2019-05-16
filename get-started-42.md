@@ -11,7 +11,7 @@ On this page you can download the latest OpenOCL v4.22. You can find older versi
 | Windows (Matlab > R2016a, 64bit)   | Linux (Matlab > R2016a, 64bit)   | Other  |
 |:----------|:--------|:---------|
 | Matlab package (easiest) | Matlab package (easiest) | Get and setup CasADi (step 1) |
-| Matlab code + binaries (you need to setup the path manually) | Matlab code + binaries (you need to setup the path manually) | Matlab Code (step2, you need to setup the path manually)  |
+| Matlab code + binaries (you need to setup the path manually) | [Matlab code + binaries](https://github.com/OpenOCL/OpenOCL/releases/download/v4.22/OpenOCL-4.22-linux.zip) (you need to setup the path manually) | Matlab Code (step2, you need to setup the path manually)  |
 
 ### Matlab package installation and execution
 
