@@ -27,9 +27,13 @@ If the file ending `.mltbx` is not associated with Matlab, open Matlab navigate 
 
 ![Installing .mltbx Matlab toolbox](/assets/img/mltbx-install.png)
 
-The the first run the toolbox will ask to download necessary software. Confirm by typing `y` and pressing `[enter]`.
+During the first run, the toolbox will ask to download necessary software (CasADi). Confirm by typing `y` and pressing `[enter]`.
 
 ![First run confirmation message](/assets/img/firstrun.png)
+
+Then the following plots should show up:
+
+![First run cart pole plots](/assets/img/firstrun_plots.png)
 
 ## Matlab code as zip
 
