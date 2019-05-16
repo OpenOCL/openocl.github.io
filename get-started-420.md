@@ -1,5 +1,5 @@
 ---
-permalink: /get-started/
+permalink: /get-started-420/
 last_modified_at: 2019-04-17
 title: Get Started
 ---
