@@ -15,7 +15,7 @@ On this page you can download the latest OpenOCL v4.22. You can find older versi
 
 ### Matlab package installation and execution
 
-If you downloaded the Matlab package you are ready to go, just double click on the file and Matlab will install the packages as an Add-on.
+If you have downloaded the **Matlab package** you are ready to go, just double click on the file and Matlab will install the packages as an Add-on.
 Then type 
 
 ```m
@@ -30,7 +30,7 @@ mainCartPole
 
 ### Matlab code + binaries
 
-If you downloaded the Matlab code + binaries, you need to unzip the downloaded folder, and navigate to it. Then do 
+If you have downloaded the **Matlab code + binaries**, you need to unzip the downloaded folder, and navigate to it. Then do 
 
 ```m
 StartupOCL
