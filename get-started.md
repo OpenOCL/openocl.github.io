@@ -35,6 +35,14 @@ Then these two plots should show up:
 
 ![First run cart pole plots](/assets/img/firstrun_plots.png)
 
+To have a look at the code, do 
+
+```m
+open mainCartPole
+```
+
+![Opens Cartpole example code](/assets/img/open_example.png)
+
 ## Matlab code as zip
 
 If you have downloaded the **Matlab code**, you need to unzip the downloaded folder, and navigate to it. Then run an example, e.g.
