@@ -10,12 +10,12 @@ On this page you can download the latest OpenOCL v4.29. You can find older versi
 
 | Windows (Matlab > R2016a, 64bit) and <br> Linux (Matlab > R2014b, 64bit)   | Other (requires two steps) |
 |:----------|:----------|
-| [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v4.29/OpenOCL-v4.29.mltbx) (easiest way) | [Get and setup CasADi](https://web.casadi.org/get/) (step 1) |
-| [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v4.29/OpenOCL-v4.29.zip) (you have to setup the path manually) | [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v4.29/OpenOCL-v4.29.zip) (step 2, you have to setup the path manually) |
+| [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v4.32/OpenOCL-v4.32.mltbx) (easiest way) | [Get and setup CasADi](https://web.casadi.org/get/) (step 1) |
+| [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v4.32/OpenOCL-v4.32.zip) (you have to setup the path manually) | [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v4.32/OpenOCL-v4.32.zip) (step 2, you have to setup the path manually) |
 
 ## Matlab .mltbx package installation and execution
 
-With the [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v4.29/OpenOCL-v4.29.mltbx) you are ready to go, just double click on the file and Matlab will install the packages as an Add-on. 
+With the [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v4.32/OpenOCL-v4.32.mltbx) you are ready to go, just double click on the file and Matlab will install the packages as an Add-on. 
 
 Then run an example by typing
 
