@@ -17,11 +17,13 @@ On this page you can download the latest OpenOCL v4.28. You can find older versi
 
 With the **Matlab .mltbx package** you are ready to go, just double click on the file and Matlab will install the packages as an Add-on. 
 
-Then run an example, e.g.
+Then run an example by typing
 
 ```m
 ocl.mainCartPole
 ```
+
+in your command window.
 
 If the file ending `.mltbx` is not associated with Matlab, open Matlab navigate to the `.mltbx` file, and *right click* within Matlab on the file and install the toolbox.
 
@@ -35,13 +37,13 @@ Then these two plots should show up:
 
 ![First run cart pole plots](/assets/img/firstrun_plots.png)
 
-To have a look at the code, do 
+To have a look at the code, type 
 
 ```m
 open mainCartPole
 ```
 
-![Opens Cartpole example code](/assets/img/open_example.png)
+![Open Cartpole example code](/assets/img/open_example.png)
 
 ## Matlab code as zip
 
