@@ -10,12 +10,12 @@ On this page you can download the latest OpenOCL v4.28. You can find older versi
 
 | Windows (Matlab > R2016a, 64bit) and <br> Linux (Matlab > R2014b, 64bit)   | Other (requires two steps) |
 |:----------|:----------|
-| [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v4.28/OpenOCL.v4.28.mltbx) (easiest) | [Get and setup CasADi](https://web.casadi.org/get/) (step 1) |
-| [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v4.28/OpenOCL-4.28.zip) (you need to setup the path manually) | [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v4.28/OpenOCL-4.28.zip) (you need to setup the path manually) |
+| [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v4.28/OpenOCL.v4.28.mltbx) (easiest way) | [Get and setup CasADi](https://web.casadi.org/get/) (step 1) |
+| [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v4.28/OpenOCL-4.28.zip) (you have to setup the path manually) | [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v4.28/OpenOCL-4.28.zip) (step 2, you have to setup the path manually) |
 
 ## Matlab .mltbx package installation and execution
 
-If you have downloaded the **Matlab .mltbx package** you are ready to go, just double click on the file and Matlab will install the packages as an Add-on. 
+With the **Matlab .mltbx package** you are ready to go, just double click on the file and Matlab will install the packages as an Add-on. 
 
 Then run an example, e.g.
 
@@ -23,7 +23,7 @@ Then run an example, e.g.
 ocl.mainCartPole
 ```
 
-If the file ending `.mltbx` is not associated with Matlab, open Matlab navigate to the `.mltbx` file, and double click within Matlab and install the toolbox.
+If the file ending `.mltbx` is not associated with Matlab, open Matlab navigate to the `.mltbx` file, and *right click* within Matlab on the file and install the toolbox.
 
 ![Installing .mltbx Matlab toolbox](/assets/img/mltbx-install.png)
 
