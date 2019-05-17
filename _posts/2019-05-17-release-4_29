@@ -7,7 +7,8 @@ permalink: /:categories/:title/
 
 # Release of OpenOCL v4.29
 
-Getting started with OpenOCL is now easier than ever. Just [download](/get-started/) the **.mltbx** package and install it as a Matlab Add-in. OpenOCL is then automatically setup with your Matlab path.
+Getting started with OpenOCL is now easier than ever. Just [download](/get-started/) the **.mltbx** package 
+and install it as a Matlab Add-in. OpenOCL is then automatically setup with your Matlab path.
 You don't need to download any dependencies as CasADi will be downloaded automatically at the first run of OpenOCL. 
 
 We also have a new front-page of the website.  
