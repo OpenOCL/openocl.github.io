@@ -1,26 +1,26 @@
 ---
 permalink: /get-started/
-last_modified_at: 2019-05-16
+last_modified_at: 2019-05-17
 title: Getting Started
 ---
 
 # Getting started  
 
-On this page you can download the latest OpenOCL v4.28. You can find older versions [here](https://github.com/OpenOCL/OpenOCL/releases).
+On this page you can download the latest OpenOCL v4.29. You can find older versions [here](https://github.com/OpenOCL/OpenOCL/releases).
 
 | Windows (Matlab > R2016a, 64bit) and <br> Linux (Matlab > R2014b, 64bit)   | Other (requires two steps) |
 |:----------|:----------|
-| [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v4.28/OpenOCL.v4.28.mltbx) (easiest way) | [Get and setup CasADi](https://web.casadi.org/get/) (step 1) |
-| [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v4.28/OpenOCL-4.28.zip) (you have to setup the path manually) | [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v4.28/OpenOCL-4.28.zip) (step 2, you have to setup the path manually) |
+| [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v4.29/OpenOCL.v4.29.mltbx) (easiest way) | [Get and setup CasADi](https://web.casadi.org/get/) (step 1) |
+| [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v4.29/OpenOCL-4.29.zip) (you have to setup the path manually) | [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v4.29/OpenOCL-4.29.zip) (step 2, you have to setup the path manually) |
 
 ## Matlab .mltbx package installation and execution
 
-With the **Matlab .mltbx package** you are ready to go, just double click on the file and Matlab will install the packages as an Add-on. 
+With the [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v4.29/OpenOCL.v4.29.mltbx) you are ready to go, just double click on the file and Matlab will install the packages as an Add-on. 
 
 Then run an example by typing
 
 ```m
-ocl.mainCartPole
+ocl.examples.cartpole
 ```
 
 in your command window.
@@ -50,7 +50,7 @@ open mainCartPole
 If you have downloaded the **Matlab code**, you need to unzip the downloaded folder, and navigate to it. Then run an example, e.g.
 
 ```m
-ocl.mainCartPole
+ocl.examples.cartpole
 ```
 
 If you would like to save your path using `savepath` or the Matlab path manager, add the main folder of OpenOCL without subfolders, 
@@ -65,9 +65,9 @@ Here is a step-by-step guide:
 
 * Get the latest CasADi version for Matlab or Octave and follow the installation [instructions](https://web.casadi.org/get/) on their page.
 * Add the main *CasADi* directory to your Matlab path, not including subdirectories: `addpath 'path/to/casadi'`
-* Download [OpenOCL v4.20 (zip)](https://github.com/OpenOCL/OpenOCL/archive/v4.20.zip), unzip, and add the folder to your path: `addpath 'path/to/OpenOCL-v4.20'`. Again do not include the sub-directories!
+* Download OpenOCL (zip) above, unzip, and add the folder to your path: `addpath 'path/to/OpenOCL-vX.XX'`. Again do not include the sub-directories!
 * Run the StartupOCL.m script: `StartupOCL`
-* Run one of the examples, e.g.: `mainCartPole`
+* Run one of the examples, e.g.: `ocl.examples.cartpole`
 
 If you would like to save your path using `savepath` or the Matlab path manager, do this **before** running `StartupOCL` in order to not include the sub-directories.
 
