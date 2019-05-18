@@ -1,6 +1,6 @@
 ---
 permalink: /legal_notice/
-last_modified_at: 2019-03-15
+last_modified_at: 2019-05-18
 title: Legal Notice
 ---
 
@@ -15,7 +15,7 @@ openocl.org is a project of:
 > 
 > info [at] openocl.org
 
-Please see the license for the code at [https://openocl.org/license/](https://openocl.org/license/).
+Please see the license for the code at [https://openocl.org/bsd-3-clause/](https://openocl.org/bsd-3-clause/).
 
 Open Optimal Control Library
 
