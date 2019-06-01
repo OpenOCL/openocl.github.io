@@ -2,6 +2,7 @@
 title: API docs are now on the website!
 last_modified_at: 2019-03-29
 permalink: /:categories/:title/
+short: 
 ---
 
 # API documentation is now on the website!
