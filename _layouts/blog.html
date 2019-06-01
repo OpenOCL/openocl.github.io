@@ -8,18 +8,22 @@ title: Blog
 {% if page.category %}
   {% for post in site.categories.[page.category] %}
   {% if post.hidden != true  %}
+  <div class="blog-list">
     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
     <p class="blog-short">{{ post.short }}</p>
+  </div>
   {% endif %}
   {% endfor %}
 {% else %}
   {% for post in site.posts %}
   {% if post.hidden != true  %}
+  <div class="blog-list">
     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
     {% if post.categories %}
     <p class="tags"><a href="/{{ post.categories }}/">{{ post.categories }}</a></p>
     {% endif %}
     <p class="blog-short">{{ post.short }}</p>
+  </div>
   {% endif %}
   {% endfor %}
 {% endif %}
