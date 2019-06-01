@@ -4,6 +4,7 @@ title: "[Contributed] 1:10 scale pro stock remote car racing"
 last_modified_at: 2019-03-29
 permalink: /:categories/:title/
 hidden: false
+short: Mustafa Alp from the Polytechnic University of Milan sent us a great video of his implementation with the OpenOCL toolbox.
 ---
 
 # 1:10 scale pro stock remote car racing
