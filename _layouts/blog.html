@@ -9,7 +9,7 @@ title: Blog
   {% for post in site.categories.[page.category] %}
   {% if post.hidden != true  %}
     <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-    {{ post.short }}
+    <p class="blog-short">{{ post.short }}</p>
   {% endif %}
   {% endfor %}
 {% else %}
@@ -19,7 +19,7 @@ title: Blog
     {% if post.categories %}
     <p class="tags"><a href="/{{ post.categories }}/">{{ post.categories }}</a></p>
     {% endif %}
-    {{ post.short }}
+    <p class="blog-short">{{ post.short }}</p>
   {% endif %}
   {% endfor %}
 {% endif %}
