@@ -8,7 +8,7 @@ title: Open Optimal Control Library
 
 ## Quick start
 
-[Download](/get-started/) the software and have a look at the [API Docs](api-docs.md).
+[Download](/get-started/) the software and have a look at the [API Docs](api-docs.md). Get [support](/support/) if you run into any problems.
 
 ## Features
 
