@@ -2,6 +2,7 @@
 title: New release OpenOCL v3.11
 categories: releases
 permalink: /:categories/:title/
+short: We are happy to announce that OpenOCL v3 is ready and released. It contains many improvements with respect to the previous version and also some API changes. 
 ---
 
 # New release OpenOCL v3.11
