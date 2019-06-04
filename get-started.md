@@ -1,6 +1,6 @@
 ---
 permalink: /get-started/
-last_modified_at: 2019-05-17
+last_modified_at: 2019-06-04
 title: Getting Started
 ---
 
