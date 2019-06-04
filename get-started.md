@@ -8,10 +8,9 @@ title: Getting Started
 
 On this page you can download the latest version of OpenOCL. You can find older versions [here](https://github.com/OpenOCL/OpenOCL/releases).
 
-| Windows (Matlab >= R2013a) <br> Linux (Matlab > R2014a) <br> Max (Matlab > R2015a)   | Other (requires two steps) |
-|:----------|:----------|
-| [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v5.06/OpenOCL-v5.06.mltbx) (easiest way) | [Get and setup CasADi](https://web.casadi.org/get/) (step 1) |
-| [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v5.06/OpenOCL-v5.06.zip) (you have to setup the path manually) | [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v5.06/OpenOCL-v5.06.zip) (step 2, you have to setup the path manually) |
+| Windows (Matlab >= R2013a) <br> Linux (Matlab > R2014a) <br> Mac (Matlab > R2015a)   |
+|:-------------|
+| [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v5.06/OpenOCL-v5.06.mltbx) (easiest way) | [Get and setup CasADi](https://web.casadi.org/get/) (step 1)  |
 
 ## Matlab .mltbx package installation and execution
 
@@ -47,7 +46,7 @@ open oc.examples.cartpole
 
 ## Matlab code as zip
 
-If you have downloaded the **Matlab code**, you need to unzip the downloaded folder, and navigate to it. Then run an example, e.g.
+You can also download the [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v5.06/OpenOCL-v5.06.zip), you need to unzip the downloaded folder, and navigate to it. Then run an example, e.g.
 
 ```m
 ocl.examples.cartpole
