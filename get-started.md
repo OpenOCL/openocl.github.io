@@ -8,14 +8,14 @@ title: Getting Started
 
 On this page you can download the latest version of OpenOCL. You can find older versions [here](https://github.com/OpenOCL/OpenOCL/releases).
 
-| Windows (Matlab > R2016a, 64bit) and <br> Linux (Matlab > R2014b, 64bit)   | Other (requires two steps) |
+| Windows (Matlab >= R2013a) <br> Linux (Matlab > R2014a) <br> Max (Matlab > R2015a)   | Other (requires two steps) |
 |:----------|:----------|
-| [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v4.33/OpenOCL-v4.33.mltbx) (easiest way) | [Get and setup CasADi](https://web.casadi.org/get/) (step 1) |
-| [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v4.33/OpenOCL-v4.33.zip) (you have to setup the path manually) | [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v4.33/OpenOCL-v4.33.zip) (step 2, you have to setup the path manually) |
+| [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v5.06/OpenOCL-v5.06.mltbx) (easiest way) | [Get and setup CasADi](https://web.casadi.org/get/) (step 1) |
+| [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v5.06/OpenOCL-v5.06.zip) (you have to setup the path manually) | [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v5.06/OpenOCL-v5.06.zip) (step 2, you have to setup the path manually) |
 
 ## Matlab .mltbx package installation and execution
 
-With the [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v4.33/OpenOCL-v4.33.mltbx) you are ready to go, just double click on the file and Matlab will install the packages as an Add-on. 
+With the [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v5.06/OpenOCL-v5.06.mltbx) you are ready to go, just double click on the file and Matlab will install the packages as an Add-on. 
 
 Then run an example by typing
 
@@ -40,7 +40,7 @@ Then these two plots should show up:
 To have a look at the code, type 
 
 ```m
-open mainCartPole
+open oc.examples.cartpole
 ```
 
 ![Open Cartpole example code](/assets/img/open_example.png)
