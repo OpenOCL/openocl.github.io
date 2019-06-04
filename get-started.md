@@ -12,9 +12,9 @@ On this page you can download the latest version of OpenOCL. You can find older 
 |:-------------:|
 | [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v5.06/OpenOCL-v5.06.mltbx) |
 
-If your configuration is not in the list see below.
+If your configuration is not in the list or you would like to try an alternative way, see below.
 
-With the [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v5.06/OpenOCL-v5.06.mltbx) you are ready to go, just double click on the file and Matlab will install the packages as an Add-on. 
+With the Matlab **.mltbx** package you are ready to go, just double click on the file and Matlab will install the packages as an Add-on. 
 
 Then run an example by typing
 
