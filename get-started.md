@@ -6,11 +6,11 @@ title: Getting Started
 
 # Getting started  
 
-On this page you can download the latest version of OpenOCL. You can find older versions [here](https://github.com/OpenOCL/OpenOCL/releases).
+On this page you can **download** the latest version of OpenOCL. You can find older versions [here](https://github.com/OpenOCL/OpenOCL/releases).
 
 | Windows (Matlab >= R2013a), Linux (Matlab > R2014a), Mac (Matlab > R2015a)   |
 |:-------------:|
-| [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v5.06/OpenOCL-v5.06.mltbx) |
+| [Download Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v5.06/OpenOCL-v5.06.mltbx) |
 
 If your configuration is not in the list or you would like to try an alternative way, see below.
 
