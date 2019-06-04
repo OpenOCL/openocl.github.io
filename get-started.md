@@ -64,7 +64,7 @@ saved to the path (by executing `ocl` scripts, some folder will be added to the 
 
 ## Other configurations
 
-If you have another configuration you need to setup CasADi manually.  
+If you have another configuration (e.g. Octave) you need to setup CasADi manually.  
 
 Here is a step-by-step guide:
 
