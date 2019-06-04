@@ -28,7 +28,7 @@ If the file ending `.mltbx` is not associated with Matlab, open Matlab navigate 
 
 ![Installing .mltbx Matlab toolbox](/assets/img/mltbx-install.png)
 
-During the first run, the toolbox will ask to download necessary software (CasADi). Confirm by typing `y` and pressing `[enter]`.
+During the first run, the toolbox will ask to download necessary software (CasADi). Confirm by pressing `[enter]`.
 
 ![First run confirmation message](/assets/img/firstrun.png)
 
@@ -43,6 +43,14 @@ open ocl.examples.cartpole
 ```
 
 ![Open Cartpole example code](/assets/img/open_example.png)
+
+To see documentationm, type
+
+```m
+doc ocl
+```
+
+
 
 ## Matlab code as zip
 
