@@ -1,6 +1,6 @@
 ---
 layout: frontpage
-last_modified_at: 2019-05-04
+last_modified_at: 2019-06-04
 title: Open Optimal Control Library
 ---
 
