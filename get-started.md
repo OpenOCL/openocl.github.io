@@ -50,8 +50,6 @@ To see documentationm, type
 doc ocl
 ```
 
-
-
 ## Matlab code as zip
 
 You can also download the [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v5.06/OpenOCL-v5.06.zip), you need to unzip the downloaded folder, and navigate to it. Then run an example, e.g.
@@ -61,8 +59,8 @@ ocl.examples.cartpole
 ```
 
 If you would like to save your path using `savepath` or the Matlab path manager, add the main folder of OpenOCL without subfolders, 
-and save the path. It is best to save the path **before** running `StartupOCL` so that the sub-directories of OpenOCL will not be 
-saved to the path (by executing `StartupOCL` some folder will be added to the path).
+and save the path. It is best to save the path **before** running *OpenOCL* so that the sub-directories of OpenOCL will not be 
+saved to the path (by executing `ocl` scripts, some folder will be added to the path).
 
 ## Other configurations
 
@@ -72,11 +70,10 @@ Here is a step-by-step guide:
 
 * Get the latest CasADi version for Matlab or Octave and follow the installation [instructions](https://web.casadi.org/get/) on their page.
 * Add the main *CasADi* directory to your Matlab path, not including subdirectories: `addpath 'path/to/casadi'`
-* Download OpenOCL (zip) above, unzip, and add the folder to your path: `addpath 'path/to/OpenOCL-vX.XX'`. Again do not include the sub-directories!
-* Run the StartupOCL.m script: `StartupOCL`
+* Download [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v5.06/OpenOCL-v5.06.zip), unzip, and add the folder to your path: `addpath 'path/to/OpenOCL-vX.XX'`. Again do not include the sub-directories!
 * Run one of the examples, e.g.: `ocl.examples.cartpole`
 
-If you would like to save your path using `savepath` or the Matlab path manager, do this **before** running `StartupOCL` in order to not include the sub-directories.
+If you would like to save your path using `savepath` or the Matlab path manager, do this **before** running the example in order to not include the sub-directories.
 
 Let us know if you run into any problems at info@openocl.org!
 
