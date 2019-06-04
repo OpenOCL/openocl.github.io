@@ -10,7 +10,7 @@ On this page you can download the latest version of OpenOCL. You can find older 
 
 | Windows (Matlab >= R2013a) <br> Linux (Matlab > R2014a) <br> Mac (Matlab > R2015a)   |
 |:-------------|
-| [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v5.06/OpenOCL-v5.06.mltbx) (easiest way) | [Get and setup CasADi](https://web.casadi.org/get/) (step 1)  |
+| [Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v5.06/OpenOCL-v5.06.mltbx) (easiest way)|
 
 ## Matlab .mltbx package installation and execution
 
