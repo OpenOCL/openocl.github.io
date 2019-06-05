@@ -25,6 +25,10 @@ code_block:
     
 parameters: 
 
+  - name: "T"
+    content: "The end time/horizon length of the optimal control problem. If your system equatiosn are expressed as function of an independent variable other than time, `T` represents not the end time but the endpoint of the integration over the independent variable."
+    type: "numeric"
+    
   - name: "vars = @(vars_handler)[]"
     content: "System variables function. Optional, defaults to an empty function handle."
     type: "[@(vars_handler)](#apiocl_@(vars_handler))"
