@@ -1,6 +1,7 @@
 ---
-name: OclSystemVarsHandler
-description: The system variables handler allows to specify the system variables, its dimensions and bounds.
+name: ocl.VarsHandler
+title: ocl.VarsHandler
+description: The variables handler allows to specify the system variables, its dimensions and bounds.
 methods: 
   - content: "Adds a state variable to the system."
     name: "addState"
@@ -64,6 +65,5 @@ methods:
         type: "numeric, optional"
     returns: ~
 position: 2
-title: OclSystemVarsHandler
 type: Class
 ---
