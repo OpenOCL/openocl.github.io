@@ -8,7 +8,7 @@ title: API Docs
 
 {{ content }}
 
-{% assign sorted_docs = site.api | sort: "title" %}
+{% assign sorted_docs = site.api | sort: "name" %}
 {% for doc in sorted_docs %}
 
   {% assign argnames = "" %}
