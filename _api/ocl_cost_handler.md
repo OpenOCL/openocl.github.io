@@ -1,6 +1,6 @@
 ---
-name: ocl.Cost
-title: ocl.Cost
+name: ocl.CostHandler
+title: ocl.CostHandler
 description: The cost handler allows to add cost terms in a cost function definition.
 methods: 
   - content: "Adds a cost term."
