@@ -1,5 +1,6 @@
 --- 
 name: ocl.Solver
+title: ocl.Solver
 position: 20
 type: Function
 description: "Creates a solver object that discretizes the given optimal control problem, and calls the underlying optimizer. "
