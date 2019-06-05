@@ -1,6 +1,6 @@
 ---
-name: @(svh)
-title: ocl.SystemvarsFunction
+name: "@(svh)"
+title: "@(svh)"
 type: function handle
 description: Function handle signature for system variables function.
 parameters: 
