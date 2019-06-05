@@ -56,25 +56,25 @@ parameters:
     content: "The end time/horizon length of the optimal control problem. If your system equatiosn are expressed as function of an independent variable other than time, `T` represents not the end time but the endpoint of the integration over the independent variable."
     type: "numeric"
     
-  - name: "vars = @()[]"
+  - name: "vars = @(vars_handler)[]"
     content: "System variables function. Optional, defaults to an empty function handle."
-    type: "[ocl.SysvarsFunction](#apiocl_sysvarsfunction)"
+    type: "[@(vars_handler)](#apiocl_@varshandler)"
     
-  - name: "dae = @(x,z,u,p)[]"
+  - name: "dae = @(dae_handler,x,z,u,p)[]"
     content: "DAE (system equations) function. Optional, defaults to an empty function handle."
-    type: "[ocl.DaeFunction](#apiocl_daefunction)"
+    type: "[@(dae_handler,x,z,u,p)](#apiocl_@daehandler)"
     
-  - name: "pathcosts = @(x,z,u,p) 0"
+  - name: "pathcosts = @(cost_handler,x,z,u,p) 0"
     content: "Path-costs function. Optional, defaults to a function handle returning 0."
-    type: "[ocl.PathcostFunction](#apiocl_pathcostfunction)"
+    type: "[@(cost_handler,x,z,u,p)](#apiocl_@(cost_handler,x,z,u,p)"
     
-  - name: "pointcosts = @(k,K,x) 0"
+  - name: "pointcosts = @(cost_handler,k,K,x) 0"
     content: "Point-costs function. Optional, defaults to a function handle returning 0."
-    type: "[ocl.PointcostFunction](#apiocl_pointcostfunction)"
+    type: "[@(cost_handler,k,K,x)](#apiocl_@(cost_handler,k,K,x)"
     
-  - name: "pointconstraints = @(k,K,x) []"
+  - name: "pointconstraints = @(constraints_handler,k,K,x) []"
     content: "Point-constraints function. Optional, defaults to an empty function handle."
-    type: "[ocl.PointconstraintFunction](#apiocl_pointconstraintfunction)"
+    type: "[@(constraints_handler,k,K,x)](#apiocl_@(constraints_handler,k,K,x)"
 
 returns: 
   - content: A solver object.
