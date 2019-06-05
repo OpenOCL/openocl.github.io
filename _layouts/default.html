@@ -71,12 +71,12 @@
           <div class="api" id="api-list">
             <h4> API classes and modules </h4>
 
-            {% assign sorted_docs = site.api | sort: "title" %}
+            {% assign sorted_docs = site.api | sort: "name" %}
             <ul>
             {% for doc in sorted_docs %}
               <li>
                 <a href="#{{ doc.id | replace: '/', '' | replace: '.', '' }}">
-                  {{ doc.name }}
+                  {{ doc.title }}
                   {% if doc.type %}<span class="endpoint {{ doc.type }}"></span>{% endif %}
                 </a>
               </li>
