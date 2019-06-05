@@ -1,18 +1,18 @@
 --- 
-name: OclOCP
+name: ocl.Stage
 description: |
-  An optimal control problem is implemented by providing functions for the path costs, arrival costs, path constraints, and boundary conditions. You can pass the function handles as positional arguments or keyword arguments. All function handles are optional. If you do not provide some of the functions, they default to zero cost for the cost functions or an empty constraints array for path constraints and boundary conditions.
+  The definition of a Stage.
 
 code_block:
-  title: Example OCP
+  title: Example Stage
   language: m
   code: |-
-    ocp = OclOCP('pathcosts', @ocpPathCosts);
+    ocp = OclStage('pathcosts', @pathcostfun);
     
     % Function definitions can be in the same file 
     % (if the main script is wrapped by a function) 
     % or in separate files:
-    function ocpPathCosts(ch,x,z,u,p)
+    function pathcostfun(ch,x,z,u,p)
       ch.add( x.p^2 );
       ch.add( x.v^2 );
       ch.add( u.u^2 );
