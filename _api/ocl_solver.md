@@ -53,8 +53,8 @@ code_block:
 parameters: 
 
   - name: "T"
-    content: "The end time/horizon length of the optimal control problem. If your system equatiosn are expressed as function of an independent variable other than time, `T` represents not the end time but the endpoint of the integration over the independent variable."
-    type: "numeric"
+    content: "The end time/horizon length of the optimal control problem. If your system equations are expressed as function of an independent variable other than time, `T` represents not the end time but the endpoint of the integration over the independent variable. If you would like to optimize for time, **time optimal control**, pass the empty list `[]`"
+    type: "numeric or []"
     
   - name: vars
     default: "@(vars_handler)[]"
