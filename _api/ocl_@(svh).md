@@ -1,13 +1,13 @@
 ---
-name: "@(svh)"
-title: "@(svh)"
+name: "@(vars_handler)"
+title: "@(vars_handler)"
 type: function handle
 description: Function handle signature for system variables function.
 parameters: 
 
-  - name: "svh"
-    content: "System variables handler"
-    type: "[ocl.SystemvarsHandler](#apiocl_systemvarshandler)"
+  - name: "vars_handler"
+    content: "Variables handler"
+    type: "[ocl.VarsHandler](#apiocl_varshandler)"
 
 methods: ~
 position: 200
