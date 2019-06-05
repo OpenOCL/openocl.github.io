@@ -40,7 +40,12 @@ title: API Docs
   <div class="subsection">
     <dl class="dl-left">
         {% for el in doc.parameters %}
-          <dt><span class="arg">{{ el.name }}</span> <span class="dltype">({{ el.type | markdownify | remove: '<p>' | remove: '</p>' | strip }})</span></dt>
+          <dt><span class="arg">{{ el.name }}</span> 
+              {% if el.default %}
+              <span class"api-param-default">{{ el.default }}</span>
+              {% endif %} 
+              <span class="dltype">({{ el.type | markdownify | remove: '<p>' | remove: '</p>' | strip }})</span>
+          </dt>
           <dd>{{ el.content | markdownify | remove: '<p>' | remove: '</p>' | strip }} </dd>
         {% endfor %}
     </dl>
