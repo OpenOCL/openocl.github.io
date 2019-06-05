@@ -71,7 +71,7 @@
           <div class="api" id="api-list">
             <h4> API classes and modules </h4>
 
-            {% assign sorted_docs = site.api | sort: "position" %}
+            {% assign sorted_docs = site.api %}
             <ul>
             {% for doc in sorted_docs %}
               <li>
