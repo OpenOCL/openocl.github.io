@@ -14,8 +14,8 @@ parameters:
     content: "List (cell-array) of stages. Optional, defaults to empty list."
     type: "cell<[ocl.Stage](#apiocl_stage)>"
     
-  - content: "transitions = {}"
-    name: "List (cell-array) of transitions. Optional, defaults to empty list."
+  - name: "transitions = {}"
+    content: "List (cell-array) of transitions. Optional, defaults to empty list."
     type: "cell<[ocl.Transition](#apiocl_transition)>"
 
 returns: 
