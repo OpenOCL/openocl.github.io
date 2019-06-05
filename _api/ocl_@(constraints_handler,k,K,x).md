@@ -7,7 +7,7 @@ parameters:
 
   - name: "constraints_handler"
     content: "Constraints handler"
-    type: "[ocl.ConstraintsHandler](#apiocl_constraintshandler)"
+    type: "[ocl.Constraint](#apiocl_constraint)"
     
   - name: "k"
     content: "current grid point index"
