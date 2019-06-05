@@ -2,49 +2,51 @@
 name: OclSolver
 position: 20
 type: Function
-description: "Creates a solver object that discretizes the given system and optimal control problem, and calls the underlying optimizer. Before solving set options, parameters, bounds, and the initial guess:"
+description: "Creates a solver object that discretizes the given optimal control problem, and calls the underlying optimizer. "
 code_block:
   title: Example
   language: m
   code: |- 
-    opt = OclOptions();
-    opt.nlp.controlIntervals = 30;
-    ocl = OclSolver(10,VanDerPolSystem,VanDerPolOCP,opt);
+    solver = ocl.Solver(END_TIME, @varsfun, @daefun, @pathcosts, 'N', 30);
     
-    ocl.setBounds('p', -0.25, inf);
-    ocl.setInitialBounds('p', 0);
+    solver.setInitialBounds('x',     0);
+    solver.setInitialBounds('y',     1);
     
-    v0 = ocl.getInitialGuess();
-    v0.states.p = -0.2;
+    initialGuess = solver.getInitialGuess();
+    initialGuess.states.x.set(-0.2);
     
-    [v,t] = ocl.solve(v0);
+    [solution,times] = solver.solve(initialGuess);
     
     % initial guess, solution and times have
     % the following structure:
-    v.states     % state trajectory
-    v.controls   % control trajectory
-    v.algVars    % algebraic variable trajectory
-    v.integrator % integrator variables
-    t.states     % time points of states
-    t.controls   % time points of controls
+    solution.states       % state trajectory
+    solution.integrator   % integrator variables trajectory
+    solution.controls     % control trajectory
+    solution.parameters   % parameters
+    times.states          % time points of states
+    times.controls        % time points of controls
     
     % plotting of control and state p trajectory:
-    oclPlot(t.controls,v.controls.u)
-    oclPlot(t.states,v.states.p)
+    oclPlot(times.controls, solution.controls.u)
+    oclPlot(times.states, solution.states.p)
     
 parameters: 
-  - content: "The end time/horizon length of the optimal control problem. You can alternatively specify a vector of `length(T)==N+1` to set the timepoints at which the optimal control problem is discretized. The default discretizatoin is at times `linspace(0,1,N+1)*T`. If you pass a vector of `length(T)==N`, the entries of `T` are the timesteps of the control interval, e.g. `T=linspace(0.1,0.1,N)`. If you specify `T=[]`, the final time of the optimal control problem is free. The endtime is available in the parameters as `p.T`. The normalized discretization of the control intervals is available in the controls as `u.h_normalized`. You can set bounds on `T` and `h_normalized` as you can do on any other variable. If your system equatiosn are expressed as function of an independent variable other than time, the same holds just that `T` represents not the end time but the endpoint of the integration over the independent variable."
-    name: "T"
+
+  - name: "T"
+    content: "The end time/horizon length of the optimal control problem. If your system equatiosn are expressed as function of an independent variable other than time, `T` represents not the end time but the endpoint of the integration over the independent variable."
     type: "numeric"
-  - content: "The system dynamics"
-    name: "system"
-    type: "[OclSystem](#apiocl_system)"
-  - content: "The optimal control problem"
-    name: "ocp"
-    type: "[OclOCP](#apiocl_ocp)"
-  - content: "Options struct, can be created with [OclOptions](#apiocl_options)()"
-    name: "options"
-    type: "struct"
+    
+  - content: "System variables function. Optional, defaults to an empty function handle."
+    name: "vars = @()[]"
+    type: "[ocl.SysvarsFunction](#apiocl_sysvarsfunction)"
+    
+  - content: "DAE (system equations) function. Optional, defaults to an empty function handle."
+    name: "dae = @(x,z,u,p)[]"
+    type: "[ocl.DaeFunction](#apiocl_daefunction)"
+    
+  - content: "Pathcost function. Optional, defaults to an empty function handle."
+    name: "pathcosts = @(x,z,u,p)[]"
+    type: "[ocl.PathcostFunction](#apioclpathcostfunction)"
 
 returns: 
   - content: A solver object.
