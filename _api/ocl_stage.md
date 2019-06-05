@@ -8,15 +8,19 @@ code_block:
   title: Example Stage
   language: m
   code: |-
-    ocp = OclStage('pathcosts', @pathcostfun);
+    stage = ocl.Stage([], @vars, @ode, 'N', N, 'd', 2);
     
     % Function definitions can be in the same file 
     % (if the main script is wrapped by a function) 
     % or in separate files:
-    function pathcostfun(ch,x,z,u,p)
-      ch.add( x.p^2 );
-      ch.add( x.v^2 );
-      ch.add( u.u^2 );
+    function vars(sh)
+      sh.addState('s');
+      sh.addState('v');
+    end
+
+    function ode(sh,x,~,~,~)
+      sh.setODE('s', x.v);
+      sh.setODE('v', -10);
     end
     
 parameters: 
