@@ -42,7 +42,7 @@ title: API Docs
         {% for el in doc.parameters %}
           <dt><span class="arg">{{ el.name }}</span> 
               {% if el.default %}
-              = <span class"api-param-default">{{ el.default }}</span>
+              = <span class="api-param-default">{{ el.default }}</span>
               {% endif %} 
               <span class="dltype">({{ el.type | markdownify | remove: '<p>' | remove: '</p>' | strip }})</span>
           </dt>
