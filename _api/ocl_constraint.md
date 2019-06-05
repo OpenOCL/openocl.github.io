@@ -1,5 +1,6 @@
 ---
-name: OclConstraintHandler
+name: ocl.Constraint
+title: ocl.Constraint
 description: "The constraint handler allows to add constraints to the optimal control problem definition."
 methods: 
  -  content: "Adds a constraint to the optimal control problem."
@@ -16,6 +17,5 @@ methods:
         type: "[OclVariable](#apiocl_variable) or Matlab matrix"
     returns: ~
 position: 12
-title: OclConstraintHandler
 type: Class
 ---
