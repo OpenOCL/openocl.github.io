@@ -8,7 +8,7 @@ code_block:
   title: Example Stage
   language: m
   code: |-
-    stage = ocl.Stage([], @vars, @ode, 'N', N, 'd', 2);
+    stage = ocl.Stage([], @vars, @ode, 'N', 10, 'd', 2);
     
     % Function definitions can be in the same file 
     % (if the main script is wrapped by a function) 
