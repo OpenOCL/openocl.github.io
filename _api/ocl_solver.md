@@ -7,28 +7,48 @@ code_block:
   title: Example
   language: m
   code: |- 
-    solver = ocl.Solver(END_TIME, @varsfun, @daefun, @pathcosts, 'N', 30);
+    function vanderpol
+      solver = ocl.Solver(END_TIME, @varsfun, @daefun, @pathcosts, 'N', 30);
+
+      solver.setInitialBounds('x',     0);
+      solver.setInitialBounds('y',     1);
+
+      initialGuess = solver.getInitialGuess();
+      initialGuess.states.x.set(-0.2);
+
+      [solution,times] = solver.solve(initialGuess);
+
+      % initial guess, solution and times have
+      % the following structure:
+      solution.states       % state trajectory
+      solution.integrator   % integrator variables trajectory
+      solution.controls     % control trajectory
+      solution.parameters   % parameters
+      times.states          % time points of states
+      times.controls        % time points of controls
+
+      % plotting of control and state p trajectory:
+      oclPlot(times.controls, solution.controls.u)
+      oclPlot(times.states, solution.states.p)
+    end
     
-    solver.setInitialBounds('x',     0);
-    solver.setInitialBounds('y',     1);
+    function varsfun(svh)
+      svh.addState('x', 'lb', -0.25, 'ub', inf);
+      svh.addState('y');
+      svh.addControl('F', 'lb', -1, 'ub', 1);
+    end
+
+    function daefun(daeh,x,~,u,~)
+      daeh.setODE('x', (1-x.y^2)*x.x - x.y + u.F);
+      daeh.setODE('y', x.x);
+    end
+
+    function pathcosts(ch,x,~,u,~)
+      ch.add( x.x^2 );
+      ch.add( x.y^2 );
+      ch.add( u.F^2 );
+    end
     
-    initialGuess = solver.getInitialGuess();
-    initialGuess.states.x.set(-0.2);
-    
-    [solution,times] = solver.solve(initialGuess);
-    
-    % initial guess, solution and times have
-    % the following structure:
-    solution.states       % state trajectory
-    solution.integrator   % integrator variables trajectory
-    solution.controls     % control trajectory
-    solution.parameters   % parameters
-    times.states          % time points of states
-    times.controls        % time points of controls
-    
-    % plotting of control and state p trajectory:
-    oclPlot(times.controls, solution.controls.u)
-    oclPlot(times.states, solution.states.p)
     
 parameters: 
 
