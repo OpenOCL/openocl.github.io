@@ -1,5 +1,6 @@
 --- 
-name: ocl.Solver (multi-stage)
+name: ocl.Solver
+title: ocl.Solver (multi-stage)
 position: 21
 type: Class
 description: "Creates a solver object for multi-stage problems. "
