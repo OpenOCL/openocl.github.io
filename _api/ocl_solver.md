@@ -17,7 +17,7 @@ code_block:
       initialGuess = solver.getInitialGuess();
       initialGuess.states.x.set(-0.2);
 
-      [solution,grid] = solver.solve(initialGuess);
+      [solution,gridpoints] = solver.solve(initialGuess);
 
       % initial guess, solution and times have
       % the following structure:
@@ -25,12 +25,12 @@ code_block:
       solution.integrator   % integrator variables trajectory
       solution.controls     % control trajectory
       solution.parameters   % parameters
-      grid.states          % time points of states
-      grid.controls        % time points of controls
+      gridpoints.states     % time points of states
+      gridpoints.controls   % time points of controls
 
       % plotting of control and state p trajectory:
-      oclPlot(grid.controls, solution.controls.u)
-      oclPlot(grid.states, solution.states.p)
+      oclPlot(gridpoints.controls, solution.controls.u)
+      oclPlot(gridpoints.states, solution.states.p)
     end
     
     function varsfun(svh)
