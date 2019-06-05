@@ -16,7 +16,7 @@ code_block:
       initialGuess = solver.getInitialGuess();
       initialGuess.states.x.set(-0.2);
 
-      [solution,times] = solver.solve(initialGuess);
+      [solution,grid] = solver.solve(initialGuess);
 
       % initial guess, solution and times have
       % the following structure:
@@ -24,12 +24,12 @@ code_block:
       solution.integrator   % integrator variables trajectory
       solution.controls     % control trajectory
       solution.parameters   % parameters
-      times.states          % time points of states
-      times.controls        % time points of controls
+      grid.states          % time points of states
+      grid.controls        % time points of controls
 
       % plotting of control and state p trajectory:
-      oclPlot(times.controls, solution.controls.u)
-      oclPlot(times.states, solution.states.p)
+      oclPlot(grid.controls, solution.controls.u)
+      oclPlot(grid.states, solution.states.p)
     end
     
     function varsfun(svh)
@@ -98,7 +98,7 @@ methods:
     returns: 
       - content: "The solution of the OCP"
         type: "[OclVariable](#apiocl_variable)"
-      - content: "Time points of the solution"
+      - content: "Grid points of the solution"
         type: "[OclVariable](#apiocl_variable)"
   - name: "setBounds"
     content: "Sets a bound on a variable for the whole trajectory. If only the lower bound is given, it will be `lb==ub`. A bound can be either scalar or a vector with `length(lb)==length(ub)==N+1` for states and `length(lb)==length(ub)==N` for control variables."
