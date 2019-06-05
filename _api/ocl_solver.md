@@ -48,7 +48,7 @@ parameters:
     name: "pathcosts = @(x,z,u,p) 0"
     type: "[ocl.PathcostFunction](#apiocl_pathcostfunction)"
     
-  - content: "Point-costs function. Optional, defaults to a function handle returning 0.
+  - content: "Point-costs function. Optional, defaults to a function handle returning 0."
     name: "pointcosts = @(k,K,x) 0"
     type: "[ocl.PointcostFunction](#apiocl_pointcostfunction)"
     
