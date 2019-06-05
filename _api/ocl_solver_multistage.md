@@ -11,11 +11,13 @@ code_block:
     
 parameters: 
 
-  - name: "stages = {}"
+  - name: "stages"
+    default: "{}"
     content: "List (cell-array) of stages. Optional, defaults to empty list."
     type: "cell<[ocl.Stage](#apiocl_stage)>"
     
-  - name: "transitions = {}"
+  - name: "transitions"
+    default: "{}"
     content: "List (cell-array) of transitions. Optional, defaults to empty list."
     type: "cell<[ocl.Transition](#apiocl_transition)>"
 
