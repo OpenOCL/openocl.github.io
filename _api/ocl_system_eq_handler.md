@@ -1,6 +1,7 @@
 ---
-name: OclSystemEqHandler
-description: The system equations handler allows to specify the system equations which can be of ODE and DAE type.
+name: ocl.DaeHandler
+title: ocl.DaeHandler
+description: The differential equations handler allows to specify the system equations which can be of ODE and DAE type.
 methods:
   - content: "Adds a differential equation to the system. Note that for every state variable defined in the variables function, a differential equation must be specified."
     name: "setODE"
@@ -20,6 +21,5 @@ methods:
         type: "[OclVariable](#apiocl_variable) or Matlab matrix"
     returns: ~
 position: 3
-title: OclSystemEqHandler
 type: Class
 ---
