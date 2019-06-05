@@ -1,60 +1,22 @@
 --- 
 name: ocl.Solver (multi-stage)
 position: 21
-type: Function
-description: "Creates a solver object that discretizes the given optimal control problem, and calls the underlying optimizer. "
+type: Class
+description: "Creates a solver object for multi-stage problems. "
 code_block:
   title: Example
   language: m
   code: |- 
-    solver = ocl.Solver(END_TIME, @varsfun, @daefun, @pathcosts, 'N', 30);
-    
-    solver.setInitialBounds('x',     0);
-    solver.setInitialBounds('y',     1);
-    
-    initialGuess = solver.getInitialGuess();
-    initialGuess.states.x.set(-0.2);
-    
-    [solution,times] = solver.solve(initialGuess);
-    
-    % initial guess, solution and times have
-    % the following structure:
-    solution.states       % state trajectory
-    solution.integrator   % integrator variables trajectory
-    solution.controls     % control trajectory
-    solution.parameters   % parameters
-    times.states          % time points of states
-    times.controls        % time points of controls
-    
-    % plotting of control and state p trajectory:
-    oclPlot(times.controls, solution.controls.u)
-    oclPlot(times.states, solution.states.p)
     
 parameters: 
 
-  - name: "T"
-    content: "The end time/horizon length of the optimal control problem. If your system equatiosn are expressed as function of an independent variable other than time, `T` represents not the end time but the endpoint of the integration over the independent variable."
-    type: "numeric"
+  - name: "stages = {}"
+    content: "List (cell-array) of stages. Optional, defaults to empty list."
+    type: "cell<[ocl.Stage](#apiocl_stage)>"
     
-  - content: "System variables function. Optional, defaults to an empty function handle."
-    name: "vars = @()[]"
-    type: "[ocl.SysvarsFunction](#apiocl_sysvarsfunction)"
-    
-  - content: "DAE (system equations) function. Optional, defaults to an empty function handle."
-    name: "dae = @(x,z,u,p)[]"
-    type: "[ocl.DaeFunction](#apiocl_daefunction)"
-    
-  - content: "Path-costs function. Optional, defaults to a function handle returning 0."
-    name: "pathcosts = @(x,z,u,p) 0"
-    type: "[ocl.PathcostFunction](#apiocl_pathcostfunction)"
-    
-  - content: "Point-costs function. Optional, defaults to a function handle returning 0."
-    name: "pointcosts = @(k,K,x) 0"
-    type: "[ocl.PointcostFunction](#apiocl_pointcostfunction)"
-    
-  - content: "Point-constraints function. Optional, defaults to an empty function handle."
-    name: "pointconstraints = @(k,K,x) []"
-    type: "[ocl.PointconstraintFunction](#apiocl_pointconstraintfunction)"
+  - content: "transitions = {}"
+    name: "List (cell-array) of transitions. Optional, defaults to empty list."
+    type: "cell<[ocl.Transition](#apiocl_transition)>"
 
 returns: 
   - content: A solver object.
@@ -80,40 +42,4 @@ methods:
         type: "[OclVariable](#apiocl_variable)"
       - content: "Time points of the solution"
         type: "[OclVariable](#apiocl_variable)"
-  - name: "setBounds"
-    content: "Sets a bound on a variable for the whole trajectory. If only the lower bound is given, it will be `lb==ub`. A bound can be either scalar or a vector with `length(lb)==length(ub)==N+1` for states and `length(lb)==length(ub)==N` for control variables."
-    parameters:
-      - content: "The variable id"
-        name: "id"
-        type: "char"
-      - content: "The lower bound"
-        name: "lb"
-        type: "numeric"
-      - content: "The upper bound"
-        name: "ub"
-        type: "numeric,optional"
-  - name: "setInitialBounds"
-    content: "Sets an initial bound on a variable. If only the lower bound is given, it will be `lb==ub`. A bound can be either scalar or a vector with `length(lb)==length(ub)==N+1` for states and `length(lb)==length(ub)==N` for control variables."
-    parameters:
-      - content: "The variable id"
-        name: "id"
-        type: "char"
-      - content: "The lower bound"
-        name: "lb"
-        type: "numeric"
-      - content: "The upper bound"
-        name: "ub"
-        type: "numeric,optional"
-  - name: "setEndBounds"
-    content: "Sets an end bound on a variable. If only the lower bound is given, it will be `lb==ub`. A bound can be either scalar or a vector with `length(lb)==length(ub)==N+1` for states and `length(lb)==length(ub)==N` for control variables."
-    parameters:
-      - content: "The variable id"
-        name: "id"
-        type: "char"
-      - content: "The lower bound"
-        name: "lb"
-        type: "numeric"
-      - content: "The upper bound"
-        name: "ub,optional"
-        type: "numeric"
 ---
