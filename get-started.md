@@ -10,7 +10,7 @@ On this page you can **download** the latest version of OpenOCL. You can find ol
 
 | Windows (Matlab >= R2013a), Linux (Matlab >= R2014a), Mac (Matlab >= R2015a)   |
 |:-------------:|
-| [Download Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v5.07/OpenOCL-v5.07.mltbx) |
+| [Download Matlab .mltbx package](https://github.com/OpenOCL/OpenOCL/releases/download/v5.08/OpenOCL-v5.08.mltbx) |
 
 If your configuration is not in the list or if you would like to try an alternative way, see below.
 
@@ -52,7 +52,7 @@ doc ocl
 
 ## Matlab code as zip
 
-You can also download the [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v5.07/OpenOCL-v5.07.zip), you need to unzip the downloaded folder, and navigate to it. Then run an example, e.g.
+You can also download the [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v5.08/OpenOCL-v5.08.zip), you need to unzip the downloaded folder, and navigate to it. Then run an example, e.g.
 
 ```m
 ocl.examples.cartpole
@@ -70,7 +70,7 @@ Here is a step-by-step guide:
 
 * [Get the latest CasADi](https://web.casadi.org/get/) version for Matlab or Octave and follow the installation instructions on their page.
 * Add the main *CasADi* directory to your Matlab path, not including subdirectories: `addpath 'path/to/casadi'`
-* Download [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v5.07/OpenOCL-v5.07.zip), unzip, and add the folder to your path: `addpath 'path/to/OpenOCL-vX.XX'`. Again do not include the sub-directories!
+* Download [Matlab code as zip](https://github.com/OpenOCL/OpenOCL/releases/download/v5.08/OpenOCL-v5.08.zip), unzip, and add the folder to your path: `addpath 'path/to/OpenOCL-vX.XX'`. Again do not include the sub-directories!
 * Run one of the examples, e.g.: `ocl.examples.cartpole`
 
 If you would like to save your path using `savepath` or the Matlab path manager, do this **before** running the example in order to not include the sub-directories.
