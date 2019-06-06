@@ -10,7 +10,7 @@ If you use OpenOCL in your scientific work, please cite the following paper:
 
 OpenOCL - Open Optimal Control Library    
 Jonas Koenemann, Giovanni Licitra, Mustafa Alp, Moritz Diehl  
-June 2019 [[research gate](https://www.researchgate.net/publication/333646261_OpenOCL_-_Open_Optimal_Control_Library)]
+Robotics Science and Systems, workshop submission, extended abstract, June 2019 [[research gate](https://www.researchgate.net/publication/333646261_OpenOCL_-_Open_Optimal_Control_Library)]
 
 ## Other publications
 
