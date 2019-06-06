@@ -1,3 +1,9 @@
+---
+permalink: /publications/
+last_modified_at: 2019-06-06
+title: Citing publications
+---
+
 # Citing
 
 If you use OpenOCL in your scientific work, please cite the following paper:
