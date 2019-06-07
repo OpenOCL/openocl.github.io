@@ -13,3 +13,5 @@ computation time is deterministic (realtime), but often a fast enough average co
 
 Due to this strict demand on the computational efficiency, linear system models, and quadratic cost models are preferred, but there is
 ongoing research on realizing predictive controllers with non-linear models.
+
+A closely related project to *OpenOCL* is the [acados](https://github.com/acados/acados) project which implements fast solvers for embedded optimization and model predictive control.
