@@ -1,6 +1,6 @@
 ---
 permalink: /model-predictive-control/
-last_modified_at: 2019-05-04
+last_modified_at: 2019-06-07
 title: Model Predictive Control
 ---
 
