@@ -9,7 +9,7 @@ title: Software projects
 - Acado [[github](https://github.com/acado/acado)] [[web](http://acado.github.io/)]
 - acados [[github](https://github.com/acados/acados)]
 - CasADi, automatic differentiation [[github](https://github.com/casadi/casadi)] [[web](https://web.casadi.org/)]
-- Control toolbox, domain specific for robotics [[bitbucket](https://bitbucket.org/adrlab/ct/wiki/Home)]
+- Control toolbox, domain specific for robotics [[github](https://github.com/ethz-adrl/control-toolbox)]
 - hpipm, high performance interior point method qp solver [[github](https://github.com/giaf/hpipm)]
 - Ipopt, interior-point non-linear programming solver [[github](https://github.com/coin-or/Ipopt)]
 - MuJoCo (Optico) - advanced physics simulation (trajectory optimization) [[web](http://www.mujoco.org/)] (commercial)
