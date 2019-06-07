@@ -88,7 +88,7 @@ The following applications give you a quick overview on which kind of problems y
      
 ### More information
 
-[interesting software projects](/other-software-projects/) - [model predictive control](/model-predictive-control/) - [trajectory optimization](/trajectory-optimization/)
+[tutorials](/tutorials/) - [interesting software projects](/other-software-projects/) - [model predictive control](/model-predictive-control/) - [trajectory optimization](/trajectory-optimization/)
      
 ### Contact
 
