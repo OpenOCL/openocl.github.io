@@ -1,16 +1,16 @@
 ---
-permalink: /publications/
+permalink: /citing-publications/
 last_modified_at: 2019-06-06
 title: Citing publications
 ---
 
-# Citing
+# Citing OpenOCL
 
 If you use OpenOCL in your scientific work, please cite the following paper:
 
-OpenOCL - Open Optimal Control Library    
+**OpenOCL - Open Optimal Control Library**    
 Jonas Koenemann, Giovanni Licitra, Mustafa Alp, Moritz Diehl  
-Robotics Science and Systems, workshop submission, extended abstract, June 2019 [[research gate](https://www.researchgate.net/publication/333646261_OpenOCL_-_Open_Optimal_Control_Library)]
+Robotics Science and Systems, workshop submission, extended abstract, June 2019 [[researchgate](https://www.researchgate.net/publication/333646261_OpenOCL_-_Open_Optimal_Control_Library)]
 
 ## Other publications
 
