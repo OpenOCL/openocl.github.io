@@ -12,6 +12,6 @@ title: Software projects
 - Control toolbox, domain specific for robotics [[bitbucket](https://bitbucket.org/adrlab/ct/wiki/Home)]
 - hpipm, high performance interior point method qp solver [[github](https://github.com/giaf/hpipm)]
 - Ipopt, interior-point non-linear programming solver [[github](https://github.com/coin-or/Ipopt)]
-- MuJoCo (Optico) - advanced physics simulation (trajectory optimization) [web](http://www.mujoco.org/) (commercial)
-- OpenAI gym [web](https://gym.openai.com/)
+- MuJoCo (Optico) - advanced physics simulation (trajectory optimization) [[web](http://www.mujoco.org/)] (commercial)
+- OpenAI gym [[web](https://gym.openai.com/)]
 - towr, domain specific for legged robots [[github](https://github.com/ethz-adrl/towr)]
