@@ -1,6 +1,6 @@
 ---
 layout: frontpage
-last_modified_at: 2019-06-04
+last_modified_at: 2019-06-07
 title: Open Optimal Control Library
 ---
 
@@ -85,6 +85,10 @@ The following applications give you a quick overview on which kind of problems y
     <img src="/imgs/cartpole.gif">
   </div>
 </div>
+     
+### More information
+
+[interesting software project](/other-software-projects/) - [model predictive control](/model-predictive-control/) - [trajectory optimization](/trajectory-optimization/)
      
 ### Contact
 
