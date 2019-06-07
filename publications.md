@@ -1,7 +1,7 @@
 ---
 permalink: /citing-publications/
 last_modified_at: 2019-06-06
-title: Citing publications
+title: Citing, publications, references
 ---
 
 # Citing OpenOCL
