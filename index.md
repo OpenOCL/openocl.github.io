@@ -79,7 +79,7 @@ The following applications give you a quick overview on which kind of problems y
 <div class="content-row-centered">
   <div class="content-row-left">
     <h4>Unstable mechanical systems</h4> 
-    <p>Get example code for the <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/01VanDerPol">Van Der Pol</a> oszillator, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/05CartPole">pendulum on a cart</a>, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/03Pendulum">pendulum swingup</a>, <a href="https://github.com/OpenOCL/OpenOCL/tree/master/Examples/02BallAndBeam">ball on a plate</a>. The toolbox can also be used for teaching!</p>
+    <p>Get example code for the <a href="/ocl-docs-matlab/vanderpol.html">Van Der Pol</a> oszillator, <a href="/ocl-docs-matlab/cartpole.html">pendulum on a cart</a>, <a href="/ocl-docs-matlab/pendulum_sim.html">pendulum simulation</a>, <a href="/ocl-docs-matlab/ballandbeam.html">ball on a plate</a>. The toolbox can also be used for teaching!</p>
   </div>
   <div class="content-row-right content-row-right-img">
     <img src="/imgs/cartpole.gif">
