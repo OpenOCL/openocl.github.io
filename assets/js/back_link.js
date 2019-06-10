@@ -1,5 +1,5 @@
 (function(document) {
-var domain_name = 'openocl';
+var domain_name = 'openocl.org';
 var element = document.getElementById('top');
 var last_page = document.referrer;
 if (element !== null && window.history.length > 0 && last_page.toLowerCase().indexOf(domain_name) !== -1)  
