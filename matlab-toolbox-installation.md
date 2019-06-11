@@ -4,11 +4,13 @@ last_modified_at: 2019-06-11
 title: Installation of the matlab toolbox
 ---
 
+# Installing OpenOCL as a Matlab toolbox (Add-on)
+
 Download the `.mltbx` file from [here](/get-started/).
 
 With the Matlab toolbox package **.mltbx** you are ready to go, just double click on the file and Matlab will install the packages as an Add-on. 
 
-Then run an example by typing
+Then run an optimal control example by typing
 
 ```m
 ocl.examples.cartpole
