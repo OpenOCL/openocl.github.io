@@ -1,6 +1,6 @@
 ---
 layout: frontpage
-last_modified_at: 2019-06-07
+last_modified_at: 2019-06-11
 title: Open Optimal Control Library
 ---
 
@@ -88,7 +88,7 @@ The following applications give you a quick overview on which kind of problems y
      
 ### More information
 
-[tutorials](/tutorials/) - [interesting software projects](/other-software-projects/) - [model predictive control](/model-predictive-control/) - [trajectory optimization](/trajectory-optimization/) -[matlab toolbox installation](/matlab-toolbox-installation/)
+[tutorials](/tutorials/) - [interesting software projects](/other-software-projects/) - [model predictive control](/model-predictive-control/) - [trajectory optimization](/trajectory-optimization/) - [matlab toolbox installation](/matlab-toolbox-installation/)
      
 ### Contact
 
