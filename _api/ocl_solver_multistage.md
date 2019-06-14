@@ -2,7 +2,7 @@
 name: ocl.Solver
 title: ocl.Solver (multi-stage)
 position: 21
-type: Class
+type: class
 description: "Creates a solver object for multi-stage problems. "
 code_block:
   title: Example
