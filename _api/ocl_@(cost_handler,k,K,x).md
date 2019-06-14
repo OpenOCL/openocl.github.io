@@ -19,7 +19,7 @@ parameters:
     
   - name: "X"
     content: "State variable"
-    type: "[OclVariable](@apiocl_variable)"
+    type: "[OclVariable](#apiocl_variable)"
 
 methods: ~
 position: 200
