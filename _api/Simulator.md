@@ -1,7 +1,7 @@
 --- 
 name: Simulator
 position: 50
-type: Class
+type: class
 code_block:
   title: Simulator Example
   language: m
