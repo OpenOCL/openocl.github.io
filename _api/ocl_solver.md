@@ -2,7 +2,7 @@
 name: ocl.Solver
 title: ocl.Solver
 position: 20
-type: Function
+type: class
 description: "Creates a solver object that discretizes the given optimal control problem, and calls the underlying optimizer. "
 code_block:
   title: Example
