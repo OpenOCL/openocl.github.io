@@ -25,13 +25,13 @@ code_block:
     end
 parameters:
   - name: "vars"
-    default: "@()[]"
+    default: "@(vars_handler)[]"
     content: "System variables function. Optional, defaults to an empty function handle."
-    type: "[ocl.SysvarsFunction](#apiocl_sysvarsfunction)"
+    type: "[@(vars_handler)](#apiocl_@(vars_handler))"
     
   - name: dae
-    default: "@(x,z,u,p)[]"
+    default: "@(dae_handler,x,z,u,p)[]"
     content: "DAE (system equations) function. Optional, defaults to an empty function handle."
-    type: "[ocl.DaeFunction](#apiocl_daefunction)"
+    type: "[@(dae_handler,x,z,u,p)](#apiocl_@(dae_handler,x,z,u,p))"
 returns: ~
 ---
