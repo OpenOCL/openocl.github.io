@@ -7,7 +7,7 @@ parameters:
 
   - name: "dae_handler"
     content: "DAE handler"
-    type: "[ocl.DaeHandler](#apiocl_daehandler)"
+    type: "[ocl.DaeHandler](#apiocl_dae_handler)"
     
   - name: x
     content: "State variables"
