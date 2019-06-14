@@ -7,7 +7,7 @@ parameters:
 
   - name: "cost_handler"
     content: "Cost handler"
-    type: "[ocl.DaeHandler](#apiocl_daehandler)"
+    type: "[ocl.Cost](#apiocl_cost)"
     
   - name: x
     content: "State variables"
