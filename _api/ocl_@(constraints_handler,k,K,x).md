@@ -1,7 +1,7 @@
 ---
 name: "@(constraints_handler,k,K,x)"
 title: "@(constraints_handler,k,K,x)"
-type: function handle
+type: function
 description: Function handle signature for point constraints function.
 category: fh
 parameters: 
