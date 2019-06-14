@@ -2,6 +2,7 @@
 layout: frontpage
 last_modified_at: 2019-06-11
 title: Open Optimal Control Library
+pid: index
 ---
 
 # Open Optimal Control Library
