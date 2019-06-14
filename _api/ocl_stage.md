@@ -3,7 +3,7 @@ name: ocl.Stage
 title: ocl.Stage
 description: |
   The definition of a Stage.
-
+type: class
 code_block:
   title: Example Stage
   language: m
@@ -56,5 +56,4 @@ parameters:
     
 position: 10
 returns: ~
-type: Class
 ---
