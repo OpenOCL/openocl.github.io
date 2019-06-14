@@ -1,7 +1,7 @@
 --- 
 name: ocl.System
 title: "ocl.System"
-type: Class
+type: class
 description: |-
   A dynamical system is defined by implementing functions for the system variables and equations, and creating an OclSystem passing the function pointers. You need to implement two functions, one for defining the system variables, and a second one for defining the system equations. The system is created by passing the handles of the two functions to the constructor of OclSystem. A system can be used width an [ocl.Simulator](#apiocl_simulator). 
   
