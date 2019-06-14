@@ -2,6 +2,7 @@
 name: ocl.VarsHandler
 title: ocl.VarsHandler
 description: The variables handler allows to specify the system variables, its dimensions and bounds.
+type: class
 methods: 
   - content: "Adds a state variable to the system."
     name: "addState"
@@ -64,6 +65,4 @@ methods:
         name: default=[]
         type: "numeric, optional"
     returns: ~
-position: 2
-type: Class
 ---
