@@ -3,7 +3,7 @@ name: CasadiOptions
 title: CasadiOptions
 description: "Creates an options struct for [ocl.Solver](#apiocl_solver). Check the casadi documentation and the ipopt documentation to see which options are available. The `ipopt` options can be set in 'casadi_options.ipopt'. The default values are the following:"
 content_markdown: ~
-type: Function
+type: struct
 code_block:
   title: Example
   language: m
