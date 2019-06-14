@@ -1,7 +1,7 @@
 ---
 name: "@(cost_handler,x,z,u,p)"
 title: "@(cost_handler,x,z,u,p)"
-type: function handle
+type: function
 description: Function handle signature for the path cost function.
 parameters: 
 
