@@ -24,16 +24,14 @@ code_block:
       seh.setODE('v',x.p);
     end
 parameters:
-
-  - name: "vars = @()[]"
+  - name: "vars"
+    default: "@()[]"
     content: "System variables function. Optional, defaults to an empty function handle."
     type: "[ocl.SysvarsFunction](#apiocl_sysvarsfunction)"
     
-  - name: "dae = @(x,z,u,p)[]"
+  - name: dae
+    default: "@(x,z,u,p)[]"
     content: "DAE (system equations) function. Optional, defaults to an empty function handle."
     type: "[ocl.DaeFunction](#apiocl_daefunction)"
-    
-position: 1
 returns: ~
-right_code_blocks: ~
 ---
