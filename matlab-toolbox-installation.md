@@ -38,7 +38,7 @@ open ocl.examples.cartpole
 
 ![Open Cartpole example code](/assets/img/open_example.png)
 
-To see documentationm, type
+To see documentation, type
 
 ```m
 doc ocl
