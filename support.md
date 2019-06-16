@@ -10,4 +10,4 @@ You can [open an issue on github](https://github.com/OpenOCL/OpenOCL/issues) and
 
 # Discussion board (forum)
 
-We also created a [subreddit for OpenOCL](https://www.reddit.com/r/OpenOCL/) where you can freely exchange your ideas and get help with OpenOCL from us and the community! Join the subreddit and get all the up-to-date and useful information.
+We also created a [google group for OpenOCL](https://groups.google.com/d/forum/openocl) where you can freely exchange your ideas and get help with OpenOCL from us and the community! Join the group and get all the up-to-date and useful information.
