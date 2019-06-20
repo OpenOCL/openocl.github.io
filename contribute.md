@@ -14,4 +14,4 @@ indicate easy issues to start with. But any contributions (have your own ideas) 
 
 Get in contact with us (jonas@openocl.org) if you would like to contribute.
 If you implemented a feature that you think would make OpenOCL a better software, 
-create `pull request` and we will review the request asap!
+create a **pull request** and we will review the request asap!
