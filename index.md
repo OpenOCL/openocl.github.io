@@ -9,7 +9,7 @@ pid: index
 
 ## Quick start
 
-[Download](/get-started/) the software and install the package with on click! The dependencies will be resolved automatically. 
+[Download](/get-started/) the software and install the package with just one click! The dependencies will be resolved automatically. 
 
 Also have a look at the [API Docs](api-docs.md). Get [support](/support/) if you run into any problems. Consider [contributing](/contribute/) if you would like to help with the project! Please [cite us](/publications/) if you use OpenOCL in your scientific work, and give us a [star on github](https://github.com/OpenOCL/OpenOCL/).
 
