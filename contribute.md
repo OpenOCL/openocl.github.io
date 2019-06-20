@@ -7,7 +7,7 @@ title: Contribution guidelines
 # Contribution guidelines
 
 We very much welcome contributions to the software! 
-The code base of `OpenOCL` is being kept small and clean to make it easy to enter for new contributors.
+The code-base of `OpenOCL` is being kept small and clean to make it easy to enter for new contributors.
 
 Check out the [issues on github](https://github.com/OpenOCL/OpenOCL/issues) with the label `ufg` (up for grabs) that 
 indicate easy issues to start with. But any contributions (have your own ideas) are welcome!
