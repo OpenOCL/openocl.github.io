@@ -9,7 +9,7 @@ pid: index
 
 ## Quick start
 
-[Download](/get-started/) the software and have a look at the [API Docs](api-docs.md). Get [support](/support/) if you run into any problems. Please [cite us](/publications/) if you use OpenOCL in your scientific work.
+[Download](/get-started/) the software and have a look at the [API Docs](api-docs.md). Get [support](/support/) if you run into any problems. Consider [contributing](/contribute/) if you would like to help with the project! Please [cite us](/publications/) if you use OpenOCL in your scientific work, and give us a start on github.
 
 ## Features
 
