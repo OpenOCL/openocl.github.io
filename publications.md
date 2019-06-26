@@ -12,6 +12,8 @@ If you use OpenOCL in your scientific work, please cite the following paper:
 Jonas Koenemann, Giovanni Licitra, Mustafa Alp, Moritz Diehl  
 Robotics Science and Systems, workshop submission, extended abstract, June 2019 [[researchgate](https://www.researchgate.net/publication/333646261_OpenOCL_-_Open_Optimal_Control_Library)]
 
+We would also appreciate if you gave us a **star** on [github](https://github.com/openocl/openocl/) so that the project will be visible to more people.
+
 ## Other publications
 
 A Reference Model for Airborne Wind Energy Systems For Optimization and Control  
