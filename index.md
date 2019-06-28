@@ -12,7 +12,7 @@ Navigation: [Get Started](/get-started/) - [Documentation](api-docs.md) - [Blog]
 
 ## Quick start
 
-[Download](/get-started/) the software and install the package with just one click!
+Get the software [from here](/get-started/), and install the package with just one click!
 
 Also have a look at the [API Docs](api-docs.md). Get [support](/support/) if you run into any problems. Consider [contributing](/contribute/) if you would like to help with the project! Please [cite us](/publications/) if you use OpenOCL in your scientific work.
 
