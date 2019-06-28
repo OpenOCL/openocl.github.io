@@ -7,6 +7,8 @@ pid: index
 
 # Open Optimal Control Library
 
+Navigation: [Get Started](/get-started/) - [Documentation](api-docs.md) - [Blog](/blog/) - [Support](/support/) - [Publications](/publications/) - [Contributing](/contribute/)
+
 ## Quick start
 
 [Download](/get-started/) the software and install the package with just one click!
