@@ -72,14 +72,14 @@ parameters:
     content: "Path-costs function. Optional, defaults to a function handle returning 0."
     type: "[@(cost_handler,x,z,u,p)](#apiocl_@(cost_handler,x,z,u,p))"
     
-  - name: pointcosts
+  - name: intervalcosts
     default: "@(cost_handler,k,K,x) 0"
-    content: "Point-costs function. Optional, defaults to a function handle returning 0."
+    content: "Interval-costs function. Optional, defaults to a function handle returning 0."
     type: "[@(cost_handler,k,K,x)](#apiocl_@(cost_handler,k,K,x))"
     
-  - name: pointconstraints
+  - name: intervalconstraints
     default: "@(constraints_handler,k,K,x) []"
-    content: "Point-constraints function. Optional, defaults to an empty function handle."
+    content: "Interval-constraints function. Optional, defaults to an empty function handle."
     type: "[@(constraints_handler,k,K,x)](#apiocl_@(constraints_handler,k,K,x))" 
 
 returns: 
