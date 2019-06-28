@@ -8,7 +8,9 @@ pid: api
 
 # Documentation
 
-In *OpenOCL* you can solve a large class of optimal control problems including continuous-time, multi-stage, and constrained problems, which can appear in the context of trajectory optimization and model predictive control. 
+In *OpenOCL* you can solve a large class of optimal control problems including continuous-time, multi-stage, and constrained problems, which can appear in the context of trajectory optimization and model predictive control. In the following we will give a short introduction to the concepts used and introduced in *OpenOCL*.
+
+## Cost terms and constraints
 
 We support *path*-constraints that hold along the entire trajectory, *point*-constraints that only hold at specific points in the continuous trajectory, and *grid*-constraints that hold only at specific gridpoints in the discretized trajectory.
 
