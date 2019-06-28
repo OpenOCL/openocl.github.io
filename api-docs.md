@@ -8,7 +8,9 @@ pid: api
 
 # Documentation
 
-In *OpenOCL* you can solve a large class of optimal control problems including **non-linear**, **continuous-time**, **multi-stage**, and **constrained** problems, which can appear in the context of trajectory optimization and model predictive control. We introduced some new concepts that should make it as easy as possible for you to model optimal control problems, in particular the notion of point-costs and point-constraints that can be very handy when implementing **tracking problems**. In the following we give a short introduction to the concepts used and introduced in *OpenOCL*.
+In *OpenOCL* you can solve a large class of optimal control problems including **non-linear**, **continuous-time**, **multi-stage**, and **constrained** problems, which can appear in the context of **trajectory optimization** and model **predictive control**. The types of dynamical systems that are supported are all systems that can be described by **ordinary differential equations** or **differential algebraic equations**.
+
+We introduced some new concepts that should make it as easy as possible for you to model optimal control problems, in particular the notion of point-costs and point-constraints that can be very handy when implementing **tracking problems**. In the following we give a short introduction to the concepts used and introduced in *OpenOCL*.
 
 ## Cost terms and constraints
 
@@ -23,6 +25,8 @@ Similarly, for the cost terms you can specify *path*-costs that are integrated a
 Summary of the introduced concepts: **path-costs**, **point-costs**, **grid-costs**, **path-constraints**, **point-constraints**, **grid-constraints**.
 
 ## Optimal control problems (single-stage)
+
+t
 
 
 ## Multi-stage optimal control problems
