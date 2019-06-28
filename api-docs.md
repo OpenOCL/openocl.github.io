@@ -19,3 +19,5 @@ Similarly, for the cost terms you can specify *path*-costs that are integrated a
 *Point*-constraints can be typically used to specify constraints at the beginning and at the end of the trajectory. *Point*-costs can be used to formulate tracking problems where waypoints are given that should be tracked for specific points. If the waypoint should be passed exactly, the you would use *point*-constraints instead (but it is harder to solve).
 
 *Grid*-costs, and *grid*-constraints are similar to the *point*-cost, and constraints. They can be specified if you want to have control over on how the problem is discretized, and where on the discretized trajectory you want to specify the cost terms and constraints. We generally recommend using *point*-costs and *point*-constraints instead as they are easier to handle.
+
+Summary of the introduced concepts: **path-costs**, **point-costs**, **grid-costs**, **path-constraints**, **point-constraints**, **grid-constraints**.
