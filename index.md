@@ -8,6 +8,7 @@ pid: index
 # Open Optimal Control Library
 
 Navigation: [Get Started](/get-started/) - [Documentation](api-docs.md) - [Blog](/blog/) - [Support](/support/) - [Publications](/publications/) - [Contributing](/contribute/)
+  
 
 ## Quick start
 
