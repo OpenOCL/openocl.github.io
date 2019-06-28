@@ -18,9 +18,9 @@ We support ***path*-constraints** that hold along the entire trajectory, ***poin
 
 Similarly, for the cost terms you can specify ***path*-costs** that are integrated along the trajectory (also known as Lagrange term), ***point*-costs** that are given for specific points along the trajectory, and ***grid*-costs** that can be specified for specific points on the discretized trajectory. 
 
-*Point*-constraints can be typically used to specify constraints at the beginning and at the end of the trajectory. *Point*-costs can be used to formulate tracking problems where waypoints are given that should be tracked for specific points. If the waypoint should be passed exactly, the you would use *point*-constraints instead (but it is harder to solve).
+*Point*-constraints can be typically used to specify constraints at the beginning and at the end of the trajectory. *Point*-costs can be used to formulate tracking problems where waypoints are given that should be tracked for specific points. If the waypoint should be passed exactly, the you would use *point*-constraints instead (but that might be harder to solve).
 
-*Grid*-costs, and *grid*-constraints are similar to the *point*-cost, and constraints. They can be specified if you want to have control over on how the problem is discretized, and where on the discretized trajectory you want to specify the cost terms and constraints. We generally recommend using *point*-costs and *point*-constraints instead as they are easier to handle.
+*Grid*-costs, and *grid*-constraints are similar to the *point*-cost, and *point*-constraints. They can be specified if you want to have control over on how the problem is discretized, and where on the discretized trajectory you want to specify the cost terms and constraints. We generally recommend using *point*-costs and *point*-constraints instead as they are easier to handle.
 
 ## Optimal control problems (single-stage)
 
