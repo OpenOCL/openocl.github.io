@@ -10,21 +10,15 @@ pid: api
 
 In *OpenOCL* you can solve a large class of optimal control problems including **non-linear**, **continuous-time**, **multi-stage**, and **constrained** problems, which can appear in the context of **trajectory optimization** and model **predictive control**. The types of dynamical systems that are supported are all systems that can be described by **ordinary differential equations** or **differential algebraic equations**.
 
-We introduced some new concepts that should make it as easy as possible for you to model optimal control problems, in particular the notion of point-costs and point-constraints that can be very handy when implementing **tracking problems**. In the following we give a short introduction to the concepts used and introduced in *OpenOCL*.
+We introduced some new concepts that should make it as easy as possible for you to model optimal control problems, in particular the notion of *grid*-costs and *grid*-constraints that can be very handy when implementing **tracking problems**. In the following we give a short introduction to the concepts used and introduced in *OpenOCL*.
 
 ## Cost terms and constraints
 
-We support ***path*-constraints** that hold along the entire trajectory, ***point*-constraints** that only hold at specific points in the continuous trajectory, and ***grid*-constraints** that hold only at specific gridpoints in the discretized trajectory.
+We support ***bounds** that hold along the entire trajectory, and ***grid*-constraints** that hold only at specific gridpoints in the discretized trajectory.
 
-Similarly, for the cost terms you can specify ***path*-costs** that are integrated along the trajectory (also known as Lagrange term), ***point*-costs** that are given for specific points along the trajectory, and ***grid*-costs** that can be specified for specific points on the discretized trajectory. 
-
-*Point*-constraints can be typically used to specify constraints at the beginning and at the end of the trajectory. *Point*-costs can be used to formulate tracking problems where waypoints are given that should be tracked for specific points. If the waypoint should be passed exactly, the you would use *point*-constraints instead (but that might be harder to solve).
-
-*Grid*-costs, and *grid*-constraints are similar to the *point*-cost, and *point*-constraints. They can be specified if you want to have control over on how the problem is discretized, and where on the discretized trajectory you want to specify the cost terms and constraints. We generally recommend using *point*-costs and *point*-constraints instead as they are easier to handle.
+For the cost terms you can specify ***path*-costs** that are integrated along the trajectory (also known as Lagrange term),  and ***grid*-costs** that can be specified for specific points on the discretized trajectory. 
 
 ## Optimal control problems (single-stage)
-
-t
 
 
 ## Multi-stage optimal control problems
