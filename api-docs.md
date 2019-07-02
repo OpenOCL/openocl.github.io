@@ -18,7 +18,7 @@ We support **bounds** that hold along the entire trajectory, and ***grid*-constr
 
 For the cost terms you can specify ***path*-costs** that are integrated along the trajectory (also known as Lagrange term),  and ***grid*-costs** that can be specified for specific points on the discretized trajectory. 
 
+<!--
 ## Optimal control problems (single-stage)
-
-
 ## Multi-stage optimal control problems
+-->
