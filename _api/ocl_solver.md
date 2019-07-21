@@ -9,7 +9,7 @@ code_block:
   language: m
   code: |- 
     function vanderpol
-      solver = ocl.Solver(END_TIME, @varsfun, @daefun, @pathcosts, 'N', 30);
+      solver = ocl.Solver(10, @varsfun, @daefun, @pathcosts, 'N', 30);
 
       solver.setInitialBounds('x',     0);
       solver.setInitialBounds('y',     1);
@@ -22,7 +22,6 @@ code_block:
       % initial guess, solution and times have
       % the following structure:
       solution.states       % state trajectory
-      solution.integrator   % integrator variables trajectory
       solution.controls     % control trajectory
       solution.parameters   % parameters
       timepoints.states     % time points of states
