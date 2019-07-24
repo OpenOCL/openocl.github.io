@@ -6,8 +6,8 @@ title: Support
 
 # Support
 
-You can [open an issue on github](https://github.com/OpenOCL/OpenOCL/issues) and use the label `support` if you need any help!
+You can [open an issue on github](https://github.com/OpenOCL/OpenOCL/issues) if you need any help, have a feature request, or find a bug!
 
 # Discussion board (forum)
 
-We also created a [google group for OpenOCL](https://groups.google.com/d/forum/openocl) where you can freely exchange your ideas and get help with OpenOCL from us and the community! Join the group and get all the up-to-date and useful information.
+We also created a [google group for OpenOCL](https://groups.google.com/d/forum/openocl) where you can freely exchange your ideas and get help with OpenOCL from us and the community! 
