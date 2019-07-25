@@ -1,6 +1,6 @@
 ---
 name: "@(vars_handler)"
-title: "@(vars_handler)"
+title: "@"
 type: function
 description: Function handle signature for system variables function.
 parameters: 
