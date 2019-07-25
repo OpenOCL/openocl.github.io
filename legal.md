@@ -8,10 +8,10 @@ title: Legal Notice
 
 openocl.org is a project of:
 
-> Jonas Koenemann   
-> University of Freiburg
-> Georges Koehler Allee 102
-> 79110 Freiburg  
+> Jonas Koenemann    
+> University of Freiburg  
+> Georges Koehler Allee 102  
+> 79110 Freiburg    
 > Germany
 > 
 > info [at] openocl.org
