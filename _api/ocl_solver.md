@@ -57,27 +57,22 @@ parameters:
     type: "numeric or []"
     
   - name: vars
-    default: "@(vars_handler)[]"
     content: "System variables function. Optional, defaults to an empty function handle."
     type: "[@(vars_handler)](#apiocl_@(vars_handler))"
     
   - name: dae
-    default: "@(dae_handler,x,z,u,p)[]"
     content: "DAE (system equations) function. Optional, defaults to an empty function handle."
     type: "[@(dae_handler,x,z,u,p)](#apiocl_@(dae_handler,x,z,u,p))"
     
   - name: pathcosts
-    default: "@(cost_handler,x,z,u,p) 0"
     content: "Path-costs function. Optional, defaults to a function handle returning 0."
     type: "[@(cost_handler,x,z,u,p)](#apiocl_@(cost_handler,x,z,u,p))"
     
   - name: gridcosts
-    default: "@(cost_handler,k,K,x) 0"
     content: "Grid-costs function. Optional, defaults to a function handle returning 0."
     type: "[@(cost_handler,k,K,x)](#apiocl_@(cost_handler,k,K,x))"
     
   - name: gridconstraints
-    default: "@(constraints_handler,k,K,x) []"
     content: "Grid-constraints function. Optional, defaults to an empty function handle."
     type: "[@(constraints_handler,k,K,x)](#apiocl_@(constraints_handler,k,K,x))" 
 
