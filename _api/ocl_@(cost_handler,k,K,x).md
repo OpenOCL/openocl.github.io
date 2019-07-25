@@ -1,5 +1,5 @@
 ---
-name: "@(cost_handler,k,K,x)"
+name: "@"
 title: "@(cost_handler,k,K,x)"
 type: function
 description: Function handle signature for point cost function.
