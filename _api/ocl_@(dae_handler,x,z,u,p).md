@@ -1,5 +1,5 @@
 ---
-name: "@(dae_handler,x,z,u,p)"
+name: "@"
 title: "@(dae_handler,x,z,u,p)"
 type: function
 description: Function handle signature for DAE function.
