@@ -1,5 +1,5 @@
 --- 
-name: Simulator
+name: ocl.Simulator
 position: 50
 type: class
 code_block:
