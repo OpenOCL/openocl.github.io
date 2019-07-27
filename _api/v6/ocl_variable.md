@@ -1,8 +1,8 @@
 ---
 version: 6
-name: OclVariable
-title: OclVariable
-description: The OclVariable type(or CasadiVariable in the CasADi backend) is the basic structure to retrieve, store, modify structured optimization variables. You can access subvariables by their name like the state trajectory or the control variables.
+name: ocl.Variable
+title: ocl.Variable
+description: The ocl.Variable type is the basic structure to retrieve, store, modify structured optimization variables. You can access subvariables by their name like the state trajectory or the control variables.
 parameters: ~
 position: 30
 returns: ~
