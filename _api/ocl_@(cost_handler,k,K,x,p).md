@@ -1,7 +1,7 @@
 ---
 version: 5
 name: "@"
-title: "@(cost_handler,k,K,x)"
+title: "@(cost_handler,k,K,x,p)"
 type: function
 description: Function handle signature for point cost function.
 parameters:
@@ -18,8 +18,12 @@ parameters:
     content: "last grid point index"
     type: "int"
 
-  - name: "X"
+  - name: "x"
     content: "State variable"
+    type: "[OclVariable](#apiocl_variable)"
+    
+  - name: p
+    content: "Parameters"
     type: "[OclVariable](#apiocl_variable)"
 
 methods: ~
