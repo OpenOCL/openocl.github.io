@@ -71,7 +71,7 @@ parameters:
 
   - name: gridcosts
     content: "Grid-costs function. Optional, defaults to a function handle returning 0."
-    type: "[@(cost_handler,k,K,x)](#apiocl_@(cost_handler,k,K,x))"
+    type: "[@(cost_handler,k,K,x,p)](#apiocl_@(cost_handler,k,K,x,p))"
 
 returns:
   - content: A solver object.
