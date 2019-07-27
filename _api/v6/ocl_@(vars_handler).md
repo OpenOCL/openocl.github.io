@@ -1,12 +1,12 @@
 ---
 version: 6
 name: "@"
-title: "@(vars_handler)"
+title: "@(vh)"
 type: function
 description: Function handle signature for system variables function.
 parameters:
 
-  - name: "vars_handler"
+  - name: "vh"
     content: "Variables handler"
     type: "[ocl.VarsHandler](#apiocl_vars_handler)"
 
