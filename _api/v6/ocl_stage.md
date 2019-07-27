@@ -42,10 +42,6 @@ parameters:
     content: "Path-costs function. Optional, defaults to a function handle returning 0."
     type: "[@(cost_handler,x,z,u,p)](#apiocl_@(cost_handler,x,z,u,p))"
 
-  - name: gridcosts
-    content: "Grid-costs function. Optional, defaults to a function handle returning 0."
-    type: "[@(cost_handler,k,K,x)](#apiocl_@(cost_handler,k,K,x))"
-
 position: 10
 returns: ~
 ---
