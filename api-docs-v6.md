@@ -1,7 +1,7 @@
 ---
 layout: api
 last_modified_at: 2019-04-17
-permalink: /api-docs/
+permalink: /api-docs/v6/
 title: API documentation
 pid: api
 version: 6
