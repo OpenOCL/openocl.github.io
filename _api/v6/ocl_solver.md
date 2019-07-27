@@ -20,14 +20,6 @@ code_block:
 
       [solution,timepoints] = solver.solve(initialGuess);
 
-      % initial guess, solution and times have
-      % the following structure:
-      solution.states       % state trajectory
-      solution.controls     % control trajectory
-      solution.parameters   % parameters
-      timepoints.states     % time points of states
-      timepoints.controls   % time points of controls
-
       % plotting of control and state p trajectory:
       oclPlot(timepoints.controls, solution.controls.u)
       oclPlot(timepoints.states, solution.states.p)
@@ -69,9 +61,9 @@ parameters:
     content: "Path-costs function. Optional, defaults to a function handle returning 0."
     type: "[@(cost_handler,x,z,u,p)](#apiocl_@(cost_handler,x,z,u,p))"
 
-  - name: gridcosts
-    content: "Grid-costs function. Optional, defaults to a function handle returning 0."
-    type: "[@(cost_handler,k,K,x)](#apiocl_@(cost_handler,k,K,x))"
+  - name: endcosts
+    content: "Terminal cost function. Optional, defaults to a function handle returning 0."
+    type: "[@(cost_handler,x,p)](#apiocl_@(cost_handler,x,p))"
 
 returns:
   - content: A solver object.
