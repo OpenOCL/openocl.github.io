@@ -71,19 +71,9 @@ returns:
 content_markdown: ~
 left_code_blocks: ~
 methods:
-  - name: "getInitialGuess"
-    content: "Use this method to retrieve a first initial guess that is generated from the bounds. You can further modify this initial guess to improve the solver performance."
-    parameters: ~
-    returns:
-      - content: "Structured variable for setting the initial guess"
-        name: initialGuess
-        type: "[OclVariable](#apiocl_variable)"
   - name: "solve"
     content: "Calls the solver and starts doing iterations."
-    parameters:
-      - content: "Provide a good initial guess"
-        name: initialGuess
-        type: "[OclVariable](#apiocl_variable)"
+    parameters: ~
     returns:
       - content: "The solution of the OCP"
         type: "[OclVariable](#apiocl_variable)"
