@@ -1,12 +1,12 @@
 ---
 version: 6
 name: "@"
-title: "@(dae_handler,x,z,u,p)"
+title: "@(daeh,x,z,u,p)"
 type: function
 description: Function handle signature for DAE function.
 parameters:
 
-  - name: "dae_handler"
+  - name: "daeh"
     content: "DAE handler"
     type: "[ocl.DaeHandler](#apiocl_dae_handler)"
 
