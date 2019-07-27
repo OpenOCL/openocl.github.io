@@ -1,4 +1,5 @@
 ---
+version: 5
 layout: api
 last_modified_at: 2019-04-17
 permalink: /api-docs/
@@ -16,7 +17,7 @@ We introduced some new concepts that should make it as easy as possible for you 
 
 We support **bounds** that hold along the entire trajectory, and ***grid*-constraints** that hold only at specific gridpoints in the discretized trajectory.
 
-For the cost terms you can specify ***path*-costs** that are integrated along the trajectory (also known as Lagrange term),  and ***grid*-costs** that can be specified for specific points on the discretized trajectory. 
+For the cost terms you can specify ***path*-costs** that are integrated along the trajectory (also known as Lagrange term),  and ***grid*-costs** that can be specified for specific points on the discretized trajectory.
 
 <!--
 ## Optimal control problems (single-stage)

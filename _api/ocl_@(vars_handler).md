@@ -1,9 +1,10 @@
 ---
+version: 5
 name: "@"
 title: "@(vars_handler)"
 type: function
 description: Function handle signature for system variables function.
-parameters: 
+parameters:
 
   - name: "vars_handler"
     content: "Variables handler"

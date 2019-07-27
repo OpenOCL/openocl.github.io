@@ -1,12 +1,13 @@
 ---
+version: 5
 name: ocl.VarsHandler
 title: ocl.VarsHandler
 description: The variables handler allows to specify the system variables, its dimensions and bounds.
 type: class
-methods: 
+methods:
   - content: "Adds a state variable to the system."
     name: "addState"
-    parameters: 
+    parameters:
       - content: "Name of the state variable"
         name: "id"
         type: "char"
@@ -22,7 +23,7 @@ methods:
     returns: ~
   - content: "Adds an algebraic variable to the system."
     name: "addAlgVar"
-    parameters: 
+    parameters:
       - content: "Name of the algebraic variable"
         name: id
         type: char
@@ -38,7 +39,7 @@ methods:
     returns: ~
   - content: "Adds an control input to the system."
     name: "addControl"
-    parameters: 
+    parameters:
       - content: "Name of the control variable"
         name: id
         type: char
@@ -54,7 +55,7 @@ methods:
     returns: ~
   - content: "Adds a parameter."
     name: "addParameter"
-    parameters: 
+    parameters:
       - content: "Name of the parameter"
         name: id
         type: char

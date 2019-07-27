@@ -1,12 +1,13 @@
 ---
+version: 5
 name: ocl.Cost
 title: ocl.Cost
 description: The cost handler allows to add cost terms in a cost function definition.
 type: class
-methods: 
+methods:
   - content: "Adds a cost term."
     name: add
-    parameters: 
+    parameters:
       - name: cost
         content: "Scalar variable containing the cost"
         type: "[OclVariable](#apiocl_variable) or Matlab matrix"
