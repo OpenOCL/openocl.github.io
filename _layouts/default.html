@@ -15,7 +15,7 @@
     {% if page.pid == "index" %}
     <title>OpenOCL: Optimal Control (Software) Library</title>
     {% endif %}
-    
+
     {% if page.pid != "index" %}
     <title>{{ page.title }} - OpenOCL</title>
     {% endif %}
@@ -27,7 +27,7 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138547611-1"></script>
     <script>
@@ -37,7 +37,7 @@
 
       gtag('config', 'UA-138547611-1');
     </script>
-    
+
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </head>
@@ -49,7 +49,7 @@
         <div class="header-fixed">
           <a href="{{ site.url | relative_url  }}"><img id="logo"src="/assets/img/logo_white_3_large.svg" alt="Logo with little robot"></a>
           <p id="view-on-github"><a href="https://github.com/OpenOCL/OpenOCL">View the Project on GitHub</a></p>
-          
+
           {% if page.pid != "api" %}
           <div id="header-blog">
             <h4><a href="/blog/"> Blog: </a> </h4>
@@ -71,7 +71,7 @@
           <div class="api" id="api-list">
             <h4> API classes and modules </h4>
 
-            {% assign sorted_docs = site.api | sort: "type" %}
+            {% assign sorted_docs = site.api | where: "version", page.version | sort: "type" %}
             <ul>
             {% for doc in sorted_docs %}
               <li>
