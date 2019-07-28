@@ -84,7 +84,7 @@ methods:
     parameters:
       - content: "The variable id"
         name: "id"
-        type: "char"
+        type: "string"
       - content: "The lower bound"
         name: "lb"
         type: "numeric"
@@ -96,7 +96,7 @@ methods:
     parameters:
       - content: "The variable id"
         name: "id"
-        type: "char"
+        type: "string"
       - content: "The lower bound"
         name: "lb"
         type: "numeric"
@@ -108,7 +108,7 @@ methods:
     parameters:
       - content: "The variable id"
         name: "id"
-        type: "char"
+        type: "string"
       - content: "The lower bound"
         name: "lb"
         type: "numeric"
