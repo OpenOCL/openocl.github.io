@@ -10,7 +10,7 @@ code_block:
   language: m
   code: |-
     function vanderpol
-      solver = ocl.Solver(10, @varsfun, @daefun, @pathcosts, 'N', 30);
+      solver = ocl.Solver(10, @varsfun, @daefun, @pathcost, 'N', 30);
 
       solver.setInitialBounds('x',     0);
       solver.setInitialBounds('y',     1);
@@ -36,7 +36,7 @@ code_block:
       daeh.setODE('y', x.x);
     end
 
-    function pathcosts(ch,x,~,u,~)
+    function pathcost(ch,x,~,u,~)
       ch.add( x.x^2 );
       ch.add( x.y^2 );
       ch.add( u.F^2 );
