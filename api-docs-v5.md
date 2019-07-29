@@ -7,7 +7,7 @@ title: API documentation
 pid: api
 ---
 
-# Documentation
+# Documentation (v5)
 
 In *OpenOCL* you can solve a large class of optimal control problems including **non-linear**, **continuous-time**, **multi-stage**, and **constrained** problems, which can appear in the context of **trajectory optimization** and model **predictive control**. The types of dynamical systems that are supported are all systems that can be described by **ordinary differential equations** or **differential algebraic equations**.
 
