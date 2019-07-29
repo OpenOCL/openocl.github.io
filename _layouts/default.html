@@ -69,8 +69,11 @@
           {% endif %}
            {% if page.pid == "api" %}
           <div class="api" id="api-list">
-            <h4> API classes and modules </h4>
+            
             <p> Versions: <a href="{{ '/api-docs/' | relative_url }}">v5</a> <a href="{{ '/api-docs/v6/' | relative_url }}">v6</a></p>
+            
+            <h4> API classes and modules </h4>
+            
             {% assign sorted_docs = site.api | where: "version", page.version | sort: "type" %}
             <ul>
             {% for doc in sorted_docs %}
