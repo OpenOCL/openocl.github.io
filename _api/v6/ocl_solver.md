@@ -115,4 +115,16 @@ methods:
       - content: "The upper bound"
         name: "ub,optional"
         type: "numeric"
+  - name: "initialize"
+    content: "Sets an initial guess for a varialbe."
+    parameters:
+      - content: "The variable id"
+        name: "id"
+        type: "string"
+      - content: "The normalized gridpoints"
+        name: "gridpoints"
+        type: "numeric"
+      - content: "The initial guess values at the gridpoints. The number of columns of `values` must be equal to the length of `gridpoints`."
+        name: "values"
+        type: "numeric"
 ---
