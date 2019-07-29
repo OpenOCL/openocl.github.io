@@ -41,10 +41,10 @@ methods:
     parameters:
       - content: "Name of the state variable"
         name: id
-        type: char
+        type: string
     returns:
       - content: "the sub-variable of the given variable."
-        type: OclVariable
+        type: ocl.Variable
   - content: 'Alternative syntax: var = <span class="arg">value</span> Sets a value to the variable.'
     name: "set"
     parameters:
@@ -67,7 +67,7 @@ methods:
     return: ~
     returns:
       - content: "the sliced variable."
-        type: OclVariable
+        type: ocl.Variable
   - content: Get the value of the variable. This is particularly useful if you want to plot the numeric values of the variable, for example for the solution. In system and OCP definition this gives you the underlying symbolic values.
     name: value
     parameters: ~
