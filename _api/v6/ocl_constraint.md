@@ -10,13 +10,13 @@ methods:
     parameters:
       - content: "Left hand side of the constraint equation"
         name: lhs
-        type: "[OclVariable](#apiocl_variable) or Matlab matrix"
+        type: "[ocl.Variable](#apiocl_variable) or Matlab matrix"
       - content: "One of the following operators as a string: '<=', '==', '>='"
         name: op
         type: char
       - content: "Right hand side of the constraint equation"
         name: rhs
-        type: "[OclVariable](#apiocl_variable) or Matlab matrix"
+        type: "[ocl.Variable](#apiocl_variable) or Matlab matrix"
     returns: ~
 position: 12
 
