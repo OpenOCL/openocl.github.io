@@ -1,1 +1,4 @@
-{% include_relative api-docs-v5.md %}
+---
+permalink:/api-docs/
+redirect_from: /api-docs/v6/
+---
