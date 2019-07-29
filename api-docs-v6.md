@@ -24,7 +24,7 @@ For the cost terms you can specify ***path*-costs** that are integrated along th
 
 For optimal control problems with a single stage, *OpenOCL* supports the following type of optimal control problems:
 ![Single stage optimal control problem](/assets/img/single_stage_problem.PNG)
-where $x(t)$ is the state trajectory, $u(t)$ the control trajectory, $z(t)$ the algebraic state trajectory, $p$ the parameters, $l_p(x,z,u,p)$ the path cost function, $l_e(x,p)$ the terminal cost function, $f(x,z,u,p)$ the system dynamics function (ordinary differential equation), $g(x,z,u,p)$ the algebraic constraints function. The bounds on the variables are given by $x_{0,lb}$, $x_{0,ub}$ (initial state), $x_{e,lb}$, $x_{e,ub}$ (end state), $x_lb$, $x_ub$, $z_lb$, $z_ub$, $u_lb$, $u_ub$. 
+where $x(t)$ is the state trajectory, $u(t)$ the control trajectory, $z(t)$ the algebraic state trajectory, $p$ the parameters, $l_p(x,z,u,p)$ the path cost function, $l_e(x,p)$ the terminal cost function, $f(x,z,u,p)$ the system dynamics function (ordinary differential equation), $g(x,z,u,p)$ the algebraic constraints function. The bounds on the variables are given by $x_\mathrm{0,lb}$, $x_\mathrm{0,ub}$ (initial state), $x_\mathrm{e,lb}$, $x_{e,ub}$ (end state), $x_\mathrm{lb}$, $x_\mathrm{ub}$, $z_\mathrm{lb}$, $z_\mathrm{ub}$, $u_\mathrm{lb}$, $u_\mathrm{ub}$. 
 
 The dimension of the variables are: number of states $n_x$ , number of algebraic states $n_z$, number of controls $n_u$, number of parameters $n_p$.
 
