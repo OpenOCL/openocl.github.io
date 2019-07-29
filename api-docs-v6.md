@@ -22,7 +22,7 @@ For the cost terms you can specify ***path*-costs** that are integrated along th
 ## Optimal control problem definition (single-stage)
 
 For a single stage, *OpenOCL* supports the following type of optimal control problem:
-![Single stage optimal control problem][/assets/img/single_stage_problem.PNG]
+![Single stage optimal control problem](/assets/img/single_stage_problem.PNG)
 
 <!--
 
