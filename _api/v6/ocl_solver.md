@@ -80,7 +80,7 @@ methods:
       - content: "Grid points of the solution"
         type: "[ocl.Variable](#apiocl_variable)"
   - name: "setBounds"
-    content: "Sets a bound on a variable for the whole trajectory. If only the lower bound is given, it will be `lb==ub`. A bound can be a scalar, a vector of the size of the variable, or a vector/matrix with `length(lb)==length(ub)==N+1` for states and `length(lb)==length(ub)==N` for control variables."
+    content: "Sets a bound on a variable for the whole trajectory. If only the lower bound is given, it will be `lb==ub`."
     parameters:
       - content: "The variable id"
         name: "id"
