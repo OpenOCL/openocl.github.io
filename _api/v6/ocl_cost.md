@@ -10,7 +10,7 @@ methods:
     parameters:
       - name: cost
         content: "Scalar variable containing the cost"
-        type: "[OclVariable](#apiocl_variable) or Matlab matrix"
+        type: "[ocl.Variable](#apiocl_variable) or Matlab matrix"
     returns: ~
 position: 11
 ---
