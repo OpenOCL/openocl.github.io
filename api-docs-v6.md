@@ -5,6 +5,7 @@ permalink: /api-docs/v6/
 title: API documentation
 pid: api
 version: 6
+mathjax: true
 ---
 
 # Documentation
@@ -23,6 +24,7 @@ For the cost terms you can specify ***path*-costs** that are integrated along th
 
 For a single stage, *OpenOCL* supports the following type of optimal control problem:
 ![Single stage optimal control problem](/assets/img/single_stage_problem.PNG)
+where $x(t)$ is the state trajectory, $u(t)$ the control trajectory, $z(t)$ the algebraic state trajectory, $p$ the parameters, $l_p(x,z,u,p)$ the path cost function, $l_e(x,p)$ the terminal cost function.
 
 <!--
 
