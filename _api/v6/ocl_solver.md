@@ -113,7 +113,7 @@ methods:
         name: "lb"
         type: "numeric"
       - content: "The upper bound"
-        name: "ub
+        name: "ub"
         type: "numeric,optional"
   - name: "initialize"
     content: "Sets an initial guess for a varialbe."
