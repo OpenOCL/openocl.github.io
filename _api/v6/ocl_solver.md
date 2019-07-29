@@ -114,7 +114,7 @@ methods:
         type: "numeric"
       - content: "The upper bound"
         name: "ub
-        type: "numeric,optional""
+        type: "numeric,optional"
   - name: "initialize"
     content: "Sets an initial guess for a varialbe."
     parameters:
