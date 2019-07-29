@@ -116,7 +116,7 @@ methods:
         name: "ub"
         type: "numeric,optional"
   - name: "initialize"
-    content: "Sets an initial guess for a varialbe."
+    content: "Sets an initial guess for a variable."
     parameters:
       - content: "The variable id"
         name: "id"
