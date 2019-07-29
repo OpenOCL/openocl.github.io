@@ -9,14 +9,14 @@ pid: index
 
 |    |
 |:--:|
-| [Get Started](/get-started/) - [Documentation](api-docs.md) - [Blog](/blog/) - [Support](/support/) - [Publications](/publications/) - [Contributing](/contribute/) |
+| [Get Started](/get-started/) - [Documentation](/api-docs/) - [Blog](/blog/) - [Support](/support/) - [Publications](/publications/) - [Contributing](/contribute/) |
   
 
 ## Quick start
 
 [Download](/get-started/) the software, and install the package with just a click!
 
-Also have a look at the [API Docs](api-docs.md). Get [support](/support/) if you run into any problems. Consider [contributing](/contribute/) if you would like to help with the project! Please [cite us](/publications/) if you use OpenOCL in your scientific work.
+Also have a look at the [API Docs](/api-docs/). Get [support](/support/) if you run into any problems. Consider [contributing](/contribute/) if you would like to help with the project! Please [cite us](/publications/) if you use OpenOCL in your scientific work.
 
 ## Features
 
@@ -102,4 +102,4 @@ The following applications give you a quick overview on which kind of problems y
 
 info [at] openocl.org
 
-[Legal Notice](legal.md)
+[Legal Notice](/legal_notice/)
