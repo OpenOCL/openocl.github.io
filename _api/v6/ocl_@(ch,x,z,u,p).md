@@ -12,19 +12,19 @@ parameters:
 
   - name: x
     content: "State variables"
-    type: "[OclVariable](#apiocl_variable)"
+    type: "[ocl.Variable](#apiocl_variable)"
 
   - name: z
     content: "Algebraic states"
-    type: "[OclVariable](#apiocl_variable)"
+    type: "[ocl.Variable](#apiocl_variable)"
 
   - name: u
     content: "Controls"
-    type: "[OclVariable](#apiocl_variable)"
+    type: "[ocl.Variable](#apiocl_variable)"
 
   - name: p
     content: "Parameters"
-    type: "[OclVariable](#apiocl_variable)"
+    type: "[ocl.Variable](#apiocl_variable)"
 
 methods: ~
 position: 200
