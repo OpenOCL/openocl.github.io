@@ -6,6 +6,8 @@ title: API documentation
 pid: api
 version: 6
 mathjax: true
+redirect_from: 
+  - /api-docs/
 ---
 
 # Documentation
