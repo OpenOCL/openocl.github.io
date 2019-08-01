@@ -7,24 +7,7 @@ type: class
 code_block:
   title: Simulator Example
   language: m
-  code: |-
-    simulator = Simulator(PendulumSystem);
-
-    x0 = simulator.getStates();
-    x0.p = [0;1];
-    x0.v = [-0.5;-1];
-
-    p = simulator.getParameters();
-    p.m = 1;
-    p.l = 1.5;
-
-    t = linspace(0,4,20);
-
-    % apply constant force
-    uVec = simulator.getControlsVec(20);
-    uVec.F = 10;
-
-    [xVec,zVec,uVec] = simulator.simulate(x0,t,uVec,p);
+  code: ~
 parameters:
 
   - name: "vars"
