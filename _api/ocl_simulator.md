@@ -1,5 +1,7 @@
 --- 
+version: 5
 name: Simulator
+title: Simulator
 position: 50
 type: class
 code_block:
