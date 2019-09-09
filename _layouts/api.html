@@ -18,7 +18,7 @@ title: API Docs
   {% assign argnames = argnames | remove_first: ", " %}
 
   <h3>
-    <a id="{{ doc.name | replace: '/', '' | replace: '.', '' }}">
+    <a id="api_{{ doc.name | replace: '/', '' | replace: '.', '' | downcase }}">
       {{ doc.name }}({{ argnames }})
     </a>
 
