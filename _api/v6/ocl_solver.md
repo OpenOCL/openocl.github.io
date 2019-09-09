@@ -1,5 +1,5 @@
 ---
-version: 7
+version: 6
 name: ocl.Solver
 title: ocl.Solver
 position: 20

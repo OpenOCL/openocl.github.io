@@ -1,5 +1,5 @@
 ---
-version: 7
+version: 6
 name: ocl.Stage
 title: ocl.Stage
 description: |
