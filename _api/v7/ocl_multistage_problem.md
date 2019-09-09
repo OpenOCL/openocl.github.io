@@ -35,16 +35,16 @@ methods:
     returns:
       - content: "Structured variable for setting the initial guess for each stage (given as cell array)."
         name: initialGuess
-        type: "cell<[OclVariable]>(#apiocl_variable)"
+        type: "cell<[OclVariable](#apiocl_variable)>"
   - name: "solve"
     content: "Calls the solver and starts doing iterations."
     parameters:
       - content: "Structured variable containing the initial guess for each stage (given as cell array)."
         name: initialGuess
-        type: "cell<[OclVariable]>(#apiocl_variable)"
+        type: "cell<[OclVariable](#apiocl_variable)>"
     returns:
       - content: "The solution of the OCP for each stage (given as cell array)."
-        type: "cell<[OclVariable]>(#apiocl_variable)"
+        type: "cell<[OclVariable](#apiocl_variable)>"
       - content: "Time points of the solution"
-        type: "cell<[OclVariable]>(#apiocl_variable)"
+        type: "cell<[OclVariable](#apiocl_variable)>"
 ---
