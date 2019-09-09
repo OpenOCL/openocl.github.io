@@ -4,6 +4,7 @@ name: "@"
 title: "@(vh)"
 type: function
 description: Function handle signature for system variables function.
+altname: vars
 parameters:
 
   - name: "vh"

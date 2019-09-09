@@ -4,6 +4,7 @@ name: "@"
 title: "@(cost_handler,k,K,x,p)"
 type: function
 description: Function handle signature for point cost function.
+altname: gridcost
 parameters:
 
   - name: "cost_handler"
@@ -21,7 +22,7 @@ parameters:
   - name: "x"
     content: "State variable"
     type: "[OclVariable](#apiocl_variable)"
-    
+
   - name: p
     content: "Parameters"
     type: "[OclVariable](#apiocl_variable)"

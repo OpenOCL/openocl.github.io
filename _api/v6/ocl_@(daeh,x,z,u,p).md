@@ -4,6 +4,7 @@ name: "@"
 title: "@(daeh,x,z,u,p)"
 type: function
 description: Function handle signature for DAE function.
+altname: dae
 parameters:
 
   - name: "daeh"

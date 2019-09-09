@@ -4,6 +4,7 @@ name: "@"
 title: "@(ch,x,z,u,p)"
 type: function
 description: Function handle signature for the path cost function.
+altname: pathcost
 parameters:
 
   - name: "ch"
