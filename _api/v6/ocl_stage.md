@@ -32,7 +32,7 @@ parameters:
 
   - name: vars
     content: "System variables function. Optional, defaults to an empty function handle."
-    type: "[@(vars_handler)](#api@vars"
+    type: "[@(vars_handler)](#api@vars)"
 
   - name: dae
     content: "DAE (system equations) function. Optional, defaults to an empty function handle."
