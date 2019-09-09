@@ -32,6 +32,8 @@ If no algebraic states $z$ are defined, the system is described by an *ordinary 
 
 The dimension of the variables are: number of states $n_x$ , number of algebraic states $n_z$, number of controls $n_u$, number of parameters $n_p$.
 
+Single stage optimal control problems are implemented using the class [ocl.Problem](#apiocl_problem).
+
 <!--
 
 ## Multi-stage optimal control problems
