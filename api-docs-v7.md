@@ -2,7 +2,7 @@
 layout: api
 last_modified_at: 2019-09-09
 permalink: /api-docs/v7/
-title: API documentation
+title: API documentation v7
 pid: api
 version: 7
 mathjax: true
