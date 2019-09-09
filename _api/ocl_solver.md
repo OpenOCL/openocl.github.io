@@ -59,19 +59,19 @@ parameters:
 
   - name: vars
     content: "System variables function. Optional, defaults to an empty function handle."
-    type: "[@(vars_handler)](#apiocl_@(vars_handler))"
+    type: "[@(vars_handler)](#apiocl_@vars)"
 
   - name: dae
     content: "DAE (system equations) function. Optional, defaults to an empty function handle."
-    type: "[@(dae_handler,x,z,u,p)](#apiocl_@(dae_handler,x,z,u,p))"
+    type: "[@(dae_handler,x,z,u,p)](#apiocl_@dae)"
 
   - name: pathcosts
     content: "Path-costs function. Optional, defaults to a function handle returning 0."
-    type: "[@(cost_handler,x,z,u,p)](#apiocl_@(cost_handler,x,z,u,p))"
+    type: "[@(cost_handler,x,z,u,p)](#apiocl_@pathcost)"
 
   - name: gridcosts
     content: "Grid-costs function. Optional, defaults to a function handle returning 0."
-    type: "[@(cost_handler,k,K,x,p)](#apiocl_@(cost_handler,k,K,x,p))"
+    type: "[@(cost_handler,k,K,x,p)](#apiocl_@gridcost)"
 
 returns:
   - content: A solver object.
