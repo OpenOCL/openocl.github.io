@@ -1,0 +1,15 @@
+---
+version: 7
+name: "@"
+title: "@(vh)"
+type: function
+description: Function handle signature for system variables function.
+parameters:
+
+  - name: "vh"
+    content: "Variables handler"
+    type: "[ocl.VarsHandler](#apiocl_vars_handler)"
+
+methods: ~
+position: 200
+---
