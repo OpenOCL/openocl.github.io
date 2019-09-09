@@ -32,15 +32,15 @@ parameters:
 
   - name: vars
     content: "System variables function. Optional, defaults to an empty function handle."
-    type: "[@(vars_handler)](#apiocl_@vars"
+    type: "[@(vars_handler)](#api@vars"
 
   - name: dae
     content: "DAE (system equations) function. Optional, defaults to an empty function handle."
-    type: "[@(dae_handler,x,z,u,p)](#apiocl_@dae)"
+    type: "[@(dae_handler,x,z,u,p)](#api@dae)"
 
   - name: pathcosts
     content: "Path-costs function. Optional, defaults to a function handle returning 0."
-    type: "[@(cost_handler,x,z,u,p)](#apiocl_@pathcost)"
+    type: "[@(cost_handler,x,z,u,p)](#api@pathcost)"
 
 position: 10
 returns: ~
