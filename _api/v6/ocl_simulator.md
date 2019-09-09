@@ -13,13 +13,13 @@ parameters:
   - name: "vars"
     default: "@(vars_handler)[]"
     content: "System variables function. Optional, defaults to an empty function handle."
-    type: "[@(vars_handler)](#apiocl_@(vars_handler))"
+    type: "[@(vars_handler)](#apiocl_@vars)"
 
   - name: dae
     default: "@(dae_handler,x,z,u,p)[]"
     content: "DAE (system equations) function. Optional, defaults to an empty function handle."
-    type: "[@(dae_handler,x,z,u,p)](#apiocl_@(dae_handler,x,z,u,p))"
-    
+    type: "[@(dae_handler,x,z,u,p)](#apiocl_@dae)"
+
 returns:
   - content: the Simulator object.
     type: Simulator
@@ -39,14 +39,14 @@ methods:
     returns:
       - content: The parameters.
         type: "[ocl.Variable](#apiocl_variable)"
-        
+
   - name: "reset"
     content: "Sets the initial state of the simulation."
     parameters:  
       - name: x0
         content: "Initial state"
         type: "[ocl.Variable](#apiocl_variable) or numeric"
-  
+
   - name: "step"
     content: "Simulate one step using the control input."
     parameters:  
