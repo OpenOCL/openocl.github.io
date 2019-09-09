@@ -51,19 +51,19 @@ parameters:
 
   - name: vars
     content: "System variables function. Optional, defaults to an empty function handle."
-    type: "[@(vh)](#apiocl_@(vh))"
+    type: "[@(vh)](#apiocl_@vars)"
 
   - name: dae
     content: "DAE (system equations) function. Optional, defaults to an empty function handle."
-    type: "[@(daeh,x,z,u,p)](#apiocl_@(daeh,x,z,u,p))"
+    type: "[@(daeh,x,z,u,p)](#apiocl_@dae)"
 
   - name: pathcost
     content: "Path-cost function. Optional, defaults to a function handle returning 0."
-    type: "[@(ch,x,z,u,p)](#apiocl_@(ch,x,z,u,p))"
+    type: "[@(ch,x,z,u,p)](#apiocl_@pathcost)"
 
   - name: terminalcost
     content: "Terminal cost function. Optional, defaults to a function handle returning 0."
-    type: "[@(ch,x,p)](#apiocl_@(ch,x,p))"
+    type: "[@(ch,x,p)](#apiocl_@terminalcost)"
 
 returns:
   - content: A solver object.
