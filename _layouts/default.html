@@ -81,7 +81,7 @@
             <ul>
             {% for doc in sorted_docs %}
               <li>
-                <a href="#{{ doc.name | replace: '/', '' | replace: '.', '_' }}">
+                <a href="#api{{ doc.name | replace: '/', '' | replace: '.', '_' | downcase }}">
                   {{ doc.title }}
                   {% if doc.type %}<span class="endpoint {{ doc.type }}"></span>{% endif %}
                 </a>
