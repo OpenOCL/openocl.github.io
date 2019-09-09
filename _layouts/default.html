@@ -70,7 +70,7 @@
            {% if page.pid == "api" %}
           <div class="api" id="api-list">
 
-            <p> Versions: 
+            <p> Versions:
               <a href="{{ '/api-docs/v5/' | relative_url }}">v5</a>
               <a href="{{ '/api-docs/v6/' | relative_url }}">v6</a>
               <a href="{{ '/api-docs/v7/' | relative_url }}">v7</a></p>
@@ -81,7 +81,7 @@
             <ul>
             {% for doc in sorted_docs %}
               <li>
-                <a href="#{{ doc.id | replace: '/', '' | replace: '.', '' }}">
+                <a href="#{{ doc.name | replace: '/', '' | replace: '.', '_' }}">
                   {{ doc.title }}
                   {% if doc.type %}<span class="endpoint {{ doc.type }}"></span>{% endif %}
                 </a>
