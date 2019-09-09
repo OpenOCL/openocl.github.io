@@ -6,7 +6,6 @@ title: API documentation
 pid: api
 version: 7
 mathjax: true
-redirect_from: /api-docs/
 ---
 
 # Documentation  (OpenOCL v7)
