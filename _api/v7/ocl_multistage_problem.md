@@ -1,10 +1,10 @@
 ---
 version: 7
-name: ocl.MultistageProblem
-title: ocl.MultistageProblem
+name: ocl.MultiStageProblem
+title: ocl.MultiStageProblem
 position: 21
 type: class
-description: "Creates a multi-stage (multiple phases) optimal control problem. "
+description: "Creates a multi-stage optimal control problem (multiple phases). "
 altname: multistage
 code_block:
   title: Example
