@@ -18,9 +18,9 @@ We introduced some new concepts that should make it as easy as possible for you 
 
 ## Cost terms and constraints
 
-We support **bounds** that hold along the entire trajectory, and ***grid*-constraints** that hold only at specific gridpoints in the discretized trajectory.
+We support **bounds** that hold along the entire trajectory, and **grid-constraints** that hold only at specific gridpoints in the discretized trajectory.
 
-For the cost terms you can specify ***path*-costs** that are integrated along the trajectory (also known as Lagrange term),  and ***grid*-costs** that can be specified for specific points on the discretized trajectory.
+For the cost terms you can specify **path-costs** that are integrated along the trajectory (also known as Lagrange term),  and **grid-costs** that can be specified for specific points on the discretized trajectory.
 
 ## Optimal control problem definition (single-stage)
 
