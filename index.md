@@ -14,7 +14,7 @@ pid: index
 
 ## Quick start
 
-[Download](/get-started/) the software, and install the package with just a click!
+Clone the repository or [download](/get-started/) the latest release of the toolbox.
 
 Also have a look at the [API Docs](/api-docs/). Get [support](/support/) if you run into any problems. Consider [contributing](/contribute/) if you would like to help with the project! Please [cite us](/publications/) if you use OpenOCL in your scientific work.
 
