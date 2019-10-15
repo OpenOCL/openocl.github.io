@@ -15,7 +15,7 @@ This is the documentation of the current version *OpenOCL v7*.
 
 In *OpenOCL* you can solve a large class of optimal control problems including non-linear, continuous-time, multi-stage, and constrained problems, which can appear in the context of **trajectory optimization** and **model predictive control**. The types of dynamical systems that are supported are all systems that can be described by **ordinary differential equations** or **differential algebraic equations**. 
 
-In the following we give a short introduction to the concepts used and introduced in *OpenOCL*.
+In the following we give a short introduction to the concepts used and introduced in *OpenOCL*. Scroll down or use the navigation on the left to look for specific classes and functions.
 
 ## Cost terms and constraints
 
