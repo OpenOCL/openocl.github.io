@@ -14,7 +14,7 @@ pid: index
 
 ## Quick start
 
-Clone the repository or [download](/get-started/) the latest release of the toolbox.
+Clone the [repository](https://github.com/OpenOCL/OpenOCL/) or [download](/get-started/) the latest release of the toolbox.
 
 Also have a look at the [API Docs](/api-docs/). Get [support](/support/) if you run into any problems. Consider [contributing](/contribute/) if you would like to help with the project! Please [cite us](/publications/) if you use OpenOCL in your scientific work.
 
@@ -30,12 +30,12 @@ Also have a look at the [API Docs](/api-docs/). Get [support](/support/) if you 
   <div class="content-icon">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M18.513 7.119c.958-1.143 1.487-2.577 1.487-4.036v-3.083h-16v3.083c0 1.459.528 2.892 1.487 4.035l3.087 3.68c.566.677.57 1.625.009 2.306l-3.13 3.794c-.937 1.136-1.453 2.555-1.453 3.995v3.107h16v-3.107c0-1.44-.517-2.858-1.453-3.994l-3.13-3.794c-.562-.681-.558-1.629.009-2.306l3.087-3.68zm-.513-4.12c0 1.101-.363 2.05-1.02 2.834l-.978 1.167h-8.004l-.978-1.167c-.66-.785-1.02-1.736-1.02-2.834h12zm-.996 15.172c.652.791.996 1.725.996 2.829h-1.061c-1.939-2-4.939-2-4.939-2s-3 0-4.939 2h-1.061c0-1.104.344-2.039.996-2.829l3.129-3.793c.342-.415.571-.886.711-1.377h.164v1h2v-1h.163c.141.491.369.962.711 1.376l3.13 3.794zm-6.004-1.171h2v1h-2v-1zm0-2h2v1h-2v-1z"/></svg>
     <h4>Get started within minutes</h4>
-    <p>Just <a href="/get-started/">install the package</a> and you are ready to go.</p>
+  <p>Just <a href="/get-started/">download</a> run an example.</p>
   </div>
 
   <div class="content-icon">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12.611 13.663c.262-.187.559-.274.849-.274.616 0 1.21.392 1.405 1.044-.249-.191-.541-.285-.836-.285-.301 0-.603.097-.866.285-.522.374-.753 1.009-.551 1.611-.814-.581-.819-1.795-.001-2.381zm2.073 7.831c.651.218 2.665.772 4.999 2.506l4.317-3.088c-1.123-1.569-.816-2.669-1.932-4.229-.499-.695-.939-1.12-1.755-.977l-.234.043.394.548c.239.335-.267.683-.499.357l-.351-.49c-.124-.174-.34-.256-.548-.21l-.796.179.478.666c.24.336-.267.681-.499.356l-.412-.576c-.129-.18-.353-.26-.562-.208l-.809.203.504.705c.241.336-.267.682-.499.357l-1.658-2.334c-.269-.376-.793-.463-1.17-.194-.376.27-.464.793-.193 1.17l2.632 3.7c-.812-.299-2.059-.426-2.289.411-.139.501.262.898.882 1.105zm-.684-18.494h-11v5h11v-5zm-7 9h3v-2h-3v2zm-1-2h-3v2h3v-2zm0 3h-3v2h3v-2zm-3 5h3v-2h-3v2zm7-5h-3v2h3v-2zm2.306 6h-10.306v-17h13v9.75c1.487.733 2 2.546 2 2.546v-14.296h-17v21h11.821c-.128-.802.049-1.379.485-2zm-1.306-9v2h.507c.709-.486 1.569-.711 2.493-.568v-1.432h-3zm-1 6h-3v2h3v-2z"/></svg>
-    <h4>Free derivatives</h4>
+    <h4>Automatic differentiation</h4>
     <p>Derivatives are calculated automatically using <a href="https://web.casadi.org">CasADi</a>.</p>
   </div>
 
