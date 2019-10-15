@@ -54,3 +54,7 @@ and innovation programme under the Marie Sklodowska-Curie grant agreement No 642
 Use without warranty. 
 
 info [at] openocl.org
+
+### More information
+
+[tutorials](/tutorials/) - [interesting software projects](/other-software-projects/) - [model predictive control](/model-predictive-control/) - [trajectory optimization](/trajectory-optimization/) - [matlab toolbox installation](/matlab-toolbox-installation/)
