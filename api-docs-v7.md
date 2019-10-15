@@ -43,4 +43,4 @@ Multi-stage problems (also called multi-phase problems) allow you to define a di
 
 where $M$ is the number of stages, and $\phi_i$ is the stage transition function that relates the first state $x_{i+1}$ of stage $i{+}1$ to the last state $x_i$ of stage $i$ (at timepoint $T_i$).
 
-All other functions and bounds can be specified for each stage as described above in the single-stage formulation. Stages are implemented using the class [ocl.Stage](#apiocl_stage), and the complete multi-stage problem can then be implemented usign  [ocl.MultiStageProblem](#apiocl_multistageproblemmultistage).
+All other functions and bounds can be specified for each stage as described above in the single-stage formulation. Stages are implemented using the class [ocl.Stage](#apiocl_stage), and the complete multi-stage problem can then be implemented using the class  [ocl.MultiStageProblem](#apiocl_multistageproblemmultistage).
