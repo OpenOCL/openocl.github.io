@@ -19,7 +19,7 @@ We introduced some new concepts that should make it as easy as possible for you 
 
 ## Cost terms and constraints
 
-We support **bounds** that hold along the entire trajectory, and **grid-constraints** that hold only at specific gridpoints $\tau_k$ in the discretized trajectory. You can specify the gridpoints by using the argument `N` for in `ocl.Problem`.
+We support **bounds** that hold along the entire trajectory, and **grid-constraints** that hold only at specific gridpoints $\tau_k$ in the discretized trajectory. You can specify the gridpoints by using the argument `N` for in [ocl.Problem](#apiocl_problem).
 
 For the cost terms you can specify **path-costs** that are integrated along the trajectory (also known as Lagrange term),  and **grid-costs** that can be specified for specific points on the discretized trajectory.
 
