@@ -37,4 +37,8 @@ Single stage optimal control problems are implemented using the class [ocl.Probl
 
 ## Multi-stage optimal control problems
 
+Multi-stage problems (also called multi-phase problems) allow you to define a different system dynamics function for each of the stages. This formulation also allows you to implement discrete *events* where a jump in the state trajectory happens.
+
 ![Multi stage optimal control problem](/assets/img/api_multi_stage_v7_n4.PNG)
+
+where $M$ is the number of stages, and $\phi_i$ is the stage transition function that relates the first state $x_{i+1}$ of stage $i{+}1$ to the last state $x_i$ of stage $i$ (at timepoint $T_i$).
