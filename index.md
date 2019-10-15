@@ -48,13 +48,13 @@ Also have a look at the [API Docs](/api-docs/). Get [support](/support/) if you 
   <div class="content-icon">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 17c0 1.104-.896 2-2 2h-11c-1.104 0-2-.896-2-2v-11c0-1.104.896-2 2-2h11c1.104 0 2 .896 2 2v11zm-11 3v3h-1v-3h1zm4 0v3h-1v-3h1zm2 0v3h-1v-3h1zm-4 0v3h-1v-3h1zm6 0v3h-1v-3h1zm-8-20v3h-1v-3h1zm4 0v3h-1v-3h1zm2 0v3h-1v-3h1zm-4 0v3h-1v-3h1zm6 0v3h-1v-3h1zm4 15h3v1h-3v-1zm0-4h3v1h-3v-1zm0-2h3v1h-3v-1zm0 4h3v1h-3v-1zm0-6h3v1h-3v-1zm-20 8h3v1h-3v-1zm0-4h3v1h-3v-1zm0-2h3v1h-3v-1zm0 4h3v1h-3v-1zm0-6h3v1h-3v-1z"/></svg>
     <h4>Model Predictive Control (MPC)</h4>
-    <p>Implement a model predictive controller using the <em>acados</em> interface. The <em>acados</em> interface is ongoing work, let us know if you are missing a feature.</p>
+    <p>Implement a model predictive controller using the <a href="https://github.com/acados/acados">acados</a> interface. The <em>acados</em> interface is ongoing work, let us know if you are missing a feature.</p>
   </div>
 
   <div class="content-icon">
     <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M5.829 6c-.412 1.165-1.524 2-2.829 2-1.656 0-3-1.344-3-3s1.344-3 3-3c1.305 0 2.417.835 2.829 2h13.671c2.484 0 4.5 2.016 4.5 4.5s-2.016 4.5-4.5 4.5h-4.671c-.412 1.165-1.524 2-2.829 2-1.305 0-2.417-.835-2.829-2h-4.671c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5h13.671c.412-1.165 1.524-2 2.829-2 1.656 0 3 1.344 3 3s-1.344 3-3 3c-1.305 0-2.417-.835-2.829-2h-13.671c-2.484 0-4.5-2.016-4.5-4.5s2.016-4.5 4.5-4.5h4.671c.412-1.165 1.524-2 2.829-2 1.305 0 2.417.835 2.829 2h4.671c1.38 0 2.5-1.12 2.5-2.5s-1.12-2.5-2.5-2.5h-13.671zm6.171 5c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1z"/></svg>
     <h4>Trajectory optimization</h4>
-    <p>Analyze the behavior and improve the performance of a dynamical system. For trajectory optimization we use <a href="https://web.casadi.org/">CasADi</a> and  <a href="https://projects.coin-or.org/Ipopt/">Ipopt</a></p>
+    <p>Analyze the behavior and improve the performance of a dynamical system. For trajectory optimization we use <a href="https://web.casadi.org/">CasADi</a> and  <a href="https://projects.coin-or.org/Ipopt/">Ipopt</a>.</p>
   </div>
   
 </div>
