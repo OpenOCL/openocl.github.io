@@ -26,7 +26,7 @@ For the cost terms you can specify **path-costs** that are integrated along the 
 ## Optimal control problem definition (single-stage)
 
 For optimal control problems with a single stage, *OpenOCL* supports the following type of optimal control problems:
-![Single stage optimal control problem](/assets/img/single_stage_problem.PNG)
+![Single stage optimal control problem](/assets/img/api_single_stage_v7_n4.PNG)
 where $x(t)$ is the state trajectory, $u(t)$ the control trajectory, $z(t)$ the algebraic state trajectory, $p$ the parameters, $l_p(x,z,u,p)$ the path cost function, $l_e(x,p)$ the terminal cost function, $f(x,z,u,p)$ the system dynamics function (differential equation), $g(x,z,u,p)$ the algebraic constraints function. The bounds on the variables are given by $x_\mathrm{0,lb}$, $x_\mathrm{0,ub}$ (initial state), $x_\mathrm{e,lb}$, $x_{e,ub}$ (end state), $x_\mathrm{lb}$, $x_\mathrm{ub}$, $z_\mathrm{lb}$, $z_\mathrm{ub}$, $u_\mathrm{lb}$, $u_\mathrm{ub}$.
 
 If no algebraic states $z$ are defined, the system is described by an *ordinary differential equation*. If algebraic states are defined, then the dynamics function $f(x,z,u,p)$ together with the algebraic constraints function $g(x,z,u,p)$ define the system dynamics as a *differential algebraic equation* in the semi-implicit form. To solve an optimal control problem, the *index* of the differential algebraic equation has to be smaller than or equal to one.
@@ -35,7 +35,6 @@ The dimension of the variables are: number of states $n_x$ , number of algebraic
 
 Single stage optimal control problems are implemented using the class [ocl.Problem](#apiocl_problem).
 
-<!--
-
 ## Multi-stage optimal control problems
--->
+
+![Multi stage optimal control problem](/assets/img/api_multi_stage_v7_n4.PNG)
