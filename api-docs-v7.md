@@ -11,7 +11,7 @@ redirect_from: /api-docs/
 
 # Documentation  (OpenOCL v7)
 
-This is the documentation of the upcoming version *OpenOCL v7*. If you are looking for the current documentation choose the version on the left.
+This is the documentation of the current version *OpenOCL v7*.
 
 In *OpenOCL* you can solve a large class of optimal control problems including **non-linear**, **continuous-time**, **multi-stage**, and **constrained** problems, which can appear in the context of **trajectory optimization** and model **predictive control**. The types of dynamical systems that are supported are all systems that can be described by **ordinary differential equations** or **differential algebraic equations**.
 
