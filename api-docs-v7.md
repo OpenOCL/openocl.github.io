@@ -13,9 +13,9 @@ redirect_from: /api-docs/
 
 This is the documentation of the current version *OpenOCL v7*.
 
-In *OpenOCL* you can solve a large class of optimal control problems including **non-linear**, **continuous-time**, **multi-stage**, and **constrained** problems, which can appear in the context of **trajectory optimization** and model **predictive control**. The types of dynamical systems that are supported are all systems that can be described by **ordinary differential equations** or **differential algebraic equations**.
+In *OpenOCL* you can solve a large class of optimal control problems including non-linear, continuous-time, multi-stage, and constrained problems, which can appear in the context of **trajectory optimization** and **model predictive control**. The types of dynamical systems that are supported are all systems that can be described by **ordinary differential equations** or **differential algebraic equations**. 
 
-We introduced some new concepts that should make it as easy as possible for you to model optimal control problems, in particular the notion of *grid*-costs and *grid*-constraints that can be very handy when implementing **tracking problems**. In the following we give a short introduction to the concepts used and introduced in *OpenOCL*.
+In the following we give a short introduction to the concepts used and introduced in *OpenOCL*.
 
 ## Cost terms and constraints
 
@@ -25,7 +25,7 @@ For the cost terms you can specify **path-costs** that are integrated along the 
 
 ## Optimal control problem definition (single-stage)
 
-For optimal control problems with a single stage, *OpenOCL* supports the following type of optimal control problems:
+For optimal control problems with a single stage (most problems), *OpenOCL* supports the following type of optimal control problems:
 ![Single stage optimal control problem](/assets/img/api_single_stage_v7_n4.PNG)
 where $x(t)$ is the state trajectory, $u(t)$ the control trajectory, $z(t)$ the algebraic state trajectory, $p$ the parameters, $L(x,z,u,p)$ the path cost function, $\Phi(x,p)$ the terminal cost function, $\Psi_k(x,p)$ the grid-cost function, $f(x,z,u,p)$ the system dynamics function (differential equation), $g(x,z,u,p)$ the algebraic constraints function, $r_k(x,p)$ the grid-constraints function. Note that the control bounds can be specified of each control interval, $\underline{u}_k$, $\overline{u}_k$.
 
