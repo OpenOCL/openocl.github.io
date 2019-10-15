@@ -58,41 +58,6 @@ Also have a look at the [API Docs](/api-docs/). Get [support](/support/) if you 
   </div>
   
 </div>
-
-
-## Applications
-
-The following applications give you a quick overview on which kind of problems you can solve with the optimal control library, you can find example code at the given links.
-
-<div class="content-row-centered">
-  <div class="content-row-left">
-    <h4>Autonomous Driving</h4> 
-    <p>Optimization of vehicle dynamics, race track simulation, implementation of a predictive controller for autonomous driving. Have a look at the blog post about <a href="/contributed/stock-pro-race-car/">laptime optimization of a remote controlled race car </a>, and the <a href="/ocl-docs-matlab/racecar.html">race car example code</a>.</p>
-  </div>
-  <div class="content-row-right content-row-right-img">
-    <img src="/assets/img/race_white.png">
-  </div>
-</div>
-
-<div class="content-row-centered">
-  <div class="content-row-right">
-    <h4>Aerospace engineering</h4> 
-    <p>Optimization of aircraft and spacecraft flight trajectories, control of unmanned aerial vehicles. Have a look at the <a href="https://openawe.github.io">OpenAWE</a> project which is about optimization of flight trajectories for <em>airborne wind energy</em>.</p>
-  </div>
-  <div class="content-row-left content-row-left-img">
-    <img src="/imgs/lemn.png">
-  </div>
-</div>
-
-<div class="content-row-centered">
-  <div class="content-row-left">
-    <h4>Unstable mechanical systems</h4> 
-    <p>Get example code for the <a href="/ocl-docs-matlab/vanderpol.html">Van Der Pol</a> oszillator, <a href="/ocl-docs-matlab/cartpole.html">pendulum on a cart</a>, <a href="/ocl-docs-matlab/pendulum_sim.html">pendulum simulation</a>, <a href="/ocl-docs-matlab/ballandbeam.html">ball on a plate</a>. </p>
-  </div>
-  <div class="content-row-right content-row-right-img">
-    <img src="/imgs/cartpole.gif">
-  </div>
-</div>
      
 ### More information
 
