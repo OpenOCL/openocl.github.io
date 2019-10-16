@@ -57,13 +57,36 @@ parameters:
     content: "DAE (system equations) function. Optional, defaults to an empty function handle."
     type: "[@(daeh,x,z,u,p)](#api@dae)"
 
-  - name: pathcost
+  - name: pathcosts
     content: "Path-cost function. Optional, defaults to a function handle returning 0."
-    type: "[@(ch,x,z,u,p)](#api@pathcost)"
+    type: "[@(costh,x,z,u,p)](#api@pathcost)"
+
+  - name: gridcosts
+    content: "Grid-cost function. Optional, defaults to a function handle returning 0."
+    type: "[@(costh,k,K,x,p)](#api@gridcost)"
+
+  - name: gridconstraints
+    content: "Grid-constraints function. Optional, defaults to no constraints added."
+    type: "[@(conh,k,K,x,p)](#api@gridcost)"
 
   - name: terminalcost
     content: "Terminal cost function. Optional, defaults to a function handle returning 0."
     type: "[@(ch,x,p)](#api@terminalcost)"
+
+  - name: userdata
+    content: "A data field that can be used to pass any kind of constant data to the model functions. The userdata can be accessed by using the `userdata` property of `ocl.Cost`, `ocl.Constraint`, `ocl.DaeHandler`, and `ocl.VarHandler`. Defaults to an empty list."
+    type: Any type, for example a struct or list.
+
+  - name: nlp_casadi_mx
+    content: If set to `true`, `casadi.MX` symbolics are used instead of `casadi.SX` symbolics. Defaults to false;
+    type: Boolean
+
+  - name: controls_regularization
+    content: If set to `true`, a small cost on the control inputs is added depending on the weight given by `controls_regularization_value`. Defaults to `true`.
+    type: Boolean
+
+  - name: controls_regularization_value
+    content: The weight for the `controls_regularization`. Defaults to `1e-6`.
 
 returns:
   - content: The Problem object.

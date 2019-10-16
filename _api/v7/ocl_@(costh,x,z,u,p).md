@@ -1,13 +1,13 @@
 ---
 version: 7
 name: "@"
-title: "@(ch,x,z,u,p)"
+title: "@(costh,x,z,u,p)"
 type: function
-description: Function handle signature for the path cost function.
+description: Function signature for the path cost function.
 altname: pathcost
 parameters:
 
-  - name: "ch"
+  - name: "costh"
     content: "Cost handler"
     type: "[ocl.Cost](#apiocl_cost)"
 
