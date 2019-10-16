@@ -66,4 +66,6 @@ methods:
         name: default=[]
         type: "numeric, optional"
     returns: ~
+  - name: "userdata"
+    content: "Returns the userdata object the can be passed to [ocl.Problem](#apiocl_problem) or [ocl.Stage](#apiocl_stage)."
 ---
