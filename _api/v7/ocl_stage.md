@@ -31,27 +31,27 @@ parameters:
     type: "numeric or []"
 
   - name: vars
-    content: "System variables function. Optional, defaults to an empty function handle."
-    type: "[@(vars_handler)](#api@vars)"
+    content: "System variables function. Defaults to an empty function handle."
+    type: "[@(vh)](#api@vars)"
 
   - name: dae
-    content: "DAE (system equations) function. Optional, defaults to an empty function handle."
-    type: "[@(dae_handler,x,z,u,p)](#api@dae)"
+    content: "DAE (system equations) function. Defaults to an empty function handle."
+    type: "[@(daeh,x,z,u,p)](#api@dae)"
 
   - name: pathcosts
-    content: "Path-costs function. Optional, defaults to a function handle returning 0."
-    type: "[@(cost_handler,x,z,u,p)](#api@pathcost)"
+    content: "Path-cost function. Defaults to a function handle returning `0`."
+    type: "[@(costh,x,z,u,p)](#api@pathcost)"
 
   - name: gridcosts
-    content: "Grid-cost function. Optional, defaults to a function handle returning 0."
+    content: "Grid-cost function. Defaults to a function handle returning `0`."
     type: "[@(costh,k,K,x,p)](#api@gridcost)"
 
   - name: gridconstraints
-    content: "Grid-constraints function. Optional, defaults to no constraints added."
+    content: "Grid-constraints function. Defaults to no constraints added."
     type: "[@(conh,k,K,x,p)](#api@gridcost)"
 
   - name: terminalcost
-    content: "Terminal cost function. Optional, defaults to a function handle returning 0."
+    content: "Terminal cost function. Defaults to a function handle returning `0`."
     type: "[@(ch,x,p)](#api@terminalcost)"
 
   - name: N

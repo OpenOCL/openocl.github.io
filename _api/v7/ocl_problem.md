@@ -86,7 +86,7 @@ parameters:
     type: Boolean
 
   - name: userdata
-    content: "A data field that can be used to pass any kind of constant data to the model functions. The userdata can be accessed by using the `userdata` property of [ocl.Cost](#apiocl_cost), [ocl.Constraint](#apiocl_constraint)`, [ocl.DaeHandler](#apiocl_daehandler), and [ocl.VarHandler](@apiocl_varhandler). Defaults to an empty list."
+    content: "A data field that can be used to pass any kind of constant data to the model functions. The userdata can be accessed by using the `userdata` property of [ocl.Cost](#apiocl_cost), [ocl.Constraint](#apiocl_constraint),  [ocl.DaeHandler](#apiocl_daehandler), and [ocl.VarHandler](@apiocl_varshandler). Defaults to an empty list."
     type: Any type, for example a struct or list.
 
   - name: nlp_casadi_mx
