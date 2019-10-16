@@ -11,12 +11,10 @@ code_block:
 parameters:
 
   - name: "vars"
-    default: "@(vars_handler)[]"
     content: "System variables function. Optional, defaults to an empty function handle."
     type: "[@(vars_handler)](#api@vars)"
 
   - name: dae
-    default: "@(dae_handler,x,z,u,p)[]"
     content: "DAE (system equations) function. Optional, defaults to an empty function handle."
     type: "[@(dae_handler,x,z,u,p)](#api@dae)"
 
