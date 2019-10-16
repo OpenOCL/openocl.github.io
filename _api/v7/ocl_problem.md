@@ -73,12 +73,24 @@ parameters:
     content: "Terminal cost function. Optional, defaults to a function handle returning 0."
     type: "[@(ch,x,p)](#api@terminalcost)"
 
+  - name: N
+    content: "Number of control intervals. Defaults to `20`."
+    type: Integer
+
+  - name: d
+    content: "Degree of the interpolating polynomial in each control interval. Defaults to `3`."
+    type: Integer in [2,5]
+
+  - name: verbose
+    content: "If set to `false` no solver output will be shown. Defaults to `true`."
+    type: Boolean
+
   - name: userdata
     content: "A data field that can be used to pass any kind of constant data to the model functions. The userdata can be accessed by using the `userdata` property of `ocl.Cost`, `ocl.Constraint`, `ocl.DaeHandler`, and `ocl.VarHandler`. Defaults to an empty list."
     type: Any type, for example a struct or list.
 
   - name: nlp_casadi_mx
-    content: If set to `true`, `casadi.MX` symbolics are used instead of `casadi.SX` symbolics. Defaults to false;
+    content: If set to `true`, `casadi.MX` symbolics are used instead of `casadi.SX` symbolics. Defaults to `false`.
     type: Boolean
 
   - name: controls_regularization
