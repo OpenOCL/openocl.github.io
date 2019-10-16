@@ -42,6 +42,30 @@ parameters:
     content: "Path-costs function. Optional, defaults to a function handle returning 0."
     type: "[@(cost_handler,x,z,u,p)](#api@pathcost)"
 
+  - name: gridcosts
+    content: "Grid-cost function. Optional, defaults to a function handle returning 0."
+    type: "[@(costh,k,K,x,p)](#api@gridcost)"
+
+  - name: gridconstraints
+    content: "Grid-constraints function. Optional, defaults to no constraints added."
+    type: "[@(conh,k,K,x,p)](#api@gridcost)"
+
+  - name: terminalcost
+    content: "Terminal cost function. Optional, defaults to a function handle returning 0."
+    type: "[@(ch,x,p)](#api@terminalcost)"
+
+  - name: N
+    content: "Number of control intervals. Defaults to `20`."
+    type: Integer
+
+  - name: d
+    content: "Degree of the interpolating polynomial in each control interval. Defaults to `3`."
+    type: Integer in [2,5]
+
+  - name: userdata
+    content: "A data field that can be used to pass any kind of constant data to the model functions. The userdata can be accessed by using the `userdata` property of `ocl.Cost`, `ocl.Constraint`, `ocl.DaeHandler`, and `ocl.VarHandler`. Defaults to an empty list."
+    type: Any type, for example a struct or list.
+
 position: 10
 returns: ~
 ---
