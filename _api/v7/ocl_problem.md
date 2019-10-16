@@ -74,37 +74,30 @@ parameters:
     type: "[@(ch,x,p)](#api@terminalcost)"
 
   - name: N
-    default: "20"
     content: "Number of control intervals. Defaults to `20`."
     type: Integer
 
   - name: d
-    default: "3"
     content: "Degree of the interpolating polynomial in each control interval. Defaults to `3`."
     type: Integer in [2,5]
 
   - name: verbose
-    default: "`true`"
     content: "If set to `false` no solver output will be shown. Defaults to `true`."
     type: Boolean
 
   - name: userdata
-    default: "`[]`"
     content: "A data field that can be used to pass any kind of constant data to the model functions. The userdata can be accessed by using the `userdata` property of [ocl.Cost](#apiocl_cost), [ocl.Constraint](#apiocl_constraint),  [ocl.DaeHandler](#apiocl_daehandler), and [ocl.VarHandler](@apiocl_varshandler). Defaults to an empty list."
     type: Any type, for example a struct or list.
 
   - name: nlp_casadi_mx
-    default: "`false`"
     content: If set to `true`, `casadi.MX` symbolics are used instead of `casadi.SX` symbolics. Defaults to `false`.
     type: Boolean
 
   - name: controls_regularization
-    default: "`true`"
     content: If set to `true`, a small cost on the control inputs is added depending on the weight given by `controls_regularization_value`. Defaults to `true`.
     type: Boolean
 
   - name: controls_regularization_value
-    default: "`1e-6`"
     content: The weight for the `controls_regularization`. Defaults to `1e-6`.
     type: Float
 
