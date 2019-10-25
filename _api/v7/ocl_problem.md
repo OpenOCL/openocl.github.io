@@ -114,7 +114,7 @@ methods:
         type: "[ocl.Variable](#apiocl_variable)"
       - content: "Grid points of the solution"
         type: "[ocl.Variable](#apiocl_variable)"
-  - name: "solve(ig)"
+  - name: "solve"
     content: "Calls the solver and starts doing iterations."
     parameters:
       - content: "An initial guess, for example from a previous solution."
