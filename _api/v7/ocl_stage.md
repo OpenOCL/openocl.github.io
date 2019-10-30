@@ -66,6 +66,75 @@ parameters:
     content: "A data field that can be used to pass any kind of constant data to the model functions. The userdata can be accessed by using the `userdata` property of `ocl.Cost`, `ocl.Constraint`, `ocl.DaeHandler`, and `ocl.VarHandler`. Defaults to an empty list."
     type: Any type, for example a struct or list.
 
+methods:
+  - name: "solve"
+    content: "Calls the solver and starts doing iterations."
+    parameters: ~
+    returns:
+      - content: "The solution of the OCP"
+        type: "[ocl.Variable](#apiocl_variable)"
+      - content: "Grid points of the solution"
+        type: "[ocl.Variable](#apiocl_variable)"
+  - name: "solve"
+    content: "Calls the solver and starts doing iterations."
+    parameters:
+      - content: "An initial guess, for example from a previous solution."
+        name: "ig"
+        type: "[ocl.Variable](#apiocl_variable)"
+    returns:
+      - content: "The solution of the OCP"
+        type: "[ocl.Variable](#apiocl_variable)"
+      - content: "Grid points of the solution"
+        type: "[ocl.Variable](#apiocl_variable)"
+  - name: "setBounds"
+    content: "Sets a bound on a variable for the whole trajectory. If only the lower bound is given, it will be `lb==ub`."
+    parameters:
+      - content: "The variable id"
+        name: "id"
+        type: "string"
+      - content: "The lower bound"
+        name: "lb"
+        type: "numeric"
+      - content: "The upper bound"
+        name: "ub"
+        type: "numeric,optional"
+  - name: "setInitialBounds"
+    content: "Sets an initial bound on a variable. If only the lower bound is given, it will be `lb==ub`."
+    parameters:
+      - content: "The variable id"
+        name: "id"
+        type: "string"
+      - content: "The lower bound"
+        name: "lb"
+        type: "numeric"
+      - content: "The upper bound"
+        name: "ub"
+        type: "numeric,optional"
+  - name: "setEndBounds"
+    content: "Sets an end bound on a variable. If only the lower bound is given, it will be `lb==ub`."
+    parameters:
+      - content: "The variable id"
+        name: "id"
+        type: "string"
+      - content: "The lower bound"
+        name: "lb"
+        type: "numeric"
+      - content: "The upper bound"
+        name: "ub"
+        type: "numeric,optional"
+  - name: "initialize"
+    content: "Sets an initial guess for a variable."
+    parameters:
+      - content: "The variable id"
+        name: "id"
+        type: "string"
+      - content: "The normalized gridpoints. The gridpoints is a list of values between `0` and `1` where `0` is the beginning of the trajectory and `1` is the final time of the trajectory."
+        name: "gridpoints"
+        type: "numeric"
+      - content: "The initial guess values at the gridpoints. The number of columns of `values` must be equal to the length of `gridpoints`."
+        name: "values"
+        type: "numeric"
+
 position: 10
 returns: ~
 ---
