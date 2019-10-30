@@ -67,25 +67,6 @@ parameters:
     type: Any type, for example a struct or list.
 
 methods:
-  - name: "solve"
-    content: "Calls the solver and starts doing iterations."
-    parameters: ~
-    returns:
-      - content: "The solution of the OCP"
-        type: "[ocl.Variable](#apiocl_variable)"
-      - content: "Grid points of the solution"
-        type: "[ocl.Variable](#apiocl_variable)"
-  - name: "solve"
-    content: "Calls the solver and starts doing iterations."
-    parameters:
-      - content: "An initial guess, for example from a previous solution."
-        name: "ig"
-        type: "[ocl.Variable](#apiocl_variable)"
-    returns:
-      - content: "The solution of the OCP"
-        type: "[ocl.Variable](#apiocl_variable)"
-      - content: "Grid points of the solution"
-        type: "[ocl.Variable](#apiocl_variable)"
   - name: "setBounds"
     content: "Sets a bound on a variable for the whole trajectory. If only the lower bound is given, it will be `lb==ub`."
     parameters:
