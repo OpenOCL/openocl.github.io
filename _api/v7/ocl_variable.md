@@ -13,8 +13,8 @@ code_block:
   code: |-
     % v is a solution of an OCP
     % p=[px;py;pz] is of size 3x1
-    % p trajectory is of size 3x1x(N+1)
-    % F trajectory is of size 1x1xN
+    % p trajectory is of size 3x(N+1)
+    % F trajectory is of size 1xN
     % with N control intervals
     p = v.states.p;     % get state p trajectory
     F = v.controls.F;   % get control F trajectory
@@ -22,14 +22,14 @@ code_block:
     % set all 3x1 p states to the same value
     v.states.p = [3;2;1];
     % set p states 4 and 5 in the trajectory
-    v.states.p(:,:,4:5) = [1,2,3;4,5,6].';
+    v.states.p(:,4:5) = [1,2,3;4,5,6].';
     % or (with the same result)
-    v.states.p(:,:,4:5) = {[1;2;3],[4;5;6]};
+    v.states.p(:,4:5) = {[1;2;3],[4;5;6]};
     % or even
-    v.states.p(:,:,4:5) = {[1,2,3],[4,5,6]};
+    v.states.p(:,4:5) = {[1,2,3],[4,5,6]};
 
     % set all px values of p in state trajectory
-    v.states.p(1,:,:) = 4;
+    v.states.p(1,:) = 4;
 
     % plotting of state p trajectory:
     plot(t.states.value,v.states.p.value)
@@ -52,7 +52,7 @@ methods:
         name: value
         type: numeric
     returns: ~
-  - content: 'Alternative syntax: var(<span class="arg">dim1</span>,<span class="arg">dim2</span>,<span class="arg">dim3</span>) Gets a slice of a variable. You can slice a variable the same way as you would index a matrix in Matlab/Octave which means linear indexing is also possible.'
+  - content: 'Alternative syntax: var(<span class="arg">dim1</span>,<span class="arg">dim2</span>) Gets a slice of a variable. You can slice a variable the same way as you would index a matrix in Matlab/Octave which means linear indexing is also possible.'
     name: "slice"
     parameters:
       - content: "indizes for the first dimension. The indizes can be scalar, integer arrays, or you can use : or end."
@@ -60,9 +60,6 @@ methods:
         type: "int, :, end"
       - content: "indizes for the second dimension. The indizes can be scalar, integer arrays, or you can use : or end."
         name: "dim2"
-        type: "int, :, end, optional"
-      - content: "indizes for the third dimension. The indizes can be scalar, integer arrays, or you can use : or end."
-        name: "dim3"
         type: "int, :, end, optional"
     return: ~
     returns:
