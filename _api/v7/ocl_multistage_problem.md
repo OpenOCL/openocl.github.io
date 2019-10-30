@@ -14,18 +14,20 @@ code_block:
 parameters:
 
   - name: "stages"
-    default: "{}"
-    content: "List (cell-array) of stages. Optional, defaults to empty list."
+    content: "List (cell-array) of stages."
     type: "cell<[ocl.Stage](#apiocl_stage)>"
 
   - name: "transitions"
-    default: "{}"
-    content: "List (cell-array) of transitions. Optional, defaults to empty list."
+    content: "List (cell-array) of transitions. The number of transitions has to be one less than the number of stages."
     type: "cell<[ocl.Transition](#apiocl_transition)>"
+    
+  - name: userdata
+    content: "A data field that can be used to pass any kind of constant data to the model functions. The userdata can be accessed by using the `userdata` property of `ocl.Cost`, `ocl.Constraint`, `ocl.DaeHandler`, and `ocl.VarHandler`. Defaults to an empty list."
+    type: Any type, for example a struct or list.
 
 returns:
   - content: The problem object.
-    type: ocl.MultistageProblem
+    type: ocl.MultiStageProblem
 content_markdown: ~
 left_code_blocks: ~
 methods:
