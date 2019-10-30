@@ -22,7 +22,7 @@ code_block:
     % set all 3x1 p states to the same value
     v.states.p = [3;2;1];
     % set p states 4 and 5 in the trajectory
-    v.states.p(:,4:5) = [1,2,3;4,5,6];
+    v.states.p(:,4:5) = [1,2,3;4,5,6].';
 
     % set all px values of p in state trajectory
     v.states.p(1,:) = 4;
