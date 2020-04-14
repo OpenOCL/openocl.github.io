@@ -17,7 +17,7 @@ code_block:
 
       problem.initialize('x', [0 1], [-0.2 -0.2]);
 
-      [solution,timepoints] = ocp.solve();
+      [solution,timepoints] = problem.solve();
 
       % plotting of control and state p trajectory:
       ocl.plot(timepoints.controls, solution.controls.u)
