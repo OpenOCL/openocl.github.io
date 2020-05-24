@@ -25,7 +25,7 @@ API changes:
 * Solver `OclSolver` takes 1 more argument T, new signature `OclSolver` OclSolver(T, system, ocp, options)
 * There is no explicit time dependents in OCP definition, new signatures: `pathCosts(ch, x, z, u, p)`, `arrivalCosts(ch, x, p)`, `pathConstraints(ch, x, p)`.  #83
 * In OclSystem: `setupEquation` became `setupEquations` #85 
-* [OclSystem](/api-docs/#apiocl_system) and [OclOCP](https://openocl.org/api-docs/#apiocl_ocp): it is possible to implement systems and OCP by in functions, and pass the function handles to the constructors. See [Example](https://github.com/OpenOCL/OpenOCL/blob/master/Examples/01VanDerPol/mainVanDerPol.m). This is an alternative way to the existing approach of inheriting from  [OclOCP](/api-docs/#apiocl_ocp) and [OclSystem](/api-docs/#apiocl_system). #74 
+* [OclSystem](/api-docs/#apiocl_system) and [OclOCP](/api-docs/#apiocl_ocp): it is possible to implement systems and OCP by in functions, and pass the function handles to the constructors. See [Example](https://github.com/OpenOCL/OpenOCL/blob/master/Examples/01VanDerPol/mainVanDerPol.m). This is an alternative way to the existing approach of inheriting from  [OclOCP](/api-docs/#apiocl_ocp) and [OclSystem](/api-docs/#apiocl_system). #74 
 * OclOCP methods `pathConstraints`, `pathCosts` have to be declared as Static when inheriting from  [OclOCP](/api-docs/#apiocl_ocp) #74 
 * OclSystem methods `setupVariables`. `setupEquations` have to be declared as Static when inheriting from [OclSystem](https://openocl.org/api-docs/#apiocl_system) #74 
 * There is no more dependency on z and u in pathConstraints #80
