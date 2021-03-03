@@ -99,6 +99,9 @@ parameters:
   - name: controls_regularization_value
     content: The weight for the `controls_regularization`. Defaults to `1e-6`.
     type: Float
+  - name: casadi_options
+    content: Options struct for casadi and ipopt.
+    type: CasadiOptions
 
 returns:
   - content: The Problem object.
