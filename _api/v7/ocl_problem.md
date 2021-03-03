@@ -71,6 +71,10 @@ parameters:
   - name: terminalcost
     content: "Terminal cost function. Defaults to a function handle returning `0`."
     type: "[@(ch,x,p)](#api@terminalcost)"
+    
+   - name: casadi_options
+    content: Options struct for casadi and ipopt.
+    type: [CasadiOptions](#apicasadioptions)
 
   - name: N
     content: "Number of control intervals. Defaults to `20`."
@@ -99,9 +103,6 @@ parameters:
   - name: controls_regularization_value
     content: The weight for the `controls_regularization`. Defaults to `1e-6`.
     type: Float
-  - name: casadi_options
-    content: Options struct for casadi and ipopt.
-    type: CasadiOptions
 
 returns:
   - content: The Problem object.
