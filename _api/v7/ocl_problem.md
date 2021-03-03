@@ -74,7 +74,7 @@ parameters:
     
   - name: casadi_options
     content: Options struct for casadi and ipopt.
-    type: [CasadiOptions](#apicasadioptions)
+    type: "[CasadiOptions](#apicasadioptions)"
 
   - name: N
     content: "Number of control intervals. Defaults to `20`."
