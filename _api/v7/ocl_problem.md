@@ -72,7 +72,7 @@ parameters:
     content: "Terminal cost function. Defaults to a function handle returning `0`."
     type: "[@(ch,x,p)](#api@terminalcost)"
     
-   - name: casadi_options
+  - name: casadi_options
     content: Options struct for casadi and ipopt.
     type: [CasadiOptions](#apicasadioptions)
 
