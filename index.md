@@ -59,8 +59,6 @@ Also have a look at the [API Docs](/api-docs/). Get [support](/support/) if you 
   
 </div>
      
-### Contact
-
-info [at] openocl.org
+### Legal Notice
 
 [Legal Notice](/legal_notice/)
