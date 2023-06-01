@@ -6,15 +6,13 @@ title: Legal Notice
 
 # Legal Notice
 
-openocl.org is a project of:
+openocl.github.org is a project of:
 
 > Jonas Koenemann    
 > University of Freiburg  
 > Georges Koehler Allee 102  
 > 79110 Freiburg    
 > Germany
-> 
-> info [at] openocl.org
 
 Please see the license for the code at [https://openocl.org/bsd-3-clause/](https://openocl.org/bsd-3-clause/).
 
@@ -52,8 +50,6 @@ This project has received funding from the European Union’s Horizon 2020 resea
 and innovation programme under the Marie Sklodowska-Curie grant agreement No 642682.
 
 Use without warranty. 
-
-info [at] openocl.org
 
 ### More information
 
