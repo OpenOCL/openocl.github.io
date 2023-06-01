@@ -12,6 +12,8 @@ pid: index
 | [Get Started](/get-started/) - [Documentation](/api-docs/) - [Blog](/blog/) - [Support](/support/) - [Publications](/publications/) - [Contributing](/contribute/) |
   
 
+__Note: This project has been archived and is not actively maintained anymore__
+
 ## Quick start
 
 Clone the [repository](https://github.com/OpenOCL/OpenOCL/) or [download](/get-started/) the latest release of the toolbox.
