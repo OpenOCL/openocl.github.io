@@ -6,7 +6,7 @@ title: Legal Notice
 
 # Legal Notice
 
-openocl.github.org is a project of:
+openocl.github.io is a project of:
 
 > Jonas Koenemann    
 > University of Freiburg  
